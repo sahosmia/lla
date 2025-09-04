@@ -1,0 +1,87 @@
+
+.am-header_six .am-loginbtns .am-white-btn:hover,
+.am-header_six .am-loginbtns .am-btn{
+    border-color: #00D027;
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%), #000;
+}
+.am-banner-vfive .am-banner{
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%);
+}
+.am-categories .am-card .am-btn{
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%), linear-gradient(90deg, #DD1885 0%, #EE4710 100%);
+}
+.am-featured-mentors-head .am-primary-btn-white:hover{
+    border-color: #049034;
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%);
+}
+.am-featured-mentors-head .am-primary-btn-white:hover{
+    border-color: #049034;
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%);
+}
+.am-featured-mentors-slider .splide__arrow:hover {
+    border-color: #049034;
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%);
+}
+.am-featured-mentors .am-experience-tutor-card:hover .am-experience-tutor-info .am-tutorsearch_user_name .am-primary-btn,
+.am-footer-v4 .am-footer-content .am-getstarted-btn {
+    background: linear-gradient(98deg, #049034 6.14%, #00D027 93.95%);
+}
+.pb-themesection:has(.am-featured-mentors-two) {
+    position: relative;
+    padding: 100px 0 166px;
+    background: linear-gradient(101deg, #06CC5F 4.63%, #06D865 92.56%);
+}
+.am-limitless-features-content .am-btn:hover {
+    background: #049034;
+}
+.splide__slide.is-active.is-visible .am-feedbackicon svg path{
+    fill: #08D14C;
+}
+.am-featured-mentors-two .am-featured-mentors-head .am-primary-btn-white:hover,
+.am-footer-v4 .am-footer-content h2 span{
+    color: #049034;
+}
+.am-featured-mentors-two .am-featured-mentors-head .am-primary-btn-white{
+    border-color: #fff;
+}
+.get-app-varient-one .am-coming-soon{
+    background: linear-gradient(98deg, #049034 6.14%, #05E96C 93.95%), #048E5E;
+}
+.am-footer-v4 .am-footer-content .am-getstarted-btn{
+    color: #fff;
+}
+.am-categories .am-section_title > span{
+    color: #7846B4;
+    background: #F8EBFF;
+}
+.am-categories .am-section_title > span::before{
+    background: #7846B4;
+}
+.am-featured-mentors-head .am-section_title > span {
+    color: #F55C2B;
+    background: rgba(245, 92, 43, 0.07);
+}
+.am-featured-mentors-head .am-section_title > span::before {
+    background: #F55C2B;
+}
+.am-featured-mentors-two .am-featured-mentors-head .am-section_title .am-tag {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+}
+.am-featured-mentors-two .am-featured-mentors-head .am-section_title .am-tag::before {
+    background: currentColor;
+}
+.am-feedback.feedback-verient-two .am-section_title span {
+    color: #06D865;
+    background: rgba(6, 216, 101, 0.07);
+}
+.am-feedback.feedback-verient-two .am-section_title span::before {
+    background: currentColor;
+}
+.am-unique-features.unique-features-varient-one .am-section_title > span{
+    color: #8972FF;
+    background: rgba(137, 114, 255, 0.05);
+}
+.am-unique-features.unique-features-varient-one .am-section_title > span::before{
+    background: currentColor;
+}

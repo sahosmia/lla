@@ -1,0 +1,14 @@
+{
+    "name": "Courses",
+    "alias": "courses",
+    "description": "Courses Management System",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\Courses\\Providers\\CoursesServiceProvider"
+    ],
+    "files": [
+        "helpers/functions.php"
+    ]
+}

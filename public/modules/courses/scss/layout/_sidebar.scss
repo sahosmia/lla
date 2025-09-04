@@ -1,0 +1,272 @@
+.cr-sidebar{
+    width: 100%;
+    flex: none;
+    max-width: 300px;
+    min-height: 100vh;
+    @extend %transition;
+    &_logo{
+        display: flex;
+        padding: 22px 16px;
+        align-items: center;
+        background: #1E1E1E;
+    }
+    &_toggle{
+        margin-left: auto;
+        @extend %transition;
+        a{
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            @extend %transition;
+            justify-content: center;
+            background: rgba($dark_black, 0.25);
+            i:before{
+                color: rgba($color: $clr-white, $alpha: 0.6);
+            }
+        }
+    }
+    &_goback{
+        padding: 0 16px;
+        margin: 0 0 30px;
+        a{
+            gap: 10px;
+            display: flex;
+            color: $clr-white;
+            padding: 10px 12px;
+            align-items: center;
+            border-radius: 10px;
+            background: rgba($clr-white, 0.05);
+            font: 400 rem(14)/em(20, 14) $body-font-family;
+            i:before{
+                color: $clr-white;
+            }
+        }
+    }
+    &_title{
+        padding: 0 16px;
+        margin: 0 0 30px;
+        span{
+            display: block;
+            margin: 0 0 4px;
+            color: rgba($color: $clr-white, $alpha: 0.5);
+            font: 400 rem(12)/em(18, 12) $body-font-family;
+        }
+        h2{
+            margin: 0;
+            overflow: hidden;
+            color: $clr-white;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font: 500 rem(16)/em(24, 16) $body-font-family;
+        }
+    }
+    &_contentwrap{
+        overflow: auto;
+        height: calc(100vh - 257px);
+        &:hover{
+            &::-webkit-scrollbar-thumb {
+                background-color:rgba(255, 255, 255, 0.1);
+                border: 5px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+        &::-webkit-scrollbar {
+            width:5px;
+        }
+        &::-webkit-scrollbar-thumb { border-radius:16px;}
+        &::-webkit-scrollbar-button {display:none}
+    }
+    &_accordion{
+        &_item{
+            padding: 0 16px;
+            & + &{
+                margin-top: 16px;
+            }
+        }
+        &_title{
+            width: 100%;
+            & > a{
+                gap: 4px;
+                display: flex;
+                padding: 1px 16px;
+                align-items: center;
+                border-radius: 10px;
+                min-height: 40px;
+                &[aria-expanded="true"]{
+                    background: rgba($clr-white, 0.05);
+                    &>em{
+                        align-self: center;
+                        color: $clr-white;
+                    }
+                    span{
+                        color: $clr-white;
+                        em{
+                            display: none;
+                        }
+                    }
+                    i{
+                        transform: rotate(90deg);
+                        &:before{color: $clr-white;}
+                    }
+                }
+                &:hover{
+                    &>em{
+                        color: $clr-white;
+                        @extend %transition;
+                    }
+                    span{
+                        color: $clr-white;
+                        em{
+                            color: $clr-white;
+                        }
+                    }
+                    i{
+                        &:before{color: $clr-white;}
+                    }
+                }
+                & > em{
+                    color: #AAA;
+                    align-self: flex-start;
+                    @extend %transition;
+                    font: normal 500 rem(14)/em(20, 14) $body-font-family;
+                }
+                span{
+                    color: #AAA;
+                    @extend %transition;
+                    font: normal 500 rem(14)/em(20, 14) $body-font-family;
+                    span{
+                        @extend %transition;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                    }
+                    em{
+                        @extend %transition;
+                        display: block;
+                        color: rgba($color: $clr-white, $alpha: 0.4);
+                        font: normal 500 rem(12)/em(18, 12) $body-font-family;
+                    }
+                }
+                i{
+                    margin-left: auto;
+                    font-weight: 700;
+                    font-size: 12px;
+                    display: block;
+                    flex: none;
+                    @extend %transition;
+                }
+            }
+        }
+        &_content{
+            &_item{
+                padding: 2px 0 2px 31px;
+                position: relative;
+                &:has(.cr-active){
+                    &:after,
+                    &:before{
+                        background: $clr-white;
+                    }
+                }
+                &:before{
+                    top: 0;
+                    width: 1px;
+                    left: 18px;
+                    content: '';
+                    height: 100%;
+                    position: absolute;
+                    background: $text-light;
+                } 
+                &:after{
+                    top: 0;
+                    left: 18px;
+                    top: 50%;
+                    margin-top: -0.5px;
+                    width: 12px;
+                    content: '';
+                    height: 1px;
+                    position: absolute;
+                    background: $text-light;
+                }
+                &:first-child{margin-top: 6px;}
+                a{
+                    gap: 6px;
+                    display: flex;
+                    min-height: 40px;
+                    padding: 2px 10px;
+                    align-items: center;
+                    &.cr-active{
+                        span{
+                            color: $clr-white;
+                            & em{
+                                display: none;
+                            }
+                        }
+                        i svg path{
+                            fill: $clr-white;
+                        }
+                        i:before{
+                            color: $clr-white;
+                        }
+                    }
+                    span{
+                        @extend %transition;
+                        color: #AAA;
+                        display: block;
+                        font: normal 500 rem(14)/em(20, 14) $body-font-family;
+                        span{
+                            @extend %transition;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                        }
+                        em{
+                            @extend %transition;
+                            display: block;
+                            color: rgba($color: $clr-white, $alpha: 0.4);
+                            font: normal 500 rem(12)/em(16, 12) $body-font-family;
+                        }
+                    }
+                }
+                i{
+                    flex: none;
+                    margin-left: auto;
+                    svg{
+                        display: block;
+                    }
+                }
+                &:hover{
+                    span{
+                        color: $clr-white;
+                        em{
+                            color: $clr-white;
+                        }
+                    }
+                    i svg path{
+                        fill: $clr-white;
+                    }
+                    i:before{
+                        color: $clr-white;
+                    }
+                    &:after,
+                    &:before{
+                        background: $clr-white;
+                    }
+                }
+            }
+        }
+    }
+    .cr-logo{
+        display: block;
+        figure{
+            margin: 0;
+            max-width: 119px;
+        }
+    }
+}

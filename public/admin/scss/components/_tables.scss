@@ -1,0 +1,873 @@
+.am-dispute-system {
+    .tb-table {
+        thead {
+            tr {
+                th:first-child {
+                    width: 20%;
+                    min-width: 20%;
+                    max-width: 20%;
+                }
+                th:nth-child(2) {
+                    width: 20%;
+                    min-width: 20%;
+                    max-width: 20%;
+                }
+                th:nth-child(3),
+                th:nth-child(4) {
+                    width: 15%;
+                    min-width: 15%;
+                    max-width: 15%;
+                }
+                th:nth-child(5),
+                th:nth-child(6),
+                th:last-child {
+                    width: 10%;
+                    min-width: 10%;
+                    max-width: 10%;
+                }
+                th.am-dispute-action {
+                    text-align: center !important;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td:first-child {
+                    width: 20%;
+                    min-width: 20%;
+                    max-width: 20%;
+                }
+                td:nth-child(2) {
+                    width: 20%;
+                    min-width: 20%;
+                    max-width: 20%;
+                }
+                td:nth-child(3),
+                td:nth-child(4) {
+                    width: 15%;
+                    min-width: 15%;
+                    max-width: 15%;
+                }
+                td:nth-child(5),
+                td:nth-child(6),
+                td:last-child {
+                    width: 10%;
+                    min-width: 10%;
+                    max-width: 10%;
+                }
+            }
+        }
+    }
+    // Invoice Table Start
+    &.am-invoice-system {
+        .am-disputelist_wrap{
+            display: grid;
+            .am-disputelist{
+                .tb-table {
+                    thead {
+                        tr {
+                            th:last-child,
+                            th:first-child {
+                                width: 120px;
+                                min-width: 120px;
+                                max-width: 120px;
+                            }
+                            th:nth-child(2) {
+                                width: 250px;
+                                min-width: 250px;
+                                max-width: 250px;
+                            }
+                            th:nth-child(3) {
+                                width: 130px;
+                                min-width: 130px;
+                                max-width: 130px;
+                            }
+                            th:nth-child(4) {
+                                width: 200px;
+                                min-width: 200px;
+                                max-width: 200px;
+                            }
+                            th:nth-child(5) {
+                                width: 170px;
+                                min-width: 170px;
+                                max-width: 170px;
+                            }
+                            th:nth-child(6) {
+                                width: 120px;
+                                min-width: 120px;
+                                max-width: 120px;
+                            }
+                            th:nth-child(7),
+                            th:nth-child(8),
+                            th:nth-child(9),
+                            th:nth-child(10) {
+                                width: 140px;
+                                min-width: 140px;
+                                max-width: 140px;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            td {padding: 10px 20px !important;}
+                        }
+                    }
+                }
+                overflow-x: auto;
+                &::-webkit-scrollbar {
+                    height: 7px;
+                }
+    
+                &:hover::-webkit-scrollbar-thumb {
+                    background-color: #e8e8e9;
+                    border: 5px solid #e8e8e9;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 16px;
+                }
+    
+                &::-webkit-scrollbar-button {
+                    display: none;
+                }
+            }
+        }
+    }
+    // Booking Table Start
+    &.am-booking-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:last-child,
+                    th:first-child {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    th:nth-child(2) {
+                        min-width: 300px;
+                        max-width: 300px;
+                    }
+                    th:nth-child(3),
+                    th:nth-child(4) {
+                        min-width: 250px;
+                        max-width: 250px;
+                    }
+                    th:nth-child(6) {
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    th:nth-child(7) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                    th:nth-child(8) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:last-child,
+                    td:first-child {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    td:nth-child(2) {
+                        min-width: 300px;
+                        max-width: 300px;
+                    }
+                    td:nth-child(3),
+                    td:nth-child(4) {
+                        min-width: 250px;
+                        max-width: 250px;
+                    }
+                    td:nth-child(6) {
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    td:nth-child(7) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+    // User Table Start
+    &.am-user-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    th:nth-child(2),
+                    th:nth-child(3) {
+                        min-width: 250px;
+                        max-width: 250px;
+                    }
+                    th:nth-child(4) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                    th:nth-child(5) {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                    th:nth-child(6) {
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    th:nth-child(7) {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    th:nth-child(8) {
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    th:nth-child(9) {
+                        min-width: 150px;
+                        max-width: 150px;
+                        white-space: nowrap;
+                    }
+                    th:last-child {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-child {
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    td:nth-child(2),
+                    td:nth-child(3) {
+                        min-width: 250px;
+                        max-width: 250px;
+                    }
+                    td:nth-child(4) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                    td:nth-child(5) {
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                    td:nth-child(6) {
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    td:nth-child(7) {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    td:nth-child(8) {
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    td:nth-child(9) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                    td:last-child {
+                        gap: 6px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    td:last-child {
+                        min-width: 130px;
+                        max-width: 130px;
+                        justify-content: flex-end;
+                        .am-custom-tooltip.am-tooltip-textimp {
+                            .am-tooltip-text {
+                                left: auto;
+                                right: 24px;
+                                bottom: 50%;
+                                transform: translateY(50%);
+                                &::before {
+                                    left: auto;
+                                    right: -6px;
+                                    bottom: 37.7%;
+                                }
+                            }
+                        }
+                        .am-custom-tooltip {
+                            &:hover {
+                                i.icon-trash-2::before {
+                                    color: #ff7062;
+                                }
+                            }
+                        }
+                    }
+                    td {
+                        .tb-email-verifiedbtn {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Blogs Table Start
+    &.am-blogs-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        width: 510px;
+                        min-width: 510px;
+                        max-width: 510px;
+                    }
+                    th:nth-child(2) {
+                        width: 500px;
+                        min-width: 500px;
+                        max-width: 500px;
+                    }
+                    th:nth-child(3),
+                    th:nth-child(4),
+                    th:last-child {
+                        width: 153.09px;
+                        min-width: 153.09px;
+                        max-width: 153.09px;
+                    }
+                }
+            }
+        }
+    }
+    // Courses Table Start
+    &.am-bundle-system,
+    &.am-courses-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        width: 70px;
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    th:nth-child(2) {
+                        width: 500px;
+                        min-width: 500px;
+                        max-width: 500px;
+                    }
+                    th:nth-child(5),
+                    th:nth-child(6) {
+                        width: 170px;
+                        min-width: 170px;
+                        max-width: 170px;
+                    }
+                    th:nth-child(3),
+                    th:nth-child(4),
+                    th:last-child {
+                        width: 153.09px;
+                        min-width: 153.09px;
+                        max-width: 153.09px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-child {
+                        width: 70px;
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    td:nth-child(2) {
+                        width: 500px;
+                        min-width: 500px;
+                        max-width: 500px;
+                    }
+                    td:nth-child(5),
+                    td:nth-child(6) {
+                        width: 170px;
+                        min-width: 170px;
+                        max-width: 170px;
+                    }
+                    td:nth-child(3),
+                    td:nth-child(4),
+                    td:last-child {
+                        width: 153.09px;
+                        min-width: 153.09px;
+                        max-width: 153.09px;
+                    }
+                    td:last-child {
+                        .tb-action-icon {
+                            gap: 0;
+                            @extend %flex;
+                            align-items: center;
+                            .am-tooltip-text {
+                                left: auto;
+                                right: 24px;
+                                bottom: 50%;
+                                transform: translateY(50%);
+                                &::before {
+                                    left: auto;
+                                    right: -6px;
+                                    bottom: 37.7%;
+                                }
+                            }
+                        }
+                        a {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.am-bundle-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:nth-child(2) {
+                        width: 170px;
+                        min-width: 170px;
+                        max-width: 170px;
+                    }
+                    th:nth-child(3) {
+                        width: 233.09px;
+                        min-width: 233.09px;
+                        max-width: 233.09px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:nth-child(2) {
+                        width: 170px;
+                        min-width: 170px;
+                        max-width: 170px;
+                    }
+                    td:nth-child(3) {
+                        width: 233.09px;
+                        min-width: 233.09px;
+                        max-width: 233.09px;
+                    }
+                }
+            }
+        }
+    }
+    // Enrollment Table Start
+    &.am-enrollment-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        width: 70px;
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    th:nth-child(2) {
+                        width: 200px;
+                        min-width: 200px;
+                        max-width: 200px;
+                    }
+                    th:nth-child(3) {
+                        width: 300px;
+                        min-width: 300px;
+                        max-width: 300px;
+                    }
+                    th:nth-child(4),
+                    th:nth-child(5) {
+                        width: 200px;
+                        min-width: 200px;
+                        max-width: 200px;
+                    }
+                    th:nth-child(6),
+                    th:nth-child(7) {
+                        width: 120px;
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    th:nth-child(8) {
+                        width: 160px;
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    th:last-child {
+                        width: 100px;
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-child {
+                        width: 70px;
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    td:nth-child(2) {
+                        span {
+                            word-break: break-all;
+                        }
+                    }
+                    th:nth-child(3) {
+                        width: 300px;
+                        min-width: 300px;
+                        max-width: 300px;
+                    }
+                    td:nth-child(4),
+                    th:nth-child(5) {
+                        width: 200px;
+                        min-width: 200px;
+                        max-width: 200px;
+                    }
+                    td:nth-child(6),
+                    td:nth-child(7) {
+                        width: 120px;
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    td:nth-child(8) {
+                        width: 160px;
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    td:last-child {
+                        width: 100px;
+                        min-width: 100px;
+                        max-width: 100px;
+                    }
+                }
+            }
+        }
+    }
+    // Identitiy Table Start
+    &.am-identitiy-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    th:nth-child(2),
+                    th:nth-child(4) {
+                        min-width: 250px;
+                        max-width: 250px;
+                    }
+                    th:nth-child(3) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                    th:nth-child(5) {
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    th:nth-child(6) {
+                        min-width: 160px;
+                        max-width: 160px;
+                    }
+                    th:nth-child(7) {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    th:last-child {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-child {
+                        min-width: 70px;
+                        max-width: 70px;
+                    }
+                    td:nth-child(2),
+                    td:nth-child(4) {
+                        min-width: 250px;
+                        max-width: 250px;
+                    }
+                    td:nth-child(3) {
+                        min-width: 150px;
+                        max-width: 150px;
+                    }
+                    td:nth-child(8) {
+                        min-width: 180px;
+                        max-width: 180px;
+                    }
+                    td:nth-child(5) {
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    td:nth-child(7) {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    td:last-child {
+                        min-width: 130px;
+                        max-width: 130px;
+                    }
+                    td {
+                        .tb-email-verifiedbtn {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Purchased Subscription Table Start
+    &.am-purchased-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        width: 8%;
+                        min-width: 8%;
+                        max-width: 8%;
+                    }
+                    th:nth-child(2),
+                    th:nth-child(3),
+                    th:nth-child(6) {
+                        width: 20%;
+                        min-width: 20%;
+                        max-width: 20%;
+                    }
+                    th:nth-child(4),
+                    th:nth-child(5) {
+                        width: 10%;
+                        min-width: 10%;
+                        max-width: 10%;
+                    }
+                    th:last-child {
+                        width: 12%;
+                        min-width: 12%;
+                        max-width: 12%;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-child {
+                        width: 8%;
+                        min-width: 8%;
+                        max-width: 8%;
+                    }
+                    td:nth-child(2),
+                    td:nth-child(3),
+                    td:nth-child(6) {
+                        width: 20%;
+                        min-width: 20%;
+                        max-width: 20%;
+                        span {
+                            word-break: break-all;
+                        }
+                    }
+                    td:nth-child(4),
+                    td:nth-child(5) {
+                        width: 10%;
+                        min-width: 10%;
+                        max-width: 10%;
+                    }
+                    td:last-child {
+                        width: 12%;
+                        min-width: 12%;
+                        max-width: 12%;
+                    }
+                }
+            }
+        }
+    }
+    // Login History Table Start
+    &.am-loginhistory-system {
+        .am-disputelist {
+            .tb-table {
+                thead {
+                    tr {
+                        th:first-child {
+                            width: 100px;
+                            min-width: 100px;
+                            max-width: 100px;
+                        }
+                        th:nth-child(2),
+                        th:nth-child(10) {
+                            width: 250px;
+                            min-width: 250px;
+                            max-width: 250px;
+                        }
+                        th:nth-child(3),
+                        th:nth-child(4),
+                        th:nth-child(5),
+                        th:nth-child(6),
+                        th:nth-child(7),
+                        th:nth-child(8),
+                        th:nth-child(9) {
+                            width: 150px;
+                            min-width: 150px;
+                            max-width: 150px;
+                        }
+                        th:nth-child(11),
+                        th:nth-child(12),
+                        th:last-child {
+                            width: 200px;
+                            min-width: 200px;
+                            max-width: 200px;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            &:last-child {
+                                text-align: left;
+                            }
+                            .tb-action-icon {
+                                gap: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                height: 7px;
+            }
+
+            &:hover::-webkit-scrollbar-thumb {
+                background-color: #e8e8e9;
+                border: 5px solid #e8e8e9;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-radius: 16px;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+        }
+    }
+    // IP Restriction Table Start
+    &.am-ip-restriction-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        width: 8%;
+                        min-width: 8%;
+                        max-width: 8%;
+                    }
+                    th:nth-child(2),
+                    th:nth-child(3) {
+                        width: 15%;
+                        min-width: 15%;
+                        max-width: 15%;
+                    }
+                    th:nth-child(4) {
+                        width: 50%;
+                        min-width: 50%;
+                        max-width: 50%;
+                    }
+                    th:last-child {
+                        width: 12%;
+                        min-width: 12%;
+                        max-width: 12%;
+                    }
+                }
+            }
+        }
+    }
+    // Review Table Start
+    &.am-review-system {
+        .tb-table {
+            thead {
+                tr {
+                    th:first-child {
+                        width: 5%;
+                        min-width: 5%;
+                        max-width: 5%;
+                    }
+                    th:nth-child(4),
+                    th:nth-child(6) {
+                        width: 25%;
+                        min-width: 25%;
+                        max-width: 25%;
+                    }
+                    th:nth-child(2),
+                    th:nth-child(3),
+                    th:nth-child(5) {
+                        width: 12%;
+                        min-width: 12%;
+                        max-width: 12%;
+                    }
+                    th:last-child {
+                        width: 9%;
+                        min-width: 9%;
+                        max-width: 9%;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:first-child {
+                        width: 5%;
+                        min-width: 5%;
+                        max-width: 5%;
+                    }
+                    td:nth-child(4),
+                    td:nth-child(6) {
+                        width: 25%;
+                        min-width: 25%;
+                        max-width: 25%;
+                    }
+                    td:nth-child(2),
+                    td:nth-child(3),
+                    td:nth-child(5) {
+                        width: 12%;
+                        min-width: 12%;
+                        max-width: 12%;
+                    }
+                    td:last-child {
+                        width: 9%;
+                        min-width: 9%;
+                        max-width: 9%;
+                    }
+                }
+            }
+        }
+    }
+}
+.tb-disputetable {
+    .tb-table-wrap {
+        overflow-y: auto;
+        border-radius: 20px;
+        height: calc(100vh - 224px);
+        border: 1px solid $border_colorlight;
+        box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+            0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+        &:hover {
+            &::-webkit-scrollbar-thumb {
+                background-color: #e8e8e9;
+                border: 5px solid #e8e8e9;
+            }
+        }
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 16px;
+        }
+        &::-webkit-scrollbar-button {
+            display: none;
+        }
+        .tb-table {
+            border: none !important;
+            box-shadow: none !important;
+        }
+    }
+    &:has(.tk-pagiantion-holder),
+    &:has(.pb-pagination_nav) {
+        .tb-table-wrap {
+            height: calc(100vh - 286px);
+        }
+    }
+}

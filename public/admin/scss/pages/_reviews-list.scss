@@ -1,0 +1,41 @@
+.am-review-system {
+    .tb-table {
+        tbody{
+            .am-review-msg{
+                span{
+                    i{
+                        color: $text-light;   
+                    }
+                }
+                p{
+                    margin: 4px 0 0;   
+                    line-clamp: 2;
+                    flex-wrap: wrap;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }   
+    }
+    .am-custom-tooltip{
+        padding: 0;
+        .am-tooltip-review{
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-width: 100% !important;
+            &:hover{
+                &::-webkit-scrollbar-thumb {
+                    background-color:#e8e8e9;
+                    border: 5px solid #e8e8e9;
+                }
+            }
+            &::-webkit-scrollbar {
+                width:5px;
+            }
+            &::-webkit-scrollbar-thumb { border-radius:16px;}
+            &::-webkit-scrollbar-button {display:none}
+        }
+    }
+}

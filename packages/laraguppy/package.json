@@ -1,0 +1,41 @@
+{
+    "name": "laraguppy",
+    "version": "1.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "development": "NODE_ENV=development vite build --mode=development",
+        "watch": "NODE_ENV=development vite build --mode=development --watch",
+        "prod": "npm run production",
+        "production": "NODE_ENV=production vite build"
+    },
+    "devDependencies": {
+        "axios": "^0.25",
+        "laravel-vite-plugin": "^1.0.2",
+        "lodash": "^4.17.21",
+        "vite": "^5.2.0"
+    },
+    "dependencies": {
+        "@videojs-player/vue": "^1.0.0",
+        "@vitejs/plugin-vue": "^5.0.4",
+        "emoji-picker-element": "^1.21.0",
+        "fslightbox-vue": "^2.1.3",
+        "laravel-echo": "^1.16.1",
+        "laravel-vue-i18n": "^2.7.6",
+        "leaflet": "^1.9.4",
+        "leaflet-fullscreen": "^1.0.2",
+        "moment": "^2.30.1",
+        "pinia": "^2.1.7",
+        "pusher-js": "^8.4.0-rc2",
+        "sass": "^1.70.0",
+        "video.js": "^7.20.1",
+        "vite-plugin-env-compatible": "^2.0.1",
+        "vite-plugin-laravel": "^0.3.1",
+        "vite-plugin-manifest-sri": "^0.2.0",
+        "vue": "^3.4.21",
+        "vue-3-linkify": "^1.1.0",
+        "vue-advanced-cropper": "^2.8.8",
+        "vue-axios": "^3.5.2",
+        "vuemoji-picker": "^0.2.0"
+    }
+}

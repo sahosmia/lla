@@ -1,0 +1,2009 @@
+/*  Start */
+.am-searchdetail {
+    gap: 60px;
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+.am-search-detail-banner {
+    margin-top: 50px;
+}
+.am-tutordetail_head {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.am-tutordetail_user {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    .am-tutorvone_img {
+        max-width: 80px;
+        img {
+            height: 80px;
+            border-radius: 20px;
+        }
+    }
+}
+.am-tutordetail_user_name {
+    h3 {
+        gap: 10px;
+        display: flex;
+        margin-bottom: 0;
+        align-items: center;
+        color: $heading-color;
+        font: 500 rem(30) / em(38, 30) $body-font-family;
+        .am-custom-tooltip {
+            padding: 0;
+        }
+        a {
+            overflow: hidden;
+            color: $heading-color;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            &:hover {
+                color: $heading-color;
+            }
+        }
+        .flag {
+            height: 13px;
+            max-width: 18.67px;
+        }
+        img {
+            max-width: 18.67px;
+        }
+        .am-icon-user-check {
+            display: block;
+            &::before {
+                font-size: 14px;
+                color: rgba(51, 204, 94, 1);
+            }
+        }
+        .am-tooltip-text {
+            width: max-content;
+        }
+    }
+    > span {
+        line-clamp: 1;
+        flex-wrap: wrap;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        color: $body-font-color;
+    }
+    > ul {
+        gap: 0 4px;
+        display: flex;
+        margin-left: 0;
+        flex-wrap: wrap;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        li {
+            > span {
+                color: $body-font-color;
+                font: 400 rem(13) / em(16, 13) $body-font-family;
+            }
+            > a {
+                display: inline-block;
+                color: $body-font-color;
+                font: 500 rem(12) / em(18, 12) $body-font-family;
+            }
+        }
+    }
+}
+.am-search-userdetail {
+    width: 100%;
+}
+.am-detailuser_video {
+    width: 100%;
+    max-width: 416px;
+    border-radius: 20px;
+    border: 8px solid $clr-white;
+    box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+        0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    .video-js {
+        width: 100%;
+        display: block;
+        border-radius: 20px;
+        video {
+            object-fit: cover;
+        }
+    }
+    &.am-detailuser_video_main {
+        height: 300px;
+        .video-js {
+            height: 100%;
+        }
+        .vjs-big-play-button {
+            top: auto;
+            left: 10px;
+            bottom: 10px;
+            width: 60px !important;
+            height: 60px !important;
+            transform: translateY(0);
+            // .vjs-icon-placeholder::before{
+            //     margin-left: 1px;
+            //     content: url("../images/play-two.svg") !important;
+            // }
+        }
+    }
+}
+.am-detailuser_novideo{
+    gap: 20px;
+    width: 100%;
+    @extend %flex;
+    max-width: 300px;
+    align-items: center;
+    flex-direction: column;
+    .am-tutordetail_fee{
+        gap: 2px;
+        width: 100%;
+        height: 124px;
+        align-items: center;
+        border-radius: 18px;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(219, 132, 1, 0.05);
+    }
+    a{
+        width: 100%;
+        padding: 13px 16px;
+        & + a {margin-top: 10px;}
+        &.am-white-btn{
+            background: transparent;
+            border: 1px solid #E9BB71;
+            i::before{
+                @extend %transition;
+                color: rgba($dark_black, 0.6);
+            }
+            &:hover{
+                color: $clr-white;
+                background: $theme-color;
+                border-color: $theme-color;
+                i::before{color: $clr-white;}
+            }
+        }
+        &.am-likebtn{
+            gap: 6px;
+            min-height: 46px;
+            border: 1px solid $border-color;
+            color: rgba($color: $body-font-color, $alpha: 0.8);
+            font: 600 rem(14)/em(20,14) $heading-font-family;
+            &:hover{
+                color: #F04438;
+                background: transparent;
+                border-color: #F04438;
+                i::before{
+                    color: #F04438;
+                }
+            }
+        }
+    }
+}
+.am-bodytutor-detail {
+    background: $auth-bg;
+    .am-main {
+        padding: 50px 0 80px;
+    }
+}
+.am-tutordetail_fee {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    strong {
+        position: relative;
+        color: $heading-color;
+        font: 600 rem(30)/em(38,30) $body-font-family;
+        sup{
+            font: 500 rem(16)/em(24,16) $body-font-family;
+        }
+        sub {
+            display: contents;
+            font: 600 rem(23) / em(32, 23) $body-font-family;
+        }
+        em {
+            margin-left: 2px;
+            font-style: normal;
+            color: $body-font-color;
+            font: 400 rem(16) / em(24, 16) $body-font-family;
+        }
+    }
+    span {
+        display: block;
+        color: $body-font-color;
+        font: 400 rem(14) / em(20, 14) $body-font-family;
+    }
+}
+.am-tutordetail-reviews {
+    gap: 10px;
+    display: flex;
+    margin-top: 30px;
+    i::before {
+        font-size: 14px;
+    }
+    &_wrap {
+        width: 100%;
+        .am-tutorsocial-list {
+            gap: 8px;
+            @extend %flex;
+            align-items: center;
+            margin: 8px 0 0 22px;
+            li {
+                list-style: none;
+                a {
+                    width: 42px;
+                    height: 42px;
+                    display: flex;
+                    border-radius: 8px;
+                    align-items: center;
+                    @extend %transition;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 4px;
+                    }
+                    &:hover{background: rgba(219, 132, 1, 0.05);}
+                }
+            }
+        }
+    }
+}
+.am-tutorreviews-list {
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    max-width: 310px;
+    flex-direction: column;
+    li {
+        list-style: none;
+    }
+}
+.am-tutorreview-item {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    span {
+        display: flex;
+        align-items: center;
+        color: $body-font-color;
+        font: 500 rem(14) / em(20, 14) $body-font-family;
+        em {
+            font-weight: 400;
+            font-style: normal;
+        }
+        &.am-currency_conversion{
+            margin-left: 3px;
+            &::first-letter{margin-right: 10px;}
+        }
+        &:not(.am-uniqespace) {
+            gap: 6px;
+        }
+    }
+    .wa-tags-list {
+        gap: 4px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        p {
+            gap: 4px;
+            display: flex;
+            margin: 0 !important;
+            align-items: center;
+            color: rgba($body-font-color, 0.7);
+            font: 400 rem(13) / em(16, 13) $body-font-family;
+            span {
+                display: flex;
+                padding: 2px 6px;
+                border-radius: 6px;
+                align-items: center;
+                color: $body-font-color;
+                justify-content: center;
+                background-color: #eff8ff;
+                font: 500 rem(12) / em(18, 12) $body-font-family;
+            }
+            .wa-bg-yellow {
+                background: #fef0c7;
+            }
+            .wa-bg-green {
+                background: #ecfdf3;
+            }
+        }
+        ul {
+            gap: 0 4px;
+            display: flex;
+            margin-left: 0;
+            flex-wrap: wrap;
+            align-items: center;
+            font: 400 rem(13) / em(16, 13) $body-font-family;
+            li {
+                list-style: none;
+                line-height: inherit;
+                > span {
+                    display: inline-block;
+                    color: rgb($body-font-color, 0.7);
+                    font: 400 rem(13) / em(16, 13) $body-font-family;
+                }
+            }
+        }
+    }
+    &_icon {
+        width: 16px;
+        height: 20px;
+        align-items: center;
+        display: inline-flex;
+        font-size: 14px;
+        justify-content: center;
+        .am-icon-star-filled:before {
+            &:before {
+                color: #fdb022;
+            }
+        }
+    }
+}
+.am-tutorskills-list {
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    li {
+        list-style: none;
+        line-height: inherit;
+        > ul {
+            gap: 0 4px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 6px;
+            margin-left: 22px;
+            align-items: center;
+            li {
+                &:nth-last-child(n + 3) {
+                    & span:after {
+                        content: ',';
+                    }
+                }
+                > span {
+                    display: block;
+                    color: $body-font-color;
+                    font: 500 rem(14) / em(20, 14) $body-font-family;
+                }
+                a {
+                    display: block;
+                    color: $body-font-color;
+                    text-decoration: underline;
+                    font: 500 rem(12) / em(18, 12) $body-font-family;
+                }
+            }
+        }
+        p {
+            margin: 6px 0 0 22px;
+            color: $body-font-color;
+            font: 500 rem(14) / em(20, 14) $body-font-family;
+            a {
+                color: $body-font-color;
+                font: 500 rem(12) / em(18, 12) $body-font-family;
+            }
+        }
+    }
+}
+.am-tooltip-text {
+    & span:not(:last-child):after {
+        content: ',';
+    }
+}
+.am-tutorskills-item {
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    span {
+        display: block;
+        color: $body-font-color;
+        font: 400 rem(14) / em(20, 14) $body-font-family;
+    }
+}
+.wa-tags-list {
+    gap: 0 16px;
+    @extend %flex;
+    align-items: center;
+    margin: 6px 0 0 22px;
+    p {
+        gap: 4px;
+        display: flex;
+        margin: 0 !important;
+        align-items: center;
+        color: $body-font-color;
+        font: 500 rem(14) / em(20, 14) $body-font-family;
+        span {
+            display: flex;
+            padding: 2px 6px;
+            border-radius: 6px;
+            align-items: center;
+            color: $body-font-color;
+            justify-content: center;
+            background-color: #eff8ff;
+            font: 500 rem(12) / em(18, 12) $body-font-family;
+        }
+        .wa-bg-yellow {
+            background: #fef0c7;
+        }
+        .wa-bg-green {
+            background: #ecfdf3;
+        }
+    }
+    ul {
+        gap: 0 6px;
+        display: flex;
+        margin-left: 0;
+        flex-wrap: wrap;
+        align-items: center;
+        li {
+            list-style: none;
+            &:nth-last-child(n + 2) span:after {
+                content: ',';
+            }
+            > span {
+                display: block;
+                color: $body-font-color;
+                font: 500 rem(14) / em(20, 14) $body-font-family;
+                &:has(em){
+                    padding-right: 12px;
+                    &::after{display: none;}
+                }
+            }
+            > a {
+                display: block;
+                color: $body-font-color;
+                text-decoration: underline;
+                font: 500 rem(12) / em(18, 12) $body-font-family;
+            }
+        }
+    }
+}
+.am-tutordetail-btns {
+    gap: 8px;
+    @extend %flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+    > div {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        > a {
+            gap: 8px;
+            display: flex;
+            min-width: 190px;
+            padding: 13px 16px;
+            align-items: center;
+            font: 600 rem(14) / em(20, 14) $heading-font-family;
+            &.am-white-btn {
+                padding: 12px 15px;
+                background: $body-color;
+                border-color: #e9bb71;
+            }
+        }
+    }
+    > span {
+        width: 46px;
+        height: 46px;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+    .am-icon-calender-duration::before {
+        font-size: 14px;
+        color: $clr-white;
+    }
+    .am-icon-chat-03::before {
+        font-size: 14px;
+    }
+    .am-white-btn {
+        i::before {
+            color: $text-light;
+            @extend %transition;
+        }
+        &:hover {
+            color: $clr-white;
+            background: $theme-color;
+            border-color: $theme-color;
+            i::before {
+                color: $clr-white;
+            }
+        }
+    }
+    .am-likebtn {
+        padding: 0;
+        min-width: 46px;
+        max-width: 46px;
+        min-height: 46px;
+        border: 1px solid transparent;
+        .am-icon-heart-01::before {
+            font-size: 14px;
+            @extend %transition;
+        }
+        &:hover,
+        &.active {
+            background: $clr-white;
+            border-color: $border-color;
+            .am-icon-heart-01::before {
+                color: #f04438;
+            }
+        }
+        &.am-loading {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}
+// About Section style start
+.am-aboutuser {
+    &_section {
+        top: 0;
+        z-index: 99;
+        margin-top: 40px;
+        position: sticky;
+        background: $body-color;
+        border-bottom: 3px solid $border-color;
+    }
+    &_tab {
+        gap: 10px;
+        display: flex;
+        list-style: none;
+        li {
+            width: 100%;
+            line-height: inherit;
+            list-style-type: none;
+            &:hover,
+            &.active {
+                a:before {
+                    height: 5px;
+                }
+            }
+            a {
+                gap: 8px;
+                width: 100%;
+                display: flex;
+                text-align: center;
+                padding: 16px 20px;
+                position: relative;
+                align-items: center;
+                color: $body-font-color;
+                justify-content: center;
+                font: 500 rem(15) / em(24, 15) $body-font-family;
+                span {
+                    display: block;
+                    padding: 2px 8px;
+                    border-radius: 9999px;
+                    background: rgba(219, 132, 1, 0.1);
+                    font: 500 rem(12) / em(18, 12) $body-font-family;
+                }
+                &:before {
+                    width: 100%;
+                    height: 0;
+                    content: '';
+                    left: 0;
+                    bottom: -3px;
+                    position: absolute;
+                    @extend %transition;
+                    background: $theme-color;
+                    border-radius: 50px 50px 0 0;
+                }
+            }
+        }
+    }
+}
+
+.am-booking_section {
+    padding: 100px 0;
+    position: relative;
+    background: $clr-white;
+    .am-userinfo_section {
+        padding: 0;
+    }
+    .am-userinfo {
+        &_content {
+            h3 {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .am-detailuser_video {
+        right: 20px;
+        bottom: 20px;
+        z-index: 999;
+        position: fixed;
+        max-width: 200px;
+        @extend %transition;
+        display: block !important;
+        transform: translateX(120%);
+        &[style*='display: block;'] {
+            transform: translateX(0%);
+        }
+        .video-js {
+            position: relative;
+            border-radius: 14px;
+        }
+        &_close {
+            top: -8px;
+            right: -8px;
+            width: 24px;
+            height: 24px;
+            z-index: 999;
+            cursor: pointer;
+            border-radius: 50%;
+            position: absolute;
+            background: $clr-white;
+        }
+    }
+}
+.am-weekly-slots_card {
+    @extend %transition;
+    &:hover {
+        .am-bookingbtns {
+            opacity: 1;
+            height: auto;
+            margin-top: 5px;
+            visibility: visible;
+        }
+    }
+}
+.am-bookcartopen {
+    top: 60px !important;
+    right: 40px !important;
+    display: block !important;
+    position: fixed !important;
+    opacity: 1;
+    visibility: visible;
+}
+.am-weekly-slots_card,
+.am-emptyslot {
+    gap: 10px;
+    width: 168px;
+    padding: 10px;
+    display: flex;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 10px;
+    border-radius: 8px;
+    flex-direction: column;
+    background: $auth-bg;
+    color: rgba($dark-black, 0.4);
+}
+.am-emptyslot {
+    padding: 12px 22px;
+    border-radius: 8px;
+    color: rgba($heading-color, 0.4);
+    font: 400 rem(12) / em(14, 12) $heading-font-family;
+}
+// .tab-content:has(div.am-booking-mobile .am-emptyslot) .tab-content + .am-view_schedule-wrap{
+//     display: none;
+// }
+.am-bookingbtns {
+    height: 0;
+    opacity: 0;
+    @extend %flex;
+    @extend %transition;
+    visibility: hidden;
+    button {
+        margin: 0;
+        width: 100%;
+        & + button {
+            margin-top: 4px;
+        }
+    }
+    .am-booksession {
+        gap: 10px;
+        display: flex;
+        padding: 5px 12px;
+        border-radius: 6px;
+        align-items: center;
+        color: $input-br-hover;
+        justify-content: center;
+        background: rgba(41, 92, 81, 0.1);
+        font: 500 rem(12) / em(18, 12) $body-font-family;
+    }
+    .am-viewdetail {
+        gap: 10px;
+        display: flex;
+        background: $clr-white;
+        align-items: center;
+        padding: 4px 11px;
+        border-radius: 6px;
+        justify-content: center;
+        color: $body-font-color;
+        border: 1px solid $border-color;
+        font: 500 rem(12) / em(18, 12) $body-font-family;
+    }
+}
+.am-tooltipicon {
+    right: 38px;
+    position: absolute;
+    i::before {
+        font-size: 14px;
+    }
+}
+.am-userinfo {
+    &_section {
+        padding: 40px 0;
+    }
+    &_content {
+        padding: 0 30px;
+        .am-filter-list {
+            right: 0 !important;
+            top: 100% !important;
+            left: auto !important;
+            transform: none !important;
+            margin-top: 10px !important;
+            .form-group {
+                padding: 8px;
+                .am-btn {
+                    margin: 0;
+                }
+            }
+        }
+        .am-booking-filter-wrapper {
+            position: relative;
+            .select2-container {
+                width: 100% !important;
+            }
+            .select2-container--open .select2-dropdown--below {
+                padding: 8px 10px;
+            }
+            .am-subject-tag {
+                margin: 0;
+                text-decoration: none;
+                padding: 3px 9px !important;
+                font: 500 rem(12) / em(18, 12) $body-font-family;
+            }
+            .am-multiple-select
+                .select2-selection--multiple
+                .select2-search.select2-search--inline
+                .select2-search__field {
+                margin: 11px 0 0;
+                line-height: 20px;
+            }
+            .select2-selection--single {
+                background: $formbg !important;
+                border-color: $formbg !important;
+            }
+            .select2-container
+                .select2-selection--single
+                .select2-selection__rendered {
+                color: rgba($body-font-color, 0.6);
+                padding: 9px 30px 9px 12px;
+            }
+        }
+        .am-booksession-title {
+            @extend %flex;
+            align-items: center;
+            justify-content: space-between;
+            .am-btn {
+                border-radius: 8px;
+                background: $btn-secondary;
+                padding: 8px 12px 8px 14px;
+                &.am-btn_disable {
+                    color: $clr-white !important;
+                    &::after {
+                        border-color: $clr-white !important;
+                        border-top-color: rgba($text-light, 0.1) !important;
+                    }
+                }
+            }
+        }
+        .am-requestsessionpopup {
+            .am-modal-header {
+                h2 {
+                    opacity: 0.7;
+                }
+                span i::before {
+                    font-weight: 600;
+                    color: $btn-color;
+                }
+            }
+            .am-booking-tabs {
+                padding: 10px;
+                margin-bottom: 17px;
+                border-radius: 10px;
+                justify-content: center;
+                background: rgba(219, 132, 1, 0.05);
+                li {
+                    width: 50%;
+                    list-style: none;
+                    button {
+                        width: 100%;
+                        padding: 7px 12px;
+                        border-radius: 10px;
+                        color: $body-font-color;
+                        background: transparent;
+                        font: 500 rem(14) / em(20, 14) $body-font-family;
+                        &.active {
+                            background: $clr-white;
+                            box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.1),
+                                0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+                        }
+                    }
+                }
+            }
+            .form-group {
+                textarea {
+                    width: 100%;
+                    min-height: 126px;
+                    padding: 10px 12px;
+                    border-radius: 10px;
+                    background: $formbg;
+                    border: 1px solid $formbg;
+                    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                    &::placeholder {
+                        color: rgba($body-font-color, 0.6);
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                &.am-invalid {
+                    textarea {
+                        border-color: #f04438;
+                    }
+                }
+            }
+            .am-btn {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+        h3 {
+            margin: 0 0 10px;
+            color: $heading-color;
+            font: 500 rem(24) / em(32, 24) $body-font-family;
+        }
+        p {
+            margin: 0;
+            color: $body-font-color;
+            font: 400 rem(16) / em(24, 16) $body-font-family;
+            & + p,
+            & p {
+                margin: 10px 0 0;
+            }
+        }
+        > a {
+            display: block;
+            margin: 10px 0 0;
+            color: $body-font-color;
+            text-decoration: underline;
+            font: 500 rem(14) / em(20, 14) $body-font-family;
+        }
+        .am-booking-calander {
+            overflow: visible;
+            min-height: inherit;
+            &_header {
+                padding: 20px 0;
+                .am-booking-dates-slot {
+                    width: 100%;
+                    max-width: 400px;
+                    .am-booking-calander-date {
+                        width: 100%;
+                        max-width: 300px;
+                    }
+                }
+            }
+            .am-booking-filter-slot {
+                gap: 10px;
+                display: flex;
+                align-items: center;
+                .am-booking-filter {
+                    margin-top: 0;
+                    display: flex;
+                    text-decoration: none;
+                    background: $clr-white;
+                }
+                .select2-selection--single {
+                    background: $clr-white;
+                    border-color: $border-color;
+                    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+                }
+                .select2-container--default
+                    .select2-selection--multiple
+                    .select2-selection__clear {
+                    display: none;
+                }
+                .am-custom-tooltip {
+                    padding: 0;
+                    top: 13px;
+                    height: 16px;
+                    position: absolute;
+                }
+            }
+            .am-booking-calander-day,
+            .am-booking-calander-date {
+                gap: 6px;
+                background: $auth-bg;
+                a {
+                    margin: 0;
+                    text-decoration: none;
+                    color: $body-font-color;
+                    font: 600 rem(14) / em(20, 14) $body-font-family;
+                }
+                input {
+                    background: $auth-bg;
+                    padding-right: 42px;
+                }
+            }
+            .am-view_schedule-wrap {
+                display: flex;
+                margin-top: 20px;
+                align-items: center;
+                justify-content: center;
+                .am-view_schedule {
+                    background: $clr-white;
+                    border-color: #e9bb71;
+                    color: rgba($dark-black, 0.6);
+                    &:hover {
+                        color: $clr-white;
+                        border-color: $theme-color;
+                        background: $theme-color;
+                    }
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .tab-pane {
+            display: flex;
+            position: relative;
+            &_leftarrow {
+                top: 16px;
+                margin: 0;
+                width: 36px;
+                left: -46px;
+                height: 36px;
+                display: flex;
+                position: absolute;
+                align-items: center;
+                border-radius: 10px;
+                background: $auth-bg;
+                text-decoration: none;
+                justify-content: center;
+                i::before {
+                    font-size: 12px;
+                    color: $text-light;
+                }
+                &[disabled] {
+                    pointer-events: none;
+                    background: $clr-white;
+                    i::before {
+                        color: rgba($color: $text-light, $alpha: 0.4);
+                    }
+                }
+            }
+            &_rightarrow {
+                top: 16px;
+                margin: 0;
+                width: 36px;
+                right: -46px;
+                height: 36px;
+                display: flex;
+                position: absolute;
+                align-items: center;
+                border-radius: 10px;
+                background: $auth-bg;
+                text-decoration: none;
+                justify-content: center;
+                i::before {
+                    font-size: 12px;
+                }
+            }
+            .am-booking-weekly-clander {
+                thead {
+                    tr {
+                        th {
+                            border: 0;
+                            padding: 0 5px;
+                            > a {
+                                cursor: default;
+                                pointer-events: none;
+                            }
+                            .am-booking-calander-title {
+                                padding: 16px 5px;
+                                border-radius: 10px;
+                                pointer-events: none;
+                                span {
+                                    margin-top: -2px;
+                                }
+                            }
+                            &.active {
+                                .am-booking-calander-title {
+                                    background: $auth-bg;
+                                }
+                            }
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            border: 0;
+                            padding: 10px 5px;
+                            vertical-align: top;
+                        }
+                    }
+                }
+                .am-weekly-slots {
+                    border: 0;
+                    padding: 0;
+                    gap: 10px;
+                    display: flex;
+                    font-size: 12px;
+                    border-radius: 10px;
+                    flex-direction: column;
+                    &_card {
+                        padding: 10px;
+                        @extend %transition;
+                        overflow: hidden;
+                        position: relative;
+                        border-radius: 10px;
+                        border: 1px solid transparent;
+                        background: rgba(219, 132, 1, 0.05);
+                        h6 {
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            color: rgb($body-font-color, 0.9);
+                            font: 400 rem(11) / em(13, 11) $body-font-family;
+                            .am-closepopup {
+                                width: auto;
+                                height: auto;
+                                margin-left: auto;
+                            }
+                        }
+                        h5 {
+                            margin: 2px 0 0 0;
+                            color: rgba($heading-color, 0.7);
+                            font: 500 rem(12) / em(18, 12) $body-font-family;
+                        }
+                        &::before {
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 2px;
+                            content: '';
+                            position: absolute;
+                            background: #fda29b;
+                        }
+                        &:hover {
+                            background: $clr-white;
+                            border: 1px solid $border-color;
+                            box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+                                0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+                        }
+                        &.am-slot-selected{
+                            &::before{
+                                background: transparent;
+                            }
+                        }
+                    }
+                    &_info {
+                        margin-top: 5px;
+                        span {
+                            gap: 7px;
+                            display: flex;
+                            padding: 5px 0;
+                            align-items: center;
+                            color: rgba($color: $heading-color, $alpha: 0.8);
+                            font: 400 rem(12) / em(14, 12) $body-font-family;
+                            em {
+                                color: rgba($color: $heading-color, $alpha: 0.8);
+                                font: normal 400 rem(10) / em(14, 10)
+                                    $body-font-family;
+                            }
+                            .am-discounted-price{
+                                gap: 2px;
+                                flex: none;
+                                align-items: center;
+                                display: inline-flex;
+                                letter-spacing: normal;
+                                color: rgba($color: $heading-color, $alpha: 0.8);
+                                font: 400 rem(12) / em(14, 12) $body-font-family;
+                                strike{
+                                    opacity: 0.9;
+                                    font-weight: 300;
+                                    color: #F04438;
+                                    letter-spacing: normal;
+                                }
+                            }
+                            .am-nondiscounted-session{
+                                em{font-size: 12px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .full-description,
+        .short-description {
+            a {
+                display: block;
+                margin: 10px 0 0;
+                color: $body-font-color;
+                text-decoration: underline;
+                font: 600 rem(14) / em(20, 14) $body-font-family;
+            }
+        }
+    }
+}
+.am-tutordetail_user_badge{
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    list-style: none;
+    align-items: center;
+    & > div{
+        list-style-type: none;
+        figure{
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            display: block;
+            border-radius: 50%;
+            img{
+                width: 20px;
+                height: 20px;
+                max-height: 20px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.am-user_badge{
+    gap: 6px;
+    margin-left: 22px;
+    .am-custom-tooltip{
+        padding: 0;
+        .am-tooltip-text{
+            max-width: fit-content;
+            white-space: nowrap;
+        }
+        figure{
+            width: 24px;
+            height: 24px;
+            img{
+                width: 24px;
+                height: 24px;
+                max-height: 24px;
+            }
+        }
+    }
+}
+.am-userinfomore {
+    &_wrap {
+        padding: 40px 30px;
+    }
+    &_tab {
+        margin: 0 0 40px;
+        &.nav-tabs {
+            gap: 10px;
+            border: 0;
+        }
+        .nav-link {
+            border: 0;
+            padding: 10px 20px;
+            border-radius: $radius;
+            color: $body-font-color;
+            font: 500 rem(15) / em(24, 15) $body-font-family;
+            &.active {
+                color: $body-font-color;
+                background: rgba(219, 132, 1, 0.05);
+            }
+        }
+    }
+    &_title {
+        margin: 0 0 30px;
+        h3 {
+            margin: 0;
+            color: $heading-color;
+            font: 600 rem(24) / em(32, 24) $body-font-family;
+        }
+    }
+    &_cards {
+        @extend %flex;
+        margin: 0 -15px;
+    }
+    &_card {
+        gap: 10px;
+        width: 100%;
+        max-width: 50%;
+        padding: 0 15px;
+        display: flex;
+        align-items: flex-start;
+        &_img {
+            margin: 0;
+            width: 100%;
+            max-width: 90px;
+            img {
+                width: 100%;
+                max-width: 90px;
+                display: block;
+                border-radius: $radius;
+            }
+        }
+        &:nth-last-child(n + 3) {
+            & .am-userinfomore_card_info {
+                border-bottom: 1px solid $border-color;
+            }
+        }
+        &:nth-child(n + 3) {
+            padding-top: 30px;
+        }
+        & > span {
+            flex: none;
+            display: block;
+            padding: 4px 0;
+            min-width: 120px;
+            color: $body-font-color;
+            font: 600 rem(14) / em(20, 14) $body-font-family;
+        }
+        &_info {
+            padding-bottom: 30px;
+            .am-description {
+                p + p {
+                    margin-top: 20px;
+                }
+            }
+            h4 {
+                margin: 0 0 4px;
+                color: $body-font-color;
+                font: 500 rem(18) / em(28, 18) $body-font-family;
+            }
+            ul {
+                gap: 6px 16px;
+                padding: 0;
+                @extend %flex;
+                margin: 0 0 16px;
+                list-style: none;
+                align-items: center;
+                li {
+                    gap: 5px;
+                    display: flex;
+                    align-items: center;
+                    color: $body-font-color;
+                    font: 400 rem(13) / em(18, 13) $body-font-family;
+                    i::before {
+                        font-size: 14px;
+                    }
+                }
+            }
+            p {
+                margin: 0;
+                font: 400 rem(14) / em(20, 14) $body-font-family;
+            }
+            .full-description,
+            .short-description {
+                color: $body-font-color;
+                font: 400 rem(14) / em(20, 14) $body-font-family;
+                a {
+                    display: block;
+                    margin: 10px 0 0 0;
+                    color: $body-font-color;
+                    text-decoration: underline;
+                    font: 600 rem(14) / em(20, 14) $body-font-family;
+                }
+            }
+        }
+    }
+}
+.am-reviews {
+    &_section {
+        padding: 0 0 80px;
+        &_wrap {
+            padding: 40px 0 0;
+            position: relative;
+            &:after {
+                top: 0;
+                left: 0;
+                content: '';
+                height: 3px;
+                width: 100%;
+                position: absolute;
+                background: $clr-white;
+                border-top: 1px solid #f5e2c8;
+            }
+        }
+    }
+    &_title {
+        padding: 0 30px;
+        margin: 0 0 30px;
+        h3 {
+            margin: 0;
+            color: $heading-color;
+            font: 600 rem(24) / em(32, 24) $body-font-family;
+        }
+    }
+    &_wrap {
+        gap: 30px;
+        display: flex;
+        padding: 0 30px;
+        align-items: flex-start;
+        .am-norecord {
+            height: 388px;
+        }
+    }
+    &_sidebar {
+        top: 60px;
+        width: 100%;
+        flex: none;
+        max-width: 386px;
+        border-radius: 20px;
+        position: sticky;
+        padding: 24px 24px 34px 24px;
+        background: rgba(219, 132, 1, 0.05);
+        &_head {
+            gap: 14px;
+            display: flex;
+            margin: 0 0 20px;
+            padding: 0 0 20px;
+            position: relative;
+            align-items: center;
+            &:after {
+                left: 0;
+                bottom: 0;
+                content: '';
+                height: 3px;
+                width: 100%;
+                position: absolute;
+                background: $clr-white;
+                border-top: 1px solid #f5e2c8;
+            }
+            strong {
+                color: $heading-color;
+                font: 600 rem(48) / em(60, 48) $body-font-family;
+            }
+        }
+        &_stars {
+            & > span {
+                gap: 4px;
+                display: flex;
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            & > em {
+                margin-top: 6px;
+                display: block;
+                color: rgba($color: $heading-color, $alpha: 0.7);
+                font: normal 400 rem(14) / em(20, 14) $body-font-family;
+                & em {
+                    font: normal 500 rem(14) / em(20, 14) $body-font-family;
+                    color: rgba($color: $heading-color, $alpha: 0.8);
+                }
+            }
+        }
+    }
+    &_ratio {
+        margin: 0;
+        padding: 0;
+        @extend %flex;
+        list-style: none;
+        li {
+            width: 100%;
+            line-height: inherit;
+            list-style-type: none;
+            & + li {
+                margin-top: 20px;
+            }
+        }
+        &_title {
+            gap: 10px;
+            display: flex;
+            margin: 0 0 6px;
+            align-items: center;
+            span {
+                display: block;
+                color: $body-font-color;
+                font: 500 rem(14) / em(20, 14) $body-font-family;
+            }
+            em {
+                margin-left: auto;
+                color: rgba($heading-color, 0.7);
+                font: 400 rem(12) / em(20, 14) $body-font-family;
+            }
+        }
+    }
+}
+.am-progressbar {
+    height: 4px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: $radius;
+    background: rgba(219, 132, 1, 0.1);
+    span {
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        background: #079455;
+        border-radius: $radius;
+    }
+}
+.am-comments {
+    flex: auto;
+    .am-pagination {
+        margin-top: 30px;
+        & > .am-pagination {
+            padding: 0;
+            margin-top: 0;
+        }
+    }
+    &_list {
+        list-style: none;
+        li {
+            gap: 10px;
+            display: flex;
+            align-items: flex-start;
+            list-style-type: none;
+            & + li {
+                padding-top: 30px;
+            }
+            &:not(:last-child) {
+                .am-comment {
+                    border-bottom: 1px solid $border-color;
+                }
+            }
+        }
+    }
+    &_user {
+        flex: none;
+        gap: 10px;
+        width: 100%;
+        display: flex;
+        max-width: 202px;
+        align-items: center;
+        &_name {
+            h4 {
+                gap: 6px;
+                margin: 0;
+                display: flex;
+                align-items: center;
+                color: $heading-color;
+                font: 500 rem(16) / em(24, 16) $body-font-family;
+                img {
+                    max-width: 16px;
+                    border-radius: 4px;
+                }
+                .flag {
+                    height: 13px;
+                    max-width: 18.67px;
+                }
+            }
+            span {
+                display: block;
+                font: 400 rem(12) / em(18, 12) $body-font-family;
+            }
+        }
+    }
+    &_img {
+        margin: 0;
+        width: 100%;
+        max-width: 42px;
+        img {
+            width: 100%;
+            display: block;
+            max-width: 42px;
+            border-radius: 6px;
+        }
+    }
+}
+.am-comment {
+    flex: auto;
+    padding-bottom: 30px;
+    &_rate {
+        margin: 0 0 10px;
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        &_stars {
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            svg {
+                width: 14px;
+                height: 14px;
+            }
+        }
+        span {
+            color: rgba($color: $heading-color, $alpha: 0.7);
+            font: normal 400 rem(14) / em(20, 14) $body-font-family;
+            em {
+                font-weight: 500;
+                font-style: normal;
+                color: rgba($color: $heading-color, $alpha: 1);
+            }
+        }
+    }
+    p {
+        margin: 0;
+        font: 400 rem(14) / em(20, 14) $body-font-family;
+        a {
+            display: block;
+            margin: 10px 0 0;
+            color: $body-font-color;
+            text-decoration: underline;
+            font: 600 rem(14) / em(20, 14) $body-font-family;
+        }
+    }
+}
+
+// About Section style end
+// Booking Section style stat
+.am-booksession {
+    margin-top: 40px;
+    background: $clr-white;
+    &_wrap {
+        padding: 0 30px;
+    }
+    &_date {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: space-between;
+        .am-select-date {
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            span {
+                display: block;
+                padding: 10px 16px;
+                border-radius: 8px;
+                background: $auth-bg;
+                color: $body-font-color;
+                font: 600 rem(14) / em(20) $body-font-family;
+            }
+        }
+    }
+}
+// Similar Tutor style stat
+.am-similar-tutor {
+    padding: 80px 0;
+    position: relative;
+    &:after {
+        top: 0;
+        left: 0;
+        content: '';
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: $clr-white;
+        border-top: 1px solid #f5e2c8;
+    }
+}
+.am-similaruser-list {
+    padding: 0;
+    margin: -12px;
+    display: flex;
+    flex-wrap: wrap;
+    > li {
+        padding: 12px;
+        list-style: none;
+    }
+}
+.am-similaruser-btn {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    .am-white-btn {
+        background: $clr-white;
+        border-color: #e9bb71;
+        color: rgba($dark_black, 0.6);
+        &::before {
+            display: none;
+        }
+        &:hover {
+            color: $clr-white;
+            background: $btn-color;
+            border-color: $btn-color;
+        }
+    }
+}
+.am-similar-user {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    @extend %transition;
+    max-width: 306px;
+    border-radius: 14px;
+    flex-direction: column;
+    background: $clr-white;
+    &:hover {
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+            0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+        .am-sendmessage-btn {
+            .am-btn {
+                color: $clr-white;
+                background: $theme-color;
+                border: 1px solid $theme-color;
+                i::before {
+                    color: $clr-white;
+                }
+            }
+        }
+    }
+    .am-tutordetail_user {
+        gap: 10px;
+        figure {
+            max-width: 40px;
+            img {
+                height: 40px;
+                border-radius: 6px;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
+    .am-tutordetail_user_name {
+        h3 {
+            font: 500 rem(16) / em(24) $body-font-family;
+            img {
+                max-width: 20px;
+            }
+        }
+        > span {
+            gap: 0 4px;
+            flex-wrap: wrap;
+            overflow: hidden;
+            max-width: 216px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            font: 400 rem(13) / em(16, 13) $body-font-family;
+        }
+    }
+    .am-tutorreviews-list {
+        gap: 10px;
+        margin: 20px 0;
+    }
+    .am-tutorreview-item {
+        span {
+            font-size: 13px;
+            em {
+                color: rgb($body-font-color, 0.7);
+                font: 400 rem(13) / em(16, 13) $body-font-family;
+            }
+        }
+        .am-more {
+            padding: 2px 4px;
+        }
+        .am-tooltip-text {
+            flex-wrap: wrap;
+            display: flex !important;
+            span {
+                gap: 0;
+            }
+        }
+    }
+}
+/**--- Custom Tooltip Start ---**/
+.am-custom-tooltip {
+    padding: 4px;
+    cursor: pointer;
+    color: $clr-white;
+    position: relative;
+    transition: all 0.2s;
+    color: rgba($body-font-color, 1);
+    font: 400 rem(13) / em(16, 13) $body-font-family;
+    &:hover {
+        .am-tooltip-text {
+            opacity: 1;
+            bottom: 30px;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+}
+.am-tooltip-text {
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    width: 250px;
+    padding: 12px;
+    max-height: 96px;
+    position: absolute;
+    border-radius: 10px;
+    transition: all 0.3s;
+    pointer-events: none;
+    background: #182230;
+    // line-clamp: 4 !important;
+    transform: translateX(-50%);
+    -webkit-box-orient: vertical;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    color: rgba($clr-white, 0.8) !important;
+    font: 500 rem(12) / em(18, 12) $body-font-family !important;
+    box-shadow: 4px 8px 48px -8px rgba(99, 115, 146, 0.12);
+    &::before {
+        left: 50%;
+        content: '';
+        width: 0.6em;
+        height: 0.6em;
+        bottom: -0.2em;
+        position: absolute;
+        background: #182230;
+        transform: translate(-50%) rotate(45deg);
+    }
+    span {
+        color: rgba($clr-white, 0.8) !important;
+    }
+}
+/**--- Custom Tooltip End ---**/
+.am-similaruser-btns {
+    margin-top: auto;
+    .am-sendmessage-btn {
+        > div {
+            gap: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .am-btn {
+            width: 100%;
+            padding: 9px 15px;
+            border: 1px solid $theme-color;
+            color: $clr-white;
+            i::before {
+                font-size: 14px;
+                color: $clr-white;
+                @extend %transition;
+            }
+        }
+        .am-white-btn {
+            flex: auto;
+            padding: 9px 15px;
+            border-color: $formbg;
+            color: $body-font-color;
+            background-color: $formbg;
+            i::before {
+                font-size: 14px;
+            }
+        }
+        .am-likebtn {
+            @extend %transition;
+            border: 1px solid transparent;
+            i::before {
+                font-size: 16px;
+                @extend %transition;
+            }
+            &:hover,
+            &.active {
+                background: $clr-white;
+                border-color: $border-color;
+                i::before {
+                    color: #f04438;
+                }
+            }
+        }
+    }
+}
+.am-allsimilaruser-btn {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    .am-white-btn {
+        border-color: #e9bb71;
+    }
+}
+.am-slot-selected {
+    background: $clr-white !important;
+    border: 1px solid $border-color !important;
+    box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1),
+        0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    .am-bookingbtns {
+        opacity: 1;
+        height: auto;
+        margin-top: 5px;
+        visibility: visible;
+    }
+}
+.am-slot-pending:before {
+    background: #53b1fd !important;
+}
+.am-slot-warning:before {
+    background: #fda29b !important;
+}
+.am-slot-ready:before {
+    background: #fec84b !important;
+}
+.am-slot-success:before {
+    background: #75e0a7 !important;
+}
+.am-session-detail-modal_two {
+    .am-session-detail {
+        width: 100%;
+        min-height: auto;
+    }
+}
+.am-howtobook {
+    right: 30px;
+    z-index: 99;
+    bottom: 100px;
+    position: fixed;
+    & > a {
+        gap: 8px;
+        display: flex;
+        padding: 0;
+        width: 42px;
+        height: 42px;
+        padding: 12px 16px;
+        border-radius: 50%;
+        align-items: center;
+        background: $btn-color;
+        justify-content: center;
+        // box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+        i::before {
+            font-size: 14px;
+            color: $clr-white;
+        }
+        span {
+            display: block;
+            color: $clr-white;
+            font: 600 rem(14) / em(20, 14) $heading-font-family;
+        }
+    }
+    &_popup {
+        right: 0;
+        z-index: 99;
+        bottom: 100%;
+        width: 340px;
+        display: none;
+        overflow: hidden;
+        position: absolute;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: $clr-white;
+        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+            0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+    }
+    &_img {
+        margin: 0;
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+        }
+    }
+    &_content {
+        padding: 20px;
+    }
+    &_info {
+        & + .am-howtobook_info {
+            margin-top: 14px;
+        }
+        h3 {
+            margin: 0 0 8px;
+            color: $heading-color;
+            font: 400 rem(13) / em(18, 13) $body-font-family;
+        }
+        ol {
+            margin: 0;
+            font: 400 rem(12) / em(14, 12) $body-font-family;
+            li {
+                line-height: inherit;
+                &::marker{color: $body-font-color;}
+                & + li {
+                    margin-top: 7px;
+                }
+                span {
+                    display: block;
+                    color: $body-font-color;
+                    strong {
+                        font-weight: 500;
+                    }
+                    a {
+                        font-style: italic;
+                        color: $body-font-color;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &_close {
+        top: 10px;
+        right: 10px;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        i::before {
+            font-size: 16px;
+            color: $input-br-hover;
+        }
+    }
+}
+.am-booksession-details {
+    width: 100%;
+    height: 640px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    .am-weekly-slots_card {
+        gap: 0;
+        width: 167.2px;
+        text-align: left;
+        &:hover .am-bookingbtns {
+            margin-top: 5px;
+        }
+    }
+    .am-booking-weekly-clander {
+        thead {
+            top: 0;
+            z-index: 1;
+            position: sticky;
+            background: $clr-white;
+        }
+    }
+}
+.am-userinfo_content .tab-pane .am-booking-weekly-clander.am-booking-mobile {
+    .am-weekly-slots {
+        width: 100%;
+    }
+    & .am-weekly-slots_card {
+        padding: 16px 20px;
+        gap: 0;
+    }
+    .am-weekly-slots_info {
+        @extend %flex;
+        gap: 0 20px;
+    }
+}
+.am-booking-mobile {
+    @media (min-width: 992px) {
+        display: none;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    .am-bookingbtns {
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        margin-top: 5px;
+    }
+    .am-weekly-slots_card,
+    .am-emptyslot {
+        width: 100%;
+    }
+    .am-bookingbtns {
+        gap: 16px;
+        flex-wrap: nowrap;
+        button {
+            width: 100%;
+            flex: auto;
+            margin: 0;
+        }
+    }
+}
+.am-filter-list
+    .am-multiple-select
+    .select2-selection--multiple
+    .select2-search.select2-search--inline
+    .select2-search__field::placeholder {
+    color: $body-font-color !important;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "amentotech/laravel-installer",
+  "description": "Laravel web installer",
+  "license": "MIT",
+  "type": "library",
+  "version": "11.0.0",
+  "authors": [
+    {
+      "name": "Ajay Kumar Choudhary",
+      "email": "ajay@froiden.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Froiden\\LaravelInstaller\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "minimum-stability": "dev"
+}

@@ -1,0 +1,411 @@
+/** ====== login page style ====== **/
+.am-mobile-logo{
+    display: none;
+    width: 150px;
+    height: 34px;
+    a{
+        display: block;
+        img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.am-main-login{
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    background: $clr-white;
+}
+.am-auth-page{
+    width: 50%;
+    padding: 30px;
+    background-color: $auth-bg;
+}
+.am-learning_video.am-auth-video{
+    height: 511px;
+    width: 441.668px;
+    background-color: rgba($clr-white, 0.1);
+    backdrop-filter: blur(65.90787506103516px);
+    iframe,
+    .video-js {
+        height: 373px;
+        border-radius: 10px;
+    }
+    .am-learning_video_tag_talent{
+        width: 90px;
+        height: 90px;
+    }
+    &::after{
+        left: -0;
+    }
+}
+.am-login-left{
+    gap: 70px;
+    height: 100%;
+    display: flex;
+    padding: 60px 100px;
+    border-radius: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: $theme-color url('../images/login/bg-pattran.png') no-repeat;
+    background-size: cover;
+    figure{
+        margin: 0;
+    }
+    &_title{
+        text-align: center;
+        h2{
+            color: $clr-white;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            font: 500 rem(30)/em(38,30) $heading-font-family;
+        }
+        span{
+            letter-spacing: 1px;
+            color: rgba($clr-white, 0.80);
+            font: 400 rem(24)/em(32,24) $heading-font-family;
+        }
+    }
+}
+.am-login-right{
+    width: 50%;
+    display: flex;
+    padding: 50px 30px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $auth-bg;
+    &_title{
+        text-align: center;
+        h2{
+            margin-bottom: 0;
+            color: $theme_color;
+            letter-spacing: 1.5px;
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 32px;
+            margin: 7px 0 0 0;
+            letter-spacing: 1.5px;
+        }
+    }
+    p.am-description{
+        font-size: 20px;
+        max-width: 626px;
+        font-weight: 400;
+        margin: 7px 0 0 0;
+        line-height: 30px;
+        text-align: center;
+        color: $body-font-color;
+        font-family: $body-font-family;
+    }
+    p.am-description + p.am-description{
+        margin-top: 20px;
+    }
+    &_btns{
+        gap: 24px;
+        width: 100%;
+        display: flex;
+        max-width: 400px;
+        margin-top: 40px;
+        align-items: center;
+        flex-direction: column;
+        .am-btn,
+        .am-white-btn{
+            width: 100%;
+        }
+    }
+}
+.am-login-form{
+    .form-group-wrap {
+        width: 100%;
+        max-width: 436px;
+        margin-top: 30px;
+    }
+    .form-group{
+        button,
+        > a{
+            width: 100%;
+        }
+    }
+    .am-terms-check{
+        a{
+            color: $body-font-color;
+            text-decoration: underline;
+            &:hover{
+                color: $theme_color;
+            }
+        }
+    }
+}
+.am-optioanl-or{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+    span{
+        @extend %h6;
+        background-color: $clr-white;
+        position: relative;
+        padding: 0 10px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        width: 100%;
+        background-color: $lighter;
+    }
+}
+.am-btn-signup{
+    border : 1.5px solid $lighter;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %h6;
+    img{
+        padding-right: 10px;
+    }
+    &:hover,
+    &:focus{
+        background-color: $clr-white;
+    }
+}
+.am-lost-password{
+    align-items: center;
+    justify-content: space-between;
+    a{
+        width: auto !important;
+        color: $theme_color;
+        @extend %transition;
+        text-decoration: underline;
+        &:hover{
+            color: $theme_color;
+        }
+    }
+}
+.am-signup-check{
+    padding: 10px 0 0;
+    // &.am-checkbox label:after{
+    //     top: 10px;
+    // }
+}
+.am-login-form{
+    fieldset{
+        margin: 0;
+    }
+    .form-control{
+        border-radius: 10px;
+        border: 1px solid $border-color;
+        background-color: $clr-white !important;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+    .am-invalid .form-control{
+        border-color: #F04438;
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    }
+    .form-group-wrap{
+        margin-top: 50px;
+    }
+    .form-group,
+    .form-group-half{
+        padding: 0 0 24px;
+    }
+    .am-form-group-row   {
+        gap: 10px;
+        flex: auto;
+        display: flex;
+    }
+}
+.am-form-groupradio{
+    gap: 36px;
+    label{
+        margin-bottom: 0;
+    }
+}
+.am-selectrole{
+    gap: 23px;
+    display: flex;
+    align-items: center;
+}
+.am-already-account{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 12px;
+    line-height: 20px;
+    color: $body-font-color;
+    font-family: $heading-font-family;
+    a{
+        color: $theme-color;
+        text-decoration-line: underline;
+    }
+}
+.am-passwordfield{
+    display: flex;
+    align-items: center;
+    .form-control{
+        padding-right: 30px;
+        &[type="word"]{
+            & + i{
+                &:before{content: "\e9f7";}
+            }
+        }
+    }
+    i{
+        right: 12px;
+        cursor: pointer;
+        position: absolute;
+    }
+}
+.am-login-options{
+    gap: 8px;
+    @extend %flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    em{
+        width: 100%;
+        display: block;
+        margin-bottom: 8px;
+        font: 400 rem(14)/em(20,14) $heading-font-family;
+    }
+    .am-btn{
+        padding: 9px 20px;
+        min-width: 110px;
+        background: $btn-white;
+        width: auto !important;
+        border: 1px solid $border-color;
+        color: rgba($color: $body-font-color, $alpha: 0.8);
+        font: 500 rem(14)/em(20,14) $heading-font-family;
+        &:hover,
+        &:focus{
+            color: $btn-white;
+            background: $btn-color;
+            border-color: $btn-color;
+        }
+    }
+    .am-already-account{
+        width: 100%;
+        margin-top: 16px;
+    }
+}
+.am-signinoption{
+    width: 100%;
+    max-width: 436px;
+     &_br{
+        width: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 40px 0;
+        z-index: 1;
+        &:before{
+            z-index: -1;
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            background: $border-color;
+            content: '';
+        }
+        & em{
+            display: inline-block;
+            color: $body-font-color;
+            background: $auth-bg;
+            padding: 0 10px;
+            font: normal 500 rem(14)/em(20,14) $heading-font-family;
+        }
+    }
+    &_btn{
+        gap: 8px;
+        display: flex;
+        padding: 10px 12px;
+        background: #FFF;
+        align-items: center;
+        border-radius: $radius;
+        color: $body-font-color;
+        justify-content: center;
+        font: 400 rem(16)/em(24,16) $heading-font-family;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        &:hover{
+            color: $body-font-color;
+        }
+    }
+}
+.am-cookies-note-wrap{
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    bottom: -100px;
+    position: fixed;
+    padding: 0 30px;
+    transition: bottom 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+    &.show{
+        opacity: 1;
+        bottom: 20px;
+    }
+}
+.am-cookies-note{
+    gap: 14px;
+    width: 100%;
+    padding: 20px;
+    @extend %flex;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $theme-color;
+    &_content{
+        gap: 14px;
+        display: flex;
+        align-items: flex-start;
+        img{
+            flex: none;
+            width: 34px;
+            height: 34px;
+        }
+    }
+    &_msg{
+        gap: 4px;
+        display: flex;
+        flex-direction: column;
+        span{
+            display: block;
+            color: $clr-white;
+            font: 500 rem(12)/em(15,12) $body-font-family;
+        }
+    }
+    &_btn{
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .am-btn,
+        .am-secondary-btn{
+            padding: 7px 10px;
+            background: $btn-white;
+            color: $btnhover-color;
+            border: 1px solid $clr-white;
+            font: 500 rem(13)/em(20,13) $body-font-family;
+            &:hover,
+            &:focus{
+                color: $btn-white;
+                background: $btn-color;
+                border-color: $btn-color;
+            }
+        }
+        .am-secondary-btn{
+            color: $clr-white;
+            background: $btn-secondary;
+            border: 1px solid $btn-secondary;
+        }
+    }
+}

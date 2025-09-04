@@ -1,0 +1,127 @@
+.am-banner-potential.am-banner-content-six .am-banner-main .am-banner-tutor h2 span{
+    background: linear-gradient(90deg, #805DFC 0%, #3E2C80 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.am-header-six .am-menubtn span{
+    background: linear-gradient(90deg, #805DFC 0%, #5F2790 100%);
+}
+.am-banner-potential.am-banner-content-six .am-banner-bg{
+    background: #6B4FE6;
+}
+.am-sidebar-menu{
+    background: #6B4FE6;
+}
+.am-banner-potential.am-banner-content-six .am-banner-bg{
+    background: #6B4FE6;
+}
+.am-banner-potential.am-banner-content-six .am-banner-main .am-banner-tutor h1, .am-banner-potential.am-banner-content-six .am-banner-main .am-banner-tutor h2{
+    color: #6B4FE6;
+}
+.am-banner-potential.am-banner-content-six .am-explore-banner-button .am-explore-btn{
+    background: linear-gradient(90deg, #805DFC 0%, #3E2C80 100%);
+}
+.am-banner-potential.am-banner-content-six .am-explore-banner-button .am-demo-btn{
+    border-color: #6B4FE6;
+    background: linear-gradient(90deg, #805DFC 0%, #3E2C80 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.am-banner-potential.am-banner-content-six .am-explore-banner-button .am-demo-btn:hover{
+    border-color: #6B4FE6;
+    background: linear-gradient(90deg, #805DFC 0%, #3E2C80 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.am-faqs-three .am-section_title h2,
+.am-feedback.am-feedback-verient-three .am-section_title h2,
+.am-whychooseus.whychooseus-variation-two .am-whychooseus-section .am-section_title h2,
+.am-categories.am-verient-three .am-section_title h2{
+    background: linear-gradient(90deg, #105FFB -9.4%, #A15AF0 51.97%, #A15AF0 99.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.am-categories.am-verient-three .am-card-container .am-card.am-highlighted .am-btn{
+    background: linear-gradient(90deg, #805DFC 0%, #3E2C80 100%), linear-gradient(98deg, #049034 6.14%, #00D027 93.95%), linear-gradient(90deg, #DD1885 0%, #EE4710 100%);
+}
+.am-whychooseus.whychooseus-variation-two .am-cards-container .am-column .am-yellow-card{
+    background-color: #FFD25D;
+}
+.am-whychooseus.whychooseus-variation-two .am-cards-container .am-column .am-yellow-card p{
+    color: #585858;
+}
+.am-whychooseus.whychooseus-variation-two .am-cards-container .am-column .am-yellow-card h2{
+    color: #000;
+}
+.am-whychooseus.whychooseus-variation-two .am-cards-container .am-column .am-blue-card{
+    background-color: #7156E6;
+
+}
+.am-guidesteps_contentwrap{
+    background: #6B4FE6;
+}
+.am-guidesteps_btns .am-explore-btn{
+    color: #6B4FE6;
+}
+.am-guidesteps_btns .am-demo-btn:hover i::before,
+.am-guidesteps_btns .am-demo-btn:hover {
+    color: #7B0FFA;
+}
+.am-feedback.am-feedback-verient-three .splide__slide.is-active.is-visible .am-feedbackicon svg path{
+    fill: #7156E6;
+}
+.am-faqs-three .am-section_title .am-btn:hover{
+    background: linear-gradient(90deg, #805DFC 0%, #3E2C80 100%);
+}
+.am-coming-section.get-app-varient-two{
+    background: linear-gradient(90deg, #6d2deb, #5218e1);
+}
+.am-footer-v4 .am-footer-content .am-outline-btn:hover{
+    color: #8219fa;
+}
+.am-feedback.feedback-verient-two .am-section_title > span {
+    color: #06D865;
+    background: rgba(6, 216, 101, 0.07);
+}
+.am-feedback.feedback-verient-two .am-section_title > span::before {
+    background: currentColor;
+}
+.am-categories.am-verient-three .am-section_title  > span {
+    color: #F55C2B;
+    background: rgba(245, 92, 43, 0.1);
+}
+.am-categories.am-verient-three .am-section_title > span::before {
+    background: currentColor;
+}
+.am-whychooseus.whychooseus-variation-two .am-whychooseus-section .am-section_title > span {
+    color: #0094FF;
+    background: rgba(0, 148, 255, 0.07);
+}
+.am-whychooseus.whychooseus-variation-two .am-whychooseus-section .am-section_title > span::before {
+    background: currentColor;
+}
+.am-feedback.am-feedback-verient-three .am-section_title > span {
+    color: #E35AF0;
+    background: rgba(228, 90, 240, 0.07);
+}
+.am-feedback.am-feedback-verient-three .am-section_title > span::before {
+    background: currentColor;
+}
+.am-guidesteps_content .am-section_title span {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+.am-guidesteps_content .am-section_title span::before {
+    background: currentColor;
+}
+.am-faqs-three .am-section_title > span{
+    color: #FF8A00;
+    background: rgba(255, 138, 0, 0.07);
+}
+.am-faqs-three .am-section_title > span::before {
+    background: currentColor;
+}

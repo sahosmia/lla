@@ -1,0 +1,625 @@
+// -- About Us section start --
+.pb-themesection:has(.am-feedback) .container-fluid > div > .col-12,
+.pb-themesection:has(.am-mission_section) .container-fluid > div > .col-12,
+.pb-themesection:has(.am-vision-section) .container-fluid > div > .col-12,
+.pb-themesection:has(.am-experience-section) .container-fluid > div > .col-12,
+.pb-themesection:has(.am-achievements_section) .container-fluid > div > .col-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+.am-aboutus{
+    &_section{
+        padding: 100px 0;
+        background: $body-color;
+        .am-content_box p{
+            max-width: 550px;
+        }
+    }
+}
+.am-content{
+    &_box{
+        margin: 0 auto;
+        max-width: 856px;
+        text-align: center;
+        & > span{
+            display: inline-grid;
+            color: $theme-color;
+            position: relative;
+            place-items: center;
+            font: 500 rem(16)/em(24,16) $body-font-family;
+            &::before{
+                content: '';
+                width: 24px;
+                left: -34px;
+                height: 2px;
+                opacity: 0.3;
+                position: absolute;
+                border-radius: 10px;
+                background: currentColor;
+            }   
+            &::after{
+                content: '';
+                width: 24px;
+                right: -34px;
+                height: 2px;
+                opacity: 0.3;
+                position: absolute;
+                border-radius: 10px;
+                background: $theme-color;
+            }
+        }
+        h3{
+            margin: 4px 0 0;
+            color: $heading-color;
+            letter-spacing: 0.2px;
+            font: 500 rem(40)/em(48,40) $heading-font-family;   
+        }
+        p{
+            max-width: 630px;
+            margin: 20px auto 0;
+            color: $body-font-color;
+            font: 400 rem(18)/em(28,18) $body-font-family;   
+        }
+        ul {
+            margin: 30px 0 0;
+            & > li {
+                gap: 10px;
+                display: flex;
+                list-style: none;
+                align-items: start;
+                & > span {
+                    display: grid;
+                    margin: 4.5px 0;
+                    place-items: center;
+                }
+                & + li{
+                    margin-top: 16px;
+                }
+            }
+        }
+        &.lx-text-white{
+            span,h3,p{
+                color: $clr-white;
+            }
+            p{
+                opacity: 0.8;
+            }
+        }
+    }
+    &_list{
+        & > h6{
+            margin: 0;
+            color: $heading-color;
+            font: 500 rem(16)/em(24,16) $heading-font-family; 
+        }
+        & > p{
+            margin: 3px 0 0 0;
+            color: $body-font-color;
+            font: 400 rem(16)/em(24,16) $heading-font-family;
+        }
+    }
+}
+// -- About Us section end --
+
+// - Mission SECTION START --
+.am-mission{
+    &_section{
+        padding: 100px 0;
+        background: $clr-white;
+        .am-left-text{
+            padding: 45px 0;
+        }
+    }
+    &_iframe{
+        height: 100%;
+        min-height: 525px;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        & figure{
+            margin: 0;
+            height: 314.636px;
+            width: 471.954px;
+            position: relative;
+            & > img{
+                height: 314.636px;
+                width: 471.954px;
+                object-fit: cover;
+                border-radius: 0 0 36px 0;
+            }
+            figcaption{
+                & > img{
+                    left: -91.5px;
+                    bottom: -59.49px;
+                    width: 156.67px;
+                    height: 156.67px;
+                    object-fit: cover;
+                    border-radius: 50%;
+                    position: absolute;
+                    border: 4px solid $clr-white;
+    
+                }
+                & > img.am-mission-handshake-img{
+                    border: 0;
+                    left: -93px;
+                    bottom: 135px;
+                    border-radius: 0;
+                    position: absolute;
+                    width: 72px !important;
+                    height: 72px !important;
+                    transform: rotate(-12.56deg);
+                }
+            }
+        }
+    }
+    &_courses{
+        top: -89.31px;
+        left: -74.16px;
+        display: flex;
+        width: 119.098px;
+        height: 119.098px;
+        position: absolute;
+        align-items: center;
+        background: #0F7058;
+        justify-content: center;
+        border-radius: 86.843px;
+        border-bottom: 5.463px solid #C3F499;
+        span{
+            color: $clr-white;
+            text-align: center;
+            font: normal 400 rem(12.235)/em(15,12.235) $body-font-family;
+            strong{
+                display: block;
+                font: normal 600 rem(33.647)/em(40,33.647) $body-font-family;
+            }
+        }
+    }
+    &_learning{
+        gap: 10px;
+        width: 249px;
+        right: -33px;
+        display: flex;
+        position: absolute;
+        align-items: center;
+        background: #F9F9F9;
+        border-radius: 9.803px;
+        top: -98.65px;
+        padding: 8px 11.9px 8px 6.84px;
+        border: 4px solid rgba($clr-white, 0.40);
+        box-shadow: 0px 5.179px 31.075px 0px rgba($dark_black, 0.05);
+        & > span{
+            flex: none;
+            display: flex;
+            width: 33.11px;
+            height: 33.11px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 56.034px;
+            background: linear-gradient(180deg, #A33AF6 0%, #1A7AD3 100%);
+            box-shadow: 0px 2.941px 23.527px 0px rgba(0, 0, 0, 0.10), 0px 3.921px 33.329px 0px rgba(0, 0, 0, 0.25) inset;
+        }
+    }
+    &_platform{
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        figure{
+            flex: none;
+            width: 46.613px;
+            height: 43.387px;
+            border-radius: 7.159px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 7.159px;
+            }
+        }
+        span{
+            letter-spacing: -0.11px;
+            font: normal 400 rem(11)/em(14.7,11) $body-font-family;
+        }
+    }
+}
+.am-content{
+    &_box{
+        &.am-left-text{
+            text-align: left;
+            &> span{
+                padding: 0 34px;
+                &::before{
+                    left: 0;
+                }
+                &::after{
+                    right: 0;
+                }
+            }
+            > p{
+                font-size: 16px;
+                line-height: 24px;
+                margin: 20px 0 0 0;
+            }
+        }
+    }
+}
+// - Mission SECTION end --
+
+// -- Achievements section start --
+.am-achievements{
+    &_section{
+        overflow: hidden;
+        padding: 100px 0;
+        overflow: hidden;
+        position: relative;
+        background: $theme-color;
+        .am-content_box{
+            & > span{
+                &::after,
+                &::before{
+                    background-color: rgba($clr-white, 0.3);
+                }
+
+            }
+            p{
+                max-width: 602px;
+            }
+        }
+        .am-placeholder-one{
+            right: -10px;
+            bottom: -58px;
+            position: absolute;
+            transform: rotate(180deg);
+        }
+        .am-placeholder-two{
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+    }
+    &_reviews{
+        margin: 40px 0 0 0;
+        ul{
+            margin: -12px;
+            display: flex;
+            list-style: none;
+            align-items: center;
+            li{
+                padding: 12px;
+                width: calc(100%/4);
+                list-style-type: none;
+            }
+        }
+    }
+    &_Commit{
+        gap: 24px;
+        display: flex;
+        padding: 36px 20px;
+        align-items: center;
+        flex-direction: column;
+        background: rgba($clr-white, 0.1);
+        border-radius: 8px;
+        & > span{
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            border-radius: 9999px;
+            justify-content: center;
+            background: rgba($clr-white, 0.05);
+            i:before{
+                font-size: 20px;
+                color: $clr-white;
+            }
+        }
+        strong{
+            text-align: center;
+            color: $clr-white;
+            font: 500 rem(30)/em(38,30) $heading-font-family;
+            & > span{
+                opacity: 0.8;
+                display: block;
+                margin-top: 4px;
+                font: 400 rem(16)/em(24,16) $heading-font-family;
+            }
+        }
+    }
+}
+// -- Achievements section end --\.am-vision-section{
+.am-vision-section{
+    overflow: hidden;
+    .am-marketplace_content_list_btn{
+        margin-top: 40px;
+        justify-content: center;
+    }
+    .video-js{
+        width: 100%;
+        .vjs-tech{
+            object-fit: cover;
+        }
+    }
+}
+.am-vision-image{
+    margin: 0;
+    width: 100%;
+    min-height: 640px;
+    img{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+}
+.am-tutor-vision{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .am-content_box{
+        margin: 0;
+        max-width: 680px;
+        padding: 50px 40px 50px 63px;
+        .am-btn{
+            margin-top: 30px;
+            color: $clr-white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            background-color: $btn-black;
+            font: 500 rem(16)/em(24,16) $heading-font-family;
+        }
+    }
+}
+.am-experience-section{
+    padding: 100px 0;
+    background-color: $clr-white;
+}
+.am-tutor-experience{
+    .am-content_box{
+        margin: 0;
+        > p{
+            margin: 20px 0 0 0;
+        }
+    }
+}
+.am-experience-tutor-detail{
+    display: flex;
+    justify-content: space-between;
+}
+.am-experience-tutuor-tbn{
+    flex: none;
+    padding: 12px 0;
+    .am-btn{
+        padding: 12px 22px;
+        border-radius: 8px;
+        background-color: $btn-secondary;
+        font: 600 rem(16)/em(24,16) $heading-font-family;
+    }
+}
+.am-experience-tutor-list{
+    gap: 20px;
+    display: flex;
+    list-style: none;
+    margin: 40px 0 0 0;
+    & > li{
+         list-style: none;
+         width: calc(100%/4);
+         list-style-type: none;
+    }
+    & > li+li{
+        margin: 0;
+    }
+}
+.am-experience-tutor-img{
+    position: relative;
+    img{
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 16px 16px 0 0;
+    }
+    span{
+        top: 16px;
+        width: 30px;
+        right: 16px;
+        height: 30px;
+        display: flex;
+        cursor: pointer;
+        position: absolute;
+        border-radius: 50%;
+        align-items: center;
+        background: $clr-white;
+        justify-content: center;
+        .am-icon-heart-01::before{
+            font-size: 14px;
+            @extend %transition;
+        }
+        &:hover,
+        &.active{
+            .am-icon-heart-01::before{
+                color: #F04438;
+            }
+        }
+    }
+    em{
+        gap: 5px;
+        right: 17px;
+        bottom: 22px;
+        padding: 5px;
+        font-size: 9px;
+        font-weight: 500;
+        color: $clr-white;
+        position: absolute;
+        border-radius: 5px;
+        font-style: normal;
+        line-height: normal;
+        align-items: center;
+        display: inline-flex;
+        font-family: $heading-font-family;
+        backdrop-filter: blur(40px);
+        background: rgba($clr-white, 0.12);
+        .am-icon-thumbs-up-01::before{
+            font-size: 13px;
+            color: $clr-white;
+        }
+    }
+    a{
+        left: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        bottom: -10px;
+        cursor: pointer;
+        border-radius: 50%;
+        position: absolute; 
+        align-items: center;
+        background: #9E9F9F;
+        justify-content: center;
+        border: 3px solid $clr-white;
+        box-shadow: 0px 2px 24px 0px rgba($dark_black, 0.05);
+        .am-icon-send-04::before{
+            font-size: 18px;
+            color: $clr-white;
+        }
+    }
+}
+.am-experience-tutor-info{
+    height: 100%;
+    padding: 22px 20px;
+    background: $body-color;
+    border-radius: 0 0 16px 16px;
+    .am-tutorsearch_info{
+        display: flex;
+        gap: 8px 20px;
+        flex-wrap: wrap;
+        margin: 8px 0 0 0;
+        align-items: center;
+        li{
+            width: auto;
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.am-experience-tutor-name{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span.flag{
+        height: 16px;
+        display: block;
+        max-width: 24px;
+    }
+    .am-tutorsearch_user_name{
+        & > span{
+            gap: 6px;
+            display: flex;
+            font-size: 13px;
+            font-weight: 400;
+            font-style: normal;
+            align-items: center;
+            line-height: normal;
+            color: $body-font-color;
+            font-family: $heading-font-family;
+        }
+        h3{
+            font: 600 rem(16)/em(24,16) $heading-font-family;
+        }
+        .flag{
+            height: 13px;
+            max-width: 18.67px;
+        }
+    }
+}
+.am-experience-tutor-card{
+    height: 100%;
+    display: flex;
+    @extend %transition;
+    border-radius: 16px;
+    flex-direction: column;
+    &:hover{
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    }
+}
+.am-feedback-about{
+    margin-bottom: -80px;
+    .am-feedback_content_list_info{
+        p{
+            line-height: 24px;
+        }
+    }
+}
+.am-quality_section{
+    &_btns{
+        gap: 16px;
+        width: 100%;
+        @extend %flex;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+        .am-btn,
+        .am-white-btn{
+            font: 600 rem(16)/em(24,16) $heading-font-family;
+            i{
+                display: none;
+            }
+        }
+        .am-btn{
+            padding: 12px 20px;
+            background: $btn-secondary;
+        }
+        .am-white-btn{
+            padding: 11px 19px;
+        }
+    }
+}
+.am-joincommunity{
+    & .am-aboutus_section .am-content_box p{
+        max-width: 100%;
+    }
+}
+.am-tutors-varient-one{
+    padding: 100px 0;
+    background: $clr-white;
+    .am-section_title{
+        // margin: 0 auto;
+        max-width: 550px;
+        // & > span{
+        //     display: inline-grid;
+        //     color: $theme-color;
+        //     position: relative;
+        //     place-items: center;
+        //     font: 500 rem(16)/em(24,16) $body-font-family;
+        //     &::before{
+        //         content: '';
+        //         width: 24px;
+        //         left: -34px;
+        //         height: 2px;
+        //         opacity: 0.3;
+        //         position: absolute;
+        //         border-radius: 10px;
+        //         background: $theme-color;
+        //     }   
+        //     &::after{
+        //         content: '';
+        //         width: 24px;
+        //         right: -34px;
+        //         height: 2px;
+        //         opacity: 0.3;
+        //         position: absolute;
+        //         border-radius: 10px;
+        //         background: $theme-color;
+        //     }
+        // }
+    }
+}
+.page-about-us .am-feature-tutors.am-tutors-varient-one .am-section_title>span{
+    background-color: transparent !important;
+    color: $theme-color !important;
+    &:before{
+        background-color: $theme-color !important;
+    }
+    &:after{
+        background-color: $theme-color !important;
+        display: inherit !important;
+        opacity: 1;
+    }
+}

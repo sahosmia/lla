@@ -1,0 +1,158 @@
+.tb-btn,
+.tb-btnvtwo,
+.tb-rejectbtn{
+    border:0;
+    gap: 10px;
+    z-index: 0;
+    color: $white;
+    height: 48px;
+    @extend %flex;
+    padding: 0 24px;
+    min-width: 160px;
+    overflow: hidden;
+    position: relative;
+    @extend %transition;
+    align-items: center;
+    letter-spacing: 0.5px;
+    border-radius: $radius;
+    justify-content: center;
+    background-color: $theme-color;
+    font: 500 rem(16)/em(26,16) $heading_font_family;
+    &:before{
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @extend %transition;
+        background-color: #051237;
+    }
+    &:hover,
+    &:focus{
+        outline: none;
+        color: $white;
+        box-shadow: none;
+        background-color: $theme-color;
+    } 
+    &:hover{
+        &:before{opacity: 0.1;}
+    }
+    i{
+        display: inline-block;
+        font-size: 20px;
+    }
+}
+.tb-btn_disable{
+    pointer-events: none;
+    background-color: #f7f7f8 !important;
+    color: rgba($color: $text-light, $alpha: 0.5) !important;
+    &:after{
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        animation: .5s btnloader infinite linear;
+        border: 2px solid rgba($color: $text-light, $alpha: 0.5);
+        border-top-color: rgba($color: $text-light, $alpha: 0.1);
+    }
+}
+.tb-btn_disabled{
+    pointer-events: none;
+    background-color: #f7f7f8 !important;
+    color: rgba($color: $text-light, $alpha: 0.5) !important;
+}
+@keyframes btnloader {
+    to {transform: rotate(360deg);}
+}
+.rippleholder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    &.is-active .ripplecircle{ animation: a-ripple .4s ease-in;}
+}
+.ripplecircle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+.tb-btnvtwo{
+    color: $heading-font-color;
+    background-color:$secondary-color;
+    &:hover,
+    &:focus{
+        color: $heading-font-color;
+    }
+}
+.tb-btnsmall{
+    min-width: 50px;
+    height: 50px;
+    font-size: 18px;
+}
+
+.btnred{
+    color: #fff;
+    background: #EF4444;
+    &:hover,
+    &:focus
+    {
+        color: #fff;
+    }
+}
+.tb-rejectbtn{
+    background:#F7F7F7;
+    color: #051237;
+    &:hover{
+        background:#F7F7F7;
+        color: #051237;
+        &::before{
+            display: none;
+        }
+    }
+}
+.tb-btn.btnred{
+    &:hover{
+        background-color: #EF4444;
+    }
+}
+.pb-btn,
+.cards_header_btns .tb-btn,
+.tb-btnvtwo,
+.op-btn-lg, .op-btn-two, .op-btn{
+    color: $white !important;
+    gap: 6px !important;
+    cursor: pointer !important;
+    overflow: hidden !important;
+    position: relative !important;
+    padding: 10px 18px !important;
+    border-radius: 10px !important;
+    border: 1px solid $theme-color !important; 
+    background-color: $theme-color !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    font-weight: 600 !important;
+}
+.tb-btnvtwo,
+.op-btn-two{
+    color: $theme-color !important;
+    background-color: transparent !important;
+    border: 1px solid $theme-color !important;
+    &:hover{
+        background-color: $theme-color !important;
+        color: $white !important;
+    }
+}

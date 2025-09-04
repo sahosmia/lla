@@ -1,0 +1,158 @@
+<?php
+
+$maxImageSize = setting('_general.max_image_size');
+
+return [
+    'id'        => 'steps',
+    'name'      => __('Steps'),
+    'icon'      => '<i class="icon-layers"></i>',
+    'tab'       => "Common",
+    'fields'    => [
+        [
+            'id'            => 'pre_heading_text_color',
+            'type'          => 'colorpicker',
+            'value'         => '',
+            'class'         => '',
+            'label_title'   => __('Pre heading text color'),
+            // 'field_desc'    => __('settings.pre_heading_text_color_desc'),
+        ],
+        [
+            'id'            => 'pre_heading_bg_color',
+            'type'          => 'colorpicker',
+            'value'         => '',
+            'class'         => '',
+            'label_title'   => __('Pre heading bg color'),
+            // 'field_desc'    => __('settings.pre_heading_text_color_desc'),
+        ],
+        [
+            'id'                => 'pre_heading',
+            'type'              => 'text',
+            'value'             => 'Demo pre heading',
+            'class'             => '',
+            'label_title'       => __('Pre Heading'),
+            'placeholder'       => __('Enter pre heading'),
+        ],
+        [
+            'id'                => 'heading',
+            'type'              => 'text',
+            'value'             => 'Demo heading',
+            'class'             => '',
+            'label_title'       => __('Heading'),
+            'placeholder'       => __('Enter heading'),
+        ],
+        [
+            'id'                => 'paragraph',
+            'type'              => 'editor',
+            'value'             => 'Demo description',
+            'class'             => '',
+            'label_title'       => __('Description'),
+            'placeholder'       => __('Enter description'),
+        ],
+
+        [                                                          
+            'id'                => 'steps_data',
+            'type'              => 'repeater',
+            'label_title'       => __('Steps data'),
+            'repeater_title'    => __('Step'),
+            'multi'             => true,
+            'fields'            => [
+                [
+                    'id'            => 'sub_heading',
+                    'type'          => 'text',
+                    'value'         => 'Demo sub heading',
+                    'class'         => '',
+                    'label_title'   => __('Sub heading'),
+                    'placeholder'   => __('Enter sub heading'),
+                ],
+                [
+                    'id'            => 'step_image',
+                    'type'          => 'file',
+                    'class'         => '',
+                    'label_title'   => __('Step image'),
+                    'label_desc'    => __('Add image'),
+                    'max_size'      => $maxImageSize ?? 5,                  
+                    'ext'    => [
+                        'jpg',
+                        'png',
+                        'svg',
+                        'jpeg',
+                        'webp',
+                    ], 
+                ],
+                [
+                    'id'            => 'step_heading',
+                    'type'          => 'text',
+                    'value'         => 'Demo step heading',
+                    'class'         => '',
+                    'label_title'   => __('Step heading'),
+                    'placeholder'   => __('Enter heading'),
+                ],
+                [
+                    'id'            => 'step_paragraph',
+                    'type'          => 'editor',
+                    'value'         => 'Demo step description',
+                    'class'         => '',
+                    'label_title'   => __('Step description'),
+                    'placeholder'   => __('Enter description'),
+                ],
+                [
+                    'id'            => 'btn_url',
+                    'type'          => 'text',
+                    'value'         => '',
+                    'class'         => '',
+                    'label_title'   => __('Button url'),
+                    'placeholder'   => __('Enter url'),
+                ],
+                [
+                    'id'            => 'btn_text',
+                    'type'          => 'text',
+                    'value'         => 'Demo button text',
+                    'class'         => '',
+                    'label_title'   => __('Button text'),
+                    'placeholder'   => __('Enter button text'),
+                ],
+            ]
+        ],
+
+        [
+            'id'                => 'start_journ_icon',
+            'type'              => 'text',
+            'value'             => '',
+            'class'             => '',
+            'label_title'       => __('Add icon'),
+            'placeholder'       => __('<i class="fa-solid fa-arrow-up-right-from-square"></i>'),
+        ],
+        [
+            'id'                => 'start_journ_heading',
+            'type'              => 'text',
+            'value'             => 'Demo start journey heading',
+            'class'             => '',
+            'label_title'       => __('Start journey heading'),
+            'placeholder'       => __('Enter heading'),
+        ],
+        [
+            'id'                => 'start_journ_description',
+            'type'              => 'text',
+            'value'             => 'Demo start journey description',
+            'class'             => '',
+            'label_title'       => __('Start journey description'),
+            'placeholder'       => __('Enter description'),
+        ],
+        [
+            'id'                => 'get_start_btn_url',
+            'type'              => 'text',
+            'value'             => '',
+            'class'             => '',
+            'label_title'       => __('Primary button url'),
+            'placeholder'       => __('Enter url'),
+        ],
+        [
+            'id'                => 'get_start_btn_text',
+            'type'              => 'text',
+            'value'             => 'Demo button text',
+            'class'             => '',
+            'label_title'       => __('Primary button text'),
+            'placeholder'       => __('Enter button text'),
+        ],
+    ]
+];

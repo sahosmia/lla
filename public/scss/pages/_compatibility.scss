@@ -1,0 +1,34 @@
+// UpCertify Compatibility
+
+
+.am-dashboard_box{
+    &:has(.uc-main-wrap),
+    &:has(.uc-certificates){
+        padding: 0;
+    }
+    &:has(.uc-main-wrap){
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .uc-element-instructor{
+        height: calc(100vh - 261px);
+    }
+    .uc-navigation{
+        height: calc(100vh - 290px);
+        min-height: calc(100vh - 290px);
+        &_wrap{
+            height: calc(100vh - 112px);
+        }
+    }
+    .uc-course{
+        &_btns{
+            margin-top: 30px;
+        }
+        &_wrap{
+            height: calc(100vh - 112px);
+        }
+        &_box{
+            min-height: calc(100vh - 334px);
+        }
+    }
+}

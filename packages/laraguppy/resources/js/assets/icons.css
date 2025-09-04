@@ -1,0 +1,455 @@
+@font-face {
+  font-family: 'wpguppy';
+  src:  url('icons/wpguppy.eot?aoknbz');
+  src:  url('icons/wpguppy.eot?aoknbz#iefix') format('embedded-opentype'),
+      url('icons/wpguppy.ttf?aoknbz') format('truetype'),
+      url('icons/wpguppy.woff?aoknbz') format('woff'),
+      url('icons/wpguppy.svg?aoknbz#wpguppy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="laraguppy-"], [class*=" laraguppy-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'wpguppy' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.laraguppy-user-check-filled:before {
+  content: "\e98c";
+}
+.laraguppy-chat-filled:before {
+  content: "\e98d";
+}
+.laraguppy-users-filled:before {
+  content: "\e98e";
+}
+.laraguppy-arrow-turn-down:before {
+  content: "\e988";
+}
+.laraguppy-arrow-turn-uright:before {
+  content: "\e989";
+}
+.laraguppy-arrow-turn-up:before {
+  content: "\e98a";
+}
+.laraguppy-arrow-turn-left:before {
+  content: "\e98b";
+}
+.laraguppy-activity-01:before {
+  content: "\e900";
+}
+.laraguppy-activity-02:before {
+  content: "\e901";
+}
+.laraguppy-airplay:before {
+  content: "\e902";
+}
+.laraguppy-alert:before {
+  content: "\e903";
+}
+.laraguppy-archive-01:before {
+  content: "\e904";
+}
+.laraguppy-archive-02:before {
+  content: "\e905";
+}
+.laraguppy-atom-01:before {
+  content: "\e906";
+}
+.laraguppy-atom-02:before {
+  content: "\e907";
+}
+.laraguppy-baby-cart:before {
+  content: "\e908";
+}
+.laraguppy-badge-01:before {
+  content: "\e909";
+}
+.laraguppy-badge-02:before {
+  content: "\e90a";
+}
+.laraguppy-bed-01:before {
+  content: "\e90b";
+}
+.laraguppy-bed-02:before {
+  content: "\e90c";
+}
+.laraguppy-bed-03:before {
+  content: "\e90d";
+}
+.laraguppy-bed-04:before {
+  content: "\e90e";
+}
+.laraguppy-bell:before {
+  content: "\e90f";
+}
+.laraguppy-bell-cross:before {
+  content: "\e910";
+}
+.laraguppy-block:before {
+  content: "\e911";
+}
+.laraguppy-bookmark-01:before {
+  content: "\e912";
+}
+.laraguppy-bookmark-02:before {
+  content: "\e913";
+}
+.laraguppy-branch:before {
+  content: "\e914";
+}
+.laraguppy-briefcase:before {
+  content: "\e915";
+}
+.laraguppy-bullhorn:before {
+  content: "\e916";
+}
+.laraguppy-chart-01:before {
+  content: "\e917";
+}
+.laraguppy-chart-02:before {
+  content: "\e918";
+}
+.laraguppy-chart-03:before {
+  content: "\e919";
+}
+.laraguppy-chat:before {
+  content: "\e91a";
+}
+.laraguppy-chat-delete:before {
+  content: "\e91b";
+}
+.laraguppy-chat-lock:before {
+  content: "\e91c";
+}
+.laraguppy-chat-reply:before {
+  content: "\e91d";
+}
+.laraguppy-check:before {
+  content: "\e91e";
+}
+.laraguppy-code:before {
+  content: "\e91f";
+}
+.laraguppy-contact:before {
+  content: "\e920";
+}
+.laraguppy-copy-01:before {
+  content: "\e921";
+}
+.laraguppy-copy-02:before {
+  content: "\e922";
+}
+.laraguppy-cube:before {
+  content: "\e923";
+}
+.laraguppy-down:before {
+  content: "\e924";
+}
+.laraguppy-download:before {
+  content: "\e925";
+}
+.laraguppy-dubble-check-01:before {
+  content: "\e926";
+}
+.laraguppy-dubble-check-02:before {
+  content: "\e927";
+}
+.laraguppy-edit:before {
+  content: "\e928";
+}
+.laraguppy-ellipsis-horizontal:before {
+  content: "\e929";
+}
+.laraguppy-ellipsis-stroke-horizontal:before {
+  content: "\e92a";
+}
+.laraguppy-ellipsis-stroke-vertical:before {
+  content: "\e92b";
+}
+.laraguppy-ellipsis-vertical:before {
+  content: "\e92c";
+}
+.laraguppy-email-01:before {
+  content: "\e92d";
+}
+.laraguppy-email-02:before {
+  content: "\e92e";
+}
+.laraguppy-email-read:before {
+  content: "\e92f";
+}
+.laraguppy-exit:before {
+  content: "\e930";
+}
+.laraguppy-file-01:before {
+  content: "\e931";
+}
+.laraguppy-file-02:before {
+  content: "\e932";
+}
+.laraguppy-file-03:before {
+  content: "\e933";
+}
+.laraguppy-filter-01:before {
+  content: "\e934";
+}
+.laraguppy-filter-02:before {
+  content: "\e935";
+}
+.laraguppy-flag-01:before {
+  content: "\e936";
+}
+.laraguppy-flag-02:before {
+  content: "\e937";
+}
+.laraguppy-gift-01:before {
+  content: "\e938";
+}
+.laraguppy-gift-02:before {
+  content: "\e939";
+}
+.laraguppy-gift-03:before {
+  content: "\e93a";
+}
+.laraguppy-grid-plus:before {
+  content: "\e93b";
+}
+.laraguppy-headphone:before {
+  content: "\e93c";
+}
+.laraguppy-heart:before {
+  content: "\e93d";
+}
+.laraguppy-Hotspot:before {
+  content: "\e93e";
+}
+.laraguppy-house-01:before {
+  content: "\e93f";
+}
+.laraguppy-house-02:before {
+  content: "\e940";
+}
+.laraguppy-image:before {
+  content: "\e941";
+}
+.laraguppy-inbox-01:before {
+  content: "\e942";
+}
+.laraguppy-inbox-02:before {
+  content: "\e943";
+}
+.laraguppy-left:before {
+  content: "\e944";
+}
+.laraguppy-life-ring-01:before {
+  content: "\e945";
+}
+.laraguppy-life-ring-02:before {
+  content: "\e946";
+}
+.laraguppy-loader:before {
+  content: "\e947";
+}
+.laraguppy-loading-trolley:before {
+  content: "\e948";
+}
+.laraguppy-location:before {
+  content: "\e949";
+}
+.laraguppy-mic:before {
+  content: "\e94a";
+}
+.laraguppy-minus:before {
+  content: "\e94b";
+}
+.laraguppy-minus-circle:before {
+  content: "\e94c";
+}
+.laraguppy-modules:before {
+  content: "\e94d";
+}
+.laraguppy-multiply:before {
+  content: "\e94e";
+}
+.laraguppy-music-01:before {
+  content: "\e94f";
+}
+.laraguppy-music-02:before {
+  content: "\e950";
+}
+.laraguppy-mute:before {
+  content: "\e951";
+}
+.laraguppy-pencil:before {
+  content: "\e952";
+}
+.laraguppy-planet-01:before {
+  content: "\e953";
+}
+.laraguppy-planet-02:before {
+  content: "\e954";
+}
+.laraguppy-planet-03:before {
+  content: "\e955";
+}
+.laraguppy-play:before {
+  content: "\e956";
+}
+.laraguppy-plus:before {
+  content: "\e957";
+}
+.laraguppy-plus-circle:before {
+  content: "\e958";
+}
+.laraguppy-radio-waves:before {
+  content: "\e959";
+}
+.laraguppy-user-request:before {
+  content: "\e95a";
+}
+.laraguppy-right:before {
+  content: "\e95b";
+}
+.laraguppy-search-01:before {
+  content: "\e95c";
+}
+.laraguppy-search-02:before {
+  content: "\e95d";
+}
+.laraguppy-search-03:before {
+  content: "\e95e";
+}
+.laraguppy-search-04:before {
+  content: "\e95f";
+}
+.laraguppy-send-right-01:before {
+  content: "\e960";
+}
+.laraguppy-send-right-02:before {
+  content: "\e961";
+}
+.laraguppy-send-up-01:before {
+  content: "\e962";
+}
+.laraguppy-send-up-02:before {
+  content: "\e963";
+}
+.laraguppy-share-01:before {
+  content: "\e964";
+}
+.laraguppy-share-02:before {
+  content: "\e965";
+}
+.laraguppy-share-03:before {
+  content: "\e966";
+}
+.laraguppy-shopping-bag-01:before {
+  content: "\e967";
+}
+.laraguppy-shopping-bag-02:before {
+  content: "\e968";
+}
+.laraguppy-shopping-basket-01:before {
+  content: "\e969";
+}
+.laraguppy-shopping-basket-02:before {
+  content: "\e96a";
+}
+.laraguppy-sliders-horizontal-01:before {
+  content: "\e96b";
+}
+.laraguppy-sliders-horizontal-02:before {
+  content: "\e96c";
+}
+.laraguppy-sliders-horizontal-03:before {
+  content: "\e96d";
+}
+.laraguppy-star:before {
+  content: "\e96e";
+}
+.laraguppy-tag-01:before {
+  content: "\e96f";
+}
+.laraguppy-tag-02:before {
+  content: "\e970";
+}
+.laraguppy-thumbs-down:before {
+  content: "\e971";
+}
+.laraguppy-thumbs-up:before {
+  content: "\e972";
+}
+.laraguppy-toggle-01:before {
+  content: "\e973";
+}
+.laraguppy-toggle-02:before {
+  content: "\e974";
+}
+.laraguppy-trash:before {
+  content: "\e975";
+}
+.laraguppy-trophy:before {
+  content: "\e976";
+}
+.laraguppy-umbrella-01:before {
+  content: "\e977";
+}
+.laraguppy-umbrella-02:before {
+  content: "\e978";
+}
+.laraguppy-up:before {
+  content: "\e979";
+}
+.laraguppy-upload:before {
+  content: "\e97a";
+}
+.laraguppy-user:before {
+  content: "\e97b";
+}
+.laraguppy-user-block:before {
+  content: "\e97c";
+}
+.laraguppy-user-check:before {
+  content: "\e97d";
+}
+.laraguppy-users:before {
+  content: "\e97e";
+}
+.laraguppy-user-setting:before {
+  content: "\e97f";
+}
+.laraguppy-user-warning:before {
+  content: "\e980";
+}
+.laraguppy-van-01:before {
+  content: "\e981";
+}
+.laraguppy-van-02:before {
+  content: "\e982";
+}
+.laraguppy-video:before {
+  content: "\e983";
+}
+.laraguppy-volume:before {
+  content: "\e984";
+}
+.laraguppy-wifi:before {
+  content: "\e985";
+}
+.laraguppy-wifi-error:before {
+  content: "\e986";
+}
+.laraguppy-wifi-low:before {
+  content: "\e987";
+}

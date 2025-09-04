@@ -1,0 +1,96 @@
+.am-quizlist_wrap{
+    & > .am-emptyview{
+        min-height: calc(100vh - 298px);
+    }
+    &[style="display: inline-block;"]{display: block !important;height: auto;}
+    .am-favourites{
+        &_list{
+            width: 100%;
+            height: 97px;
+            @extend %skeleton;
+            border-radius: 16px;
+        }
+        &_list + &_list{
+            margin-top: 14px;
+        }
+    }
+    &.am-quizlist-skeleton{
+        padding: 0;
+        margin: 0;
+        height: auto;
+        .am-quizlist_item{
+            & > span{
+                width: 100%;
+                display: block;
+                height: 150px;
+                @extend %skeleton;
+                border-radius: 10px;
+            }
+            .am-quizlist_item_content{
+                .am-quizlist_coursename{
+                    & > span{
+                        width: 90px;
+                        height: 18px;
+                        display: block;
+                        @extend %skeleton;
+                        min-height: 20px;
+                        border-radius: 4px;
+                    }
+                    .am-itemdropdown{
+                        width: 15px;
+                        height: 18px;
+                        @extend %skeleton;
+                        border-radius: 4px;
+                    }
+                }
+                h3{
+                    width: 150px;
+                    height: 36px;
+                    margin: 2px 0 0;
+                    @extend %skeleton;
+                    border-radius: 4px;
+                }
+                .am-quizlist_item_comparing{
+                    & > span{
+                        width: 110px;
+                        height: 18px;
+                        display: block;
+                        @extend %skeleton;
+                        border-radius: 10px;
+                    }
+                    .am-quizlist_item_percentage{
+                        margin-top: 4px;
+                        & > span{
+                            width: 20px;
+                            height: 20px;
+                            display: block;
+                            @extend %skeleton;
+                            border-radius: 4px;
+                        }
+                    }
+                }
+                .am-quizlist_item_footer{
+                    span{
+                        width: 150px;
+                        height: 18px;
+                        display: block;
+                        @extend %skeleton;
+                        border-radius: 4px;
+                    }
+                    em{
+                        width: 80px;
+                        height: 18px;
+                        display: block;
+                        @extend %skeleton;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+.am-question_manager{
+    .am-emptyview{
+        min-height: calc(100vh - 363px);
+    }
+}

@@ -1,0 +1,37 @@
+/** ====== Sass function ====== **/
+body {
+  color: #0A0F26;
+  font: 400 0.875rem/1.8571428571em "SF Pro Text";
+}
+
+h1 {
+  font: 700 2.25rem/1.1666666667em "SF Pro Text";
+}
+
+h2 {
+  font: 700 1.75rem/1.2857142857em "SF Pro Text";
+}
+
+h3 {
+  font: 700 1.5rem/1.3333333333em "SF Pro Text";
+}
+
+h4 {
+  font: 700 1.125rem/1.4444444444em "SF Pro Text";
+}
+
+h5 {
+  font: 700 1rem/1.5em "SF Pro Text";
+}
+
+h6 {
+  font: 700 0.875rem/1.5714285714em "SF Pro Text";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0A0F26;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #0A0F26;
+}/*# sourceMappingURL=main.css.map */

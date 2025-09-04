@@ -1,0 +1,134 @@
+.tb-translator{
+    .tb-themeform{
+        .op-switchbtn{
+            input::before{
+                top: -2px;
+            }
+            label{
+                margin: 0 0 0 16px;   
+            }
+        }
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        li{
+            list-style: none;
+            padding: 0 0 0 16px;
+        }
+    }
+    .tb-checkbox{
+        margin: 4px 0;
+    }
+    .uploadbar-wrap{
+        width: 100%;
+        span{
+            color: #585858;
+            font: 600 rem(14) / em(20, 14) $body-font-family;
+        }
+    }
+    .uploadbar{
+        gap: 12px;
+        width: 97%;
+        @extend %flex;
+        margin-top: 6px;
+        flex-wrap: nowrap;
+        overflow: visible;
+        position: relative;
+        align-items: center;
+        background: transparent;
+        .progress-bar{
+            width: 100%;
+            height: 16px;
+            border-radius: 12px;
+            background: #22C55E;
+            background-size: 21px;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+        }
+        button{
+            width: 24px;
+            height: 24px;
+            right: -40px;
+            position: absolute;
+            background: transparent;
+        }
+    }
+    .am-insights_notice{
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+}
+.tb-translatorwrap{
+    padding: 30px 0;
+    max-width: 1024px;
+    margin: 0px auto;
+    & > .am-insights_title{
+        margin-bottom: 20px;
+    }
+}
+.tb-langtrans-form{
+    flex: auto;
+    .tb-switchbtn{
+        width: 100%;
+    }
+    .tb-radiobox-wrap{
+        padding: 9px 0;
+        gap: 20px;
+         .tb-radiobox{
+            width: auto;
+         }
+    }
+    .am-insights_notice{
+        margin: 0;
+    }
+    .am-translationprogress{
+        width: 100%;
+        .uploadbar{width: 100%;}
+    }
+    
+}
+.tb-langtranswrap{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    @media (max-width: 800px){
+        flex-wrap: wrap;
+    }
+    .am-alertmsg{
+        font-size: 14px;
+        line-height: 20px;
+        padding-left: 20px;
+        p{
+            font-size: 14px;
+            line-height: 20px;
+            strong{
+                color: #585858 !important
+            }
+        }
+        p:not(:last-child){
+            margin: 0 0 10px;
+        }
+        ul{
+            margin: 0 0 10px 10px;
+            list-style: inside disc;
+            li{
+                padding: 0;
+                line-height: 20px;
+                list-style: inside disc;
+            }
+        }
+        & > strong{
+            color: $dark;
+            display: block;
+        }
+    }
+    .am-insights_notice{
+        width: 100%;
+        flex: none;
+        max-width: 350px;
+        @media (max-width: 800px){
+            max-width: 100%;
+        }
+    }
+}

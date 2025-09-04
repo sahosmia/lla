@@ -1,0 +1,56 @@
+.video-js{
+    overflow: hidden;
+    .vjs-big-play-button{
+        border: 0 !important;
+        margin: 0 !important;
+        width: 69.21px !important;
+        line-height: 0 !important;
+        height: 69.21px !important;
+        color: $clr-white !important;
+        border-radius: 50% !important;
+        transform: translate(-50%,-50%);
+        backdrop-filter: blur(10px) !important;
+        background: #25252533 !important;
+        .vjs-icon-placeholder{
+            &::before{
+                display: flex;
+                top: 50% !important;
+                align-items: center;
+                justify-content: center;
+                transform: translateY(-50%) !important;
+                content: url("../images/play.svg") !important;
+            }
+        }
+    }
+    .vjs-control-bar{
+        background: transparent !important;
+    }
+    .vjs-error-display{
+        background: transparent !important;
+    }
+
+}
+.video-js-two{
+    .vjs-big-play-button{
+        top: auto !important;
+        left: auto !important;
+        width: 44px !important;
+        right: -10px !important;
+        height: 44px !important;
+        bottom: -10px !important;
+        .vjs-icon-placeholder{
+            &::before{
+                content: url("../images/playtwo.svg") !important;
+            }
+        }
+    }
+    .vjs-control-bar{
+        justify-content: space-between;
+    }
+    .vjs-time-control,
+    .vjs-progress-control,
+    .vjs-fullscreen-control,
+    .vjs-picture-in-picture-control{
+        display: none !important;
+    }
+}

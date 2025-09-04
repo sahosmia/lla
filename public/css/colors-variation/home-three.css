@@ -1,0 +1,107 @@
+.am-header_five .am-loginbtns .am-btn:hover,
+.am-header_five .am-loginbtns .am-white-btn:hover{
+    background: #871EFA;
+    border-color: #871EFA;
+}
+.am-banner-potential .am-explore-banner-button .am-explore-btn:hover,
+.am-courses-block.am-courses-block-two .cr-price-wrap .am-btn:hover {
+    background: #841CFA;
+}
+.am-banner-potential .am-explore-banner-button .am-demo-btn:hover i::before,
+.am-banner-potential .am-explore-banner-button .am-demo-btn:hover{
+    color: #8219FA;
+    background: #fff;
+}
+.easy-steps-variation-one .am-easysetup_list_item > a i::before, .easy-steps-variation-two .am-easysetup_list_item > a i::before,
+.easy-steps-variation-one .am-easysetup_list_item > a, .easy-steps-variation-two .am-easysetup_list_item > a{
+    color: #7846B4;
+}
+.am-feature-tutors.style-varient .am-experience-tutor-card:hover .am-tutorsearch_user_name > a, .am-feature-tutors.am-tutors-varient-one .am-experience-tutor-card:hover .am-tutorsearch_user_name > a{
+    background: #754FFE !important;
+}
+.am-faqs-three .am-section_title .am-btn:hover{
+    background: #841CFA;
+}
+.am-coming-section.get-app-varient-two{
+    background: linear-gradient(90deg, #6D2DEB 0%, #5218E1 100%);
+}
+.am-footer-v4 .am-footer-content .am-outline-btn:hover{
+    color: #8219FA;
+}
+.am-header_five .am-header_two_wrap .am-navigation > ul > li:hover > a{
+    background: rgba(120, 79, 248, 0.05);
+}
+.am-feedback-two .am-section_title > span{
+    gap: 6px;
+    display: flex;
+    margin: 0 auto;
+    color: #06D865;
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    border-radius: 50px;
+    font: 400 14px / 20px;
+    width: -moz-fit-content;
+    text-transform: capitalize;
+    padding: 6px 10px 6px 24px;
+    background: rgba(6, 216, 101, 0.07);
+    &::before {
+        top: 50%;
+        left: 10px;
+        width: 6px;
+        height: 6px;
+        content: "";
+        margin: 0 1px;
+        border-radius: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        background-color: currentColor;
+    }
+}
+.am-unique-features .am-section_title > span {
+    color: #8972FF;
+    background: rgba(137, 114, 255, 0.05);
+}
+.am-unique-features .am-section_title > span::before {
+    background: currentColor;
+}
+.am-feature-tutors.style-varient .am-section_title > span{
+    color: #0094FF;
+    background: rgba(0, 148, 255, 0.07);
+}
+.am-feature-tutors.style-varient .am-section_title > span::before {
+    background: currentColor;
+    opacity: 1;
+}
+.easy-steps-variation-one.am-easysetup .am-section_title > span{
+    color: #F55C2B !important;
+    background: rgba(245, 92, 43, 0.05);
+}
+.easy-steps-variation-one.am-easysetup .am-section_title > span::before{
+    background: currentColor;
+}
+.am-unique-features.unique-features-varient-three .am-section_title > span {
+    color: #17B26A !important;
+    background: rgba(23, 178, 106, 0.05);
+}
+.am-courses-block-two .am-section_title.am-section_title_center > span{
+    color: #4448A9 !important;
+    background: rgba(68, 72, 169, 0.05);
+}
+.am-courses-block-two .am-section_title.am-section_title_center > span::before{
+    background: currentColor;
+}
+.am-courses-block.am-courses-block-two .cr-price-wrap .am-btn{
+    color: #fff;
+    background: #000;
+}
+.am-unique-features.unique-features-varient-three .am-section_title > span::before {
+    background: currentColor;
+}
+.am-faqs-three .am-section_title span {
+    color: #FF8A00;
+    background: rgba(255, 138, 0, 0.07);
+}
+.am-faqs-three .am-section_title span::before {
+    background: currentColor;
+}

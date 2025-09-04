@@ -1,0 +1,13 @@
+{
+    "name": "MeetFusion",
+    "alias": "meetfusion",
+    "description": "Google Meet Scheduler for Lernen LMS",
+    "keywords": [],
+    "priority": 0,
+    "version": "lite",
+    "type": "core",
+    "providers": [
+        "Modules\\MeetFusion\\Providers\\MeetFusionServiceProvider"
+    ],
+    "files": []
+}

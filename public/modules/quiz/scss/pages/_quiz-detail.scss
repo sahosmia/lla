@@ -1,0 +1,460 @@
+.am-quiz-detail{
+    height: 100%;
+    @extend %flex;
+    padding: 30px 30px 0;
+    flex-wrap: nowrap;
+    min-height: calc(100vh);
+    &_banner{
+        padding: 20px;
+        display: flex;
+        min-height: 300px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 20px 20px 0 0;
+        background: url(../../../../demo-content/quiz/quiz-detail-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        figure{
+            margin: 0;
+            height: 38px;
+            width: 170px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        h3{
+            margin-top: 20px;
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 38px; /* 126.667% */
+        }
+    }
+    &_box{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1040px;
+        background: $clr-white;
+        height: 100%;
+        min-height: calc(100vh - 30px);
+        border-radius: 20px 20px 0 0;
+    }
+    &_info{
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        figure{
+            margin: 0;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 11.25px;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 11.25px;
+            }
+        }
+        & h6{
+            margin: 0;
+            color: $dark_black;
+            font: 500 rem(16)/em(24,16) $heading-font-family;
+            span{
+                margin-top: -2px;
+                display: block;
+                color: $text-light;
+                font: 400 rem(12)/em(18,12) $heading-font-family;
+            }
+        }
+    }
+    &_content{
+        width: 100%;
+        margin: 0 auto;
+        max-width: 680px;
+        padding: 75px 20px;
+        .am-btn{
+            width: 100%;
+            i{
+                &::before{
+                    font-size: 12px;
+                    font-weight: 800;
+                    color: $clr-white;
+                }
+            }
+        }
+    }
+    &_title{
+        gap: 10px;
+        @extend %flex;
+        align-items: center;
+        h2{
+            color: $heading-color;
+            font: 600 rem(24)/em(32,24) $heading-font-family;
+        }
+        span{
+            display: block;
+            padding: 3px 10px;
+            border-radius: 8px;
+            background: $clr-white;
+            color: $body-font-color;
+            border: 1px solid rgba($text-light, 0.20);
+            font: 500 rem(12)/em(18,12) $heading-font-family;
+            em{
+                font-weight: 400;
+                font-style: normal;
+            }
+        }
+    }
+    .am-course-stats {
+        gap: 12px 0;
+        width: 100%;
+        @extend %flex;
+        margin: 0 -10px;
+        margin-top: 10px;
+        align-items: center;
+        justify-content: start;
+    }
+    .am-stat-item {
+        gap: 8px;
+        @extend %flex;
+        padding: 0 10px;
+        align-items: end;
+        flex-wrap: nowrap;
+        justify-content: start;
+    }
+    .am-stat-icon-wrapper {
+        gap: 10px;
+        @extend %flex;
+        font-size: 15px;
+        line-height: 20px;
+        align-items: center;
+        min-height: 20px;
+        justify-content: center;
+        svg{
+            display: block;
+        }
+        i{
+            display: block;
+            line-height: inherit;
+        }
+    }
+    .am-stat-icon {
+        width: 15px;
+        margin: auto 0;
+        aspect-ratio: 1;
+        object-fit: contain;
+        align-self: stretch;
+        object-position: center;
+    }
+    .am-stat-content {
+        gap: 4px;
+        display: flex;
+        align-items: center;
+    }
+    .am-stat-label {
+        color: #585858;
+        font: 400 rem(14)/em(20,14) $body-font-family;
+    }
+    .am-stat-value {
+        font: 500 rem(14)/em(20,14) $body-font-family;
+        color: rgba($dark-black, 0.7);
+    }
+    &_description{
+        margin-top: 30px;
+        h3{
+            font: 600 rem(24)/em(32,24) $heading-font-family;
+            color: rgba($color: $heading-color, $alpha: 0.9);
+        }
+        p{
+            margin: 16px 0 0 0;
+            color: rgba(#585858, 0.9);
+            font: 400 rem(14)/em(20,14) $heading-font-family;
+            & + p{
+                margin-top: 20px;
+            }
+        }
+        a{
+            margin-top: 10px;
+            display: inline-flex;
+            color: $hyperlink;
+            text-decoration-line: underline;
+            text-decoration-style: solid;
+            text-decoration-skip-ink: none;
+            text-decoration-thickness: auto;
+            text-underline-offset: auto;
+            text-underline-position: from-font;
+            font: 400 rem(14)/em(20,14) $heading-font-family;
+        }
+        & + .am-btn{
+            margin-top: 30px;
+        }
+    }
+    // &_grades{
+    //     gap: 100px;
+    //     @extend %flex;
+    //     padding: 24px 0;
+    //     align-items: center;
+    //     margin-bottom: 24px;
+    //     border-bottom: 0.8px solid $border-color;
+    //     .am-passinggrade,
+    //     .am-yourgrade{
+    //         h4{
+    //             color: $heading-color;
+    //             font: 500 rem(16)/em(24,16) $heading-font-family;
+    //         }
+    //         span{
+    //             display: block;
+    //             margin-top: 6px;
+    //             font: 500 rem(14)/em(21,14) $heading-font-family;
+    //             color: rgba($color: $heading-color, $alpha: 0.7);
+    //             em{
+    //                 margin-left: 4px;
+    //                 font-weight: 400;
+    //                 font-style: normal;
+    //                 color: rgba($color: $body-font-color, $alpha: 0.8);
+    //             }
+    //         }
+    //     }
+    //     & > span{
+    //         width: 0.8px;
+    //         height: 40px;
+    //         background: $border-color;
+    //     }
+    // }
+    &_sidebar{
+        flex: none;
+        width: auto;
+        padding: 0 0 0 40px;
+        border-left: 1px solid $border-color;
+        .am-tutorreview-item{
+            gap: 10px;
+            i::before{
+                opacity: 0.7;
+                font-size: 16px;
+            }
+            & span{
+                gap: 4px;
+                font-size: 14px;
+                em{
+                    font-size: 14px;
+                    color: rgba($color: $body-font-color, $alpha: 0.8);
+                }
+            }
+        }
+        .am-similar-user{
+            height: auto;
+            max-width: 420px;
+            background: $formbg;
+            border-radius: 12px;
+            .am-tutorvone_img{
+                max-width: 45px;
+                border-radius: 12px;
+                img{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 12px;
+                }
+            }
+            h2{
+                margin-bottom: 16px;
+                color: rgba($color: $heading-color, $alpha: 0.8);
+                font: 500 rem(16)/em(24,16) $heading-font-family;
+            }
+            .am-tutordetail_user{
+                &_name{
+                    h3{
+                        gap: 14px;
+                        .flag{
+                            display: block;
+                        }
+                        a{
+                            font-size: 18px;
+                            font-weight: 700;
+                            line-height: 28px;
+                        }
+                    }
+                    & > span{
+                        font-size: 12px;
+                        max-width: 100%;
+                        margin-top: -2px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+        .am-tutorreviews-list{
+            margin: 16px 0;
+            max-width: 100%;
+
+        }
+        .am-tags-list{
+            gap: 6px;
+            margin: 0;
+            @extend %flex;
+            line-height: 20px;
+            padding-left: 26px;
+            align-items: center;
+            li{
+                line-height: inherit;
+            }
+            li{
+                & > span{
+                    display: block;
+                    color: $body-font-color;
+                    font: 500 14px/20px $body-font-family;
+                    em{
+                        padding: 2px 6px;
+                        font-style: normal;
+                        border-radius: 6px;
+                        background: #EFF8FF;
+                        color: $body-font-color;
+                    }
+                    &:has(.am-custom-tooltip){
+                        @extend %flex;
+                        align-items: center;
+                    }
+                }
+                em{
+                    font: 500 12px/18px $body-font-family;
+                }
+            }
+        }
+        .am-instructor-bio {
+            opacity: 0.9;
+            flex-wrap: wrap;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font: 400 rem(14)/em(20,14) $body-font-family;
+        }
+        .am-profile-footer {
+            gap: 14px;
+            display: flex;
+            margin-top: 16px;
+            align-items: center;
+            justify-content: space-between;
+            .am-social-icons {
+                gap: 10px;
+                @extend %flex;
+                align-items: center;
+                li {
+                    list-style: none;
+                    a {
+                        width: 36px;
+                        height: 36px;
+                        @extend %flex;
+                        font-size: 15px;
+                        color: $text-light;
+                        border-radius: 50%;
+                        align-items: center;
+                        text-decoration: none;
+                        background: $clr-white;
+                        justify-content: center;
+                    }
+                    .am-tooltip-text{
+                        z-index: 999;
+                        width: max-content;
+                    }
+                }
+            }
+            & > a{
+                flex: none;
+            }
+            .am-view-profile-btn{
+                flex: none;
+                padding: 8px 16px;
+                color: $theme-color;
+                border-radius: $radius;
+                font: 500 14px/20px $body-font-family;
+                background-color: rgba($theme-color, 0.06);
+            }
+        }
+    }
+}
+.am-instructions{
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    border: 1px solid #FFFAEB;
+    background: rgba(247, 144, 9, 0.06);
+    h6{
+        gap: 10px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        color: rgba($color: $heading-color, $alpha: 0.9);
+        font: 600 rem(20)/em(30,20) $heading-font-family;
+        i{
+            font-size: 18px;
+            transform: scaleY(-1);
+            &::before{color: #F79009;}
+        }
+    }
+    ul{
+        padding: 0;
+        list-style: none;
+        margin: 16px 0 0 0;
+        li{
+            gap: 6px;
+            display: flex;
+            position: relative;
+            padding-left: 18px;
+            list-style-type: none;
+            p{
+                margin: 0;
+                color: #585858;
+                font: 400 rem(14)/em(20,14) $heading-font-family;
+                strong{
+                    color: #000;
+                }
+            }
+            & + li{margin-top: 8px;}
+            &::before{
+                left: 0;
+                top: 4px;
+                content: "\e998";
+                font-weight: 800;
+                color: #F79009;
+                font-size: 12px;
+                line-height: 12px;
+                position: absolute;
+                font-family: icomoon !important;
+            }
+        }
+    }
+}
+.am-startquiz-popup{
+    .am-deletepopup{
+        &_icon{
+            span:before,
+            span:after,
+            &:after,
+            &:before{
+                background: $theme-color;
+            }
+            span:before{
+                opacity: 0.5;
+            }
+            span:after{
+                opacity: 0.7;
+            }
+            &:after{
+                opacity: 0.2;
+            }
+            i:before{
+                color: $theme-color;
+            }
+        }
+        &_title{
+            h3{
+                font: 700 rem(18)/em(28,18) $heading-font-family;
+                color: rgba($color: $heading-color, $alpha: 0.9);
+            }
+        }
+    }
+}

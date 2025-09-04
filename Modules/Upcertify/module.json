@@ -1,0 +1,14 @@
+{
+    "name": "Upcertify",
+    "alias": "upcertify",
+    "description": "Laravel Digital Certificate Generator",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\Upcertify\\Providers\\UpcertifyServiceProvider"
+    ],
+    "files": [
+        "helpers/functions.php"
+    ]
+}

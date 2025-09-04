@@ -1,0 +1,54 @@
+/** ====== Skeletons layout Start ====== **/
+%skeleton{
+    background: #ebebea;
+    background-size: 40px 100%;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: skeleton-wave 1.2s ease infinite;
+    background-image: linear-gradient(90deg, rgba($clr-white, 0), rgba($clr-white, 0.5), rgba($clr-white, 0));
+    @keyframes skeleton-wave {
+    to {background-position: right -40px top 0;}
+    100% {background-position: left 40px top 1;}
+    }
+}
+.uc-skeleton{
+    .uc-template_item{
+        height: 120px;
+        @extend %skeleton;
+    }
+    .uc-geomatric-img{
+        height: 95px;
+        @extend %skeleton;
+    }
+    .uc-media-title{
+        span{
+            width: 60%;
+            height: 18px;
+            @extend %skeleton;
+        }
+        i{
+            width: 18px;
+            height: 18px;
+            @extend %skeleton;
+        }
+    }
+    .uc-element-drag_icon{
+        width: 8px;
+        height: 12px;
+        @extend %skeleton;
+    }
+    &.uc-element-drag span{
+        width: 60%;
+        height: 20px;
+        @extend %skeleton;
+    }
+    &.uc-geomatric-img{
+        @extend %skeleton;
+        & > img{
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}
+/** ====== Skeletons layout End ====== **/

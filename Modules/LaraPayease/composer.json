@@ -1,0 +1,30 @@
+{
+    "name": "amentotech/larapayease",
+    "description": "",
+    "authors": [
+        {
+            "name": "AmentoTech",
+            "email": "info@amentotech.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "require": {
+        "stripe/stripe-php": "^10.21"
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\LaraPayease\\Tests\\": "tests/"
+        }
+    }
+}

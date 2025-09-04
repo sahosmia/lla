@@ -1,0 +1,13 @@
+{
+    "name": "LaraPayease",
+    "alias": "larapayease",
+    "description": "Versatile Payment Gateway Integration Addon for Lernen.",
+    "keywords": [],
+    "priority": 1,
+    "version": "lite",
+    "type": "core",
+    "providers": [
+        "Modules\\LaraPayease\\Providers\\LaraPayeaseServiceProvider"
+    ],
+    "files": []
+}

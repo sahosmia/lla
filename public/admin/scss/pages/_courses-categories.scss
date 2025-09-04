@@ -1,0 +1,9 @@
+.tb-courses-categories{
+    .tb-table{
+        .tb-checkbox{
+            label::before{
+                display: none;
+            }
+        }
+    }
+}

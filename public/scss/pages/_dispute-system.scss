@@ -1,0 +1,713 @@
+// dispute modal style start    
+.am-message-content {
+    &:has(>p:empty){
+    display: none;
+  }
+}
+.am-dispute_modal{
+    .modal-dialog{
+        max-width: 524px;
+    }
+    .am-modal-body{
+        .am-themeform{
+            fieldset{
+                margin: -8px;
+                .form-group{
+                   padding: 8px;
+                }
+                .am-form-btn-wrap{
+                    margin-top: 14px;
+                }
+                .note-editor{
+                    max-height: 150px;
+                    .note-editable{
+                        height: calc(150px - 52px);
+                    }
+                }
+            }
+        }
+    }
+}
+// dispute modal style end    
+// dispute manage style start    
+.am-dispute {
+    &-wrapper {
+      display: flex;
+      background: $clr-white;
+      border-radius: $radius;
+      height: calc(100vh - 132px);
+    }
+  
+    &-details {
+        display: flex;
+        padding: 24px;
+        height: 100%;
+        flex: 0 0 524px;
+        flex-direction: column;
+        & > button{
+            margin-top: auto;
+        }
+    }
+  
+    &-chat {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      border-left: 1px solid $border-color;
+    }
+  }
+  
+  // Left side styles
+  .am-dispute-header {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+    border-bottom: 1px solid $border-color;
+    .am-dispute-id {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+      h4 {
+          margin: 0;
+          color: rgba($heading-color,0.7);
+          font: 600 18px/27px $heading-font-family;
+      }
+    }
+  }
+  
+  .am-status-badge {
+    font-size: 12px;
+    color: #56C5DE;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 6px;
+    position: relative;
+    flex: none;
+    padding: 3px 6px 3px 20px;
+    background: rgba(86, 197, 222, 0.10);
+    &::after{
+        top: 50%;
+        left: 7px;
+        content: '';
+        width: 8px;
+        height: 8px;
+        position: absolute; 
+        border-radius: 50%;
+        background-color: #56C5DE;
+        transform: translateY(-50%);
+    }
+    &.am-pending{
+      color: #FE9C30;
+      background: rgba(254, 156, 48, 0.10);
+      &::after{
+        background: #fe9c30;
+      }
+    }
+    &.am-closed{
+      color: #808080;
+      background: rgba(128, 128, 128, 0.10);
+      &::after{
+        background: #808080;
+      }
+    }
+    &.am-under-review{
+      color: #0080C0;
+      background: rgba(0, 128, 192, 0.10);
+      &::after{
+        background: #0080C0;
+      }
+    }
+    &.am-in-discussion{
+      color: #2B9C0E;
+      background: rgba(43, 156, 14, 0.10);
+      &::after{
+        background: #2B9C0E;
+      }
+    }
+  }
+  .am-dispute-chat{
+    .am-page-error{
+      border: 0;
+      height: 100%;
+      .am-norecord-wrap{
+        max-width: 360px;
+      }
+    }
+  }
+  .am-message-wrap{
+    gap: 10px;
+    display: flex;
+    margin-top: 6px;
+    align-items: self-start;
+    justify-content: flex-end;
+    p{
+      margin: 1px 0;
+      font: 400 12px/18px $heading-font-family;
+      color: rgba($color: $body-font-color, $alpha: 0.6);
+    }
+    .am-message-time{
+      margin-top: 0 !important;
+    }
+  }
+  .am-dispute {
+    &-container {
+      padding: 20px;
+      background: $bg-light;
+      border-radius: $radius;
+    }
+  
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: -11px 0;
+    }
+  
+    &-item {
+      display: flex;
+      padding: 11px 0;
+      align-items: center;
+      justify-content: space-between;
+  
+      &:last-child {
+        border-bottom: none;
+      }
+  
+      // Left side span
+      > span {
+          display: block;
+          color: $body-font-color;
+          font: 400 13px/18px $heading-font-family;
+      }
+  
+      // Right side strong
+      > strong {
+          display: block;
+          color: $body-font-color;
+          font: 500 14px/150% $heading-font-family;
+      }
+  
+      // Session div styling
+      > div{
+        &:not(.am-dispute-user) {
+            text-align: right;
+      
+            strong {
+                display: block;
+                color: $body-font-color;
+                font: 500 14px/150% $heading-font-family;
+            }
+      
+            span {
+              display: block;
+              color: $body-font-color;
+              font: 400 12px/20px $heading-font-family;
+            }
+          }
+        }
+      }
+  
+    &-user {
+        gap: 12px;
+        display: flex;
+        text-align: left;
+        align-items: center;
+  
+      figure {
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        border-radius: 50%;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      div {
+        display: flex;
+        flex-direction: column;
+  
+        strong {
+          color: $body-font-color;
+          font-family: Roboto, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 150%;
+        }
+  
+        em {
+          color: $body-font-color;
+          font-family: Roboto, sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .am-dispute-details  {
+    .am-btn{
+        padding: 18px 16px;
+    }
+  }
+.am-dispute-resolution {
+    margin-top: 20px;
+
+    h4 {
+        margin: 0 0 20px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 27px;
+        padding: 0 0 16px;
+        color: rgba($heading-color,0.7);
+        border-bottom: 1px solid $border-color;
+    }
+  
+    .am-form-group {
+      margin-bottom: 16px;
+  
+      label {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        margin-bottom: 6px;
+        color: $body-font-color;
+        &.fw-important::after {
+          content: "*";
+          color: #EF4444;
+        }
+      }
+
+      .am-form-heading{
+        margin-bottom: 16px;
+      }
+  
+      textarea.form-control {
+        height: 108px;  
+      }
+    }
+    .am-radio-item{
+        width: 50%;
+        label{
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
+        .am-radio{
+            margin-bottom: 0;
+            position: relative;
+            .am-dispute-user{
+                border-radius: 8px;
+                padding: 16px 12px;
+                background: $formbg;
+                border: 2px solid $formbg;
+                & > div{
+                    strong{
+                      font-weight: 400;
+                      line-height: 20px;
+                      color: $heading-color;
+                    }
+                }
+            }
+            .am-icon{
+                right: 3px;
+                opacity: 0;
+                bottom: 3px;
+                visibility: hidden;
+                position: absolute;
+            }
+            input[type="radio"]{
+                opacity: 0;
+                display: none;
+                visibility: hidden;
+                &:checked ~ .am-dispute-user{
+                    border-color: #17B26A;
+                }
+                &:checked ~ .am-icon{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+  // Right side chat styles
+  .am-user {
+    &-profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+  
+    &-card,
+    &-item {
+      display: flex;
+      gap: 12px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      align-items: center;
+      transition: all 0.3s ease;
+      background: $clr-white;
+  
+      &:hover {
+        background: rgba($theme-color, 0.05);
+      }
+  
+      &:active {
+        background: rgba($theme-color, 0.1);
+      }
+    }
+    &-item{
+        cursor: pointer;
+    }
+  
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px;
+      background: $bg-light;
+      border-radius: 10px;
+    }
+  
+    &-avatar {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      overflow: hidden;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    &-info {
+      min-width: 0; // Prevents text overflow issues
+    }
+  
+    &-name {
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        color: $heading-color;
+        text-overflow: ellipsis;
+        font: 400 14px/20px $heading-font-family;
+      }
+      
+      &-role {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: rgba($body-font-color,0.8);
+        font: 400 14px/20px $heading-font-family;
+    }
+  }
+  
+  // Active state styles
+  .am-user-item.active {
+    background: rgba($theme-color, 0.1);
+    
+    .am-user-avatar {
+      border-color: $theme-color;
+    }
+  
+    .am-user-name {
+      color: $theme-color;
+    }
+  }
+  
+  
+  .am-chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  
+    .am-message {
+      gap: 10px;
+      display: flex;
+      margin-bottom: 20px;
+      max-width: 766px;
+  
+      &-avatar {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+      &-content-wrapper{
+        width: 100%;
+        max-width: fit-content;
+        .am-message-header {
+            display: flex;
+            margin-bottom: 6px;
+            .am-message-name {
+                color: $body-font-color;
+                font: 400 14px/20px $heading-font-family;
+            }
+    
+        }
+        .am-message-time {
+          display: flex;
+          font-size: 14px;
+          margin-top: 6px;
+          line-height: 20px;
+          color: $body-font-color;
+          justify-content: flex-end;
+        }
+      }
+  
+      &-content {
+        flex: 1;
+        padding: 16px;
+        border-radius: 12px;
+        background: $formbg;
+        word-break: break-word;
+  
+        p {
+          margin: 0;
+          color: rgba($heading-color,0.7);
+          font: 400 14px/20px $heading-font-family;
+        }
+      }
+    }
+    .am-reply-message{
+        margin-top: 20px;
+        .am-message-content{
+            background: #E5EBF9;
+            max-width: max-content;
+        }
+    }
+  }
+  .am-message-content{
+    &:empty{
+      display: none;
+    }
+  }
+  .am-chat-input {
+    gap: 10px;
+    padding: 16px;
+    display: flex;
+    width: 100%;
+    border-top: 1px solid $border-color;
+  
+    textarea {
+      width: 100%;
+      border: 0;
+      resize: none;
+      height: 37px;
+      padding: 8px 0;
+      border-radius: 0;
+      resize: none;
+      &:focus{
+        outline: none;
+      }
+  
+      &::placeholder {
+        color: rgba($dark-black,0.4);
+      }
+      &::-webkit-scrollbar {
+        width: 4px;  // Slightly smaller than regular scrollbar
+    }
+    
+      &::-webkit-scrollbar-track {
+          background: transparent;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+          background-color: rgba(#e8e8e9, 0.8);
+          border-radius: 10px;
+          
+          &:hover {
+              background-color: #e8e8e9;
+          }
+      }
+      
+      // Firefox scrollbar styling
+      scrollbar-width: none;
+      scrollbar-color: #e8e8e9 transparent;
+      
+      // Remove default textarea resize handle
+      &::-webkit-resizer {
+          display: none;
+      }
+    }
+  
+    .am-btn {
+        background: #1570EF;  
+      &:hover {
+        background: darken($theme-color, 10%);
+      }
+      svg{
+        flex: none;
+      }
+      &.am-btn_disable{
+        background: $btn-disable;
+        cursor: default;
+        &:after{
+          display: none;
+        }
+        &:before{
+          display: none;
+        }
+        svg{
+          path{
+            stroke: rgba($color: $text-light, $alpha: 0.5);
+          }
+        }
+      }
+      &.am-btn_loader{
+        background: $formbg;
+        pointer-events: none;
+        color: rgba($color: $text-light, $alpha: 0.5) !important;
+        &:after{
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            animation: .5s btnloader infinite linear;
+            border: 2px solid rgba($color: $text-light, $alpha: 0.5);
+            border-top-color: rgba($color: $text-light, $alpha: 0.1);
+        }
+        &:before{
+          display: none;
+        }
+        & svg{
+          display: none;
+        }
+      }
+    }
+  }
+    .am-tooltip-wrap{
+      position: relative;
+    .am-tooltip-text{
+      left: auto;
+      right: 0;
+      width: 250px;
+      transform: translateX(0);
+      position: absolute;
+      bottom: calc(100% + 10px);
+      font: 500 12px/16px $heading-font-family;
+      &::before {
+        right: 20px;
+        left: auto;
+        transform: translate(-50%) rotate(45deg);
+    }
+    }
+    .am-tooltip{
+      overflow: visible;
+    }
+    &:hover{
+      & > .am-tooltip-text{
+        opacity: 1;
+      }
+    }
+  }
+  
+  // Radio buttons
+  .am-radio-group {
+    display: flex;
+    gap: 16px;
+    .am-radio {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    
+      input[type="radio"] {
+        margin: 0;
+      }
+    
+      span {
+        font-size: 14px;
+        color: rgba($heading-color,0.7);
+      }
+    }
+  }
+  
+  .am-dispute-container{
+    padding: 10px;
+    background: $formbg;
+    border-radius: $radius;
+  }
+  .am-dispute-content{
+    height: 100%;
+    padding: 0 20px;
+    margin: 0 -20px;
+    margin-bottom: 20px;
+}
+.am-custom-scrollbar-y {
+  overflow: auto;
+  overflow-x: hidden;
+}
+.am-custom-scrollbar-y:hover::-webkit-scrollbar-thumb {
+  background-color: #e8e8e9;
+  border: 5px solid #e8e8e9;
+}
+
+.am-custom-scrollbar-y::-webkit-scrollbar {
+  width: 5px;
+}
+.am-custom-scrollbar-y::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+}
+.am-dispute-chat{
+    .am-user-profile{
+      min-height: 82px;
+      padding: 20px 30px 20px 20px;
+      border-bottom: 1px solid $border-color;
+        .am-user-card{
+            padding: 0;
+            background: transparent;
+        }
+        .am-user-list{
+            gap: 10px;
+            width: 100%;
+            padding: 5px;
+            max-width: 300px;
+            margin-left: auto;
+            background:  $formbg;
+            border-radius: 9999px;
+        }
+        .am-user-item{
+            padding: 8px;
+            min-width: 140px;
+            border-radius: 9999px;
+            background: transparent;
+            &.active,
+            &:hover{
+                background: $clr-white;
+                box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+            }
+            .am-user-avatar{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+.am-disputelist{
+    .tb-adminhead__img{
+        flex-shrink: 0;
+    }
+    .am-view-btn{
+        cursor: pointer;
+        padding: 7px 12px;
+        border-radius: 8px;
+    }
+}

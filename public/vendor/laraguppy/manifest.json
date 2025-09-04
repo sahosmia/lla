@@ -1,0 +1,580 @@
+{
+  "_AudioPlayer.js": {
+    "file": "AudioPlayer.js",
+    "name": "AudioPlayer",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "AudioPlayer.css"
+    ],
+    "integrity": "sha384-0w5yoVAW4V3A2/Ja4nVTz9yk8lrFBVVtzOfxGS6xs057Gw3+dRBUJgGmr5XL71s5"
+  },
+  "_GeoMap.js": {
+    "file": "GeoMap.js",
+    "name": "GeoMap",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "GeoMap.css"
+    ],
+    "assets": [
+      "layers.png",
+      "layers-2x.png",
+      "marker-icon.png",
+      "fullscreen.png",
+      "fullscreen@2x.png"
+    ],
+    "integrity": "sha384-6MDIo8tzEDaylm7+PTt2v6qKZGAcs2FLZ8xMDzj6hwAQmfso64ZAb0Ohujy9rwGb"
+  },
+  "_empty-users.js": {
+    "file": "empty-users.js",
+    "name": "empty-users",
+    "assets": [
+      "empty-users.svg"
+    ],
+    "integrity": "sha384-v2ekHRQ9rdaJMrNINaU8f7CzxoFjlkZqsghFKUM+9yeNZJnJ19rEjK1SYWuEj7pN"
+  },
+  "_v3.js": {
+    "file": "v3.js",
+    "name": "v3",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-iGgS3ZeP1do45F/sD/j7Bhu32Q8W+hwmpVmXzC7FOuLmQRZgDItxjAgFSAN00pX5"
+  },
+  "_video-js.js": {
+    "file": "video-js.js",
+    "name": "video-js",
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "video-js.css"
+    ],
+    "integrity": "sha384-6fPDoYLHPKr4Zwyffid6mHmOOc+AzCsllr08HhQKJLwiRepytUJ+50ksXK9CFMh3"
+  },
+  "lang/php_en.json": {
+    "file": "php_en.js",
+    "name": "php_en",
+    "src": "lang/php_en.json",
+    "isDynamicEntry": true,
+    "integrity": "sha384-FmjFklybEW6p2rBlX4Fdd92+F0VSXZX7f26tbHXZf29Qf3LxSOpyFi98jZcfUDHm"
+  },
+  "node_modules/leaflet-fullscreen/dist/fullscreen.png": {
+    "file": "fullscreen.png",
+    "src": "node_modules/leaflet-fullscreen/dist/fullscreen.png",
+    "integrity": "sha384-+zZYFj3o8Yq7eanDCphJDGXDxpBskj6ZT0rXBaucSJcDF7GN7SY4TGvUMzB91hd5"
+  },
+  "node_modules/leaflet-fullscreen/dist/fullscreen@2x.png": {
+    "file": "fullscreen@2x.png",
+    "src": "node_modules/leaflet-fullscreen/dist/fullscreen@2x.png",
+    "integrity": "sha384-CUMWpgtifbK8jd3IYvAEiUsLRSsc9jrFQd+onFomvczO9KXPzUI1WF9uxFLn9lWl"
+  },
+  "node_modules/leaflet/dist/images/layers-2x.png": {
+    "file": "layers-2x.png",
+    "src": "node_modules/leaflet/dist/images/layers-2x.png",
+    "integrity": "sha384-+F2ZWK/HTpkV9kN2HnMGCQOTM/cnQJLs770FLOeHznwVWRfDESI8z4JwcGYmy2Au"
+  },
+  "node_modules/leaflet/dist/images/layers.png": {
+    "file": "layers.png",
+    "src": "node_modules/leaflet/dist/images/layers.png",
+    "integrity": "sha384-80x85ZS+G189o0xL8E8D7BnfhuNss6EwUPHzG7e+qByRD2xnpxikZ6UQU4Re5nNy"
+  },
+  "node_modules/leaflet/dist/images/marker-icon.png": {
+    "file": "marker-icon.png",
+    "src": "node_modules/leaflet/dist/images/marker-icon.png",
+    "integrity": "sha384-wg83fCOXjBtqzFAWhTL9Sd9vmLUNhfEEzfmNUX9zwv2igKlz/YQbdapF4ObdxF+R"
+  },
+  "resources/js/app.js": {
+    "file": "app.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "resources/js/components/sidebar/profileSettings/profileSettings.vue",
+      "resources/js/components/sidebar/threads/PrivateList.vue",
+      "resources/js/components/sidebar/friendList/FriendUserList.vue",
+      "resources/js/components/sidebar/userList/UserList.vue",
+      "resources/js/components/messages/messageHeader/SidebarSettings.vue",
+      "resources/js/components/messages/messagesContainer/MessagesList.vue",
+      "resources/js/components/alertModals/AlertModals.vue",
+      "lang/php_en.json"
+    ],
+    "css": [
+      "app.css"
+    ],
+    "assets": [
+      "notification-bell.wav",
+      "avatar.png",
+      "close.png",
+      "emoji.png",
+      "wpguppy.eot",
+      "wpguppy.ttf",
+      "wpguppy.woff",
+      "wpguppy.svg",
+      "SF-Pro-Text-Ultralight.otf",
+      "SF-Pro-Text-UltralightItalic.otf",
+      "SF-Pro-Text-Light.otf",
+      "SF-Pro-Text-LightItalic.otf",
+      "SF-Pro-Text-Regular.otf",
+      "SF-Pro-Text-RegularItalic.otf",
+      "SF-Pro-Text-Medium.otf",
+      "SF-Pro-Text-MediumItalic.otf",
+      "SF-Pro-Text-Semibold.otf",
+      "SF-Pro-Text-SemiboldItalic.otf",
+      "SF-Pro-Text-Bold.otf"
+    ],
+    "integrity": "sha384-nHBw0xUWBwpTLmQxX1hMXDI7cyn58Z6qJO/kpYDQIxddGL7GM8QPh46IvZhMRDTL"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-Bold.otf": {
+    "file": "SF-Pro-Text-Bold.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-Bold.otf",
+    "integrity": "sha384-ZDJXRf00WntIQ2zg2hvh9uwXOh6VdKniWVwtrQK+AtJoxGc2yeCqA0HYDrNu4vZo"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-Light.otf": {
+    "file": "SF-Pro-Text-Light.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-Light.otf",
+    "integrity": "sha384-uVzo+LDvST33b8BAt5yfk3zmxeF6CMsy/nJuYF2rj6heb2hFRV+kk7vCgo+uk1rv"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-LightItalic.otf": {
+    "file": "SF-Pro-Text-LightItalic.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-LightItalic.otf",
+    "integrity": "sha384-PKehc85ttrQwKCi0twlC+KjpRc6k6l9I/Q5CqNS7NZPBiEQ+bmpS1/PfO1WZ0PB3"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-Medium.otf": {
+    "file": "SF-Pro-Text-Medium.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-Medium.otf",
+    "integrity": "sha384-GQ0HfIfS1R/Xhot/XUNIMry3ccWRkXiCN8xy0xOabYKGO7ypudMXnWdORUAwaYV7"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-MediumItalic.otf": {
+    "file": "SF-Pro-Text-MediumItalic.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-MediumItalic.otf",
+    "integrity": "sha384-hdPWSOMvS3xTN1BECWIrIeb5Dk1JSQa0y6hJRTT4cUS3l3kaJ3X2NORgtobounNr"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-Regular.otf": {
+    "file": "SF-Pro-Text-Regular.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-Regular.otf",
+    "integrity": "sha384-NwhQf5jVDci+Lvi5R/v2g/ZQv5Go+jkB5XuQbf2Cm+PEZ8DmCn2vx+cKjrVvZP40"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-RegularItalic.otf": {
+    "file": "SF-Pro-Text-RegularItalic.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-RegularItalic.otf",
+    "integrity": "sha384-4Iks2wEDd0C5gg5A8drv/GQwjK1KNdeBlWx9XMVU9iV3/OOMTw88zFFMqRUm8Y1I"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-Semibold.otf": {
+    "file": "SF-Pro-Text-Semibold.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-Semibold.otf",
+    "integrity": "sha384-nKbB5tbFoTndrcBeRhKkEMTsRi5w8RYOfcZ8q0iBJWEpbieJb1VrnTFAknUThHu8"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-SemiboldItalic.otf": {
+    "file": "SF-Pro-Text-SemiboldItalic.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-SemiboldItalic.otf",
+    "integrity": "sha384-xoFB/83I2JlF1GJz/EbGGMsP9SDCUJJTutglZuF8eegL1SbtxuL35YAkF+e5FENw"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-Ultralight.otf": {
+    "file": "SF-Pro-Text-Ultralight.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-Ultralight.otf",
+    "integrity": "sha384-R8vGHA/yp8LewN33pCjR4k7/NBAZJlSUWZXubBPHltM7GWwqXpkPY87gYgAJ4T+k"
+  },
+  "resources/js/assets/fonts/SF-Pro-Text-UltralightItalic.otf": {
+    "file": "SF-Pro-Text-UltralightItalic.otf",
+    "src": "resources/js/assets/fonts/SF-Pro-Text-UltralightItalic.otf",
+    "integrity": "sha384-Ag1KII/+fkWGBcMNvMPKWttppxGaIBiPosinUANp3T/EUocCRpHvJDBTgCobFpPp"
+  },
+  "resources/js/assets/icons/wpguppy.eot": {
+    "file": "wpguppy.eot",
+    "src": "resources/js/assets/icons/wpguppy.eot",
+    "integrity": "sha384-6WNKd9Kvbd/SRbswNuVC1WZYE/4xvyMkllwkHU9Avauk7jym+3jJiNfdZk2pRzK+"
+  },
+  "resources/js/assets/icons/wpguppy.svg": {
+    "file": "wpguppy.svg",
+    "src": "resources/js/assets/icons/wpguppy.svg",
+    "integrity": "sha384-3Cm1BF61IxYLOY5lewdzBE72O2v6gWbewuvOyMV7oEvw1kBCN1FYzLO89Ub6W/h9"
+  },
+  "resources/js/assets/icons/wpguppy.ttf": {
+    "file": "wpguppy.ttf",
+    "src": "resources/js/assets/icons/wpguppy.ttf",
+    "integrity": "sha384-6C5eonwu0S+UC5M0JeqdcXpIV4grvz/WF96rxD+NL8Iq9f6E8CKPDpAImrjeD/zS"
+  },
+  "resources/js/assets/icons/wpguppy.woff": {
+    "file": "wpguppy.woff",
+    "src": "resources/js/assets/icons/wpguppy.woff",
+    "integrity": "sha384-8CU/Cm8bLQisikBZQHG90gcis7dUWlYfljfTBmQdlqBVa7p0J9jHruYYGrbRqxyQ"
+  },
+  "resources/js/assets/images/avatar.png": {
+    "file": "avatar.png",
+    "src": "resources/js/assets/images/avatar.png",
+    "integrity": "sha384-wMOmaawyBYZ7yz2Z6ZdCg/rbxM8y7XsvrNGp8vzpgHQtgNb7jc/5CK+gHhV6T6z0"
+  },
+  "resources/js/assets/images/empty-chat.svg": {
+    "file": "empty-chat.svg",
+    "src": "resources/js/assets/images/empty-chat.svg",
+    "integrity": "sha384-mouNay2VAyhJ6qjSlBogDbuNm6VtH769u2csVU8/DSkHQr0FgzObPpr9aslqNHlV"
+  },
+  "resources/js/assets/images/empty-users.svg": {
+    "file": "empty-users.svg",
+    "src": "resources/js/assets/images/empty-users.svg",
+    "integrity": "sha384-pfBp4z9OO+JneNbOtaUWlYVJ+6of3AwN64wcehArZoQXNGIw5pBv1ZGSPxcpGhO1"
+  },
+  "resources/js/assets/images/favicon.png": {
+    "file": "favicon.png",
+    "src": "resources/js/assets/images/favicon.png",
+    "integrity": "sha384-B3Ys+k5USWdp8gG2e3ji1UAoK1oI6xP7NTPbJBNj6FS2AfB3vB9UkWnA3yUJ8qHq"
+  },
+  "resources/js/assets/media/notification-bell.wav": {
+    "file": "notification-bell.wav",
+    "src": "resources/js/assets/media/notification-bell.wav",
+    "integrity": "sha384-BomKclucv/pBK2FvhNo4D5vfEPL9B6+Ze7OO6drwJfNXTosF6qbdEI7ZuBnPPxZp"
+  },
+  "resources/js/components/alertModals/AlertModals.vue": {
+    "file": "AlertModals.js",
+    "name": "AlertModals",
+    "src": "resources/js/components/alertModals/AlertModals.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-fln6QoX2b5SX497+KiveutoMRW4C+KebKq0/+rNI7tzFRMTjWP0BcMRi1wCUlJWL"
+  },
+  "resources/js/components/messages/audioMessage/AudioMessage.vue": {
+    "file": "AudioMessage.js",
+    "name": "AudioMessage",
+    "src": "resources/js/components/messages/audioMessage/AudioMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue",
+      "resources/js/components/messages/messageActions/MessageActions.vue"
+    ],
+    "css": [
+      "AudioMessage.css"
+    ],
+    "integrity": "sha384-voy5qZH/AMq4ONfrXcLWlp5ji0kUa6GST1MQhGB1ONRwez7bLh0a/TVYeAYXcryh"
+  },
+  "resources/js/components/messages/deleteMessage/DeleteMessage.vue": {
+    "file": "DeleteMessage.js",
+    "name": "DeleteMessage",
+    "src": "resources/js/components/messages/deleteMessage/DeleteMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-6R3PisVkLbJCKO7M3VVhrljX2iILUoXOtSdDKkXKA0QSQREiY+905GaCM+w5/Y8R"
+  },
+  "resources/js/components/messages/fileMessage/FileMessage.vue": {
+    "file": "FileMessage.js",
+    "name": "FileMessage",
+    "src": "resources/js/components/messages/fileMessage/FileMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue",
+      "resources/js/components/messages/messageActions/MessageActions.vue"
+    ],
+    "integrity": "sha384-dPSKjL5YSXkcPhKT/g7+gp2hFNrg3/1er/LtW4Z845vNbTXsRfI/aDkoehxsU0kJ"
+  },
+  "resources/js/components/messages/imageMessage/ImageMessage.vue": {
+    "file": "ImageMessage.js",
+    "name": "ImageMessage",
+    "src": "resources/js/components/messages/imageMessage/ImageMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_v3.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/messageActions/MessageActions.vue",
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue"
+    ],
+    "css": [
+      "ImageMessage.css"
+    ],
+    "integrity": "sha384-pAQC5CBeSe4Tm1AcfShP8Iz7vKmCJUW27RPrZhwTfyEfmx9wuBj8HTbj8I+x2dOa"
+  },
+  "resources/js/components/messages/locationMessage/LocationMessage.vue": {
+    "file": "LocationMessage.js",
+    "name": "LocationMessage",
+    "src": "resources/js/components/messages/locationMessage/LocationMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_GeoMap.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/messageActions/MessageActions.vue",
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue"
+    ],
+    "css": [
+      "LocationMessage.css"
+    ],
+    "integrity": "sha384-JqNmjcAxZ1BvWympzkHOJEOhlmSzr3vfPWmFJcL2nKCX4EpgNAIlys4vNrTj6BqQ"
+  },
+  "resources/js/components/messages/messageActions/MessageActions.vue": {
+    "file": "MessageActions.js",
+    "name": "MessageActions",
+    "src": "resources/js/components/messages/messageActions/MessageActions.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-RqbEWZVE368UsqNmD36Qb4XxNNdkrPE71hkzjTfVaMHiMpuOqN5O5TrMZxX7c0tW"
+  },
+  "resources/js/components/messages/messageComposer/resources/close.png": {
+    "file": "close.png",
+    "src": "resources/js/components/messages/messageComposer/resources/close.png",
+    "integrity": "sha384-Gn7ggd0bgyuF15/qdTvmDnpj1abdJEr/5JOEN+OwwI/sTdwF9tclqAABZhcd+ZsH"
+  },
+  "resources/js/components/messages/messageComposer/resources/emoji.png": {
+    "file": "emoji.png",
+    "src": "resources/js/components/messages/messageComposer/resources/emoji.png",
+    "integrity": "sha384-IGVLsdg0M70aqGq2WB7NnSGohxpV0Qed37JWn3snhSA2bpsPClNC2/343Q5sdGKn"
+  },
+  "resources/js/components/messages/messageHeader/SidebarSettings.vue": {
+    "file": "SidebarSettings.js",
+    "name": "SidebarSettings",
+    "src": "resources/js/components/messages/messageHeader/SidebarSettings.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_v3.js"
+    ],
+    "css": [
+      "SidebarSettings.css"
+    ],
+    "assets": [
+      "file.jpg",
+      "audio.jpg",
+      "video.jpg"
+    ],
+    "integrity": "sha384-wDkeRRcGBuyjv/dsHB6iKcWTOBZb1BKmOphnYQ+3oLZ601cbg7L0QwQ9+W9XGub9"
+  },
+  "resources/js/components/messages/messageHeader/resources/audio.jpg": {
+    "file": "audio.jpg",
+    "src": "resources/js/components/messages/messageHeader/resources/audio.jpg",
+    "integrity": "sha384-Df0mXsfqN0h4PCbY5/N0cBN/BXrTvyRFFHOv3b9p7KuVPQb41Ioe3va09D0EiuL8"
+  },
+  "resources/js/components/messages/messageHeader/resources/file.jpg": {
+    "file": "file.jpg",
+    "src": "resources/js/components/messages/messageHeader/resources/file.jpg",
+    "integrity": "sha384-HfAGPwe+9mZCTlHhCwg0/VYTqlVUTObUM/L2HcpoKtJZtyhHfzvYK+SnZEbY+8ZO"
+  },
+  "resources/js/components/messages/messageHeader/resources/video.jpg": {
+    "file": "video.jpg",
+    "src": "resources/js/components/messages/messageHeader/resources/video.jpg",
+    "integrity": "sha384-0zduDmkJnp+2/LNfpQHQqjagVRF8aFrPRkqPdZT/G5HRhR2NVjxFpckZ7vPRdZt+"
+  },
+  "resources/js/components/messages/messagesContainer/MessagesList.vue": {
+    "file": "MessagesList.js",
+    "name": "MessagesList",
+    "src": "resources/js/components/messages/messagesContainer/MessagesList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/deleteMessage/DeleteMessage.vue",
+      "resources/js/components/messages/fileMessage/FileMessage.vue",
+      "resources/js/components/messages/imageMessage/ImageMessage.vue",
+      "resources/js/components/messages/locationMessage/LocationMessage.vue",
+      "resources/js/components/messages/videoMessage/VideoMessage.vue",
+      "resources/js/components/messages/voiceMessage/VoiceMessage.vue",
+      "resources/js/components/messages/textMessage/TextMessage.vue",
+      "resources/js/components/messages/notifyMessage/NotifyMessage.vue",
+      "resources/js/components/messages/audioMessage/AudioMessage.vue"
+    ],
+    "css": [
+      "MessagesList.css"
+    ],
+    "integrity": "sha384-db0LyFQ4IlKyonWPCz8ljWI2nbfkBK5Gz7DCDHCIajiUtlXk/oH+XHIhFR1ulC5b"
+  },
+  "resources/js/components/messages/notifyMessage/NotifyMessage.vue": {
+    "file": "NotifyMessage.js",
+    "name": "NotifyMessage",
+    "src": "resources/js/components/messages/notifyMessage/NotifyMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-aKzAHp0Hk2jXIx+OoKIh1vyU9tz5eG+lpDUI1vnXHSlHMDkEb9Y+ZV0rum0Cbkoi"
+  },
+  "resources/js/components/messages/quoteMessages/QuoteMessageList.vue": {
+    "file": "QuoteMessageList.js",
+    "name": "QuoteMessageList",
+    "src": "resources/js/components/messages/quoteMessages/QuoteMessageList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_v3.js",
+      "_GeoMap.js",
+      "_AudioPlayer.js",
+      "_video-js.js",
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-qOR8/H15mlehfszGv3Jt/Zjwjp0n8IZlElubPOVueANqzmg9zdTzA9M2klcwok2T"
+  },
+  "resources/js/components/messages/textMessage/TextMessage.vue": {
+    "file": "TextMessage.js",
+    "name": "TextMessage",
+    "src": "resources/js/components/messages/textMessage/TextMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue",
+      "resources/js/components/messages/messageActions/MessageActions.vue"
+    ],
+    "css": [
+      "TextMessage.css"
+    ],
+    "integrity": "sha384-Lx2wfTs7sdIpe9zYmF+23L7PvxdjrJ4eFnYEOa76524lvwq8Omp910SWL/3tV2Ju"
+  },
+  "resources/js/components/messages/videoMessage/VideoMessage.vue": {
+    "file": "VideoMessage.js",
+    "name": "VideoMessage",
+    "src": "resources/js/components/messages/videoMessage/VideoMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_video-js.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue",
+      "resources/js/components/messages/messageActions/MessageActions.vue"
+    ],
+    "css": [
+      "VideoMessage.css"
+    ],
+    "integrity": "sha384-PAPcc6StNhqwvpFk3r9tGsEu9slaGP6UAaMMjPGxg+qrLp3U+KZvCVKOHMVfd4Ww"
+  },
+  "resources/js/components/messages/voiceMessage/VoiceMessage.vue": {
+    "file": "VoiceMessage.js",
+    "name": "VoiceMessage",
+    "src": "resources/js/components/messages/voiceMessage/VoiceMessage.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_AudioPlayer.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/messages/messageActions/MessageActions.vue",
+      "resources/js/components/messages/quoteMessages/QuoteMessageList.vue"
+    ],
+    "css": [
+      "VoiceMessage.css"
+    ],
+    "integrity": "sha384-szOFHmXJZvGWFPDOgNQifh8VF5al3KctNqHhqcrtvQW1FE2QkjTEKMrDqAH+W9+C"
+  },
+  "resources/js/components/sidebar/friendList/FriendUserList.vue": {
+    "file": "FriendUserList.js",
+    "name": "FriendUserList",
+    "src": "resources/js/components/sidebar/friendList/FriendUserList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_empty-users.js"
+    ],
+    "dynamicImports": [
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-yBXeCys5aRdq5WTm86e14Px7wjNAtWA4FYcEfrKnr4EXeqxvpbKZ5GnHEXQktl0E"
+  },
+  "resources/js/components/sidebar/profileSettings/profileSettings.vue": {
+    "file": "profileSettings.js",
+    "name": "profileSettings",
+    "src": "resources/js/components/sidebar/profileSettings/profileSettings.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "profileSettings.css"
+    ],
+    "integrity": "sha384-4/Y8/7d+K9HPpkrn2fF9tb9EBrvG+mIqKjTYkOaEcyyytEbdTZDZGks7HM3NkckO"
+  },
+  "resources/js/components/sidebar/threads/PrivateList.vue": {
+    "file": "PrivateList.js",
+    "name": "PrivateList",
+    "src": "resources/js/components/sidebar/threads/PrivateList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/app.js"
+    ],
+    "assets": [
+      "empty-chat.svg"
+    ],
+    "integrity": "sha384-4n/8+bB7WHqEoI9cOiZyFJUlc+cxlu4hK1lD0QPmMQhDH1TZybBYABsKND15IlTz"
+  },
+  "resources/js/components/sidebar/userList/ContactList.vue": {
+    "file": "ContactList.js",
+    "name": "ContactList",
+    "src": "resources/js/components/sidebar/userList/ContactList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_empty-users.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/sidebar/userList/ListItem.vue",
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-euez01Sy8iNOZj/YZIFoUoGUDMnTDkwUB5fSyau5PqdocAw6BBfA+UxMqmu3A2Hb"
+  },
+  "resources/js/components/sidebar/userList/ListItem.vue": {
+    "file": "ListItem.js",
+    "name": "ListItem",
+    "src": "resources/js/components/sidebar/userList/ListItem.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/app.js"
+    ],
+    "css": [
+      "ListItem.css"
+    ],
+    "integrity": "sha384-XqT5JMjdzQcmlDYiCyCACGwvQQVZInARkRfpbitp91raMj6u65jtmHCnWCOtmBRd"
+  },
+  "resources/js/components/sidebar/userList/RequestList.vue": {
+    "file": "RequestList.js",
+    "name": "RequestList",
+    "src": "resources/js/components/sidebar/userList/RequestList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js",
+      "_empty-users.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/sidebar/userList/ListItem.vue",
+      "resources/js/app.js"
+    ],
+    "integrity": "sha384-rA/bw2MkegRqJWwzsyvx0EhRep6PQp3jcPkG7zXwiy656sveSh7ernH3+rAsXuDK"
+  },
+  "resources/js/components/sidebar/userList/UserList.vue": {
+    "file": "UserList.js",
+    "name": "UserList",
+    "src": "resources/js/components/sidebar/userList/UserList.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.js"
+    ],
+    "dynamicImports": [
+      "resources/js/components/sidebar/userList/ContactList.vue",
+      "resources/js/components/sidebar/userList/RequestList.vue"
+    ],
+    "css": [
+      "UserList.css"
+    ],
+    "integrity": "sha384-aaGDQdgJK/K8ZFp1zc2qtqsLQw6K23j88mJf4mtnTAIV2TspDyHKAErWzGXI+6Z7"
+  }
+}

@@ -261,7 +261,6 @@ class Checkout extends Component
             DB::beginTransaction();
             $orderItems = [];
             $data = $this->form->updateInfo();
-            return redirect()->route('example2');
             if (Module::has('subscriptions') && Module::isEnabled('subscriptions') && !empty($this->chosenSubscription)) {
                 $data['subscription_id'] = $this->chosenSubscription;
             }

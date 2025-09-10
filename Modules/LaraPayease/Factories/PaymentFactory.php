@@ -1,18 +1,18 @@
 <?php
 
 namespace Modules\LaraPayease\Factories;
-use Modules\LaraPayease\Drivers\Stripe;
+use Modules\LaraPayease\Drivers\Sslcommerz;
 use Modules\LaraPayease\Utils\CurrencyUtil;
 
 class PaymentFactory {
 
-   /**
-    * @return \Modules\LaraPayease\Drivers\Stripe
-    */
-
-    public function stripe(): Stripe{
-        return new Stripe();
-     }
+    /**
+     * @return \Modules\LaraPayease\Drivers\Sslcommerz
+     */
+    public function sslcommerz(): Sslcommerz
+    {
+        return new Sslcommerz();
+    }
 
      /**
       * @return \Modules\LaraPayease\Utils\CurrencyUtil\supportedCurrencies
@@ -27,16 +27,16 @@ class PaymentFactory {
        */
      public function supportedGateways() : array{
         return [
-           'stripe' => [
-              'keys' => [
-                 'stripe_key' => '',
-                 'stripe_secret' => '',
-              ],
-              'status' => 'off',
-              'currency' => 'USD',
-              'exchange_rate' => '',
-              'ipn_url_type' => 'get.success'
-          ],
+          'sslcommerz' => [
+                'keys' => [
+                    'sslcz_store_id' => env('SSLCZ_STORE_ID'),
+                    'sslcz_store_password' => env('SSLCZ_STORE_PASSWORD'),
+                ],
+                'status' => 'off',
+                'currency' => 'BDT',
+                'exchange_rate' => '',
+                'ipn_url_type' => 'post.ipn'
+            ],
         ];
      }
 

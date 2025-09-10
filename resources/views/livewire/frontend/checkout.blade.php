@@ -53,7 +53,7 @@
                                 <p>{{ __('checkout.secure_and_convenient_payment_purchase') }}</p>
                             </div>
                             <div class="am-checkout_accordion">
-                                {{-- @if($available_payment_methods)
+                                @if($available_payment_methods)
                                     @foreach ($available_payment_methods as $method => $available_method)
                                         @if ($available_method['status'] == 'on')
                                             <div class="accordion-item">
@@ -71,7 +71,7 @@
                                             </div>
                                         @endif
                                     @endforeach
-                                @endif --}}
+                                @endif
                                 @if(\Nwidart\Modules\Facades\Module::has('subscriptions') && \Nwidart\Modules\Facades\Module::isEnabled('subscriptions') && !empty($subscriptions))
                                     @foreach ($subscriptions as $item)
                                         <div class="accordion-item am-learner-plan">

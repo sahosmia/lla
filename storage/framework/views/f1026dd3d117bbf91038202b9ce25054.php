@@ -76,7 +76,26 @@
                                 <p><?php echo e(__('checkout.secure_and_convenient_payment_purchase')); ?></p>
                             </div>
                             <div class="am-checkout_accordion">
-                                
+                                <!--[if BLOCK]><![endif]--><?php if($available_payment_methods): ?>
+                                    <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $available_payment_methods; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $method => $available_method): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <!--[if BLOCK]><![endif]--><?php if($available_method['status'] == 'on'): ?>
+                                            <div class="accordion-item">
+                                                <div class="am-radiowrap">
+                                                    <div class="am-radio">
+                                                    <input wire:model.lazy="form.paymentMethod"  <?php echo e($form->paymentMethod == $method ? 'checked' : ''); ?>  type="radio" id="payment-<?php echo e($method); ?>" name="payment" value=<?php echo e($method); ?> >
+                                                    <label for="payment-<?php echo e($method); ?>">
+                                                        <?php echo e(__("settings." .$method. "_title")); ?>
+
+                                                        <figure class="am-radiowrap_img">
+                                                            <img src="<?php echo e(asset('images/payment_methods/'.$method. '.png')); ?>" alt="<?php echo e(__("settings." .$method. "_title")); ?>">
+                                                        </figure>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><!--[if ENDBLOCK]><![endif]-->
+                                <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
                                 <!--[if BLOCK]><![endif]--><?php if(\Nwidart\Modules\Facades\Module::has('subscriptions') && \Nwidart\Modules\Facades\Module::isEnabled('subscriptions') && !empty($subscriptions)): ?>
                                     <!--[if BLOCK]><![endif]--><?php $__currentLoopData = $subscriptions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                                         <div class="accordion-item am-learner-plan">

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static \Modules\LaraPayease\Drivers\Paystack paystack()
  * @method static \Modules\LaraPayease\Drivers\Paypal paypal()
  * @method static \Modules\LaraPayease\Drivers\PayFast payfast()
- * @method static \Modules\LaraPayease\Drivers\Paytm paytm()
+ * @method static \Modules\LaraPayease\Drivers\Sslcommerz sslcommerz()
  * @method static array supportedCurrencies()
  * @method static array supportedGateways()
  * @method static string getIpnUrl()

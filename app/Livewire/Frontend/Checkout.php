@@ -20,6 +20,8 @@ use App\Services\WalletService;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Nwidart\Modules\Facades\Module;
+use App\Library\SslCommerz\SslCommerzNotification;
+
 
 class Checkout extends Component
 {
@@ -260,8 +262,14 @@ class Checkout extends Component
             }
             DB::beginTransaction();
             $orderItems = [];
-            $data = $this->form->updateInfo();
-            return redirect()->route('example2');
+            $this->form->paymentMethod = 'sslcommerz';
+
+            $data = $this->form->updateInfo();  // get form data as array
+
+
+       
+                    
+       
             if (Module::has('subscriptions') && Module::isEnabled('subscriptions') && !empty($this->chosenSubscription)) {
                 $data['subscription_id'] = $this->chosenSubscription;
             }

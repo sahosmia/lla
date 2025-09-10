@@ -165,17 +165,17 @@ new class extends Component
                     ],
                 ],
             ],
-            [
-                'title' => __('admin/sidebar.bookings'),
-                'icon'  => 'icon-file-text',
-                'routes' => [
-                    [
-                        'route' => 'admin.bookings',
-                        'title' => __('bookings'),
-                        'permission' => 'can-manage-bookings',
-                    ],
-                ],
-            ],
+            // [
+            //     'title' => __('admin/sidebar.bookings'),
+            //     'icon'  => 'icon-file-text',
+            //     'routes' => [
+            //         [
+            //             'route' => 'admin.bookings',
+            //             'title' => __('bookings'),
+            //             'permission' => 'can-manage-bookings',
+            //         ],
+            //     ],
+            // ],
             [
                 'title' => __('sidebar.transaction_payment'),
                 'icon'  => 'icon-credit-card',

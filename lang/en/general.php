@@ -304,5 +304,8 @@ return [
     'delete_review'                             => 'Delete review',
     'delete_review_content'                     => 'Are you sure you want to delete this review?',
     'delete_review_message'                     => 'Review deleted successfully',
-
+    'submit_btn'                                => 'Submit',
+    'contact_us'                                => 'Contact Us',
+    'disclaimer'                                => 'Disclaimer',
+    'legal_policies'                            => 'Legal & Policies',
 ];

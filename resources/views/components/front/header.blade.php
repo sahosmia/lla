@@ -152,6 +152,14 @@
                                     <x-menu-item :menu="$item" />
                                 @endforeach
                             @endif
+                                <li class="menu-item-has-children">
+                                    <a href="javascript:void(0);">{{ __('general.legal_policies') }}</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{{ route('privacy-policy') }}">{{ __('general.privacy_policy') }}</a></li>
+                                        <li><a href="{{ route('terms-conditions') }}">{{ __('general.terms_and_conditions') }}</a></li>
+                                        <li><a href="{{ route('disclaimer') }}">{{ __('general.disclaimer') }}</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </nav>
                         @auth

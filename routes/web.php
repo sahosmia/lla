@@ -125,6 +125,22 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn'])->name('post.ipn
     Route::get('session/{id}',              [SiteController::class, 'sessionDetail'])->name('session-detail');
     Route::post('book-session',             [SiteController::class, 'bookSession'])->name('book-session');
 
+    Route::get('/contact-us', function () {
+        return view('frontend.contact-us');
+    })->name('contact-us');
+
+    Route::get('/privacy-policy', function () {
+        return view('frontend.legal.privacy-policy');
+    })->name('privacy-policy');
+
+    Route::get('/terms-conditions', function () {
+        return view('frontend.legal.terms-conditions');
+    })->name('terms-conditions');
+
+    Route::get('/disclaimer', function () {
+        return view('frontend.legal.disclaimer');
+    })->name('disclaimer');
+
     require __DIR__ . '/auth.php';
     require __DIR__ . '/admin.php';
     require __DIR__ . '/optionbuilder.php';

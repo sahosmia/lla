@@ -193,8 +193,10 @@
                             </p>
                             <nav>
                                 <ul>
-                                    <li><a href="{{ url('terms-condition') }}">{{ __('general.terms_and_conditions') }}</a></li>
-                                    <li><a href="{{ url('privacy-policy') }}">{{ __('general.privacy_policy') }}</a></li>
+                                    <li><a href="{{ route('terms-conditions') }}">{{ __('general.terms_and_conditions') }}</a></li>
+                                    <li><a href="{{ route('privacy-policy') }}">{{ __('general.privacy_policy') }}</a></li>
+                                    <li><a href="{{ route('disclaimer') }}">{{ __('general.disclaimer') }}</a></li>
+                                    <li><a href="{{ route('contact-us') }}">{{ __('general.contact_us') }}</a></li>
                                 </ul>
                             </nav>
                         </div>

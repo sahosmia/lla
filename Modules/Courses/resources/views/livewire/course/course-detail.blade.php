@@ -48,8 +48,6 @@
                             @endif
                         </div>
                         <div class="cr-course-stats">
-<<<<<<< HEAD
-=======
                             @if($course->course_for === 'classroom')
                                 <div class="cr-stat-item">
                                     <div class="cr-stat-icon-wrapper">
@@ -79,7 +77,6 @@
                                     </div>
                                 </div>
                             @endif
->>>>>>> master
                             
                             <div class="cr-stat-item">
                                 <div class="cr-stat-icon-wrapper">
@@ -121,8 +118,6 @@
                                     <span class="cr-stat-value">{{ number_format($course?->views_count ?? 0) }}</span>
                                 </div>
                             </div>
-<<<<<<< HEAD
-=======
                             
                             @if(!empty($course->validity) || !empty($course->validity_type))
 
@@ -137,7 +132,6 @@
                                 </div>
                                 
                                 @endif
->>>>>>> master
                         </div>
                     </div>
                 </div>

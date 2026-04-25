@@ -54,17 +54,10 @@
                         <div class="am-stat-icon-wrapper">
                             <i class="am-icon-shield-check"></i>
                         </div>
-<<<<<<< HEAD
-                        @if(!empty($quizAttempt?->quiz?->settings?->where('meta_key', 'passing_grade')->first()->meta_value))
-                            <div class="am-stat-content">
-                                <span class="am-stat-label">{{ __('quiz::quiz.passing_marks') }}</span>
-                                <span class="am-stat-value">{{ $quizAttempt?->quiz?->settings?->where('meta_key', 'passing_grade')->first()->meta_value }}%</span>
-=======
                         @if(!empty($passingGrade))
                             <div class="am-stat-content">
                                 <span class="am-stat-label">{{ __('quiz::quiz.passing_marks') }}</span>
                                 <span class="am-stat-value">{{ $passingGrade }}%</span>
->>>>>>> master
                             </div>
                         @endif
                     </div>
@@ -80,8 +73,6 @@
                     </div>
                     @endif
                 </div>
-<<<<<<< HEAD
-=======
 
                 @if($bestAttempt)
                     <div class="am-course-stats">
@@ -105,7 +96,6 @@
                         </div>
                     </div>
                 @endif
->>>>>>> master
                <p>
                     @if ($fullDescription)
                         {!! $quizAttempt?->quiz?->description !!}
@@ -131,12 +121,6 @@
                 @endif
             </div>
             @if($quizAttempt?->quiz?->questions?->count() > 0)
-<<<<<<< HEAD
-                <button  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#back-confirm-popup" class="am-btn">
-                    {{ __('quiz::quiz.start_quiz') }}
-                    <i class="am-icon-chevron-right"></i>
-                </button>
-=======
                 @if ($quizAttempt->result == 'assigned')
                     <button data-toggle="modal" data-bs-toggle="modal" data-bs-target="#start-confirm-popup" class="am-btn">
                         {{ __('quiz::quiz.start_quiz') }}
@@ -160,7 +144,6 @@
                         </a>
                     @endif
                 @endif
->>>>>>> master
             @endif
     <div class="modal fade am-deletepopup am-startquiz-popup" id="back-confirm-popup" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">

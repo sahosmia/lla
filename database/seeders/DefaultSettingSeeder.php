@@ -66,12 +66,12 @@ class DefaultSettingSeeder extends Seeder
                 'footer3_paragraph'            => 'Join our community to either share your expertise as an tutor or enhance your skills as a student. Connect, learn, and grow with us today. ',
                 'primary_button_text'          => 'Get Started Now',
                 'primary_button_url'           => 'login',
-                'secondary_button_text'        => 'Learn About Lernen',
+                'secondary_button_text'        => 'Learn About The Learning Line Academy',
                 'secondary_button_url'         => 'about-us',
                 'tutor_link_heading'           => 'Are you a Tutor?',
-                'join_lernen_link'             => 'Join Lernen',
+                'join_lernen_link'             => 'Join The Learning Line Academy',
                 'join_lernen_link_url'         => 'register',
-                'footer_paragraph'              => 'Lernen is the top online tutoring platform for children, dedicated to connecting each student with their perfect tutor. With a network of over 1 million qualified tutors, we provide exceptional tutoring in every school subject.',
+                'footer_paragraph'              => 'The Learning Line Academy is the top online tutoring platform for children, dedicated to connecting each student with their perfect tutor. With a network of over 1 million qualified tutors, we provide exceptional tutoring in every school subject.',
                 'footer_contact'                => '(316) 555-0116',
                 'footer_email'                  => 'hello@gmail.com',
                 'footer_address'                => '4517 Washington Ave. Manchester, Kentucky 39495',
@@ -346,7 +346,7 @@ class DefaultSettingSeeder extends Seeder
         if ($version == '2.2.1') {
             $def_setting = [
                 '_general' => [
-                    'company_name'      => 'Lernen',
+                    'company_name'      => 'The Learning Line Academy',
                     'invoice_logo'      => [uploadObMedia('demo-content/invoice-logo.png')],
                     'company_email'     => 'hellow@yourdomain.com',
                     'company_address'   => '4517 Washington Ave. Manchester, Kentucky 39495',
@@ -487,10 +487,10 @@ class DefaultSettingSeeder extends Seeder
                 'email_logo'          => [
                     'file_name' => 'email-logo.png',
                 ],
-                'sender_name'         => env('APP_NAME', 'Lernen'),
+                'sender_name'         => env('APP_NAME', 'The Learning Line Academy'),
                 'sender_email'        => 'abc@somedomain.com',
-                'sender_signature'     => 'Happy learning! <br /> <br /> Best regards, <br /> The Lernen Team',
-                'footer_text'         => '&copy; ' . date('Y') . ' The Lernen. All rights reserved.'
+                'sender_signature'     => 'Happy learning! <br /> <br /> Best regards, <br /> The The Learning Line Academy Team',
+                'footer_text'         => '&copy; ' . date('Y') . ' The The Learning Line Academy. All rights reserved.'
             ],
             '_front_page_settings' => [
                 'per_page'                     => 9,
@@ -508,13 +508,13 @@ class DefaultSettingSeeder extends Seeder
                 'footer3_paragraph'            => 'Join our community to either share your expertise as an tutor or enhance your skills as a student. Connect, learn, and grow with us today. ',
                 'primary_button_text'          => 'Get Started Now',
                 'primary_button_url'           => 'login',
-                'secondary_button_text'        => 'Learn About Lernen',
+                'secondary_button_text'        => 'Learn About The Learning Line Academy',
                 'secondary_button_url'         => 'about-us',
                 'tutor_link_heading'           => 'Are you a Tutor?',
-                'join_lernen_link'             => 'Join Lernen',
+                'join_lernen_link'             => 'Join The Learning Line Academy',
                 'join_lernen_link_url'         => 'register',
 
-                'footer_paragraph'              => 'Lernen is the top online tutoring platform for children, dedicated to connecting each student with their perfect tutor. With a network of over 1 million qualified tutors, we provide exceptional tutoring in every school subject.',
+                'footer_paragraph'              => 'The Learning Line Academy is the top online tutoring platform for children, dedicated to connecting each student with their perfect tutor. With a network of over 1 million qualified tutors, we provide exceptional tutoring in every school subject.',
                 'footer_contact'                => '(316) 555-0116',
                 'footer_email'                  => 'hello@gmail.com',
                 'footer_address'                => '4517 Washington Ave. Manchester, Kentucky 39495',
@@ -564,7 +564,7 @@ class DefaultSettingSeeder extends Seeder
                 'decimal_separator'             => '.',
                 'number_of_decimals'            => '2',
                 'enable_rtl'                    => '0',
-                'site_name'                     => 'Lernen',
+                'site_name'                     => 'The Learning Line Academy',
                 'site_email'                    => 'hellow@yourdomain.com',
                 'date_format'                   => 'F j, Y',
                 'address_format'                => 'city_country',

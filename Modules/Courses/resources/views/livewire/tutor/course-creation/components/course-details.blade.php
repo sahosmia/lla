@@ -20,8 +20,6 @@
                     </div>
                     <div class="form-group">
                         <div class="form-group-two-wrap">
-<<<<<<< HEAD
-=======
                              <div class="form-contro_wrap @error('course_for') cr-invalid @enderror">
                                 <x-input-label class="am-important" for="course-for">{{ __('courses::courses.course_for') }}</x-input-label>
                                 <span class="am-select" wire:ignore>
@@ -36,7 +34,6 @@
                                 </span>
                                 <x-input-error field_name='course_for' />
                             </div>
->>>>>>> master
                             <div class="form-contro_wrap @error('category_id') cr-invalid @enderror">
                                 <x-input-label class="am-important" for="category">{{ __('courses::courses.select_category') }}</x-input-label>
                                 <span class="am-select" wire:ignore>
@@ -67,53 +64,6 @@
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    @if(\Nwidart\Modules\Facades\Module::has('upcertify') && \Nwidart\Modules\Facades\Module::isEnabled('upcertify'))
-                        <div @class(['am-certificate-template', 'form-group', 'form-group-half', 'am-invalid' => $errors->has('template_id')])>
-                            <label class="am-label">
-                                {{ __('calendar.certificate_template') }}
-                                <a href="javascript:void(0);" class="am-custom-tooltip">
-                                    <i class="am-icon-exclamation-01"></i>
-                                    <span class="am-tooltip-text">
-                                        {{ __('calendar.certificate_info') }}
-                                    </span>
-                                </a>
-                            </label>
-                            <span class="am-select" wire:ignore>
-                                <select data-componentid="@this" data-wiremodel="template_id" class="am-select2" data-parent=".am-certificate-template" data-searchable="true" data-placeholder="{{ __('calendar.certificate_template_placeholder') }}">
-                                    <option label="{{ __('calendar.certificate_template_placeholder') }}"></option>
-                                    @foreach ($templates as $template)
-                                        <option value="{{ $template->id }}" @if($template_id == $template->id) selected @endif>{{ $template->title }}</option>
-                                    @endforeach
-                                </select>
-                            </span>
-                            <x-input-error field_name="template_id" />
-                        </div>
-                    @endif
-
-                    @if(isActiveModule('upcertify') && isActiveModule('quiz'))
-                        <div @class(['am-certificate-quiz', 'form-group', 'form-group-half', 'am-invalid' => $errors->has('assign_quiz_certificate')])>
-                            <label class="am-label">
-                                {{ __('calendar.assign_certificate') }}
-                                <a href="javascript:void(0);" class="am-custom-tooltip">
-                                    <i class="am-icon-exclamation-01"></i>
-                                    <span class="am-tooltip-text">
-                                        {{ __('calendar.assign_certificate_info') }}
-                                    </span>
-                                </a>
-                            </label>
-                            <span class="am-select" wire:ignore>
-                                <select data-componentid="@this" data-wiremodel="assign_quiz_certificate" class="am-select2" data-parent=".am-certificate-quiz" data-searchable="true" data-placeholder="{{ __('calendar.certificate_template_placeholder') }}">
-                                    <option label="{{ __('calendar.certificate_template_placeholder') }}"></option>
-                                        <option value="any" @if($assign_quiz_certificate == 'any') selected @endif>{{ __('calendar.any_quizzes') }}</option>
-                                        <option value="all" @if($assign_quiz_certificate == 'all') selected @endif>{{ __('calendar.all_quizzes') }}</option>
-                                        <option value="none" @if($assign_quiz_certificate == 'none') selected @endif>{{ __('calendar.no_quizzes') }}</option>
-                                </select>
-                            </span>
-                            <x-input-error field_name="assign_quiz_certificate" />
-                        </div>
-                    @endif
-=======
                     @if($course_for == 'online')
 
                     <div class="form-group">
@@ -211,7 +161,6 @@
                     @endif
 
                   
->>>>>>> master
                 
                     <div class="form-group @error('description') cr-invalid @enderror">
                         <x-input-label class="am-important" for="description">{{ __('courses::courses.course_description') }}</x-input-label>

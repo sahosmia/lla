@@ -8,7 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | This section contains various settings and options for configuring
-    | the quiz functionality within the Lernen platform.
+    | the quiz functionality within the The Learning Line Academy platform.
     |
     */
     

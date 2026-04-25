@@ -23,7 +23,7 @@
     "larapayease": {
         "name": "LaraPayEase",
         "image": "larapayease.jpg",
-        "description": "Versatile Payment Gateway Integration Addon for Lernen.",
+        "description": "Versatile Payment Gateway Integration Addon for The Learning Line Academy.",
         "type": "external",
         "price": "$29",
         "demo_url": "https://codecanyon.net/item/lara-payease-versatile-payment-gateway-integration-addon-for-taskup/53009467",
@@ -31,7 +31,7 @@
     },
     "meetfusion": {
         "name": "MeetFusion",
-        "description": "Google Meet Scheduler for Lernen LMS",
+        "description": "Google Meet Scheduler for The Learning Line Academy LMS",
         "image": "meetfusion.png",
         "type": "external",
         "price": "$20",
@@ -72,7 +72,7 @@
     },
     "starup": {
         "name": "StarUp",
-        "description": "StarUp LMS - Badges Addon For Lernen",
+        "description": "StarUp LMS - Badges Addon For The Learning Line Academy",
         "image": "starup.png",
         "type": "external",
         "price": "$20",
@@ -99,7 +99,7 @@
     },
     "quiz": {
         "name": "QuizDeck",
-        "description": "Quiz Creation & Management Solution for Lernen LMS",
+        "description": "Quiz Creation & Management Solution for The Learning Line Academy LMS",
         "image": "quiz.png",
         "type": "external",
         "price": "$20",
@@ -107,7 +107,7 @@
     },
     "coursebundles": {
         "name": "LearntySuite",
-        "description": "Course Bundle Addon for Lernen",
+        "description": "Course Bundle Addon for The Learning Line Academy",
         "image": "course-bundle.png",
         "type": "external",
         "requires": ["courses"],
@@ -124,7 +124,7 @@
     },
     "ipmanager":{
         "name": "SmartIpier",
-        "description": "The Ultimate IP & Session Manager for Lernen LMS!",
+        "description": "The Ultimate IP & Session Manager for The Learning Line Academy LMS!",
         "image": "smartIpier.png",
         "type": "external",
         "price": "$20",

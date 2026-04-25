@@ -312,7 +312,7 @@ return array (
   'quiz_result_student_variables' => '{userName} - For Username <br> {sessionDate} - For Session Date <br> {tutorName} - For Tutor Name <br> {sessionSubject} - For Session Subject <br> {bookingDetails} - For Details of Bookings <br> {courseDetails} - For Details of Course',
   'quiz_result_tutor_variables' => '{userName} - For Username <br> {sessionDate} - For Session Date <br> {studentName} - For Student Name <br> {sessionSubject} - For Session Subject <br> {bookingDetails} - For Details of Bookings <br> {courseDetails} - For Details of Course',
   'quiz_purchase_tutor_subject' => 'New Quiz Purchase Notification!',
-  'course_buy_tutor_content' => 'A student has purchased your course on Lernen! Here are the details of the purchase: <br> :bookingDetails <br> The student can now access your course content and begin learning. You can track their progress through your instructor dashboard. <br><br> Thank you for being part of the Lernen teaching community!',
+  'course_buy_tutor_content' => 'A student has purchased your course on The Learning Line Academy! Here are the details of the purchase: <br> :bookingDetails <br> The student can now access your course content and begin learning. You can track their progress through your instructor dashboard. <br><br> Thank you for being part of the The Learning Line Academy teaching community!',
   'variables_used' => 'Variables Used in email',
   'subject' => 'Subject',
   'greeting_text' => 'Greeting text',

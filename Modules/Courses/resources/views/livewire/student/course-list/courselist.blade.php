@@ -1,12 +1,9 @@
 <div class="cr-allcourses" wire:init="loadCoursesData">
-<<<<<<< HEAD
-=======
     @if (session()->has('error'))
         <div class="alert alert-danger" style="background-color: #f8d7da; border-color: #f5c6cb; color: #721c24; padding: .75rem 1.25rem; margin-bottom: 1rem; border: 1px solid transparent; border-radius: .25rem;">
             {{ session('error') }}
         </div>
     @endif
->>>>>>> master
     <div class="cr-allcourses_title">
         <div>
             <h2>{{ __('courses::courses.all_courses_heading') }}</h2>

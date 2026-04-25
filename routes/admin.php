@@ -76,10 +76,11 @@ Route::middleware(['auth', 'verified', 'role:admin|sub_admin'])->prefix('admin')
     Route::post('update-pusher-settings', [GeneralController::class, 'updatePusherSettings'])->name('update-pusher-settings')->middleware('permit-of:can-manage-option-builder');
     Route::post('update-reverb-settings', [GeneralController::class, 'updateReverbSettings'])->name('update-reverb-settings')->middleware('permit-of:can-manage-option-builder');
     Route::post('update-social-login-settings', [GeneralController::class, 'updateSocialLoginSettings'])->name('update-social-login-settings')->middleware('permit-of:can-manage-option-builder');
-    
-    Route::get('/inquiries', [InquiryManagerController::class, 'index'])->name('inquiries.index');
-    Route::get('/inquiries/{id}', [InquiryManagerController::class, 'show'])->name('inquiries.show');
-    Route::delete('/inquiries/{id}', [InquiryManagerController::class, 'destroy'])->name('inquiries.destroy');
+
+    Route::middleware('permit-of:can-manage-inquiries')->group(function () {
+        Route::get('/inquiries', [InquiryManagerController::class, 'index'])->name('inquiries.index');
+        Route::get('/inquiries/{id}', [InquiryManagerController::class, 'show'])->name('inquiries.show');
+        Route::delete('/inquiries/{id}', [InquiryManagerController::class, 'destroy'])->name('inquiries.destroy');
+    });
 });
 Route::get('download-invoice/{id}', [SiteController::class, 'downloadPDF'])->name('download.invoice');
-

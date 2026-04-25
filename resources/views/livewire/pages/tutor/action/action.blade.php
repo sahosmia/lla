@@ -96,11 +96,7 @@ new #[Layout('layouts.app')] class extends Component
     }
 }">
 
-<<<<<<< HEAD
-    <a href="{{ $this->navigate ? route('tutor-detail',['slug' => $tutor->profile->slug]).'#availability' : '#availability' }}" class="am-btn">{{ __('tutor.book_session') }}  <i class="am-icon-calender-duration"></i> </a>
-=======
     <!--<a href="{{ $this->navigate ? route('tutor-detail',['slug' => $tutor->profile->slug]).'#availability' : '#availability' }}" class="am-btn">{{ __('tutor.book_session') }}  <i class="am-icon-calender-duration"></i> </a>-->
->>>>>>> master
     @if(auth()->check() && auth()->user()->role == 'student')
     <a href="javascript:void(0)" @click=" recepientId=@js($tutor->id); threadId=''; $nextTick(() => $wire.dispatch('toggleModel', {id: 'message-model-'+@js($tutor->id),action:'show'}) )" class="am-white-btn"> {{ __('tutor.send_message') }} <i class="am-icon-chat-03"></i></a>
     <a href="javascript:void(0);" wire:click="toggleFavourite({{ $tutor->id }})"

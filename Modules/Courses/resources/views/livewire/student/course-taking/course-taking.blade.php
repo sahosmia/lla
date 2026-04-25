@@ -468,8 +468,6 @@
                                                     <span class="cr-stat-value">{{ number_format($course->views_count) }}</span>
                                                 </div>
                                             </div>
-<<<<<<< HEAD
-=======
                                             
                                             @if(!empty($course->validity) && !empty($course->validity_type))
                                                 <div class="cr-stat-item">
@@ -483,7 +481,6 @@
                                                 </div>
                                             @endif
                                            
->>>>>>> master
                                         </div>
                                     </div>
                                 </div>

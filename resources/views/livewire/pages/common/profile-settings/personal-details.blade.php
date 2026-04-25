@@ -41,8 +41,6 @@
                             <x-input-error field_name="form.phone_number" />
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
                     
                      <div class="form-group @error('form.profession') am-invalid @enderror">
                         <x-input-label for="profession" :value="__('auth.profession')" />
@@ -58,7 +56,6 @@
                             <x-input-error field_name="form.organization" />
                         </div>
                     </div>
->>>>>>> master
                     <div class="form-group @error('form.gender') am-invalid @enderror">
                         <x-input-label for="gender" class="am-important" :value="__('profile.gender')" />
                         <div class="am-radiowrap">

@@ -27,11 +27,8 @@ class CourseBasicDetails extends Component
     public $language_id;
     public $categories;
     public $languages;
-<<<<<<< HEAD
-=======
     public $validity;
     public $validity_type;
->>>>>>> master
     public $levels;
     public $types;
     public $sub_categories         = [];
@@ -39,14 +36,11 @@ class CourseBasicDetails extends Component
     public $templates = [];
     public $template_id = '';
     public $assign_quiz_certificate = 'any';
-<<<<<<< HEAD
-=======
     public $course_for = 'online';
     public $course_for_options = [];
     public $venue;
     public $date;
     public $time;
->>>>>>> master
     public function mount()
     {
         $this->courseId = request()->route('id');
@@ -60,12 +54,9 @@ class CourseBasicDetails extends Component
             'article'           => 4,
             'all'               => 5,
         ];
-<<<<<<< HEAD
-=======
         
         $this->course_for_options = Course::COURSE_FOR;
 
->>>>>>> master
 
         if ($this->courseId) {
             $this->loadCourseData();
@@ -103,15 +94,12 @@ class CourseBasicDetails extends Component
         $this->template_id              = $course?->certificate_id ?? '';
         $this->assign_quiz_certificate  = !empty($course?->meta_data['assign_quiz_certificate']) ? $course?->meta_data['assign_quiz_certificate'] : 'any';
         $this->learning_objectives      = !empty($course->learning_objectives) ?  $course->learning_objectives : [''];
-<<<<<<< HEAD
-=======
         $this->validity                 = $course->validity;
         $this->validity_type            = $course->validity_type;
          $this->course_for               = $course->course_for;
         $this->venue                    = $course->venue;
         $this->date                     = $course->date;
         $this->time                     = $course->time;
->>>>>>> master
         
     }
 
@@ -146,8 +134,6 @@ class CourseBasicDetails extends Component
             $validatedData['tags']  = array_filter($this->tags, fn($tag) => !empty($tag));
 
             $validatedData['instructor_id'] = Auth::id();
-<<<<<<< HEAD
-=======
             
             
             if ($this->course_for === 'classroom') {
@@ -170,7 +156,6 @@ class CourseBasicDetails extends Component
                 $validatedData['validity'] = $this->validity;
                 $validatedData['validity_type'] = $this->validity_type;
             }
->>>>>>> master
 
             $course = (new CourseService())->updateOrCreateCourse($this->courseId, $validatedData);
             return redirect()->route('courses.tutor.edit-course', ['tab' => 'media', 'id' => $course->id]);

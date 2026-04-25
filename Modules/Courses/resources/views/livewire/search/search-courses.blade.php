@@ -72,8 +72,6 @@
                         </span>
                     </div>
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-<<<<<<< HEAD
-=======
                         
                         <div class="accordion-item" wire:ignore>
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -105,7 +103,6 @@
     </div>
 </div>
                         
->>>>>>> master
                         @if(!empty($categories))
                             <div class="accordion-item" wire:ignore>
                                 <h2 class="accordion-header" id="panelsStayOpen-headingOne">

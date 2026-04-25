@@ -1,11 +1,11 @@
 <?php
 
 return array (
-  'title' => 'Lernen Installer',
+  'title' => 'The Learning Line Academy Installer',
   'next' => 'Next Step',
   'welcome' => 
   array (
-    'title' => 'Welcome to the Lernen Installer',
+    'title' => 'Welcome to the The Learning Line Academy Installer',
     'message' => 'Welcome to the setup wizard.',
   ),
   'requirements' => 
@@ -16,13 +16,13 @@ return array (
   'permissions' => 
   array (
     'title' => 'Permissions',
-    'message' => 'Please ensure that Lernen has the necessary permissions <br /> to access the following folders in order to continue.',
+    'message' => 'Please ensure that The Learning Line Academy has the necessary permissions <br /> to access the following folders in order to continue.',
   ),
   'seeders' => 
   array (
     'title' => 'Migrate & Import Demo Content',
     'migrate_title' => 'Database Migration',
-    'migrate_desc' => 'Migrate the database schema and structure for Lernen.',
+    'migrate_desc' => 'Migrate the database schema and structure for The Learning Line Academy.',
     'general_title' => 'Site Settings Import',
     'general_desc' => 'Imports basic settings and configurations for your site.',
     'pages_title' => 'Pages & Layouts Import',

@@ -63,13 +63,9 @@ class Enrollment extends Model
      */
     public function courseProgress(): HasMany
     {
-<<<<<<< HEAD
-        return $this->hasMany(Watchtime::class, 'course_id', 'course_id');
-=======
         // return $this->hasMany(Watchtime::class, 'course_id', 'course_id');
                 return $this->hasMany(Watchtime::class, 'course_id', 'course_id')->where('user_id', $this->student_id);
 
->>>>>>> master
     }
 
     public function student(): BelongsTo

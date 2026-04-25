@@ -205,8 +205,8 @@ class SiteController extends Controller
         $ipnUrl = PaymentDriver::getIpnUrl($orderDetail->payment_method);
         session(['payment_data' =>  [
             'amount'        => $orderDetail->amount - $orderDetail->used_wallet_balance,
-            'title'         => 'Lernen Purchase',
-            'description'   => 'Lernen Purchase Order Confirmation for reference #' . $orderDetail->id,
+            'title'         => 'The Learning Line Academy Purchase',
+            'description'   => 'The Learning Line Academy Purchase Order Confirmation for reference #' . $orderDetail->id,
             'ipn_url'       => !empty($ipnUrl) ? route($ipnUrl, ['payment_method' => $orderDetail->payment_method, 'upi' => $orderDetail->unique_payment_id, 'source' => request()->get('source') ?? 'web']) : url('/'),
             'order_id'      => $orderDetail->id,
             'track'         => $orderDetail->unique_payment_id,

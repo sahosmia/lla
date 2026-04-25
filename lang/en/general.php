@@ -1,7 +1,7 @@
 <?php
 
 return array (
-  'app_name' => 'Lernen',
+  'app_name' => 'The Learning Line Academy',
   'profile_settings' => 'Profile Settings',
   'manage_bookings' => 'Manage Bookings',
   'student' => 'Student',

@@ -7,7 +7,7 @@ return [
      * Shared translations.
      *
      */
-    'title' => 'Lernen Installer',
+    'title' => 'The Learning Line Academy Installer',
     'next' => 'Next Step',
     'finish' => 'Install',
 
@@ -18,7 +18,7 @@ return [
      *
      */
     'welcome' => [
-        'title'   => 'Welcome to the Lernen Installer',
+        'title'   => 'Welcome to the The Learning Line Academy Installer',
         'message' => 'Welcome to the setup wizard.',
     ],
 

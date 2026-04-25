@@ -54,9 +54,6 @@ class Course extends Model
         'created_at',
         'updated_at',
         'discussion_forum',
-<<<<<<< HEAD
-        'certificate_id'
-=======
         'certificate_id',
         'validity',
         'validity_type',
@@ -64,7 +61,6 @@ class Course extends Model
         'venue',
         'date',
         'time'
->>>>>>> master
     ];
 
 
@@ -105,8 +101,6 @@ class Course extends Model
         'expert'            => 3,
         'all'               => 4,
     ];
-<<<<<<< HEAD
-=======
     
      public const COURSE_FOR = [
         'online'            => 1,
@@ -125,7 +119,6 @@ class Course extends Model
             set: fn($value) => Arr::get(self::COURSE_FOR, $value, null)
         );
     }
->>>>>>> master
 
     /**
      * Get and set the status attribute.

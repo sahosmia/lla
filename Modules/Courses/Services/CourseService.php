@@ -744,8 +744,6 @@ class CourseService
         })->sortByDesc('active_courses_count')->values();
         return $categories;
     }
-<<<<<<< HEAD
-=======
     
       // get online course  1 = online course
     public function getOnlineCourese(){
@@ -762,7 +760,6 @@ class CourseService
         
         return $classRoomCourse;
     }
->>>>>>> master
 
     public function getLevels(){
 

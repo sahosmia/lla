@@ -34,6 +34,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
 Route::get('auth/{provider}', [SocialController::class, 'redirect'])->name('social.redirect');
 Route::get('auth/{provider}/callback', [SocialController::class, 'callback'])->name('social.callback');
 Route::view('language-translator', 'language-translator');
+
 Route::get('/contact-us', [InquiryController::class, 'index'])->name('contact.index');
 Route::post('/contact-us/inquiry', [InquiryController::class, 'store'])->name('contact.inquiry');
 

@@ -82,18 +82,6 @@ class QuizDetails extends Component
     #[Layout('quiz::layouts.quiz')]
     public function render()
     {
-<<<<<<< HEAD
-        $completedAt = null;
-        $totalGrade = null;
-
-        if (!empty($latestAttempt)) {
-            $completedAt    = $latestAttempt->completed_at ? Carbon::parse($latestAttempt?->completed_at)->format(setting('_general.date_format') ?? "F j Y") : null;
-            $totalGrade     = $latestAttempt->total_marks > 0 ? round(($latestAttempt->earned_marks / $latestAttempt->total_marks) * 100, 2) : 0;
-        }
-
-        $passingGrade       = $this->quizAttempt?->quiz?->settings?->where('meta_key', 'passing_grade')->first()?->meta_value ?? 0;
-
-=======
         $allAttempts = \Modules\Quiz\Models\QuizAttempt::where('quiz_id', $this->quizAttempt->quiz_id)
             ->where('student_id', $this->user->id)
             ->orderBy('created_at', 'desc')
@@ -125,7 +113,6 @@ class QuizDetails extends Component
 
         $passingGradeValue = $this->quizAttempt?->quiz?->settings?->where('meta_key', 'passing_grade')->first()?->meta_value ?? 0;
         $passingGrade = is_array($passingGradeValue) ? ($passingGradeValue[0] ?? 0) : $passingGradeValue;
->>>>>>> master
 
         $this->totalSlots = $this->tutor?->subjects?->flatMap(function ($subject) {
             return $subject->slots;
@@ -134,19 +121,12 @@ class QuizDetails extends Component
         $userService = new UserService($this->user);
         $this->isFavourite = $userService->isFavouriteUser($this->tutor?->id ?? 0);
         if ($this->tutor?->profile?->verified_at) {
-<<<<<<< HEAD
-            $this->reviews       = Rating::where('tutor_id', $this->tutor?->id ?? 0)->count();
-=======
             $this->reviews = Rating::where('tutor_id', $this->tutor?->id ?? 0)->count();
->>>>>>> master
         }
 
         return view('quiz::livewire.student.quiz-details.quiz-details', [
             'passingGrade'      => $passingGrade,
             'completedAt'       => $completedAt,
-<<<<<<< HEAD
-            'totalGrade'        => $totalGrade
-=======
             'totalGrade'        => $totalGrade,
             'bestAttempt'       => $bestAttempt,
             'latestAttempt'     => $latestAttempt,
@@ -154,7 +134,6 @@ class QuizDetails extends Component
             'attemptsMade'      => $attemptsMade,
             'attemptsAllowed'   => $attemptsAllowed,
             'hasPassed'         => $hasPassed,
->>>>>>> master
         ]);
     }
 
@@ -168,8 +147,6 @@ class QuizDetails extends Component
         $this->quizService->startQuiz($this->quizAttempt->id);
         return redirect()->route('quiz.student.attempt-quiz', ['attemptId' => $this->quizAttempt->id]);
     }
-<<<<<<< HEAD
-=======
 
     public function retakeQuiz()
     {
@@ -192,5 +169,4 @@ class QuizDetails extends Component
             return redirect()->route('quiz.student.quiz-details', ['attemptId' => $newAttempt->id]);
         }
     }
->>>>>>> master
 }

@@ -284,9 +284,6 @@ if (! function_exists('uploadImage')) {
             mkdir($directoryUrl);
         }
 
-<<<<<<< HEAD
-        Storage::disk($disk)->put('profile_images/' . $fileName, file_get_contents($imageUrl));
-=======
         // Storage::disk($disk)->put('profile_images/' . $fileName, file_get_contents($imageUrl));
 
               // Check if the image is a data URL
@@ -307,7 +304,6 @@ if (! function_exists('uploadImage')) {
 
         Storage::disk($disk)->put($dirName . '/' . $fileName, $data);
 
->>>>>>> master
 
         if ($fileName) {
             return $dirName . '/' . $fileName;
@@ -503,11 +499,7 @@ if (! function_exists('getProfileImageURL')) {
 if (!function_exists('getCurrentCurrency')) {
     function getCurrentCurrency()
     {
-<<<<<<< HEAD
-        $currency = !empty(session()->get('selected_currency')) ? session()->get('selected_currency') : (setting('_general.currency') ?? 'USD');
-=======
         $currency = !empty(session()->get('selected_currency')) ? session()->get('selected_currency') : (setting('_general.base_currency') ?? 'USD');
->>>>>>> master
         return !empty($currency) ? currencyList($currency) : array();
     }
 }
@@ -520,11 +512,7 @@ if (!function_exists('getExchangeRate')) {
             $currencyCode = $currentCurrency['code'] ?? 'USD';
         }
 
-<<<<<<< HEAD
-        $baseCurrency = setting('_general.currency') ?? 'USD';
-=======
         $baseCurrency = setting('_general.base_currency') ?? 'USD';
->>>>>>> master
 
         if ($currencyCode === $baseCurrency) {
             return 1.00;

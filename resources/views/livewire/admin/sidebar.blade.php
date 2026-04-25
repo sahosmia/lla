@@ -28,6 +28,17 @@ new class extends Component
                 ],
             ],
             [
+                'title' => __('Inquiries'),
+                'icon'  => 'icon-mail',
+                'routes' => [
+                    [
+                        'route' => 'admin.inquiries.index',
+                        'title' => __('All Inquiries'),
+                        'permission' => 'can-manage-inquiries',
+                    ],
+                ],
+            ],
+            [
                 'title' => __('sidebar.site_management'),
                 'icon'  => 'icon-layout',
                 'routes' => [

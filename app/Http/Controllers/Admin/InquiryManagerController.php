@@ -24,6 +24,6 @@ class InquiryManagerController extends Controller
         $inquiry = Inquiry::findOrFail($id);
         $inquiry->delete();
 
-        return redirect()->back()->with('success', 'Inquiry deleted successfully.');
+        return redirect()->route('admin.inquiries.index')->with('success', 'Inquiry deleted successfully.');
     }
 }

@@ -158,6 +158,11 @@ class SiteController extends Controller
             if ($itemType == SlotBooking::class) {
                 $bookingService->removeReservedBooking($request->cartable_id);
             }
+<<<<<<< HEAD
+=======
+            
+
+>>>>>>> master
 
             Cart::remove($request->cartable_id, $itemType);
             $orderServices = new OrderService();

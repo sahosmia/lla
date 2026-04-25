@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 return [
 
     /*
@@ -16,3 +17,9 @@ return [
     'previous'      => '&laquo; Previous',
     'next'          => 'Next &raquo;',
 ];
+=======
+return array (
+  'previous' => '« Previous',
+  'next' => 'Next »',
+);
+>>>>>>> master

@@ -27,6 +27,13 @@ class CourseBasicDetailRequest extends FormRequest
             'language_id'           => 'required|exists:languages,id',
             'learning_objectives'   => 'nullable|array',
             'learning_objectives.*' => 'string',
+            'validity'              => 'nullable|integer|min:1',
+            'validity_type'         => 'nullable|string|in:days,months,years',
+            'course_for'            => 'required|in:online,classroom',
+            'venue'                 => 'required_if:course_for,classroom|nullable|string|max:255',
+            'date'                  => 'required_if:course_for,classroom|nullable|date',
+            'time'                  => 'required_if:course_for,classroom|nullable',
+
         ];
     }
 

@@ -4,6 +4,10 @@
 namespace Modules\Courses\Livewire\Pages\Tutor\CourseCreation;
 
 use Modules\Courses\Models\Pricing;
+<<<<<<< HEAD
+=======
+use Modules\Courses\Models\Course;
+>>>>>>> master
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
@@ -20,6 +24,11 @@ class CreateCourse extends Component
         $this->tab = $tab;
         $this->id = $id;
         $pricing = Pricing::whereCourseId($this->id)->first();
+<<<<<<< HEAD
+=======
+                $this->course = $this->id ? Course::find($this->id) : null;
+
+>>>>>>> master
         $tabList = [
             'details' => [
                 'title' => __('courses::courses.basic_details'),

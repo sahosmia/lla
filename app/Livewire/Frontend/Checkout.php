@@ -20,7 +20,7 @@ use App\Services\WalletService;
 use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Nwidart\Modules\Facades\Module;
-use App\Library\SslCommerz\SslCommerzNotification;
+use Illuminate\Support\Facades\Bus;
 
 
 class Checkout extends Component
@@ -262,14 +262,9 @@ class Checkout extends Component
             }
             DB::beginTransaction();
             $orderItems = [];
-            $this->form->paymentMethod = 'sslcommerz';
+            $data = $this->form->updateInfo();
+                        // return redirect()->route('example2');
 
-            $data = $this->form->updateInfo();  // get form data as array
-
-
-       
-                    
-       
             if (Module::has('subscriptions') && Module::isEnabled('subscriptions') && !empty($this->chosenSubscription)) {
                 $data['subscription_id'] = $this->chosenSubscription;
             }
@@ -314,7 +309,9 @@ class Checkout extends Component
                 $orderDetail = $this->orderService->updateOrder($orderDetail, ['status' => 'complete']);
                 DB::commit();
                 session()->forget('order_id');
-                dispatch(new CompletePurchaseJob($orderDetail));
+                // dispatch(new CompletePurchaseJob($orderDetail));
+                Bus::dispatchNow(new CompletePurchaseJob($orderDetail));
+
                 Cart::clear();
                 redirect()->route('thank-you', ['id' => $orderDetail->id]);
             } else {

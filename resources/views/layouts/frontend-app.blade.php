@@ -16,7 +16,23 @@
             'public/css/splide.min.css',
         ])
     <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
-   
+    <!--@if(!empty($page) && $page->slug == 'home-two')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-two.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-three')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-three.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-four')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-four.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-five')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-five.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-six')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-six.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-seven')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-seven.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-eight')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-eight.css') }}">-->
+    <!--@elseif(!empty($page) && $page->slug == 'home-nine')-->
+    <!--    <link rel="stylesheet" type="text/css" href="{{ asset('css/colors-variation/home-nine.css') }}">-->
+    <!--@endif-->
     <x-favicon />
 
     @stack('styles')

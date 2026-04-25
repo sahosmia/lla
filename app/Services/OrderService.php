@@ -36,7 +36,7 @@ class OrderService
 
     public function getOrders($status, $search, $sortby, $selectedSubject, $selectedSubGroup, $userId = null)
     {
-        $orderableTypes = [SlotBooking::class];
+        $orderableTypes = [];
         if (Module::has('courses') && Module::isEnabled('courses')) {
             $orderableTypes[] = \Modules\Courses\Models\Course::class;
         }
@@ -59,6 +59,7 @@ class OrderService
             ->with('orderable')
             ->whereHasMorph('orderable', $orderableTypes, function ($query, $type) use ($userId) {
                 if (!empty($userId) && Auth::user()->role == 'tutor') {
+                   if (!empty($userId) && Auth::user()->role == 'tutor') {
                     if ($type === SlotBooking::class) {
                         $query->where('tutor_id', $userId)->with(['tutor']);
                     } elseif (Module::has('courses') && Module::isEnabled('courses') && $type === \Modules\Courses\Models\Course::class) {
@@ -68,6 +69,11 @@ class OrderService
                     } elseif (Module::has('coursebundles') && Module::isEnabled('coursebundles') && $type === \Modules\CourseBundles\Models\Bundle::class) {
                         $query->where('instructor_id', $userId);
                     }
+                } elseif (!empty($userId) && Auth::user()->role == 'student') {
+                    if (Module::has('coursebundles') && Module::isEnabled('coursebundles') && $type === \Modules\CourseBundles\Models\Bundle::class) {
+                        $query->with('instructor');
+                    }
+                }
                 } elseif (!empty($userId) && Auth::user()->role == 'student') {
                     if (Module::has('coursebundles') && Module::isEnabled('coursebundles') && $type === \Modules\CourseBundles\Models\Bundle::class) {
                         $query->with('instructor');
@@ -144,15 +150,8 @@ class OrderService
     public function getOrdersList($status, $search, $sortby)
     {
         $orders = Order::with('items')
-            ->withSum('items as admin_commission', 'platform_fee')
-            ->withCount([
-                'items as slot_bookings_count' => function ($query) {
-                    $query->whereHasMorph(
-                        'orderable',
-                        [SlotBooking::class]
-                    );
-                }
-            ]);
+                        ->withSum('items as admin_commission', 'platform_fee');
+
 
         if (isset(OrderStatusCast::$statuses[$status])) {
             $orders->whereStatus(OrderStatusCast::$statuses[$status]);

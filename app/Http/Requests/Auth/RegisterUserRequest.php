@@ -24,7 +24,9 @@ class RegisterUserRequest extends FormRequest
             'phone_number'  => $isProfilePhoneMendatory ? 'required|regex:/^(\+?\(?\d{1,4}\)?)?[\d\s\-]{7,15}$/' : 'nullable|regex:/^(\+?\(?\d{1,4}\)?)?[\d\s\-]{7,15}$/',
             'password'      => ['required', 'string', 'confirmed', Password::defaults()],
             'user_role'     => 'required|in:tutor,student',
-            'terms'         => 'required|string'
+            'terms'         => 'required|string',
+            'profession'    => 'nullable|string|max:255',
+            'organization'  => 'nullable|string|max:255',
         ];
     }
 

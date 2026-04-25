@@ -14,6 +14,8 @@ use App\Services\OrderService;
 use App\Services\WalletService;
 use App\Http\Requests\Student\Order\OrderRequest;
 use App\Traits\ApiResponser;
+use Illuminate\Support\Facades\Bus;
+
 
 class CheckoutController extends Controller
 {
@@ -91,7 +93,13 @@ class CheckoutController extends Controller
         
         if($request->useWalletBalance && ($walletBalance >= $request->amount) ){
            $orderDetail = $orderService->updateOrder($orderDetail,['status'=>'complete']);
+<<<<<<< HEAD
            dispatch(new CompletePurchaseJob($orderDetail));
+=======
+        //   dispatch(new CompletePurchaseJob($orderDetail));
+           Bus::dispatchNow(new CompletePurchaseJob($orderDetail));
+
+>>>>>>> master
            Cart::clear();
             return $this->success(data: ['payment_status' => 'completed'], message: __('api.checkout_details_added_successfully'));
         } else{

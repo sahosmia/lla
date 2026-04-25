@@ -117,65 +117,64 @@
                                     @endif
                                 </nav>
                             @endif
-                            @if (getMenu('footer', 'Footer menu 2')->isNotEmpty())
-                                <nav class="am-fnavigation">
-                                     <div class="am-fnavigation_title">
-                                        <h3>{{ setting('_front_page_settings.tutors_by_country_heading') }}</h3>
-                                    </div>
-                                    @if (!empty(getMenu('footer', 'Footer menu 2')))
-                                    <ul>
-                                        @foreach (getMenu('footer', 'Footer menu 2') as $item)
-                                            <x-menu-item :menu="$item" /> 
-                                        @endforeach
-                                    </ul>
-                                    @endif
-                                </nav>
-                            @endif
-                            @if (getMenu('footer', 'Footer menu 3')->isNotEmpty())
-                                <nav class="am-fnavigation">
-                                   <div class="am-fnavigation_title">
-                                        <h3>{{ setting('_front_page_settings.our_services_heading') }}</h3>
-                                    </div>
-                                    <ul>
-                                        @if (!empty(getMenu('footer', 'Footer menu 3')))
-                                            @foreach (getMenu('footer', 'Footer menu 3') as $item)
-                                                <x-menu-item :menu="$item" /> 
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                </nav>
-                            @endif
+                            <!--@if (getMenu('footer', 'Footer menu 2')->isNotEmpty())-->
+                            <!--    <nav class="am-fnavigation">-->
+                            <!--         <div class="am-fnavigation_title">-->
+                            <!--            <h3>{{ setting('_front_page_settings.tutors_by_country_heading') }}</h3>-->
+                            <!--        </div>-->
+                            <!--        @if (!empty(getMenu('footer', 'Footer menu 2')))-->
+                            <!--        <ul>-->
+                            <!--            @foreach (getMenu('footer', 'Footer menu 2') as $item)-->
+                            <!--                <x-menu-item :menu="$item" /> -->
+                            <!--            @endforeach-->
+                            <!--        </ul>-->
+                            <!--        @endif-->
+                            <!--    </nav>-->
+                            <!--@endif-->
+                            <!--@if (getMenu('footer', 'Footer menu 3')->isNotEmpty())-->
+                            <!--    <nav class="am-fnavigation">-->
+                            <!--       <div class="am-fnavigation_title">-->
+                            <!--            <h3>{{ setting('_front_page_settings.our_services_heading') }}</h3>-->
+                            <!--        </div>-->
+                            <!--        <ul>-->
+                            <!--            @if (!empty(getMenu('footer', 'Footer menu 3')))-->
+                            <!--                @foreach (getMenu('footer', 'Footer menu 3') as $item)-->
+                            <!--                    <x-menu-item :menu="$item" /> -->
+                            <!--                @endforeach-->
+                            <!--            @endif-->
+                            <!--        </ul>-->
+                            <!--    </nav>-->
+                            <!--@endif-->
+                            <!--@if (getMenu('footer', 'Footer menu 4')->isNotEmpty())-->
+                            <!--    <nav class="am-fnavigation">-->
+                            <!--       <div class="am-fnavigation_title">-->
+                            <!--            <h3>{{ setting('_front_page_settings.one_on_one_sessions_heading') }}</h3>-->
+                            <!--        </div>-->
+                            <!--        <ul>-->
+                            <!--            @if (!empty(getMenu('footer', 'Footer menu 4')))-->
+                            <!--                @foreach (getMenu('footer', 'Footer menu 4') as $item)-->
+                            <!--                    <x-menu-item :menu="$item" /> -->
+                            <!--                @endforeach-->
+                            <!--            @endif-->
+                            <!--        </ul>-->
+                            <!--    </nav>-->
+                            <!--@endif-->
                             
-                            {{-- @if (getMenu('footer', 'Footer menu 4')->isNotEmpty())
-                                <nav class="am-fnavigation">
-                                   <div class="am-fnavigation_title">
-                                        <h3>{{ setting('_front_page_settings.one_on_one_sessions_heading') }}</h3>
-                                    </div>
-                                    <ul>
-                                        @if (!empty(getMenu('footer', 'Footer menu 4')))
-                                            @foreach (getMenu('footer', 'Footer menu 4') as $item)
-                                                <x-menu-item :menu="$item" /> 
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                </nav>
-                            @endif --}}
                             
-{{--                             
-                            @if (getMenu('footer', 'Footer menu 5')->isNotEmpty())
-                               <nav class="am-fnavigation">
-                                   <div class="am-fnavigation_title">
-                                        <h3>{{ setting('_front_page_settings.group_sessions_heading') }}</h3>
-                                    </div>
-                                    <ul>
-                                        @if (!empty(getMenu('footer', 'Footer menu 5')))
-                                            @foreach (getMenu('footer', 'Footer menu 5') as $item)
-                                                <x-menu-item :menu="$item" /> 
-                                            @endforeach
-                                        @endif
-                                    </ul>
-                                </nav>
-                            @endif --}}
+                            <!--@if (getMenu('footer', 'Footer menu 5')->isNotEmpty())-->
+                            <!--    <nav class="am-fnavigation">-->
+                            <!--       <div class="am-fnavigation_title">-->
+                            <!--            <h3>{{ setting('_front_page_settings.group_sessions_heading') }}</h3>-->
+                            <!--        </div>-->
+                            <!--        <ul>-->
+                            <!--            @if (!empty(getMenu('footer', 'Footer menu 5')))-->
+                            <!--                @foreach (getMenu('footer', 'Footer menu 5') as $item)-->
+                            <!--                    <x-menu-item :menu="$item" /> -->
+                            <!--                @endforeach-->
+                            <!--            @endif-->
+                            <!--        </ul>-->
+                            <!--    </nav>-->
+                            <!--@endif-->
                             
                             
                         </div>

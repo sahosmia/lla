@@ -73,11 +73,11 @@
                             </span>
                         </div>
                         @if(isPaidSystem())
-                            <div class="am-searchfilter_item">
-                                <span class="am-searchfilter_title">{{ __('calendar.max_price') }}</span>
-                                <input type="text" placeholder="{{ getCurrencySymbol() }}0.00" class="form-control"
-                                    id="max_price" value="{!! (!empty($filters['max_price']) ? (getCurrencySymbol().$filters['max_price']) : '') !!}">
-                            </div>
+                            <!--<div class="am-searchfilter_item">-->
+                            <!--    <span class="am-searchfilter_title">{{ __('calendar.max_price') }}</span>-->
+                            <!--    <input type="text" placeholder="{{ getCurrencySymbol() }}0.00" class="form-control"-->
+                            <!--        id="max_price" value="{!! (!empty($filters['max_price']) ? (getCurrencySymbol().$filters['max_price']) : '') !!}">-->
+                            <!--</div>-->
                         @endif
                         <div class="am-searchfilter_item">
                             <span class="am-searchfilter_title">{{ __('general.tutor_location') }}</span>

@@ -22,6 +22,8 @@ class RegisterService
             'default_role'  => $request['user_role'],
             'email'         => $request['email'],
             'password'      => Hash::make($request['password']),
+            'profession'    => $request['profession'],
+            'organization'  => $request['organization'],
         ]);
         $user->profile()->create([
             'first_name'    => $request['first_name'],
@@ -34,9 +36,11 @@ class RegisterService
 
         $emailData = ['userName' => $user->profile->full_name, 'userEmail' => $user->email, 'key' => $user->getKey()];
 
+
         dispatch(new SendNotificationJob('registration', $user, $emailData));
         dispatch(new SendNotificationJob('registration', User::admin(), $emailData));
 
+        event(new Registered($user));
         $user->token = $user->createToken('learnen')->plainTextToken;
 
         return $user;

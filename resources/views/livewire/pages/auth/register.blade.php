@@ -17,9 +17,11 @@ new #[Layout('layouts.guest')] class extends Component
     public string $email = '';
     public string $password = '';
     public string $password_confirmation = '';
-    public string $user_role    = 'tutor';
+    public string $user_role    = 'student';
     public string $terms        = '';
     public string $phone_number = '';
+    public string $profession   = '';
+    public string $organization = '';
     public bool $isProfilePhoneMendatory = true;
     public $tutor_name = '';
     public $student_name = '';
@@ -120,6 +122,18 @@ new #[Layout('layouts.guest')] class extends Component
                             </div>
                         </div>
                         @endif
+                        
+                        <div class="form-group {{ $errors->get('profession') ? 'am-invalid' : '' }}">
+                            <x-input-label for="profession" :value="__('auth.profession')" />
+                            <x-text-input id="profession" wire:model="profession" placeholder="{{ __('auth.profession_placeholder') }}" type="text"  autofocus  />
+                            <x-input-error field_name="profession" />
+                        </div>
+                        <div class="form-group {{ $errors->get('organization') ? 'am-invalid' : '' }}">
+                            <x-input-label for="organization" :value="__('auth.organization')" />
+                            <x-text-input id="organization" wire:model="organization" placeholder="{{ __('auth.organization_placeholder') }}" type="text"  autofocus  />
+                            <x-input-error field_name="organization" />
+                        </div>
+                        
                         <div class="form-group {{ $errors->get('password') ? 'am-invalid' : '' }}">
                             <x-input-label for="password" :value="__('auth.password_placeholder')" />
                             <div class="am-passwordfield">
@@ -135,21 +149,7 @@ new #[Layout('layouts.guest')] class extends Component
                             </div>
                             <x-input-error field_name="password" />
                         </div>
-                        @if(setting('_lernen.restricting_tutor_account_creation') === 'no')
-                            <div class="form-group am-form-groupradio">
-                                <x-input-label :value="__('auth.role')" />
-                                <div class="am-selectrole">
-                                    <div class="am-radio">
-                                        <input wire:model="user_role" id="tutor" value="tutor" type="radio" autofocus name="user_role">
-                                        <x-input-label for="tutor" :value="$tutor_name" />
-                                    </div>
-                                    <div class="am-radio">
-                                        <input wire:model="user_role" id="student" value="student" type="radio" autofocus name="user_role">
-                                        <x-input-label for="student" :value="$student_name" />
-                                    </div>
-                                </div>
-                            </div>
-                        @endif
+                        
                         <div class="form-group @error('terms') am-invalid @enderror am-terms-check">
                             <div class="am-checkbox am-signup-check">
                                 <input wire:model="terms" type="checkbox" id="terms" name="terms">

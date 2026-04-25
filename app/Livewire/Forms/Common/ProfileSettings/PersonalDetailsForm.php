@@ -38,6 +38,8 @@ class PersonalDetailsForm extends Form
     public $countryName         = '';
     public $phone_number        = '';
     public $social_profiles    = [];
+    public string $profession   = '';
+    public string $organization = '';
     private ?PersonalDetailRequest $request = null;
     public $isProfileVideoMendatory = true;
     
@@ -60,7 +62,11 @@ class PersonalDetailsForm extends Form
         $this->image            = $profile?->image ?? '';
         $this->intro_video      = $profile?->intro_video ?? '';
         $this->email            = Auth::user()?->email;
+         $this->profession       = Auth::user()?->profession ?? '';
+        $this->organization     = Auth::user()?->organization ?? '';
     }
+    
+   
 
     public function rules(): array
     {

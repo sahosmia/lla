@@ -80,6 +80,21 @@ class Quiz extends Model
         return $this->hasMany(QuizAttempt::class);
     }
 
+    public function getBestAttempt(int $studentId): ?QuizAttempt
+    {
+        return $this->quizAttempts()
+            ->where('student_id', $studentId)
+            ->where('result', '!=', QuizAttempt::RESULT_ASSIGNED)
+            ->orderByDesc('earned_marks')
+            ->first();
+    }
+
+    public function bestAttempt(): HasOne
+    {
+        return $this->hasOne(QuizAttempt::class)->ofMany([
+            'earned_marks' => 'max',
+        ]);
+    }
     /**
      * Relationship: Quiz can be associated with multiple models (polymorphic).
      */

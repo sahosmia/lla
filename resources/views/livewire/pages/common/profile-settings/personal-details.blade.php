@@ -41,6 +41,24 @@
                             <x-input-error field_name="form.phone_number" />
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+                    
+                     <div class="form-group @error('form.profession') am-invalid @enderror">
+                        <x-input-label for="profession" :value="__('auth.profession')" />
+                        <div class="form-control_wrap">
+                            <x-text-input wire:model="form.profession" id="profession" placeholder="{{ __('auth.profession_placeholder') }}" name="profession" type="text" class="block w-full mt-1"  autocomplete="profession" />
+                            <x-input-error field_name="form.profession" />
+                        </div>
+                    </div>
+                    <div class="form-group @error('form.organization') am-invalid @enderror">
+                        <x-input-label for="organization" :value="__('auth.organization')" />
+                        <div class="form-control_wrap">
+                            <x-text-input wire:model="form.organization" id="organization" placeholder="{{ __('auth.organization_placeholder') }}" name="organization" type="text" class="block w-full mt-1"  autocomplete="organization" />
+                            <x-input-error field_name="form.organization" />
+                        </div>
+                    </div>
+>>>>>>> master
                     <div class="form-group @error('form.gender') am-invalid @enderror">
                         <x-input-label for="gender" class="am-important" :value="__('profile.gender')" />
                         <div class="am-radiowrap">

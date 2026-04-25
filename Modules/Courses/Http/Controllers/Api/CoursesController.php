@@ -298,7 +298,9 @@ class CoursesController extends Controller
 
         $progress = 0;
 
-        if(!empty($course->course_watchtime_sum_duration) && !empty($course->content_length)) {
+        // if(!empty($course->course_watchtime_sum_duration) && !empty($course->content_length)) {
+                if ($course->content_length > 0) {
+
             $progress = floor(($course->course_watchtime_sum_duration / $course->content_length) * 100);
         }
         $course->progress = $progress;

@@ -25,6 +25,8 @@ use Modules\Courses\Livewire\Pages\Tutor\CourseCreation\Components\CourseNoticeb
 use Modules\Courses\Livewire\Pages\Tutor\CourseCreation\Components\CoursePricing;
 use Modules\Courses\Livewire\Pages\Tutor\CourseCreation\Components\CoursePromotions;
 use Modules\Courses\Livewire\Pages\Tutor\CourseCreation\Components\CoursePublish;
+use Modules\Courses\Livewire\Pages\Course\ClassroomTrainingSubmissionForm;
+
 
 use Modules\Courses\Livewire\Pages\Tutor\CourseCreation\Components\CourseSidebar;
 
@@ -70,9 +72,11 @@ class CoursesServiceProvider extends ServiceProvider
         Livewire::component('courses::admin.course-enrollments',                     CourseEnrollments::class);
         Livewire::component('courses::admin.commission-settings',                    AdminCommissionSettings::class);
         Livewire::component('courses::student.course-taking',                        CourseTaking::class);
-        Livewire::component('courses::discussion-forum',                              DiscussionForum::class);
-        Livewire::component('courses::student.course-list',                           CourseList::class);
-        Livewire::component('courses::admin.categories',                              Categories::class);
+        Livewire::component('courses::discussion-forum',                             DiscussionForum::class);
+        Livewire::component('courses::student.course-list',                          CourseList::class);
+        Livewire::component('courses::admin.categories',                             Categories::class);
+        Livewire::component('courses::classroom-training-submission-form',           ClassroomTrainingSubmissionForm::class);
+
 
     }
 

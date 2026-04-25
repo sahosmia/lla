@@ -468,6 +468,22 @@
                                                     <span class="cr-stat-value">{{ number_format($course->views_count) }}</span>
                                                 </div>
                                             </div>
+<<<<<<< HEAD
+=======
+                                            
+                                            @if(!empty($course->validity) && !empty($course->validity_type))
+                                                <div class="cr-stat-item">
+                                                    <div class="cr-stat-icon-wrapper">
+                                                        <i class="am-icon-calendar"></i>
+                                                    </div>
+                                                    <div class="cr-stat-content">
+                                                        <span class="cr-stat-label">{{ __('courses::courses.course_validity_period') }}</span>
+                                                        <span class="cr-stat-value">{{ $course->validity }} {{ Str::ucfirst($course->validity_type) }}</span>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                           
+>>>>>>> master
                                         </div>
                                     </div>
                                 </div>

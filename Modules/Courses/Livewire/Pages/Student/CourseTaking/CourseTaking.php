@@ -15,14 +15,31 @@ use Illuminate\Support\Str;
 use Modules\Assignments\Models\Assignment;
 use Modules\Quiz\Models\Quiz;
 use App\Models\User;
+<<<<<<< HEAD
+=======
+use App\Models\Order;
+>>>>>>> master
 use Livewire\Component;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
 use Livewire\Attributes\On;
 use Livewire\Attributes\Renderless;
+<<<<<<< HEAD
 
 class CourseTaking extends Component
 {
+=======
+use Symfony\Component\HttpFoundation\Response;
+use App\Traits\ApiResponser;
+
+
+
+class CourseTaking extends Component
+{
+    
+        use ApiResponser;
+
+>>>>>>> master
 
     public $logo;
     public $activeCurriculum;
@@ -35,6 +52,10 @@ class CourseTaking extends Component
     public $studentRating;
     public $role;
     public $backRoute = null;
+<<<<<<< HEAD
+=======
+    public $expirationDate = null;
+>>>>>>> master
     public $curriculumOrder = [];
     public $nextCurriculumItem = [];
     public $socialIcons = [
@@ -57,14 +78,26 @@ class CourseTaking extends Component
         $this->role = Auth::user()->role;
         $logo = setting('_general.logo_white');
         $this->logo = !empty($logo[0]['path']) ? Storage::url($logo[0]['path']) : asset('modules/courses/images/logo.svg');
+<<<<<<< HEAD
+=======
+    //     if(true){
+    // return $this->error(__('general.not_allowed'), Response::HTTP_NOT_FOUND);
+    //     }
+>>>>>>> master
 
         if (!$this->course) {
             abort(404);
         }
 
+<<<<<<< HEAD
         if ($this->role == 'tutor' && $this->course?->instructor_id != Auth::id()) {
             return $this->redirect(route('courses.course-detail', ['slug' => $this->course->slug]));
         }
+=======
+        // if ($this->role == 'tutor' && $this->course?->instructor_id != Auth::id()) {
+        //     return $this->redirect(route('courses.course-detail', ['slug' => $this->course->slug]));
+        // }
+>>>>>>> master
 
         $courseAddedToStudent = (new CourseService())->getStudentCourse(
             courseId: $this->course->id,
@@ -75,6 +108,44 @@ class CourseTaking extends Component
         if ($this->role == 'student' && !$courseAddedToStudent) {
             return $this->redirect(route('courses.search-courses'));
         }
+<<<<<<< HEAD
+=======
+        
+          if ($this->role == 'student' && $courseAddedToStudent) {
+            if (!empty($this->course->validity) && !empty($this->course->validity_type)) {
+                $startDate = null;
+                if ($this->course->pricing && $this->course->pricing->price > 0) {
+                    // Paid course, use purchase date
+                    $order = Order::where('user_id', Auth::id())
+                                    ->whereHas('items', function ($query) {
+                                        $query->where('orderable_id', $this->course->id)
+                                              ->where('orderable_type', 'Modules\Courses\Models\Course');
+                                    })
+                                    ->first();
+                    if ($order) {
+                        $startDate = \Carbon\Carbon::parse($order->created_at);
+                    }
+                } else {
+                    // Free course, use enrollment date
+                    $startDate = \Carbon\Carbon::parse($courseAddedToStudent->created_at);
+                }
+
+                if ($startDate) {
+                    $expirationDate = $startDate->add($this->course->validity, $this->course->validity_type);
+
+                    if (\Carbon\Carbon::now()->gt($expirationDate)) {
+                        session()->flash('error', __('courses::courses.course_access_expired'));
+                        // return $this->redirect(route('courses.course-list'));
+                        return back(); 
+
+                        
+                    }
+                    
+                    $this->expirationDate = $expirationDate->format('d M, Y');
+                }
+            }
+        }
+>>>>>>> master
 
         if (!empty($this->course->course_watchtime_sum_duration) && !empty($this->course->content_length)) {
             $progress = floor(($this->course->course_watchtime_sum_duration / $this->course->content_length) * 100);

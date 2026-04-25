@@ -207,6 +207,11 @@ class CourseService
      */
     public function updateOrCreateCourse(?int $courseId, array $data)
     {
+        
+        if (empty($courseId)) {
+            $data['status'] = 'active';
+        }
+        
         $course = Course::updateOrCreate(
             ['id' => $courseId],
             $data
@@ -739,6 +744,25 @@ class CourseService
         })->sortByDesc('active_courses_count')->values();
         return $categories;
     }
+<<<<<<< HEAD
+=======
+    
+      // get online course  1 = online course
+    public function getOnlineCourese(){
+
+        $onlineCourse= Course::where('course_for', 1)->get();
+        
+        return $onlineCourse;
+    }
+
+    //get class room course 2 = class room course
+    public function getClassRoomCourses(){
+
+         $classRoomCourse= Course::where('course_for', 2)->get();
+        
+        return $classRoomCourse;
+    }
+>>>>>>> master
 
     public function getLevels(){
 

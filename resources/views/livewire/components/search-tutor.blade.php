@@ -46,7 +46,7 @@
                                         </video>
                                     @endif
                                     <div class="am-tutorsearch_btns">
-                                        <a href="{{ route('tutor-detail',['slug' => $tutor->profile->slug]).'#availability' }}" class="am-white-btn">{{ __('tutor.book_session') }}<i class="am-icon-calender-duration"></i></a>
+                                        <!--<a href="{{ route('tutor-detail',['slug' => $tutor->profile->slug]).'#availability' }}" class="am-white-btn">{{ __('tutor.book_session') }}<i class="am-icon-calender-duration"></i></a>-->
                                         @if(Auth::check() && $allowFavAction)
                                             <a href="javascript:;" @click=" tutorInfo = @js($tutorInfo);threadId=''; recepientId=@js($tutor->id); $nextTick(() => $wire.dispatch('toggleModel', {id: 'message-model-'+@js($tutor->id),action:'show'}) )" class="am-btn">{{ __('tutor.send_message') }}<i class="am-icon-chat-03"></i></a>
                                             <a href="javascript:void(0);" id="toggleFavourite-{{ $tutor->id }}" wire:click.prevent="toggleFavourite({{ $tutor->id }})" @class(['am-likebtn', 'active' => in_array($tutor->id, $favouriteTutors)])> <i class="am-icon-heart-01"></i></a>
@@ -86,26 +86,15 @@
                                                 @endif
                                             </div>
                                         </div>
-                                        @if(isPaidSystem())
-                                            <div class="am-tutorsearch_fee">
-                                                <span>{{ __('tutor.session_fee') }}</span>
-                                                <strong>{{ formatAmount($tutor->min_price) }}<em>/{{ __('tutor.session') }}</em></strong>
-                                            </div>
-                                        @endif
+                                       
                                     </div>
                                     <ul class="am-tutorsearch_info">
                                         <li>
                                             <div class="am-tutorsearch_info_icon"><i class="am-icon-star-01"></i></div>
                                             <span>{{ number_format($tutor->avg_rating, 1) }}<em>/5.0 ({{ $tutor->total_reviews == 1 ? __('general.review_count') : __('general.reviews_count', ['count' => $tutor->total_reviews] ) }})</em></span>
                                         </li>
-                                        <li>
-                                            <div class="am-tutorsearch_info_icon"><i class="am-icon-user-group"></i></div>
-                                            <span>{{$tutor->active_students}} <em>{{ $tutor->active_students == '1' ? __('tutor.booked_session') : __('tutor.booked_sessions') }}</em></span>
-                                        </li>
-                                        <li>
-                                            <div class="am-tutorsearch_info_icon"><i class="am-icon-menu-2"></i></div>
-                                            <span>{{$tutor->subjects->sum('sessions')}} <em>{{ $tutor->subjects->sum('sessions') == 1 ? __('tutor.session') : __('tutor.sessions') }}</em></span>
-                                        </li>
+                                        
+                                       
                                         <li>
                                             <div class="am-tutorsearch_info_icon"><i class="am-icon-language-1"></i></div>
                                             <span> {{ __('tutor.language_know') }}</span>

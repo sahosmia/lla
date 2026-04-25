@@ -262,12 +262,12 @@
                             {{ __('sidebar.profile_settings') }}
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('student.bookings') }}">
-                            <i class="am-icon-calender-day"></i>
-                            {{ __('sidebar.bookings') }}
-                        </a>
-                    </li>
+                    <!--<li>-->
+                    <!--    <a href="{{ route('student.bookings') }}">-->
+                    <!--        <i class="am-icon-calender-day"></i>-->
+                    <!--        {{ __('sidebar.bookings') }}-->
+                    <!--    </a>-->
+                    <!--</li>-->
                     @if(\Nwidart\Modules\Facades\Module::has('courses') && \Nwidart\Modules\Facades\Module::isEnabled('courses') && function_exists('courseMenuOptions'))
                         @php
                             $courseMenuOptions = courseMenuOptions('student');
@@ -325,12 +325,12 @@
                     <li>
                         <a href="{{ route('tutor.profile.personal-details') }}"><i class="am-icon-user-01"></i>{{ __('sidebar.profile_settings') }}</a>
                     </li>
-                    <li>
-                        <a href="{{ route('tutor.bookings.subjects') }}">
-                            <i class="am-icon-calender-day"></i>
-                            {{ __('sidebar.bookings') }}
-                        </a>
-                    </li>
+                    <!--<li>-->
+                    <!--    <a href="{{ route('tutor.bookings.subjects') }}">-->
+                    <!--        <i class="am-icon-calender-day"></i>-->
+                    <!--        {{ __('sidebar.bookings') }}-->
+                    <!--    </a>-->
+                    <!--</li>-->
                     @if (\Nwidart\Modules\Facades\Module::has('forumwise') && \Nwidart\Modules\Facades\Module::isEnabled('forumwise'))
                         <li>
                             <a href="{{ route('forums') }}">

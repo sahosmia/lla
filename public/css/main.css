@@ -4598,6 +4598,7 @@ form p span i {
 .am-flogo {
   display: block;
   margin: 0 0 24px;
+  width: 120px !important;
 }
 .am-flogo a {
   margin: 0;
@@ -4610,6 +4611,10 @@ form p span i {
   display: block;
   width: 100%;
   max-width: 160.63px;
+}
+
+.am-login-left img {
+    width: 200px;
 }
 .am-fnavigation {
   width: 100%;

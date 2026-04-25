@@ -6,7 +6,10 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Modules\Quiz\Casts\QuizResultCast;
+use Modules\Quiz\Models\Question;
+
 
 class QuizAttempt extends Model
 {
@@ -70,6 +73,12 @@ class QuizAttempt extends Model
     public function attemptedQuestions(): HasMany
     {
         return $this->hasMany(AttemptedQuestion::class);
+    }
+    
+    
+    public function questions(): BelongsToMany
+    {
+        return $this->belongsToMany(Question::class, config('quiz.db_prefix') . 'attempted_questions');
     }
 
     /**

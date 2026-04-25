@@ -134,6 +134,12 @@ class PersonalDetails extends Component
         if (!empty($socialsProfiles)) {
             $this->profileService->setSocialProfiles($socialsProfiles);
         }
+        
+        $user = Auth::user();
+        $user->profession = $this->form->profession;
+        $user->organization = $this->form->organization;
+        $user->save();
+        
         $this->dispatch('profile-img-updated', image: resizedImage($form->image, 36, 36));
         $this->dispatch('showAlertMessage', type: 'success', title: __('general.success_title'), message: __('general.success_message'));
     }

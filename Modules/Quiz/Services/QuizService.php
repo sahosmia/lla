@@ -303,9 +303,9 @@ class QuizService
             })
 
             ->when(!empty($studentId), function ($query) use ($studentId) {
-                return $query->withWhereHas('quizAttempts', function ($query) use ($studentId) {
+                return $query->with(['bestAttempt' => function ($query) use ($studentId) {
                     $query->where('student_id', $studentId);
-                });
+                }]);
             })
 
             ->withCount($withCount)
@@ -398,13 +398,14 @@ class QuizService
                 'duration'              => '02:30',
                 'duration_type'         => 'hours',
                 'hide_quiz_timer'       => 0,
-                'attempts_allowed'      => 1,
+                'attempts_allowed'      => 3,
                 'passing_grade'         => 50,
                 'question_order'        => 'asc',
                 'hide_question_number'  => 0,
                 'short_ans_limit'       => 500,
                 'max_ans_limit'         => 5000,
                 'auto_result_generate'  => 0,
+                'questions_per_attempt' => 30,
             ];
 
             $quizId = $quiz?->id ?? null;
@@ -724,13 +725,14 @@ class QuizService
             'duration'              => '02:30',
             'duration_type'         => 'hours',
             'hide_quiz_timer'       => 0,
-            'attempts_allowed'      => 1,
+            'attempts_allowed'      => 3,
             'passing_grade'         => 50,
             'question_order'        => 'asc',
             'hide_question_number'  => 0,
             'short_ans_limit'       => 500,
             'max_ans_limit'         => 100,
             'auto_result_generate'  => 0,
+            'questions_per_attempt' => 30,
         ];
 
         $quizSettings = array_map(function ($metaKey, $metaValue) use ($quiz) {
@@ -906,22 +908,32 @@ class QuizService
             return false;
         }
 
-        $quiz = Quiz::with('questions', 'tutor.profile')->whereStatus(Quiz::PUBLISHED)->find($quizId);
+        $quiz = Quiz::with('questions', 'tutor.profile', 'settings')->whereStatus(Quiz::PUBLISHED)->find($quizId);
 
         if (empty($quiz)) {
             return false;
         }
 
-        foreach ($studentIds as $studentId) {
+        $attemptsAllowedSetting = $quiz->settings->where('meta_key', 'attempts_allowed')->first();
+        $attemptsAllowed = 1;
+        if ($attemptsAllowedSetting) {
+            $attemptsAllowedValue = $attemptsAllowedSetting->meta_value;
+            $attemptsAllowed = is_array($attemptsAllowedValue) ? ($attemptsAllowedValue[0] ?? 1) : $attemptsAllowedValue;
+        }
 
-            $quizAttempt = QuizAttempt::where('quiz_id', $quiz->id)->where('student_id', $studentId)->first();
-            if (!empty($quizAttempt)) {
+        $lastAttempt = null;
+        foreach ($studentIds as $studentId) {
+            $attemptsCount = QuizAttempt::where('quiz_id', $quiz->id)
+                                        ->where('student_id', $studentId)
+                                        ->count();
+
+            if ($attemptsCount >= $attemptsAllowed) {
                 continue;
             }
 
             $student = User::find($studentId);
             if (!empty($student)) {
-                $detail = QuizAttempt::create(
+                $lastAttempt = QuizAttempt::create(
                     [
                         'quiz_id'           => $quiz->id,
                         'student_id'        => $student->id,
@@ -931,19 +943,50 @@ class QuizService
                     ]
                 );
             }
-            return $detail;
         }
+        
+        return $lastAttempt;
     }
 
     public function  startQuiz($id)
     {
-        $quiz = QuizAttempt::where('quiz_id', $id)->first();
-        if (!empty($quiz)) {
-            $quiz->started_at = now();
-            $quiz->save();
-            return true;
+        $attempt = QuizAttempt::with('quiz.settings', 'quiz.questions')->find($id);
+
+        if (empty($attempt) || !empty($attempt->started_at)) {
+            return false;
         }
-        return false;
+
+        $questionsPerAttemptSetting = $attempt->quiz->settings->where('meta_key', 'questions_per_attempt')->first();
+        $questionsPerAttemptValue = $questionsPerAttemptSetting ? $questionsPerAttemptSetting->meta_value : 30;
+        $questionsPerAttempt = is_array($questionsPerAttemptValue) ? ($questionsPerAttemptValue[0] ?? 30) : $questionsPerAttemptValue;
+        
+        $allQuestions = $attempt->quiz->questions;
+        $selectedQuestions = $allQuestions->count() > $questionsPerAttempt
+            ? $allQuestions->random($questionsPerAttempt)
+            : $allQuestions;
+
+        $attemptedQuestionsData = [];
+        $totalMarks = 0;
+        foreach ($selectedQuestions as $question) {
+            $attemptedQuestionsData[] = [
+                'quiz_attempt_id' => $attempt->id,
+                'question_id'     => $question->id,
+                'created_at'      => now(),
+                'updated_at'      => now(),
+            ];
+            $totalMarks += $question->points;
+        }
+
+        if (!empty($attemptedQuestionsData)) {
+            \Modules\Quiz\Models\AttemptedQuestion::insert($attemptedQuestionsData);
+        }
+
+        $attempt->total_questions = $selectedQuestions->count();
+        $attempt->total_marks = $totalMarks;
+        $attempt->started_at = now();
+        $attempt->save();
+
+        return true;
     }
 
     public function getAttemptedId($quizId)

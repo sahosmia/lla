@@ -94,6 +94,8 @@ class NotificationService
                 ]
             );
             $btnHtml = view('components.email.button', ['btnText' => trans('email_template.verfiy_email'), 'btnUrl' => $verifyUrl]);
+                        // $btnHtml = view('components.email.button', ['btnText' => trans('email_template.verfiy_email'), 'btnUrl' => $verifyUrl])->render();
+
             $emailTemplate['content'] = Str::replace('{verificationLink}', $btnHtml, $emailTemplate['content']);
         }
         return $emailTemplate;

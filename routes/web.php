@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\SocialController;
 use App\Http\Controllers\Frontend\SearchController;
+use App\Http\Controllers\Frontend\InquiryController;
 use App\Http\Controllers\Impersonate;
 use App\Http\Controllers\OpenAiController;
 use App\Http\Controllers\SiteController;
@@ -33,6 +34,8 @@ use App\Http\Controllers\SslCommerzPaymentController;
 Route::get('auth/{provider}', [SocialController::class, 'redirect'])->name('social.redirect');
 Route::get('auth/{provider}/callback', [SocialController::class, 'callback'])->name('social.callback');
 Route::view('language-translator', 'language-translator');
+Route::get('/contact-us', [InquiryController::class, 'index'])->name('contact.index');
+Route::post('/contact-us/inquiry', [InquiryController::class, 'store'])->name('contact.inquiry');
 
 Route::middleware(['locale', 'maintenance'])->group(function () {
     Route::get('find-tutors', [SearchController::class, 'findTutors'])->name('find-tutors');
@@ -93,10 +96,9 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
             Route::get('manage-dispute/{id}', ManageDispute::class)->name('manage-dispute');
         });
     });
-
-
-
-    // SSLCOMMERZ Start
+    
+    
+        // SSLCOMMERZ Start
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout'])->name('example2');
 
 Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay');
@@ -106,9 +108,9 @@ Route::post('/success', [SslCommerzPaymentController::class, 'success']);
 Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
 Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
 
-Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn'])->name('post.ipn');
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 //SSLCOMMERZ END
-
+    
 
     Route::post('/remove-cart', [SiteController::class, 'removeCart']);
 

@@ -40,12 +40,7 @@
                                     @endif
                                 </div>
                             </div>
-                            @if(!empty($tutor?->profile?->intro_video) && isPaidSystem())
-                                <div class="am-tutordetail_fee">
-                                    <strong> {!! formatAmountV2($tutor?->min_price) !!}<em>{{__('tutor.per_session') }}</em></strong>
-                                    <span>{{ __('tutor.starting_from') }}</span>
-                                </div>
-                            @endif
+                            
                         </div>
                         <div class="am-tutordetail-reviews">
                             <div class="am-tutordetail-reviews_wrap">
@@ -59,20 +54,7 @@
                                                     }})</em></span>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div class="am-tutorreview-item">
-                                            <i class="am-icon-user-group"></i>
-                                            <span>{{$tutor?->active_students}} <em>
-                                            {{ $tutor?->active_students == '1' ? __('tutor.booked_session') :
-                                            __('tutor.booked_sessions') }}</em></span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="am-tutorreview-item">
-                                            <i class="am-icon-menu-2"></i>
-                                            <span>{{$tutor?->subjects->sum('sessions')}} <em>{{ $tutor?->subjects->sum('sessions') == 1 ? __('tutor.session') : __('tutor.sessions') }}</em></span>
-                                        </div>
-                                    </li>
+                                   
                                     <li>
                                         <div class="am-tutorreview-item">
                                             <i class="am-icon-watch-1"></i>
@@ -107,32 +89,7 @@
                             </div>
                             <ul class="am-tutorskills-list">
                                 @if($tutor?->subjects->isNotEmpty())
-                                    <li>
-                                        <div class="am-tutorskills-item">
-                                            <i class="am-icon-book-1"></i>
-                                            <span>{{ __('tutor.i_can_teach') }}</span>
-                                        </div>
-                                        <ul x-data="{ open: false }">
-                                        
-                                                @foreach ($tutor?->subjects as $index => $sub)
-                                                    @if ($index < 2) 
-                                                        <li><span>{!! $sub->subject?->name !!}</span></li>
-                                                    @else
-                                                        <li x-show="open"><span>{!! $sub->subject?->name !!}</span></li>
-                                                    @endif
-                                                @endforeach
-                                        
-                                            @if ($tutor?->subjects->count() > 2)
-                                                <li>
-                                                    <a href="javascript:void(0);" @click="open = !open">
-                                                        <span x-show="!open">{{ __('tutor.more_item', ['count' =>
-                                                            $tutor?->subjects->count() - 2]) }}</span>
-                                                        <span x-show="open">{{ __('tutor.show_less') }}</span>
-                                                    </a>
-                                                </li>
-                                            @endif
-                                        </ul>
-                                    </li>
+                                    
                                 @endif
                                 <li>
                                     <div class="am-tutorskills-item">
@@ -235,10 +192,7 @@
                     <li x-bind:class="tab == 'about' ? 'active' : ''">
                         <a href="#" @click="tab='about'" class="am-tabitem">{{ __('tutor.introduction') }}</a>
                     </li>
-                    <li x-bind:class="tab == 'availability' ? 'active' : ''">
-                        <a href="#availability" @click="tab='availability'" class="am-tabitem">{{
-                            __('tutor.availability') }}</a>
-                    </li>
+                    
                     @if(\Nwidart\Modules\Facades\Module::has('courses') && \Nwidart\Modules\Facades\Module::isEnabled('courses') && $courses->isNotEmpty())
                         <li x-bind:class="tab == 'courses' ? 'active' : ''">
                             <a @click="tab='courses'" href="#courses" class="am-tabitem">{{
@@ -292,72 +246,10 @@
     </div>
 </div>
 <div class="am-tutor-detail">
-    <div class="am-booking_section" id="availability">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <livewire:components.tutor-sessions :user="$tutor" />
-                </div>
-            </div>
-        </div>
-        <div class="am-howtobook">
-            @if (!empty(setting('_lernen.enable_booking_tips')) && (
-            !empty(setting('_lernen.tips_for_booking_image')) ||
-            !empty(setting('_lernen.tips_for_booking_heading')) ||
-            !empty(setting('_lernen.tips_for_booking_bullets')) ||
-            !empty(setting('_lernen.tips_for_booking_sub_heading')) ||
-            !empty(setting('_lernen.tips_for_booking_sub_heading'))
-            ))
-            <a href="javascript:void(0);">
-                <i class="am-icon-exclamation-01"></i>
-                <!-- <span>{{ __('general.how_it_work') }}</span> -->
-            </a>
-            <div class="am-howtobook_popup">
-                @if (!empty(setting('_lernen.tips_for_booking_image')[0]['path']))
-                <figure class="am-howtobook_img">
-                    <img src="{{ url(Storage::url(setting('_lernen.tips_for_booking_image')[0]['path'])) }}"
-                        alt="img description">
-                    <a href="javascript:void(0);" class="am-howtobook_close">
-                        <i class="am-icon-multiply-02"></i>
-                    </a>
-                </figure>
-                @endif
-                <div class="am-howtobook_content">
-                    <div class="am-howtobook_info">
-                        @if (!empty(setting('_lernen.tips_for_booking_heading')))
-                        <h3>{{ setting('_lernen.tips_for_booking_heading') }}</h3>
-                        @endif
-                        @if (!empty(setting('_lernen.tips_for_booking_bullets')))
-                        <ol>
-                            @foreach (setting('_lernen.tips_for_booking_bullets') as $bullet)
-                            <li>
-                                <span>{!! $bullet['tips_for_booking_bullet'] !!}</span>
-                            </li>
-                            @endforeach
-                        </ol>
-                        @endif
-                    </div>
-                    <div class="am-howtobook_info">
-                        @if (!empty(setting('_lernen.tips_for_booking_sub_heading')))
-                        <h3>{{ setting('_lernen.tips_for_booking_sub_heading') }}</h3>
-                        @endif
-                        @if (!empty(setting('_lernen.tips_for_booking_sub_bullets')))
-                        <ol>
-                            @foreach (setting('_lernen.tips_for_booking_sub_bullets') as $sub_bullet)
-                            <li>
-                                <span>{!! addBaseUrl($sub_bullet['tips_for_booking_sub_bullet']) !!}</span>
-                            </li>
-                            @endforeach
-                        </ol>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            @endif
-        </div>
-    </div>
     @if(\Nwidart\Modules\Facades\Module::has('courses') && \Nwidart\Modules\Facades\Module::isEnabled('courses') && $courses->isNotEmpty())
-        <div wire:ignore class="am-booking_section am-featured-courses" id="courses">
+        <!--<div wire:ignore class="am-booking_section am-featured-courses" id="courses">-->
+                <div wire:ignore class="am-booking_section am-featured-courses" id="courses">
+
             <div class="container">
                 <div class="row">
                     <div class="col-12">

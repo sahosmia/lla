@@ -54,10 +54,17 @@
                         <div class="am-stat-icon-wrapper">
                             <i class="am-icon-shield-check"></i>
                         </div>
+<<<<<<< HEAD
                         @if(!empty($quizAttempt?->quiz?->settings?->where('meta_key', 'passing_grade')->first()->meta_value))
                             <div class="am-stat-content">
                                 <span class="am-stat-label">{{ __('quiz::quiz.passing_marks') }}</span>
                                 <span class="am-stat-value">{{ $quizAttempt?->quiz?->settings?->where('meta_key', 'passing_grade')->first()->meta_value }}%</span>
+=======
+                        @if(!empty($passingGrade))
+                            <div class="am-stat-content">
+                                <span class="am-stat-label">{{ __('quiz::quiz.passing_marks') }}</span>
+                                <span class="am-stat-value">{{ $passingGrade }}%</span>
+>>>>>>> master
                             </div>
                         @endif
                     </div>
@@ -73,6 +80,32 @@
                     </div>
                     @endif
                 </div>
+<<<<<<< HEAD
+=======
+
+                @if($bestAttempt)
+                    <div class="am-course-stats">
+                        <div class="am-stat-item">
+                            <div class="am-stat-icon-wrapper">
+                                <i class="am-icon-trophy-04"></i>
+                            </div>
+                            <div class="am-stat-content">
+                                <span class="am-stat-label">{{ __('quiz::quiz.best_score') }}</span>
+                                <span class="am-stat-value">{{ $bestAttempt->earned_marks }} / {{ $bestAttempt->total_marks }}</span>
+                            </div>
+                        </div>
+                        <div class="am-stat-item">
+                            <div class="am-stat-icon-wrapper">
+                                <i class="am-icon-check-circle"></i>
+                            </div>
+                            <div class="am-stat-content">
+                                <span class="am-stat-label">{{ __('quiz::quiz.attempts_made') }}</span>
+                                <span class="am-stat-value">{{ $attemptsMade }} / {{ $attemptsAllowed }}</span>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+>>>>>>> master
                <p>
                     @if ($fullDescription)
                         {!! $quizAttempt?->quiz?->description !!}
@@ -98,10 +131,36 @@
                 @endif
             </div>
             @if($quizAttempt?->quiz?->questions?->count() > 0)
+<<<<<<< HEAD
                 <button  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#back-confirm-popup" class="am-btn">
                     {{ __('quiz::quiz.start_quiz') }}
                     <i class="am-icon-chevron-right"></i>
                 </button>
+=======
+                @if ($quizAttempt->result == 'assigned')
+                    <button data-toggle="modal" data-bs-toggle="modal" data-bs-target="#start-confirm-popup" class="am-btn">
+                        {{ __('quiz::quiz.start_quiz') }}
+                        <i class="am-icon-chevron-right"></i>
+                    </button>
+                @else
+                    @if ($hasPassed)
+                        <div class="alert alert-success" role="alert">
+                            <strong>{{ __('quiz::quiz.congratulations') }}</strong> {{ __('quiz::quiz.passed_quiz_message') }}
+                        </div>
+                    @endif
+                    @if ($remainingAttempts > 0 && !$hasPassed)
+                        <button wire:click="retakeQuiz" class="am-btn">
+                            {{ __('quiz::quiz.retake_quiz') }}
+                            <i class="am-icon-chevron-right"></i>
+                        </button>
+                    @endif
+                    @if($bestAttempt)
+                        <a href="{{ route('quiz.student.quiz-result', ['attemptId' => $bestAttempt->id]) }}" class="am-btn am-btn-secondary">
+                            {{ __('quiz::quiz.view_results') }}
+                        </a>
+                    @endif
+                @endif
+>>>>>>> master
             @endif
     <div class="modal fade am-deletepopup am-startquiz-popup" id="back-confirm-popup" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">

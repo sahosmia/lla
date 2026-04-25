@@ -16,50 +16,7 @@
                     </div>
                 @endif
 
-                @if(!empty(pagesetting('events_data')))
-                    <div class="am-events-list row">
-                        @foreach(pagesetting('events_data') as $event)
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <div class="am-event-card">
-                                    <figure class="am-event-banner">
-                                        @if(!empty($event['banner_image']) && !empty($event['banner_image'][0]['path']))
-                                            <img src="{{ url(Storage::url($event['banner_image'][0]['path'])) }}" alt="{{ $event['title'] ?? 'Event Image' }}">
-                                        @else
-                                            <img src="{{ asset('demo-content/placeholders/placeholder-image.jpg') }}" alt="{{ $event['title'] ?? 'Event Image' }}">
-                                        @endif
-                                        @if(!empty($event['mode']))
-                                            <span class="am-event-mode">{{ $event['mode'] }}</span>
-                                        @endif
-                                    </figure>
-                                    <div class="am-event-content">
-                                        @if(!empty($event['title']))
-                                            <h3>{{ $event['title'] }}</h3>
-                                        @endif
-                                        <ul class="am-event-details">
-                                            @if(!empty($event['date_time']))
-                                                <li>
-                                                    <i class="am-icon-calender-duration"></i>
-                                                    <span>{{ $event['date_time'] }}</span>
-                                                </li>
-                                            @endif
-                                            @if(!empty($event['trainer_name']))
-                                                <li>
-                                                    <i class="am-icon-user-check"></i>
-                                                    <span>{{ $event['trainer_name'] }}</span>
-                                                </li>
-                                            @endif
-                                        </ul>
-                                        @if(!empty($event['registration_link']))
-                                            <a href="{{ $event['registration_link'] }}" class="am-btn am-event-btn" target="_blank">
-                                                {{ $event['button_text'] ?? __('Register Now') }}
-                                            </a>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                @endif
+                <livewire:upcoming-events :limit="pagesetting('events_limit') ?? 6" />
             </div>
         </div>
     </div>
@@ -157,6 +114,8 @@
         text-decoration: none;
         font-weight: 600;
         transition: background 0.3s ease;
+        border: none;
+        cursor: pointer;
     }
     .am-event-btn:hover {
         background: #f55c2b;

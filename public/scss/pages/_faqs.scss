@@ -1,0 +1,247 @@
+.pb-themesection:has(.am-faqs_section) .container-fluid > div > .col-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+.am-faqs_section{
+    &_contant{
+        background: $clr-white;
+        padding: 100px 0;
+    }
+    .am-page-title-wrap{
+        padding: 0;
+    }
+    .am-content_box{
+        max-width: 868px;
+        padding: 100px 12px;
+        p{
+            max-width: 550px;
+        }
+    }
+}
+.am-page-title-wrap{
+    padding: 80px 0;
+}
+.am-faqs-steps{
+    h3{
+        margin-top: 0 !important;
+    }
+    p{
+        max-width: 500px;
+    }
+}
+.am-faqs-card{
+    z-index: 1;
+    padding: 50px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #227269 0%, #001C24 102.97%), linear-gradient(180deg, #FFB34E 0%, #F94748 107.57%), rgba(219, 132, 1, 0.05);
+    h3{
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 0;
+        line-height: 44px;
+        letter-spacing: -0.72px;
+        font-family: $heading-font-family;
+        text-shadow: 4px 4px 14px rgba($heading-color, 0.25);
+        background: linear-gradient(180deg, #FFF 35.81%, rgba(255, 255, 255, 0.30) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 410px;
+        color: $clr-white;
+        margin: 7px 0 0 0;
+        line-height: 21.6px;
+        font-family: 'Inter';
+        letter-spacing: 0.54px;
+    }
+    .am-btn{
+        margin-top: 30px;
+        padding: 12px 22px;
+        border-radius: 8px;
+        background: $btn-secondary;
+        font: 600 rem(16)/em(24,16) $heading-font-family;
+        .am-icon-link::before{
+            font-size: 18px;
+            color: $clr-white;
+        }
+    }
+}
+.am-card-shape{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    svg{
+        border-radius: 0 0 0 20px;
+    }
+}
+.am-card-picture{
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+    &_group{
+        width: 391px;
+        height: 240px;
+        position: relative;
+        .am-boxes-shape{
+            bottom: 0;
+            left: 38px;
+            position: absolute;
+        }
+        .am-cube-shape{
+            top: 0;
+            right: 20px;
+            position: absolute;
+        }
+        .am-background-shape{
+            bottom: 0;
+            right: 43px;
+            position: absolute;
+        }
+        img{
+            right: -1px;
+            bottom: 0px;
+            position: absolute;
+            border-radius: 0 0 20px 0;
+        }
+    }
+}
+.am-themetabwrap{
+    box-shadow: inset 0 -3px 0 $border-color;
+}
+
+.am-faqs-tabs{
+    margin: 0;
+    gap: 0 30px;
+    justify-content: center;
+    li{
+        list-style: none;
+        line-height: inherit;
+        .nav-link{
+            gap: 8px;
+            width: 190px;
+            display: flex;
+            padding: 16px 16px;
+            position: relative;
+            align-items: center;
+            border-radius: 10px;
+            color: $body-font-color;
+            justify-content: center;
+            font: 500 rem(15)/em(24,15) $heading-font-family;
+            &:after{
+                content: '';
+                bottom: 0;
+                left: 0;
+                height: 0;
+                width: 100%;
+                position: absolute;
+                background: $theme-color;
+                border-radius: 30px 30px 0 0;
+            }
+            &.active{
+                color: $body-font-color;
+                background-color: transparent;
+                &:after{
+                    height: 5px;
+                }
+            }
+        }
+        .am-icon-book-1::before{
+            font-size: 16px;
+        }
+        .am-icon-user-check::before{
+            font-size: 16px;
+        }
+    }
+}
+.am-faqs-tabs-detail{
+    gap: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.am-faqtab-content{
+    width: 100%;
+    .accordion-item{
+        border: 0;
+        padding: 17px 24px;
+        border-radius: 16px;
+        background: $body-color;
+    }
+    .accordion {
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .accordion-header{
+        gap: 10px;
+        display: flex;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px; 
+        align-items: center;
+        color:  $heading-color;
+        font-family: $heading-font-family;
+        .accordion-button{
+            gap: 10px;
+            font-weight: 500;
+            color:  $heading-color;
+        }
+        span{
+            width: 36px;
+            height: 36px;
+            flex: none;
+            display: flex;
+            background: #F1F1ED;
+            border-radius: 6px;
+            align-items: center;
+            justify-content: center;
+            .am-icon-file-02::before{
+                font-size: 16px;
+                color: $theme-color;
+            }
+        }
+    }
+    .accordion-button{
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+        &::after{
+            width: 14px;
+            height: 14px;
+            background-size: auto;
+            transform: rotate(-90deg);
+        }
+    }
+    .accordion-button[aria-expanded="true"]{
+        &::after{
+            transform: rotate(0);
+        }
+    }
+    .accordion-body{
+        font-size: 16px;
+        padding: 20px 0 0 0;
+        color: $body-font-color;
+    }
+
+}
+.am-faq-page{
+    width: 100%;
+    max-width: 856px;
+}
+.am-faq{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.am-faqs-tabs-detailtwo{
+    flex-direction: row;
+    align-items: flex-start;
+    .am-faqs-tabs {
+        width: min-content;
+    }
+}

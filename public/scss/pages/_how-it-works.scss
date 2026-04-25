@@ -1,0 +1,240 @@
+.pb-themesection:has(.am-works_contant) .container-fluid > div > .col-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+.am-works{
+    .am-page-title-wrap{
+        padding: 0;
+        .am-content_box{
+            padding: 100px 0;
+            p{
+                max-width: 550px;
+            }
+        }
+    }
+    &_contant{
+        background: $clr-white;
+        padding: 100px 0;
+        .am-faqs-tabs-detail{
+            gap: 30px;
+            margin: 0;
+        }
+    }
+    &_steps{
+        margin: 0 auto;
+        text-align: center;
+        max-width: 896px;
+        >span{
+            color: $theme-color;
+            position: relative;
+            place-items: center;
+            display: inline-grid;
+            font: 500 rem(16)/em(24,16) $body-font-family;
+            &::before{
+                content: '';
+                width: 24px;
+                left: -34px;
+                height: 2px;
+                opacity: 0.3;
+                position: absolute;
+                border-radius: 10px;
+                background: $theme-color;
+            }   
+            &::after{
+                content: '';
+                width: 24px;
+                right: -34px;
+                height: 2px;
+                opacity: 0.3;
+                position: absolute;
+                border-radius: 10px;
+                background: $theme-color;
+            }
+        }
+        h3{
+            margin: 8px 0 0;
+            color: $heading-color;
+            letter-spacing: 0.96px;
+            font: 500 rem(48)/em(60,48) $heading-font-family;   
+        }
+        p{
+            color: $body-font-color;
+            margin: 24px auto 0 auto;
+            font: 400 rem(18)/em(28,18) $body-font-family;   
+        }
+    }
+    &_tabs{
+        padding: 10px;
+        min-width: 400px;
+        width: fit-content;
+        border-radius: 10px;
+        margin: 30px auto 0 auto;
+        background: rgba(219, 132, 1, 0.05);
+    }
+    &_info{
+        gap: 60px;
+        display: flex;
+        align-items: center;
+        & + .am-works_info{margin-top: 100px;}
+        >div{
+            width: 100%;
+            max-width: calc(100% / 2);
+        }
+        &_tag{
+            width: 100px;
+            height: 100px;
+            display: grid;
+            border-radius: 10px;
+            place-items: center;
+            background: rgba(219, 132, 1, 0.05);
+            i::before{
+                font-size: 32px;
+                color: $theme-color;
+            }
+        }
+        &_description{
+            margin: 24px 0 0;
+            >span{
+                color: $theme-color;
+                position: relative;
+                place-items: center;
+                margin: 0 0 4px 26px;
+                display: inline-grid;
+                letter-spacing: 1px;
+                font: 500 rem(20)/em(30,20) $body-font-family;
+                &::before{
+                    content: '';
+                    width: 16px;
+                    left: -26px;
+                    height: 2px;
+                    position: absolute;
+                    opacity: 0.3;
+                    border-radius: 10px;
+                    background: currentColor;
+                }
+                a{
+                    color: $theme-color;
+                } 
+            }
+            h3{
+                max-width: 490px;
+                margin: 0 0 24px 0;
+                color: $heading-color;
+                letter-spacing: 1.6px;
+                font: 500 rem(30)/em(38,30) $heading-font-family;
+            }
+            h5{color: $heading-color;}
+            p{
+                margin: 0;
+                color: $body-font-color;
+                font: 400 rem(16)/em(24,16) $body-font-family;
+            }
+            p+p{margin: 12px 0 0 0 !important}
+            &_list{
+                margin: 24px 0 0;
+                h6{
+                    margin: 0;
+                    color: $heading-color;
+                    font: 500 rem(20)/em(30,20) $heading-font-family;
+                }
+                ul{
+                    margin: 13px 0 0;
+                    li{
+                        gap: 10px;
+                        display: flex;
+                        list-style: none;
+                        align-items: center;
+                        em{
+                            flex: none;
+                            width: 26px;
+                            height: 26px;
+                            display: grid;
+                            border-radius: 50%;
+                            place-items: center;
+                            background: rgba(219, 132, 1, 0.05);
+                        }
+                        span{
+                            color: $body-font-color;
+                            font: 400 rem(16)/em(24,16) $body-font-family;
+                        }
+                    }
+                    li+li{margin: 10px 0 0;}
+                }
+            }
+            h4{
+                margin: 0;
+                color: $heading-color;
+                font: 500 rem(20)/em(30,20) $heading-font-family;
+            }
+            & > ul{
+                margin: 12px 0 0;
+                li{
+                    gap: 10px;
+                    display: flex;
+                    align-items: center;
+                    list-style: none;
+                    &:before{
+                        flex: none;
+                        width: 26px;
+                        height: 26px;
+                        display: flex;
+                        font-size: 12px;
+                        content: "\e996";
+                        border-radius: 50%;
+                        color: $theme-color;
+                        align-items: center;
+                        justify-content: center;
+                        font-family: 'icomoon' !important;
+                        background: rgba(219, 132, 1, 0.05);
+                    }
+                    p{
+                        color: $body-font-color;
+                        font: 400 rem(16)/em(24,16) $body-font-family;
+                    }
+                }
+                li+li{margin: 8px 0 0;}
+            }
+        }
+        &_user{
+            figure{
+                margin: 0;
+                padding: 0 74px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.am-joincommunity{
+    .am-works{
+        padding: 100px 0;
+        .am-content_box{
+            padding: 0;
+        }
+        .am-page-title-wrap .am-content_box p{
+            max-width: 840px !important;
+        }
+    }
+    &_btn{
+        gap: 16px;
+        @extend %flex;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+        .am-btn{
+            padding: 12px 26px;
+            background: $btn-secondary;
+            font: 500 rem(16)/em(24,16) $body-font-family;
+        }
+        .am-white-btn{
+            padding: 11px 36px;
+            font: 500 rem(16)/em(24,16) $body-font-family;
+        }
+    }
+}
+.page-how-it-works .am-works .am-page-title-wrap .am-content_box p{
+    max-width: 640px;
+}

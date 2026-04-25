@@ -1,0 +1,119 @@
+.am-dashboard_box_wrap{
+    .at-chat{
+        padding: 0;
+        border-radius: 20px;
+        height: calc(100vh - 112px);
+    }
+    .at-userlist {
+        height: calc(100vh - 280px);
+    }
+    .at-chat_messages{
+        .at-video-message{
+            .video-js{
+                .vjs-big-play-button{
+                    top: 17% !important;
+                    transform: translateY(-50%) !important;
+                }
+                .vjs-icon-placeholder::before{
+                    background: transparent;
+                }
+            }
+        }
+        height: calc(100vh - 112px);
+    }
+    .at-userlist_tab .at-userlist_tab{
+        height: calc(100vh - 337px) !important;
+    }
+    .at-userchat_tab+.at-userlist_tab{
+        height: calc(100vh - 333px) !important;
+    }
+    .at-profile_setting .at-themeform{
+        height: calc(100vh - 257px);
+    }
+    .at-chat_sidebarsettingarea{
+        height: calc(100vh - 328px);
+    }
+    .at-sidebarhead {
+        padding: 0;
+    }
+    .at-sidebarmenu{
+        border-radius: 0;
+    }
+    .at-profile_setting .at-themeform,
+    .at-chat_sidebarsettingarea,
+    .at-userlist_tab ul{
+        &:hover{
+            &::-webkit-scrollbar-thumb {
+                background-color:#e8e8e9;
+                border: 5px solid #e8e8e9;
+            }
+        }
+        &::-webkit-scrollbar {
+            width:5px;
+        }
+        &::-webkit-scrollbar-thumb { border-radius:16px;}
+        &::-webkit-scrollbar-button {display:none}
+    }
+    .at-chat_sidebarsettingarea{
+        &::-webkit-scrollbar-thumb {
+            background-color:#e8e8e9;
+            border: 5px solid #e8e8e9;
+        }
+    }
+}
+.am-dashboard_box{
+    position: relative;
+    &:has(.wpguppy-chat-app){
+        padding: 0;
+    }
+}
+.am-connect_google_calendar{
+    z-index: 9;
+    right: 11px;
+    bottom: 12px;
+    padding: 20px;
+    max-width: 340px;
+    position: absolute;
+    border-radius: 20px;
+    background: $clr-white;
+    box-shadow: 10px -6px 30px 10px rgba($dark-black, 0.06);
+    &_title{
+        gap: 6px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        figure{
+            width: 21px;
+            img{
+                width: 21px;
+                object-fit: cover;
+            }
+        }
+        h4{
+            color: rgba($heading-color, 0.8);
+            font: 500 rem(16)/em(24,16) $heading-font-family;
+        }
+        i{
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            position: absolute;
+            &::before{
+                font-size: 16px;
+                color: $theme-color;
+            }
+        }
+    }
+    p{
+        margin: 8px 0 0;
+        color: $body-font-color;
+        font: 400 rem(14)/em(20,14) $heading-font-family;
+    }
+    .am-btn{
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+.am-dashboardwrap:has(.am-impersonation-bar) .am-connect_google_calendar{
+    bottom: 80px;
+}

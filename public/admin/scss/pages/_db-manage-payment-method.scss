@@ -1,0 +1,267 @@
+.tb-payment-methods_list{
+    padding: 20px 19px 19px 19px;
+li{
+    list-style: none;
+    + li{
+        margin-top: 10px;
+    }
+}
+}
+.tb-paymethod-items{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h6{
+        margin: 0;
+        font: 700 16px/26px $heading-font-family;
+    }
+    img{
+        max-width: 30px;
+        width: 100%;
+        height: 30px;
+    }
+}
+.tb-paymethodedit{
+    border-left: 1px solid $lighter;
+    padding-left: 20px;
+    margin-left: 10px;
+    span{
+        i{
+            margin-left: 6px;
+        }
+    }
+}
+.tb-payment-methods{
+    background: $white;
+    border-radius: 12px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    .tb-payment-methods_title{
+        padding: 9px 19px;
+        border-bottom: 1px solid #eee;
+    }
+}
+.tb-paymethodedit{
+    a{
+        display: flex;
+        color:  $dark;
+        align-items: center;
+        font: 400 14px/24px $body-font-family-two;
+    }
+    i{
+        font-size: 18px;
+        color: $light;
+        margin-left: 6px;
+    }
+}
+.tb-payment-items{
+     display: flex;
+     align-items: center;
+     padding: 10px 20px;
+     background: $lightest_3;
+     border-radius: $radius;
+     justify-content: space-between;
+}
+.tb-paymethod-items{
+    .checkbox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        input{
+            position: relative;
+            height: 18px;
+            width: 34px;
+            border: 1.5px solid $lighter;
+            background: $lightest;
+            -webkit-appearance: none;
+            border-radius: 50px;
+            outline: none;
+            @extend %transition;
+            cursor: pointer;
+        }
+        label{
+            margin: 0;
+            font: 400 14px/24px $body-font-family-two;
+        }
+    }
+    input:checked{
+        background: $white;
+        border: 1.5px solid $bright-green;
+    }
+    .checkbox{
+        & input{
+            &::before{
+            top: -2px;
+            left: -2px;
+            width: 20px;
+            content: "";
+            height: 20px;
+            transition: 0.5s;
+            position: absolute;
+            background: $lighter;
+            border-radius: 50px;
+            }
+            &:checked::before{
+                left: 14px;
+                background: $bright-green;
+            }
+            &:checked ~ .text::before{
+                content: "Enabled ";
+                color: $dark;
+                font: 600 1rem/1.625em $heading-font-family;
+            }
+        }
+        & .text::before{
+            content: "Disabled ";
+            color: $dark;
+            font: 600 1rem/1.625em $heading-font-family;
+        }
+    }
+    .tk-label::before{line-height: 20px !important;}
+}
+.tb-test-opt {
+    .checkbox {
+        .text::before {
+            content: "Disabled development mode";
+            color: $dark;
+            font: 600 1rem/1.625em $heading-font-family;
+        }
+        
+        input:checked ~ .text::before {
+            content: "Enabled development mode";
+        }
+    }
+}
+
+.tb-payment-approv{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    li{
+        span{
+            color: $dark;
+            font: 400 14px/24px $body-font-family-two;
+            i{
+                font-size: 18px;
+                color: #999999;
+                margin-left: 6px;
+            }
+        }
+    }
+.tb-Approved{
+    margin: 0 !important;
+    display: none;
+    i{
+    color: #22C55E;
+    }
+    }
+}
+.tb-Approve{
+    margin: 0 !important;
+}
+.tb-payment-settings{
+    padding: 19px;
+    fieldset{
+    margin: -10px;
+    .form-vertical{
+    padding: 10px;
+    .tb-titleinput{
+    padding-top: 0;
+    }
+    .tb-form-span{
+    margin-top: 10px;
+    display: block;
+    color: #64748B;
+    font: 400 13px/22px $body-font-family-two;
+    a{
+    text-decoration: none;
+    }
+    }
+    label{
+    color: #484848;
+    margin-bottom: 10px;
+    }
+    }
+    & .tb-updatesave-btn{
+    padding: 10px;
+    margin-top: 10px;
+    & .tb-btn{
+    min-width: 0;
+    padding: 0 22px;
+    height: 48px;
+    }
+    }
+    }
+}
+.tb-empty{
+    color: rgba(0, 0, 0, 0.6);
+    font: 400 15px/24px $body-font-family-two;
+    a{
+        gap: 4px;
+        align-items: center;
+        display: inline-flex;
+        font: 600 14px/24px $body-font-family-two;
+        color: rgba(0, 0, 0, 0.6);
+        i{
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.6);
+
+        }
+    }
+}
+.tb-empty-img{
+    width: 100%;
+    max-width: 155px;
+    margin-bottom: 20px;
+}
+.tb-emptypaysetting{
+    height: 294px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.tb-approved-active{
+    .tb-Approved{
+        display: block;
+    }
+    .tb-Approve{
+        display: none;
+    }
+}
+
+
+.tb-adminp-title{
+    padding: 9px 19px;
+    background-color: #F7F7F8;
+    border-radius: 12px;
+    h6{
+        margin: 0;
+        font: 700 rem(18)/em(26,18) $heading_font_family;
+    }
+}
+.tb-testmode-wrapper{
+    align-self: flex-end;
+    &:has(+ .form-group > input.tk-invalid){
+        align-self: center;
+    }
+}
+.form-group:has(.tb-select)+.tb-testmode-wrapper{
+    .tb-payment-items{margin-top: 26px;}
+}
+.tb-test-opt{
+    width: 100%;
+    .checkbox{
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: row-reverse;
+        .tk-label{
+            margin: 0;
+        }
+    }
+}
+.tb-payment-methods .tb-updatesave-btn{
+    max-width: 170px;
+}

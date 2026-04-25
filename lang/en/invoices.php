@@ -1,0 +1,26 @@
+<?php
+
+return array (
+  'invoices' => 'Invoices',
+  'filter_by' => 'Filter by:',
+  'all_invoices' => 'All Invoices',
+  'pending' => 'Pending',
+  'complete' => 'Complete',
+  'preview' => 'Preview',
+  'pdf' => 'PDF',
+  'invoice' => 'Invoice',
+  'invoice_qty' => 'Qty',
+  'invoice_price' => 'Price',
+  'invoice_subtotal' => 'Subtotal',
+  'invoice_discount_amount' => 'Discount',
+  'invoice_id' => 'Invoice ID',
+  'payment_from' => 'Bill To',
+  'transaction_id' => 'Transaction ID',
+  'payment_date' => 'Payment Date',
+  'items' => 'Items',
+  'invoice_summary' => 'Invoice Summary',
+  'grand_total' => 'Grand Total',
+  'download_pdf' => 'Download PDF',
+  'amount' => 'Amount',
+  'company' => 'Company',
+);

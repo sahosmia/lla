@@ -1,0 +1,183 @@
+.am-bodywrap:has(.page-home-nine){
+    background: #fff;
+}
+.am-header_five .am-loginbtns .am-btn:hover,
+.am-header_five .am-loginbtns .am-white-btn:hover{
+    background: #871EFA;
+    border-color: #871EFA;
+}
+.am-banner-potential .am-explore-banner-button .am-explore-btn:hover {
+    background: #841CFA;
+}
+.am-banner-potential .am-explore-banner-button .am-demo-btn:hover i::before,
+.am-banner-potential .am-explore-banner-button .am-demo-btn:hover{
+    color: #8219FA;
+    background: #fff;
+}
+.easy-steps-variation-three .am-easysetup_list_item > a i::before,
+.easy-steps-variation-three .am-easysetup_list_item > a{
+    color: #7846B4;
+}
+.easy-steps-variation-three .am-easysetup_list_item::before{
+    background: #98E423;
+    filter: blur(160px);
+
+}
+.easy-steps-variation-three .am-easysetup_list_item::after{
+    background: #F8C461;
+    filter: blur(195px);
+}
+.easy-steps-variation-three .am-easysetup_list ul li:nth-child(3) .am-easysetup_list_item::before{
+    background: #0D8F71;
+    filter: blur(165px);
+
+}
+.easy-steps-variation-three .am-easysetup_list ul li:nth-child(3) .am-easysetup_list_item::after{
+    background: #9BE933;
+    filter: blur(130px);
+
+}
+.am-feature-tutors.style-varient .am-experience-tutor-card:hover .am-tutorsearch_user_name > a, .am-feature-tutors.am-tutors-varient-one .am-experience-tutor-card:hover .am-tutorsearch_user_name > a{
+    background: #754FFE !important;
+}
+.am-faqs-three .am-section_title .am-btn:hover{
+    background: #841CFA;
+}
+.am-coming-section.get-app-varient-five{
+    background: url(/public/demo-content/home-v9/bg-pattren.png), linear-gradient(90deg, #0F8870 0%, #1C935F 53.77%, #29A8B1 100%);
+}
+.am-footer-v4 .am-footer-content .am-outline-btn:hover{
+    color: #8219FA;
+}
+.am-header_five .am-header_two_wrap .am-navigation > ul > li:hover > a{
+    background: rgba(120, 79, 248, 0.05);
+}
+.am-feedback-two .am-section_title > span{
+    gap: 6px;
+    display: flex;
+    margin: 0 auto;
+    color: #06D865;
+    position: relative;
+    width: fit-content;
+    align-items: center;
+    border-radius: 50px;
+    font: 400 14px / 20px;
+    width: -moz-fit-content;
+    text-transform: capitalize;
+    padding: 6px 10px 6px 24px;
+    background: rgba(6, 216, 101, 0.07);
+    &::before {
+        top: 50%;
+        left: 10px;
+        width: 6px;
+        height: 6px;
+        content: "";
+        margin: 0 1px;
+        border-radius: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+        background-color: currentColor;
+    }
+}
+.am-banner_section .am-banner_btns .am-primary-btn {
+    color: #fff;
+    background-color: #000;
+}
+.am-banner_section .am-banner_btns .am-primary-btn:hover,
+.am-courses-block.am-courses-block-three .cr-course-card .cr-price-wrap .am-btn:hover {
+    color: #000;
+    background-color: #FBFF22;
+}
+.am-header_ten .am-loginbtns .am-btn{
+    background-color: #E0FDFF;
+    color: #000000;
+}
+.am-header_ten .am-loginbtns .am-btn:hover{
+    background: #000;
+    color: #fff;
+}
+.am-header_ten .am-loginbtns .am-white-btn{
+    background: #FBFF22;
+    border-color: transparent;
+    color: #000000;
+}
+.am-header_ten .am-loginbtns .am-white-btn:hover{
+    background: #000;
+}
+.am-easysetup.easy-steps-variation-three .am-section_title > span {
+    color: #5869FC !important;
+    background: rgba(88, 105, 252, 0.05);
+}
+.am-easysetup.easy-steps-variation-three .am-section_title > span::before{
+    background-color: currentColor;
+}
+.am-featured-mentors-head .am-section_title .am-tag{
+    color: #00A1FF;
+    background: rgba(0, 161, 255, 0.10);
+}
+.am-featured-mentors-head .am-section_title .am-tag::before{
+    background: currentColor;
+}
+.am-featured-mentors-head .am-primary-btn-white:hover{
+    background: #000;
+    color: white;
+}
+.am-featured-mentors .am-experience-tutor-card:hover .am-experience-tutor-info .am-tutorsearch_user_name .am-primary-btn{
+    background: #000;
+}
+.am-tutors-varient-two .am-experience-tutor-card .am-experience-tutor-info .am-tutorsearch_user_name .am-primary-btn{
+    border-radius: 10px;
+}
+.am-limitless-features-box{
+    background: #FFDC1D;
+}
+.am-limitless-features-content .am-btn{
+    border-radius: 10px;
+
+}
+.am-featured-mentors-slider .splide__arrow.splide__arrow--prev,
+.am-featured-mentors-slider .splide__arrow.splide__arrow--next{
+    border-color: #000;
+}
+.am-featured-mentors-slider .splide__arrow.splide__arrow--prev:hover,
+.am-featured-mentors-slider .splide__arrow.splide__arrow--next:hover{
+    background-color: #000;
+}
+.am-featured-mentors-slider .splide__arrow.splide__arrow--prev svg path,
+.am-featured-mentors-slider .splide__arrow.splide__arrow--next svg path{
+    fill: #000;
+}
+.am-featured-mentors-slider .splide__arrow.splide__arrow--prev:hover svg path,
+.am-featured-mentors-slider .splide__arrow.splide__arrow--next:hover svg path{
+    fill: #fff;
+}
+.am-featured-mentors-head .am-primary-btn-white{
+    color: #000;
+    border-color: #000;
+} 
+.am-unique-features::after{
+    right: 33.949px;
+    top: 83px;
+    background: #FFE450;
+    filter: blur(150px);
+    width: 112.102px;
+    height: 112.102px;
+}
+.am-easysetup,
+.am-unique-features{
+    padding: 70px 0;
+}
+.unique-features-varient-three .am-section_title > span{
+    color: #17B26A;
+    background-color: rgba(23, 178, 106, 0.05);
+}
+.unique-features-varient-three .am-section_title > span::before{
+    background: currentColor;
+}
+.am-courses-block-three .am-section_title.am-section_title_center > span{
+    color: #FFA500 !important;
+    background: rgba(255, 220, 29, 0.05);
+}
+.am-courses-block-three .am-section_title.am-section_title_center > span::before{
+    background: currentColor;
+}

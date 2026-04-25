@@ -1,0 +1,204 @@
+.am-quiz{
+    &_result{
+        .am-quiz_tagline{
+            span{color: rgba($color: $body-font-color, $alpha: 0.9);}
+        }
+    }
+}
+.am-result{
+    &_summary{
+        gap: 26px;
+        @extend %flex;
+        margin-left: auto;
+        align-items: center;
+    }
+    &_detail{
+        gap: 10px;
+        @extend %flex;
+        align-items: flex-start;
+    }
+    &_info{
+        text-align: right;
+        h5{
+            margin: 0;
+            color: rgba($color: $heading-color, $alpha: 0.9);
+            font: 600 rem(14)/em(20,14) $heading-font-family;
+        }
+        span{
+            display: block;
+            color: rgba($color: $heading-color, $alpha: 0.5);
+            font: 400 rem(12)/em(18,12) $heading-font-family;
+        }
+    }
+    &_massage{
+        width: 100%;
+        @extend %flex;
+        max-width: 328px;
+        margin: 0 auto 40px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h3{
+            margin: 24px 0 0;
+            text-align: center;
+            color: $heading-color;
+            font: 600 rem(18)/em(28,18) $heading-font-family;
+        }
+        p{
+            margin: 4px 0 0;
+            text-align: center;
+            color: $body-font-color;
+            font: 400 rem(14)/em(20,14) $body-font-family;
+        }
+        .am-btn{
+            margin-top: 24px;
+            padding: 10px 25px;
+        }
+        .am-deletepopup_icon.confirm-icon{
+            background: #DBFAE6;
+            span{
+                i::before{color: #17B26A;}
+                &::before{background: #17B26A;}
+                &::after{background: #DBFAE6;}
+            }
+            &::before{background: #17B26A;}
+            &::after{background: #DBFAE6;}
+        }
+    }
+}
+.am-accordions{
+    .accordion-item{
+        border-radius: 16px;
+        border-top: 1px solid;
+        border-color: transparent;
+        & + .accordion-item{margin-top: 14px;}
+        .accordion-header{
+            .accordion-button{
+                box-shadow: none;
+                padding: 16px 24px;
+                position: relative;
+                background: $formbg;
+                border-radius: 16px;
+                padding-right: 70px;
+                justify-content: space-between;
+                h4{
+                    margin: 0;
+                    width: 100%;
+                    font: 400 rem(16)/em(24,16) $heading-font-family;
+                    color: rgba($color: $heading-color, $alpha: 0.9);
+                    & > em{
+                        font-weight: 700;
+                        margin-right: 2px;
+                        font-style: normal;
+                        color: rgba($color: $heading-color, $alpha: 0.8);
+                    }
+                }
+                .am-ans-detail{
+                    span{
+                        gap: 5px;
+                        @extend %flex;
+                        align-items: center;
+                        font: 400 rem(13)/em(18,13) $heading-font-family;
+                        color: rgba($color: $heading-color, $alpha: 0.7);
+                        em{
+                            font-style: normal;
+                            color: $heading-color;
+                        }
+                    }
+                    gap: 20px;
+                    @extend %flex;
+                    margin-top: 5px;
+                    align-items: center;
+                    &_incorrect{
+                        width: 14px;
+                        height: 14px;
+                        @extend %flex;
+                        border-radius: 4px;
+                        align-items: center;
+                        background: #F04438;
+                        justify-content: center;
+                        i{
+                            font-size: 7.5px;
+                            &::before{color: $clr-white;}
+                        }
+                    }
+                    &_correct{
+                        width: 14px;
+                        height: 14px;
+                        @extend %flex;
+                        border-radius: 4px;
+                        align-items: center;
+                        background: #17B26A;
+                        justify-content: center;
+                        i{
+                            font-size: 7.5px;
+                            &::before{color: $clr-white;}
+                        }
+                    }
+                }
+                .am-ans-btn-wrap{
+                    display: flex;
+                    align-items: center;
+                    margin-left: auto;
+                }
+                & > span{
+                    top: 24px;
+                    right: 24px;
+                    width: 28px;
+                    height: 28px;
+                    @extend %flex;
+                    border-radius: 6px;
+                    position: absolute;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba($color: $heading-color, $alpha: 0.05);
+                    i{
+                        font-size: 12px;
+                    }
+                }
+                &.collapsed{border-radius: 16px;}
+                &:focus{box-shadow: none;}
+                &::after{
+                    display: none;
+                }
+            }
+        }
+        .accordion-body{
+            padding: 0 24px 24px;
+            .am-quiz-answers{margin: 0;}
+        }
+        &:has(.accordion-button[aria-expanded="true"]){
+            border-color: $border-color;
+            .accordion-button{
+                background: $clr-white;
+                border-color: $border-color;
+                border-radius: 16px 16px 0 0;
+                & > span{
+                    i{transform: rotate(180deg);}
+                }
+            }
+        }
+    }
+    .am-quiz-box_points{
+        margin-top: 4px;
+    }
+}
+.anti-clock-progessbar {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    border-radius: 50%;
+    background: #F7F7F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: background 0.5s;
+    outline: 2px solid #F7F7F8;
+    span{
+        display: none !important;
+    }
+  }

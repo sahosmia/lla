@@ -1,0 +1,105 @@
+.tb-packages-main{
+    .am-disputelist{
+        .tb-table{
+            > thead{
+                tr{
+                    th{
+                        &:nth-child(1){
+                            width: 25%;
+                            min-width: 25%;
+                            max-width: 25%;
+                        }
+                        &:nth-child(2){
+                            width: 40%;
+                            min-width: 40%;
+                            max-width: 40%;
+                        }
+                        &:nth-child(3){
+                            width: 20%;
+                            min-width: 20%;
+                            max-width: 20%;
+                        }
+                        &:nth-child(4){
+                            width: 15%;
+                            min-width: 15%;
+                            max-width: 15%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.tb-warning-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & > li{
+        gap: 10px;
+        display: flex;
+        color: #664d03;
+        align-items: center;
+        word-break: break-all;
+        list-style-type: none;
+        font: 400 14px/24px $body-font-family;
+        &.tk-successmsg{
+            i{
+                color: $bright_green;
+            }
+        }
+        &.tk-errormsg{
+            i{
+                color: $red;
+            }
+        }
+        & + li {
+            margin-top: 2px;
+        }
+    }
+}
+.tb-block{
+    display: block;
+}
+.tb-isloading{
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    height: calc(100% + 40px);
+    & .tb-dhb-mainheading  *,
+    & .am-disputelist_wrap  *{
+        pointer-events: none !important;
+    }
+    & > .tb-section-load{
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        display: flex;
+        padding: 20px;
+        height: calc(100%);
+        align-items: center;
+        position: absolute;
+        pointer-events: none;
+        justify-content: center;
+        backdrop-filter: blur(1.5px);
+        z-index: 999;
+        // background: rgba(0, 0, 0, 0.05);
+        & > p{
+            gap: 10px;
+            color: #000;
+            display: flex;
+            font-size: 18px;
+            align-items: center;
+;
+            &:before {
+                content: "";
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                animation: 0.5s btnloader infinite linear;
+                border: 2px solid rgba(88, 88, 88, 0.5);
+                border-top-color: rgba(88, 88, 88, 0.1);
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+// popup badges start
+.tb-badge-popup {
+    .form-group{
+        & > .form-group{
+            padding: 10px 0;
+            .tk-errormsg{
+                span{
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+    .tb-formbtn{
+        gap: 10px;
+        justify-content: space-between;
+    }
+    .tb-cancel{
+        color: #585858;
+        background-color: #fff;
+        border: 1px solid $border-color;
+        &:hover{
+            background-color: $theme-color;
+            color: #fff;
+        }
+    }
+    .tk-invalid{
+        .tb-uploadfile{
+            .tb-border-svg {
+                stroke: #EF4444;
+            }
+        }
+    }
+}
+// popup badges end
+.tb-badge-list-form{
+    &.am-dispute-system{
+        table{
+            > thead{
+                tr {
+                    th:nth-child(3){
+                        width: 350px;
+                        max-width: 350px;
+                        min-width: 350px;
+                    }
+                    th:nth-child(2){
+                        width: 250px;
+                        max-width: 250px;
+                        min-width: 250px;
+                    }
+                    th:nth-child(6){
+                        width: 150px;
+                        max-width: 150px;
+                        min-width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

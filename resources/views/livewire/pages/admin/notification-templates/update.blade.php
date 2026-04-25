@@ -1,0 +1,107 @@
+<div class="col-lg-4 col-md-12 tb-md-40">
+    <div class="tb-dbholder tb-packege-setting">
+        <div class="tb-dbbox tb-dbboxtitle">
+            <h5>{{ $edit_id ? __('notification_template.update_notification') : __('notification_template.add_notification') }}</h5>
+        </div>
+        <div class="tb-dbbox">
+            <form class="tk-themeform">
+                <fieldset>
+                    <div class="tk-themeform__wrap">
+                        <div class="form-group">
+                            @if( !$edit_id )
+                                <div class="tb-actionselect">
+                                    <span>{{ __('notification_template.select_notification')  }}: </span>
+                                </div>
+                                <div class="tb-select border-0">
+                                    <select class="am-select2" data-componentid="@this" data-live="true" data-searchable="false" data-wiremodel="template_key" id="template_key" class="form-control">
+                                        <option value="">{{ __('notification_template.select_notification')  }}</option>
+                                        @if(!empty($emailTemplates))
+                                            @foreach($emailTemplates as $template)
+                                                @php
+                                                    $key = $template['type'] . '-' . $template['role'];
+                                                @endphp
+                                                @if(!in_array($key, $exclude_templates))
+                                                    <option value="{{ $template['id'] }}">{{ $template['title'] }} ( {{ $template['role'] }} )</option>
+                                                @endif
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </div>
+                            @endif
+                        </div>
+                        @if( !empty($selected_template) )
+                           @foreach( $selected_template['content'] as $key => $single )
+                                @if( $key == 'subject' || $key == 'greeting' )
+
+                                    <div class="form-group">
+                                        <label class="tb-label">{{ $single['title'] }}</label>
+                                        <input type="text" class="form-control @error('validated_fields.'.$single['id']) tk-invalid @enderror"  placeholder="{{ $single['title'] }}"  wire:model="validated_fields.{{ $single['id'] }}" required>
+                                        @error('validated_fields.'.$single['id'])
+                                            <div class="tk-errormsg">
+                                                <span>{{ $message }}</span>
+                                            </div>
+                                        @enderror
+                                    </div>
+                                @elseif( $key == 'info' )
+
+                                    <div class="form-group">
+                                        <label class="tb-label">{{ $single['title'] }}
+                                            <i class="{{ $single['icon'] }}"></i>
+                                        </label>
+                                        <span class="tb-emailsubject-list">
+                                            {!! $single['desc'] !!}
+                                        </span>
+                                    </div>
+                                @elseif( $key == 'content' )
+
+                                    <div class="form-group">
+                                        <label class="tb-label">{{ $single['title'] }}</label>
+                                        <textarea class="form-control @error('validated_fields.'.$single['id']) tk-invalid @enderror" placeholder="{{ $single['title'] }}"  wire:model="validated_fields.{{ $single['id'] }}" required></textarea>
+                                        @error('validated_fields.'.$single['id'])
+                                            <div class="tk-errormsg">
+                                                <span>{{ $message }}</span>
+                                            </div>
+                                        @enderror
+                                    </div>
+                                @endif
+                           @endforeach
+                           <div class="form-group">
+                            <label class="tb-label">{{ __('general.status') }}:</label>
+                            <div class="tb-email-status">
+                                <span>{{__('notification_template.set_notification_status')}}</span>
+                                <div class="tb-switchbtn">
+                                    <label for="tb-emailstatus" class="tb-textdes"><span id="tb-textdes">{{ $status == 'active' ? __('general.active') : __('general.deactive') }}</span></label>
+                                    <input class="tb-checkaction" wire:model="status" {{ $status == 'active' ? 'checked' : '' }} type="checkbox" id="tb-emailstatus">
+                                </div>
+                            </div>
+                        </div>
+                        @endif
+                        <div class="form-group tb-dbtnarea">
+                            <a href="javascript:void(0);" wire:click.prevent="saveEmailTemplate" class="tb-btn">
+                                {{ $edit_id ?  __('notification_template.update_notification') : __('notification_template.add_notification') }}
+                            </a>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+@push('scripts')
+    <script>
+        document.addEventListener('livewire:load', function () {
+            $(document).on('click', '.tb-checkaction', function(event){
+                let _this   = $(this);
+                let status  = '';
+                if(_this.is(':checked')){
+                    _this.parent().find('#tb-textdes').html("{{__('general.active')}}");
+                    status = 'active';
+                } else {
+                    _this.parent().find('#tb-textdes').html( "{{__('general.deactive')}}");
+                    status = 'deactive';
+                }
+                @this.set('status', status, true);
+            });
+        });
+    </script>
+@endpush

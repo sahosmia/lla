@@ -1,0 +1,992 @@
+/**--- Dashboard Skeleton Start ---**/ 
+.am-title{
+    &_heading{
+        width: 110px;
+        height: 26px;
+        @extend %skeleton;
+        border-radius: 50px;
+
+    }
+    &_description{
+        width: 200px;
+        height: 20px;
+        margin-top: 4px;
+        @extend %skeleton;
+        border-radius: 50px;
+
+    }
+}
+.am-userearning{
+    &_card{
+        width: 100%;
+        height: 190px;
+        padding: 16px;
+        display: flex;
+        border-radius: 20px;
+        background: #FBFBFB;
+        flex-direction: column;
+        justify-content: space-between;
+        &_items{
+            width: 48px;
+            height: 48px;
+            @extend %skeleton;
+            border-radius: 10px;
+        }
+    }
+    &_footer{
+        &_payment{
+            width: 120px;
+            height: 20px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_status{
+            width: 75px;
+            height: 16px;
+            margin-top: 4px;
+            @extend %skeleton;
+            border-radius: 50px;
+    
+        }
+    }
+}
+.am-dbbox{
+    &_heading{
+        width: 120px;
+        height: 24px;
+        @extend %skeleton;
+        border-radius: 50px;
+
+    }
+    &_filter{
+        width: 110px;
+        height: 22px;
+        @extend %skeleton;
+        border-radius: 50px;
+
+    }
+    &_calander{
+        width: 110px;
+        height: 22px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_contents{
+        overflow: hidden;
+        width: 100%;
+        height: 389px;
+        display: flex;
+        justify-content: center;
+    }
+    &_chart{
+        gap: 44px;
+        display: flex;
+        margin-top: auto;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+    &_progressbar{
+        width: 16px;
+        height: 190px;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    .am-payout{
+        &_item1{
+            width: 44px;
+            height: 44px;
+            @extend %skeleton;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        &_item2{
+            width: 135px;
+            height: 20px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_item3{
+            width: 138px;
+            height: 16px;
+            margin-top: 4px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_item4{
+            width: 130px;
+            height: 20px;
+            margin: 12px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_text1{
+            width: 100%;
+            height: 16px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_text2{
+            width: 90%;
+            height: 16px;
+            @extend %skeleton;
+            border-radius: 50px;
+            margin: 4px auto 0 auto;
+        }
+    }
+    .am-table{
+        &_theader{
+            width: 100%;
+            height: 44px;
+            @extend %skeleton;
+            border-radius: 10px;
+        }
+        &_tbody{
+            margin-top: 35px;
+            span{
+            width: 100%;
+            height: 17px;
+            display: block;
+            @extend %skeleton;
+            border-radius: 50px;
+            }
+            span + span{
+                margin-top: 20px;
+            }
+        }
+    }
+}
+/**--- Dashboard Skeleton Start ---**/ 
+// Book a Session Skeleton Start
+.am-userinfo{
+    &_heading{
+        width: 175px;
+        height: 32px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+}
+.am-booking-calander{
+    &_day{
+        width: 73px;
+        height: 40px;
+        @extend %skeleton;
+        border-radius: 8px;
+    }
+    &_date{
+        width: 238px;
+        height: 40px;
+        @extend %skeleton;
+        border-radius: 8px;
+    }
+    &_search{
+        width: 280px;
+        height: 40px;
+        @extend %skeleton;
+        border-radius: 8px;
+    }
+    &_filter{
+        width: 40px;
+        height: 40px;
+        @extend %skeleton;
+        border-radius: 8px;
+    }
+    &_body{
+        .am-table-title{
+            height: 68px;
+            width: 166.56px;
+            @extend %skeleton;
+            border-radius: 10px;
+        }
+        .am-table-card{
+            height: 132px;
+            width: 166.56px;
+            @extend %skeleton;
+            border-radius: 10px;
+        }
+    }
+    &_btn{
+        height: 42px;
+        width: 170.7px;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+}
+// Book a Session Skeleton End
+/**--- Education Section Skeleton Start ---**/ 
+.am-userinfomore{
+    &_tab1{
+        height: 44px;
+        width: 112.16px;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    &_tab2{
+        height: 44px;
+        width: 120.27px;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    &_tab3{
+        height: 44px;
+        width: 201.97px;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    &_heading{
+        height: 32px;
+        width: 117.66px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_card{
+        &_date{
+            width: 100%;
+            height: 16px;
+            display: flex;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_title{
+            width: 100px;
+            height: 28px;
+            @extend %skeleton;
+            margin-bottom: 4px;
+            border-radius: 50px;
+        }
+        &_svg{
+            width: 16px;
+            height: 16px;
+            @extend %skeleton;
+            border-radius: 50%;
+        }
+        &_institutename{
+            width: 108px;
+            height: 15px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_discription{
+            gap: 4px;
+            display: flex;
+            flex-direction: column;
+            span{
+                width: 100%;
+                height: 16px;
+                @extend %skeleton;
+                border-radius: 50px;
+            }
+        }
+        &_showbtn{
+            width: 110px;
+            height: 20px;
+            margin-top: 10px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+    }
+}
+/**--- Education Section Skeleton End ---**/
+/**--- students-list Skeleton Start ---**/ 
+.am-tutorsearch{
+    &_videoclip{
+        width: 300px;
+        height: 170px;
+        @extend %skeleton;
+        margin-bottom: 10px;
+        border-radius: 11.536px;
+    }
+    &_btn1{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    &_btn2{
+        flex: auto;
+        width: auto;
+        height: 40px;
+        display: flex;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    &_btn3{
+        flex: none;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    &_user{
+        &_img{
+            width: 50px;
+            height: 50px;
+            @extend %skeleton;
+            border-radius: 8px;
+        }
+    }
+    &_username{
+        height: 21px;
+        width: 100px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_svg{
+        width: 16px;
+        height: 16px;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    &_img{
+        width: 18.66px;
+        height: 13.96px;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    &_tag{
+        width: 100%;
+        height: 20px;
+        margin-top: 4px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_feestitle{
+        width: 79.3px;
+        height: 20px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_fees{
+        width: 72px;
+        height: 24px;
+        margin-top: 4px;
+        margin-left: auto;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_icons{
+        width: 16px;
+        height: 16px;
+        @extend %skeleton;
+        border-radius: 50%;
+    }
+    &_reviews{
+        width: 142px;
+        height: 16px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_description{
+        span{
+            width: 100%;
+            height: 16px;
+            display: block;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        & span + span{
+            margin-top: 4px;
+        }
+        em{
+            width: 70%;
+            height: 16px;
+            display: block;
+            margin-top: 4px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+    }
+}
+/**--- students-list Skeleton End ---**/  
+/**--- Review Section Skeleton Start ---**/
+.am-reviews{
+    &_rating{
+        height: 60px;
+        width: 73.67px;
+        @extend %skeleton;
+        border-radius: 8px;
+    }
+    &_stars{
+        width: 18px;
+        height: 18px;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    &_tagline{
+        width: 124px;
+        height: 20px;
+        margin-top: 6px;
+        @extend %skeleton;
+        border-radius: 8px;
+    }
+    &_points{
+        width: 22px;
+        height: 20px;
+        @extend %skeleton;
+        border-radius: 6px;
+    }
+    &_counter{
+        width: 10px;
+        height: 18px;
+        margin-left: auto;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    &_percentage{
+        width: 100%;
+        height: 4px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_userimg{
+        width: 42px;
+        height: 42px;
+        @extend %skeleton;
+        border-radius: 6px;
+    }
+    &_username{
+        width: 98px;
+        height: 20px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_userdob{
+        width: 92px;
+        height: 18px;
+        margin-top: 4px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_commentstar{
+        width: 14px;
+        height: 14px;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    &_commentrating-point{
+        width: 47px;
+        height: 20px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_comment{
+        span{
+            width: 100%;
+            height: 16px;
+            display: block;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        em{
+            width: 70%;
+            height: 16px;
+            display: block;
+            margin-top: 4px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+    }
+}
+/**--- Review Section Skeleton Start ---**/
+/**--- Similar Section Skeleton Start ---**/
+.am-skeleton {
+    min-width: 306px;
+    padding: 24px;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    border: 1px solid #F6F5EE;
+    background-color: #F6F5EE;
+    &_profile {
+        gap: 14px;
+        display: flex;
+        align-items: center;
+        &_line {border-radius: 4px;}
+        &_circle {
+            flex: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+        }
+        &_bar {
+            gap: 6px;
+            flex: auto;
+            display: flex;
+            flex-direction: column;
+        .short {
+            height: 24px;
+            border-radius: 30px;
+        }
+        .shorter {
+            height: 16px;
+            border-radius: 20px;}
+        }
+    }
+    &_inner {
+        gap: 9px;
+        display: flex;
+        margin-top: 30px;
+        flex-direction: column;
+        .am-skeleton_line {
+            height: 14px;
+            border-radius: 40px;
+        } 
+    }
+    &_line {
+        background: #ebebea;
+        background-size: 40px 100%;
+        background-clip: padding-box;
+        background-repeat: no-repeat;
+        background-position: left -40px top 0;
+        animation: skeleton-wave 1.2s ease infinite;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+      @keyframes skeleton-wave {
+        to {background-position: right -40px top 0;}
+        100% {background-position: left 40px top 1;}
+        }
+    }
+    &_btn{
+        gap: 10px;
+        display: flex;
+        margin-top: 10px;
+        flex-direction: column;
+        &>div{
+            gap: 10px;
+            display: flex;
+        }
+        .am-skeleton_line{
+            height: 40px;
+            border-radius: 8px;
+        }
+    }
+}
+/**--- Similar Section Skeleton End ---**/
+/**--- personal Detail & Identity Verification Skeleton Start ---**/
+.am-userperinfo{
+    .am-title{
+        &_heading{
+            height: 28px;
+            max-width: 227px;
+            width: 100%;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+    }
+    .am-themeform{
+        &_title{
+            min-width: 150px;
+        }
+        &_inputtitle{
+            flex: none;
+            width: 100%;
+            height: 24px;
+            margin: 8px 0;
+            max-width: 104px;
+            @extend %skeleton;
+            border-radius: 5px;
+        }
+        &_inputfield{
+            width: 100%;
+            height: 40px;
+            @extend %skeleton;
+            border-radius: 10px;
+        }
+        &_inputfieldfull{
+            width: 100%;
+        }
+        &_inputfieldhalf{
+            width: calc(33.33% - 15px);
+        }
+        &_inputtextarea{
+            width: 100%;
+            height: 200px;
+        }
+        &_inputtextareatwo{
+            width: 100%;
+            height: 64px;
+        }
+        &_tagline{
+            width: 383px;
+            height: 18px;
+            @extend %skeleton;
+            border-radius: 50px;
+        }
+        &_btn{
+            width: 137px;
+            height: 40px;
+            @extend %skeleton;
+            border-radius: 12px;
+        }
+    }
+}
+.am-resumebox_content{
+    width: calc(100% - 350px);
+}
+.am-resumewrap{
+    .am-title_wrap{
+        .am-title{
+            width: calc(100% - 136px);
+            .am-title_tagline{
+                width: 100%;
+                max-width: 540px;
+            }
+        }
+        .am-title_btn{
+            flex-shrink: 0;
+        }
+    }
+}
+/**--- Personal Detail & Identity Verification Skeleton End ---**/
+/**--- Billing Detail Skeleton Start---**/
+.am-billingdetail-skeleton{
+    .form-group-two-wrap{
+        flex-wrap: wrap;
+    }
+    .form-group-two{
+        gap: 20px;
+        flex: auto;
+        display: flex;
+    }
+    .form-group.form-group-last{
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+/**--- Billing Detail Skeleton End---**/
+/**--- Favourites Skeleton Start---**/
+.am-favourites{
+    &_list{
+        width: 100%;
+        height: 80px;
+        @extend %skeleton;
+        border-radius: 18px;
+    }
+    &_list + &_list{
+        margin-top: 14px;
+    }
+}
+/**--- Favourites Skeleton End---**/
+/**--- Manage Subjects Skeleton Start---**/
+.am-title{
+    width: calc(100% - 136px);
+    &_tagline{
+        max-width: 540px;
+        width: 100%;
+        height: 20px;
+        margin-top: 4px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_btn{
+        height: 36px;
+        width: 115.42px;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+}
+.am-subjectmanage_skeleton{
+    .am-subject{
+        &_content{
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &_items{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+        }
+        &_item{
+            width: 28px;
+            height: 28px;
+            @extend %skeleton;
+            border-radius: 6px;
+        }
+        &_itemtitle{
+            width: 100px;
+            height: 24px;
+        }
+    }
+}
+/**--- Manage Subjects Skeleton End---**/
+/**--- Resume Skeleton Start---**/
+.am-resume_item{
+    &_title{
+        gap: 20px;
+    }
+    &_heading{
+        width: 100%;
+        height: 24px;
+        max-width: 230px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_optionicon{
+        width: 28px;
+        height: 28px;
+        margin-left: auto;
+        @extend %skeleton;
+        border-radius: 6px;
+    }
+    &_icon{
+        width: 20px;
+        height: 20px;
+        @extend %skeleton;
+        border-radius: 4px;
+    }
+    &_tagline{
+        width: 100px;
+        height: 15px;
+        @extend %skeleton;
+        border-radius:50px;
+    }
+}
+/**--- Resume Skeleton End---**/
+/**--- Payout Skeleton Start---**/
+.am-payoutskeleton{
+    &_heading{
+        width: 100%;
+        height: 24px;
+        max-width: 122px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_filter{
+        width: 60px;
+        height: 20px;
+        @extend %skeleton;
+        border-radius: 50px;
+    }
+    &_filterselect{
+        width: 120px;
+        height: 40px;
+        @extend %skeleton;
+        border-radius: 10px;
+    }
+    .am-table{
+        thead,
+        tbody{
+            th,td {
+                & > span {
+                    height: 20px;
+                    display: block;
+                    @extend %skeleton;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+    &_th1{
+        width: 100%;
+        max-width: 40px;
+    }
+    &_th2{
+        width: 100%;
+        max-width: 59px;
+    }
+    &_th3{
+        width: 100%;
+        max-width: 36px;
+    }
+    &_th4{
+        width: 100%;
+        max-width: 60px;
+    }
+    &_th5{
+        width: 100%;
+        max-width: 50px;
+    }
+    &_th6{
+        width: 100%;
+        max-width: 50px;
+    }
+    &_th7{
+        width: 100%;
+        max-width: 100%;
+    }
+    &_td1{
+        width: 100%;
+        max-width: 24px;
+    }
+    &_td2{
+        width: 100%;
+        max-width: 58px;
+    }
+    &_td3{
+        width: 100%;
+        max-width: 75px;
+    }
+    &_td4{
+        width: 100%;
+        max-width: 60px;
+    }
+    &_td5{
+        width: 100%;
+        max-width: 76px;
+        height: 22px !important;
+        border-radius: 6px !important;
+    }
+    &_td6{
+        width: 100%;
+        max-width: 75px;
+    }
+    &_td7{
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 992px){
+    .am-dashboard_box:has(.am-payoutskeleton){
+        overflow: hidden;
+        height: calc(100vh - 100px);
+    }
+    .am-dashboard_box_wrap:has(.am-payoutskeleton){
+        overflow: hidden;
+        height: calc(100vh - 112px);
+    }
+    .am-payoutskeleton{
+        overflow: hidden;
+        height: calc(100vh - 152px);
+        .am-table{
+            thead,
+            tbody{
+                th{
+                    display: none;
+                }
+                td {
+                    border: 0;
+                    width: 100%;
+                    display: flex;
+                    min-width: 100%;
+                    max-width: 100%;
+                    &::before {
+                        content: '';
+                        width: 100px;
+                        height: 20px;
+                        margin-right: 100px;
+                        border-radius: 10px;
+                        background: #ebebea;
+                        background-size: 40px 100%;
+                        background-clip: padding-box;
+                        background-repeat: no-repeat;
+                        background-position: left -40px top 0;
+                        animation: skeleton-wave 1.2s ease infinite;
+                        background-image: linear-gradient(90deg, rgba($clr-white, 0), rgba($clr-white, 0.5), rgba($clr-white, 0));
+                        @keyframes skeleton-wave {
+                        to {background-position: right -40px top 0;}
+                        100% {background-position: left 40px top 1;}
+                        };
+                    }
+                    &:last-child{gap: 0 !important;}
+                }
+            }
+        }
+        &_td7{
+            width: 100%;
+            max-width: 100px;
+        }
+    }
+}
+@media (max-width: 820px){
+    .am-dashboard_box:has(.am-payoutskeleton){
+        overflow: hidden;
+        height: calc(100vh - 158px);
+    }
+    .am-dashboard_box_wrap:has(.am-payoutskeleton){
+        overflow: hidden;
+        height: calc(100vh - 170px);
+    }
+    .am-payoutskeleton{
+        overflow: hidden;
+        height: calc(100vh - 210px);
+    }
+}
+/**--- Payout Skeleton End---**/
+
+.am-invoiceskeleton{
+    .am-payoutskeleton_td1{
+        max-width: 60px;
+    }
+}
+.am-booking-skeleton{
+    .am-booking-weekly-clander.am-booking-mobile{
+        display: flex;
+    }
+}
+
+@media (min-width: 991px){
+    .am-mob-skeleton .am-booking-mobile{
+        display: flex !important;
+        .am-weekly-slots.am-day-slots-show{
+            display: none;
+        }
+    }
+}
+@media (max-width: 991px){
+    // Mobile View
+    .am-mob-skeleton .am-userinfo_content .tab-pane .am-booking-weekly-clander tbody{
+        display: none !important;
+    }
+    .am-booking-mobile.am-booking-weekly-clander{
+        .am-table-card{
+            width: 100%;
+            height: 129px;
+            background: #ebebea;
+            background-size: 40px 100%;
+            background-clip: padding-box;
+            background-repeat: no-repeat;
+            background-position: left -40px top 0;
+            animation: skeleton-wave 1.2s ease infinite;
+            background-image: linear-gradient(90deg, rgba($clr-white, 0), rgba($clr-white, 0.5), rgba($clr-white, 0));
+            @keyframes skeleton-wave {
+            to {background-position: right -40px top 0;}
+            100% {background-position: left 40px top 1;}
+            }
+        }
+    }
+}
+.am-similar-tutor{
+    .am-skeleton_profile_bar .short{
+        width: 130px;
+    }
+    .am-skeleton_btn{
+        & > div > .am-skeleton_line{
+            &:first-child{
+                flex: auto;
+            }
+            &:nth-child(2){
+                width: 40px;
+            }
+        }
+    }
+    .am-skeleton_inner{
+        .am-skeleton_line{
+            &:first-child{
+                width: 136px;
+            }
+            &:nth-child(2){
+                width: 109px;
+            }
+            &:nth-child(3){
+                width: 116px;
+            }
+            &:nth-child(4){
+                width: 133px;
+            }
+            &:nth-child(5){
+                width: 158px;
+            }
+        }
+    }
+}
+.am-skeletontwo{
+    display:flex;
+    align-items: center;
+    gap: 24px;
+    overflow: hidden;
+}
+.am-userinfomore_card_info .am-skeletonresume{
+    width: 100%;
+}

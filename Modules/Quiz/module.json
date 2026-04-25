@@ -1,0 +1,14 @@
+{
+    "name": "Quiz",
+    "alias": "quiz",
+    "description": "Quiz Management System",
+    "keywords": [],
+    "priority": 0,
+    "version": "pro",
+    "providers": [
+        "Modules\\Quiz\\Providers\\QuizServiceProvider"
+    ],
+    "files": [
+        "helpers/functions.php"
+    ]
+}

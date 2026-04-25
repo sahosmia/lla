@@ -1,0 +1,421 @@
+@media (max-width: 1536px){
+    .cr-allcourses_list .cr-card, .cr-allcourses_list .cr-card-skeleton{
+        max-width: calc(33.33% - 14px);
+    }
+}
+@media (max-width: 1399px){
+    .cr-card figure,
+    .cr-card-skeleton figure{
+        height: 250px;
+        min-height: 250px;
+        > img {
+            height: 250px;
+           
+        }
+        .cr-video-modal .video-js{
+            height: 250px;
+        }
+    }
+    .cr-card-skeleton{
+        .cr-image-wrapper-skeleton{
+            height: 250px;
+        }
+    }
+    .cr-course-sidebar{
+        max-width: 350px;
+    }
+    .cr-course-details-area .am-aboutuser_tab li{
+        width: auto;
+        a{
+            padding: 17.5px 10px !important;
+        }
+    }
+    .cr-detail-tabs .am-aboutuser_tab{
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        max-width: calc(100% - 370px);
+    }
+    .cr-course-details-banner .cr-course-details-area{
+        .cr-course-details-info{
+            max-width: 720px;
+            margin-left: 0;
+        }
+    }
+    .cr-course-sidebar{
+        margin-top: 60px;
+    }
+}
+@media (max-width: 1320px) and (min-width: 1200px){
+    .cr-allcourses_list .cr-card, .cr-allcourses_list .cr-card-skeleton{
+        max-width: calc(50% - 10px);
+    }
+}
+@media (max-width: 1199px){
+    .am-table-area > .am-pagination{
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        .am-pagination{
+            width: 100%;
+            margin: 0;
+            justify-content: flex-start;
+        }
+    }
+    .am-courses-table{
+        max-width: calc(100vw - 109px);
+        width: 100%;
+        overflow: auto;
+        table{
+            & >thead:first-child>tr:first-child>th{
+                &:first-child {
+                    min-width: 328px;
+                }
+                &:nth-child(2) {
+                    min-width: 290px;
+                }
+                &:nth-child(3) {
+                    min-width: 100px;
+                }
+                &:nth-child(4) {
+                    min-width: 240px;
+                }
+                &:nth-child(5) {
+                    min-width: 280px;
+                }
+            }
+            & >tbody tr>td{
+                &:first-child {
+                    min-width: 328px;
+                }
+                &:nth-child(2) {
+                    min-width: 290px;
+                }
+                &:nth-child(3) {
+                    min-width: 100px;
+                }
+                &:nth-child(4) {
+                    min-width: 240px;
+                }
+                &:nth-child(5) {
+                    min-width: 280px;
+                }
+            }
+        }
+    }
+    .cr-usercourse_header{
+        padding-left: 50px;
+    }
+    .cr-sidebar{
+        position: absolute;
+        z-index: 999;
+        background: #1E1E1E;
+        box-shadow: 10px -6px 30px 10px rgba(0, 0, 0, 0.06);
+            &:not(.cr-togglesidebar){
+            width: 20px;
+            transform: translate(-300px, 0);
+            & > div{
+                width: 300px;
+            }
+        }
+    }
+    .cr-sidebar_toggle{
+        transform: translate(72px, 0);
+    }
+    .cr-togglesidebar .cr-sidebar_toggle{
+        transform: none;
+    }
+    .cr-coursedetails_content{padding-left: 20px;}
+}
+@media (max-width: 1049px){
+    .cr-coursecontent{
+        flex-direction: column;
+        &_sidebar{
+            margin: 0;
+            border: 0;
+            max-width: 100%;
+            .cr-course-sidebar{
+                margin: 0;
+                max-width: 100%;
+            }
+        }
+    }
+    .cr-course-sidebar .am-similar-user .am-tutorreviews-list,
+    .cr-coursecontent_sidebar .cr-course-card .cr-course-includes .cr-includes-list{
+        flex-direction: unset;
+        flex-wrap: wrap;
+        & > li{
+            width: auto;
+        }
+    }
+}
+@media (max-width: 991px){
+    .cr-course-details-sections{
+        > .cr-course-details-area{
+            padding: 20px;
+            .cr-course-sidebar{
+            margin-top: 0;
+        }
+        }
+    }
+    .cr-detail-tabs .am-aboutuser_tab{
+        max-width: 100%;
+        li{
+            width: auto;
+        }
+    }
+    .cr-course-sidebar{
+        top: 0;
+        max-width: 100%;
+        order: -1;
+    }
+    .cr-course-details-sections{
+        .cr-course-details-area{
+            gap: 0;
+            flex-wrap: wrap;
+        }
+        & > .cr-course-details-area{
+            max-width: 100%;
+        }
+        .cr-detail-tabs .cr-course-details-area{
+            justify-content: center;
+        }
+    }
+    .cr-allcourses_list .cr-card, .cr-allcourses_list .cr-card-skeleton{
+        max-width: calc(50% - 10px);
+    }
+    .cr-coursedetails_article{
+        height: 419px;
+    }
+    .cr-coursedetails_body_video,
+    .cr-coursedetails_body_video iframe, .cr-coursedetails_body_video .video-js{
+        height: 520px;
+    }
+}
+@media (max-width: 820px){
+    .cr-usercourse_header{ 
+        .am-header_user{
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 767px){
+    .cr-next-curriculum_content{
+        span{
+            font-size: 14px;
+        }
+        h2{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    .cr-course-body .cr-curriculum-item .cr-contentbox-area{
+        flex-wrap: wrap;
+        gap: 10px 0;
+    }
+    .am-aboutuser_tab li a{
+        padding: 17.5px 5px !important;
+    }
+    .cr-topic-main.cr-forum-topic {
+        overflow: auto;
+        max-width: calc(100vw - 106px);
+    }
+    .cr-topic-main.cr-forum-topic .cr-david-list {
+        width: 720px;
+    }
+    .cr-david-list > li ul li::after{
+        left: -20px;
+        width: 1.9%;
+    }
+    .cr-david-list > li ul{
+        margin-left: 40px;
+    }
+    .cr-villy-about{
+        gap: 10px;
+    }
+    .cr-coursedetails_article{
+        height: 309px;
+    }
+    .cr-coursedetails_body_video,
+    .cr-coursedetails_body_video iframe, .cr-coursedetails_body_video .video-js{
+        height: 370px;
+    }
+    .cr-filter-area .cr-filters{
+        flex: auto;
+        gap: 0;
+        margin: -5px;
+        .cr-price-range{
+            right: auto;
+        }
+        .cr-price-dropdown > span{
+            width: 100%;
+        }
+        & > .at-form-group{
+            width: 50%;
+            padding: 5px;
+            .select2-container{
+                width: 100% !important;
+            }
+        }
+    }
+    .cr-filters-sidebar-wapper{
+        max-width: 100%;
+    }
+    .cr-search-results-wrapper{
+        width: 100%;
+    }
+    .cr-search-courses-area{
+        flex-wrap: wrap;
+    }
+    .cr-course-sidebar .cr-price-wrapper,
+    .cr-course-includes{padding: 0;}
+    .cr-coursecontent_tabs,
+    .cr-coursecontent_tabs_content{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .cr-coursedetails_body_video:has(.cr-coursedetails_article){
+        padding: 30px 30px;
+    }
+}
+@media (max-width: 576px){
+    .cr-detail-tabs .am-aboutuser_tab{
+        flex-wrap: wrap;
+        li {
+            width: 100%;
+        }
+    }
+    .cr-coursedetails_body{
+        height: auto;
+        border-radius: 20px;
+    }
+    .cr-topic-main.cr-forum-topic{
+        max-width: calc(100vw - 53px);
+    }
+    .cr-allcourses_title{
+        .am-searchinput{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .cr-sidebar_toggle{
+        transform: translate(64px, 0);
+    }
+    .cr-coursedetails_content{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .cr-faq-accordion .accordion .accordion-item .accordion-header{
+        flex-wrap: wrap;
+    }
+    .cr-overview-course .cr-faq-accordion .accordion .accordion-item .accordion-header{
+        flex-wrap: nowrap;
+    }
+    .cr-curriculum-list .accordion-item{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cr-overview-rating .cr-review .cr-review-content .cr-review-rating-main{
+        flex-wrap: wrap;
+        & .cr-reviews-content{width: 100%;}
+    }
+    .cr-overview .cr-overview-course .cr-learn-content{
+        flex-wrap: wrap;
+        & > li{
+            width: 100%;
+        }
+    }
+    .cr-allcourses{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .cr-usercourse_header{
+        padding-left: 40px;
+    }
+    .cr-allcourses_title{
+        flex-wrap: wrap;
+    }
+    .cr-allcourses_list .cr-card, .cr-allcourses_list .cr-card-skeleton{
+        max-width: 100%;
+    }
+    .cr-courses-container,
+    .cr-coursecontent_sidebar .cr-course-card, .cr-coursecontent_sidebar .am-similar-user,
+    .cr-coursecontent_tabs,
+    .cr-coursedetails_body_video:has(.cr-coursedetails_article),
+    .cr-coursecontent_tabs_content{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .cr-coursecontent_body .cr-course-details-area{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .cr-coursecontent{
+        &_tabs{
+            &_content{
+                .cr-course-meta{
+                    gap: 14px;
+                }
+                .cr-course-stats{
+                    .cr-stat-item{
+                        width: 50% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px){
+    .cr-course-body .cr-course-item .cr-contentbox span{
+        max-width: 150px;
+    }
+    .cr-steps > li{
+        &:not(:last-child)::after{
+            top: 12px;
+            right: -2px;
+        }
+        .cr-icon{
+            width: 24px;
+            height: 24px;
+            i{
+                font-size: 12px;
+            }
+        }
+    }
+    .cr-sorting-options{
+        width: 100%;
+        .select2-container{
+            width: 100% !important;
+        }
+    }
+    .cr-sorting-options .at-form-group{
+        width: 100%;
+    }
+    .cr-share-icons a{
+        width: 32px;
+        height: 32px;
+    }
+    .cr-question .cr-div-wrapper{
+        padding: 0;
+    }
+    .cr-curriculum-list .accordion{
+        padding: 10px;
+    }
+    .cr-curriculum-list .accordion-content{
+        padding: 14px 0 0 !important;
+    }
+    .cr-filter-area .cr-filters{
+        & > .at-form-group{
+            width: 100%;
+        }
+    }
+    .cr-coursedetails_body_video,
+    .cr-coursedetails_body_video iframe, .cr-coursedetails_body_video .video-js{
+        height: 250px;
+    }
+    .cr-coursedetails_article{
+        height: 189px;
+    }
+}

@@ -1,0 +1,89 @@
+.uc-header {
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    gap: 10px 20px;
+    min-height: 65px;
+    position: absolute;
+    align-items: center;
+    padding: 12.5px 20px;
+    background: $clr-white;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba($text-light, 0.08);
+    strong{
+        flex-shrink: 0;
+        display: block;
+        a,
+        img{
+            display: block;
+        }
+    }
+    h1{
+        margin: 0;
+        text-align: center;
+        color: rgba(#575757,0.7);
+        font: 400 rem(14)/em(21,14) $heading-font-family;
+    }
+    &_actions{
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        .uc-btn-primary{
+            color: $clr-white;
+            padding: 9px 18px;
+            border-radius: 8px;
+            background: $theme-color;
+            border: 1px solid $theme-color;
+            &[disabled],
+            &.uc-btn_disable{
+                border-color: $formbg !important;;
+                background: $formbg !important;
+                pointer-events: none;
+                color: rgba($color: $text-light, $alpha: 0.5) !important;
+            }
+        }
+        .uc-outline-btn{
+            padding: 10px 11px;
+            border-radius: 8px !important;
+            color: rgba($color: #fff, $alpha: 0.7);
+            &:focus,
+            &:hover{
+                color: $body-font-color;
+                i{
+                    &::before{
+                        color: $body-font-color;
+                    }
+                }
+            }            
+            i{
+                font-size: 18px;
+                &::before{
+                    color:rgba(225,225,225,0.7);
+                }
+            }
+        }
+        .uc-previewbtn{
+            padding: 9px 16px;
+        }
+    }
+}
+.uc-certifytitle{
+    width: 100%;
+    max-width: 360px;
+    padding: 9.5px 12px;
+    border-radius: 10px;
+    background: #F7F7F8;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    span{
+        display: block;
+        color: $text-light;
+        font: 400 rem(14)/em(21,14) $heading-font-family;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}

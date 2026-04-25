@@ -1,0 +1,31 @@
+/** ====== Sass function ====== **/
+$base: 16 !default;
+// @use "sass:math";
+
+// @function scut-strip-unit ($num) {
+//   @return math.div($num, ($num * 0 + 1));
+// }
+
+// @function rem ($pixels) {
+//   @return math.div(scut-strip-unit($pixels), $base) * 1rem;
+// }
+
+// @function em ($pixels, $context: $base) {
+//   @return #{math.div($pixels,$context)}em;
+// }
+
+$base: 16 !default;
+
+@function scut-strip-unit ($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem ($pixels) {
+  @return scut-strip-unit($pixels) / $base * 1rem;
+}
+@function em ($pixels, $context: $base) {
+    @return #{$pixels/$context}em;
+}
+@function slash($a, $b) {
+  @return $a / $b;
+}

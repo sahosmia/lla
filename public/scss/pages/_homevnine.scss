@@ -1,0 +1,294 @@
+.am-main:has(.am-banner_section){
+    margin-top: -88px;
+    padding-top: 88px;
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: '';
+        border-radius: 840.802px;
+        background: #20E036;
+        filter: blur(460px);
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -576.7px;
+        width: 840.802px;
+        height: 840.802px;
+        z-index: -1;
+        pointer-events: none;
+
+    }
+ }
+// banner nine styling start 
+.am-banner_section{
+    padding: 100px 0;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        left: -465.301px;
+        top: -313.25px;
+        border-radius: 840.802px;
+        background: #A2EB12;
+        filter: blur(390px);
+        height: 840.802px;
+        width: 840.802px;
+        z-index: -1;
+        pointer-events: none;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        right: -294.4px;
+        top: -737.096px;
+        border-radius: 840.802px;
+        background: #0F9BC2;
+        filter: blur(465px);
+        height: 840.802px;
+        width: 840.802px;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .am-banner{
+        &_wrap{
+            gap: 95px;
+        }
+        &_content{
+            h1{
+                margin-top: 0;
+                color: $heading-color;
+                letter-spacing: 0.6px;
+                font: 700 rem(60)/em(71,60) $pTserif-font-family;
+            }
+            p{
+                margin-top: 36px;
+                color: rgba($heading-color, 0.7);
+                letter-spacing: 0;
+                font: 400 rem(20)/em(30,20) $body-font-family;
+            }
+        }
+        &_btns{
+            margin-top: 36px;
+            .am-primary-btn{
+                border: 0;
+                color: $clr-white;
+                border-radius: 10px;
+                background-color: $btn-color;
+                &:hover{
+                    background-color: $btn-secondary;
+                }
+            }
+        }
+        &_logo{
+            margin-top: 40px;
+            & > span{
+                gap: 20px;
+                max-width: 469px;
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                color: $heading-color;
+                font: 400 rem(18)/em(28,18) $body-font-family;
+                em{
+                    width: 100%;
+                    height: 1px;
+                    background: #585858;
+                    opacity: 0.3;
+                }            
+            }
+        }
+        &_companies{
+            margin-top: 24px;
+            justify-content: flex-start;
+            li{
+                figure{
+                    height: 34px;
+                }
+            }
+        }
+        &_images{
+            max-width: 573px;
+        }
+    }
+}
+// banner nine styling end 
+
+// section title styling start
+.page-home-nine{
+    .am-section_title {
+        &_center{
+            margin: 0 auto;
+            max-width: 748px;
+            & > span{
+                margin: 0 auto;
+            }
+        }
+        & > h2{
+            letter-spacing: -0.72px;
+        }
+
+    }
+} 
+// section title styling end 
+
+// featured mentors styling start
+.pb-themesection:has(.am-tutors-varient-five){
+    position: relative;
+    &::after{
+        content: '';
+        right: 498.065px;
+        bottom: -642.91px;
+        width: 840.802px;
+        height: 840.802px;
+        position: absolute;
+        filter: blur(470px);
+        background: #20E036;
+        border-radius: 840.802px;
+        pointer-events: none;
+        z-index: 0;
+    }
+    & ~ .pb-themesection{
+        background: white;
+        position: relative;
+        z-index: 1;
+    }
+} 
+.am-tutors-varient-five{
+    padding: 54px 0 259px !important;
+    position: relative;
+    z-index: 1;
+    &::before{
+        content: '';
+        z-index: -1;
+        position: absolute;
+        left: -508.801px;
+        bottom: -472.802px;
+        width: 840.802px;
+        height: 840.802px;
+        filter: blur(400px);
+        pointer-events: none;
+        background: #EBBF12;
+        border-radius: 840.802px;
+
+    }
+    &:after{
+        content: '';
+        background: #0F9BC2;
+        filter: blur(475px);
+        border-radius: 840.802px;
+        position: absolute;
+        right: -474.802px;
+        bottom: -720.802px;
+        width: 840.802px;
+        height: 840.802px;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .am-experience-tutor-card {
+        display: flex;
+        height: 100%;
+        padding: 8px 8px 0;
+        border-radius: 8px;
+        @extend %transition;
+        background: $clr-white;
+        flex-direction: column;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        &:hover{
+            .am-experience-tutor-info .am-tutorsearch_user_name .am-primary-btn{
+                color: $clr-white;
+                background: $btn-color;
+            }
+        }
+        .am-experience-tutor-img{
+            margin: 0;
+            width: 100%;
+            height: 170px;
+            border-radius: 8px;
+            background: #D7DFE9;
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                border-radius: 8px;
+                object-fit: cover;
+            }
+        }
+        .am-experience-tutor-info{
+            height: 100%;
+            background: $clr-white;
+            padding: 16px 10px 20px;
+            .am-experience-tutor-name{
+                height: 100%;
+                width: 100%;
+            }
+            .am-tutorsearch_user_name{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                h3 {
+                    margin-bottom: 4px;
+                    justify-content: center;
+                    color: rgba($heading-color, 0.8);
+                    font: 500 rem(16)/em(24,16) $heading-font-family;
+                    a{
+                        color: rgba($heading-color, 0.8);
+                        font: 500 rem(16)/em(24,16) $heading-font-family;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    line-height: 18px;
+                    text-align: center;
+                    margin-bottom: 14px;
+                    color: rgb($body-font-color, 0.8);
+                }
+                .am-primary-btn {
+                    margin-top: auto;
+                    padding: 8px 20px;
+                    background: $formbg;
+                    border-color: $formbg;
+                    color: $body-font-color;
+                    font: 500 rem(12)/em(18,12) $body-font-family;
+                }
+            }
+        }
+    }
+    .am-experience-tutor-card:hover{
+        box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+    }
+    .am-bgimg1 {
+        right: 0;
+        top: 60px;
+        position: absolute;
+        mix-blend-mode: exclusion;
+        width: 78.074px;
+        height: 98.207px;
+        transform: rotate(-8.609deg);
+        animation: style_parallax 8s cubic-bezier(0.37, 0, 0.63, 1) -30s infinite alternate;
+    } 
+    .am-bgimg2 {
+        left: 10px;
+        bottom: 50px;
+        position: absolute;
+        animation: orbit 15s linear infinite;
+        width: 134.11px;
+        height: 122.479px;
+        transform: rotate(-17.88deg);
+        mix-blend-mode: difference;
+    } 
+}
+// featured mentors styling end  
+
+// comming soon styling start
+.get-app-varient-five{
+    .am-coming-soon{
+        > figure{
+            max-width: 467px;
+        }
+    }
+}
+// comming soon styling end 
+
+

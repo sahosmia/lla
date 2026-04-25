@@ -1,0 +1,120 @@
+<?php
+
+$maxImageSize = setting('_general.max_image_size');
+
+return [
+    'id'        => 'limitless-features',
+    'name'      => __('Limitless features'),
+    'icon'      => '<i class="icon-airplay"></i>',
+    'tab'       => "Common",
+    'fields'    => [
+        [
+            'id'            => 'heading',
+            'type'          => 'text',
+            'value'         => '',  
+            'class'         => '',
+            'label_title'   => __('Heading'),
+            'placeholder'   => __('Enter heading'),
+        ],
+        [
+            'id'            => 'paragraph',
+            'type'          => 'editor',
+            'value'         => '',
+            'class'         => '',
+            'label_title'   => __('Description'),
+            'placeholder'   => __('Enter description'),
+        ],
+
+        [
+            'id'            => 'btn_txt',
+            'type'          => 'text',
+            'value'         => '',
+            'class'         => '',
+            'label_title'   => __('Primary button text'),
+            'placeholder'   => __('Enter button text'),
+        ],
+        [
+            'id'            => 'btn_url',
+            'type'          => 'text',
+            'value'         => '',
+            'class'         => '',
+            'label_title'   => __('Primary button url'),
+            'placeholder'   => __('Enter url'),
+        ],
+        [
+            'id'            => 'image',
+            'type'          => 'file',
+            'class'         => '',
+            'label_title'   => __('Main image'),
+            'label_desc'    => __('Add image'),
+            'max_size'      => $maxImageSize ?? 5,            
+            'ext'    => [
+                'jpg',
+                'png',
+                'svg',
+                'jpeg',
+                'webp',
+            ], 
+        ],
+        [
+            'id'            => 'shape_image',
+            'type'          => 'file',
+            'class'         => '',
+            'label_title'   => __('First shape image'),
+            'label_desc'    => __('Add image'),
+            'max_size'      => $maxImageSize ?? 5,            
+            'ext'    => [
+                'jpg',
+                'png',
+                'svg',
+                'jpeg',
+                'webp',
+            ], 
+        ],
+        [
+            'id'            => 'second_shape_image',
+            'type'          => 'file',
+            'class'         => '',
+            'label_title'   => __('Second shape image'),
+            'label_desc'    => __('Add image'),
+            'max_size'      => $maxImageSize ?? 5,            
+            'ext'    => [
+                'jpg',
+                'png',
+                'svg',
+                'jpeg',
+                'webp',
+            ], 
+        ],
+        [
+            'id'            => 'left_shape_image',
+            'type'          => 'file',
+            'class'         => '',
+            'label_title'   => __('Left shape image'),
+            'label_desc'    => __('Add image'),
+            'max_size'      => $maxImageSize ?? 5,            
+            'ext'    => [
+                'jpg',
+                'png',
+                'svg',
+                'jpeg',
+                'webp',
+            ], 
+        ],
+        [
+            'id'            => 'right_shape_image',
+            'type'          => 'file',
+            'class'         => '',
+            'label_title'   => __('Right shape image'),
+            'label_desc'    => __('Add image'),
+            'max_size'      => $maxImageSize ?? 5,            
+            'ext'    => [
+                'jpg',
+                'png',
+                'svg',
+                'jpeg',
+                'webp',
+            ], 
+        ],
+    ]
+];

@@ -6,7 +6,7 @@
                 <div class="tb-sortby">
                     <div class="form-group tb-inputicon tb-inputheight">
                         <i class="icon-search"></i>
-                        <input type="text" class="form-control" wire:model.live.debounce.500ms="search" autocomplete="off" placeholder="Search by email">
+                        <input type="text" class="form-control" wire:model.live.debounce.500ms="search" autocomplete="off" placeholder="Search by name or email">
                     </div>
                     <a href="{{ route('admin.events.index') }}" class="tb-btn tb-menubtn">Back to Events</a>
                 </div>
@@ -27,11 +27,11 @@
                             <tbody>
                                 @foreach($attendees as $attendee)
                                     <tr>
-                                        <td>{{ $attendee->profile?->full_name ?? 'N/A' }}</td>
+                                        <td>{{ $attendee->name ?? 'N/A' }}</td>
                                         <td>{{ $attendee->email }}</td>
                                         <td>{{ $attendee->profession ?? 'N/A' }}</td>
                                         <td>{{ $attendee->organization ?? 'N/A' }}</td>
-                                        <td>{{ $attendee->pivot->created_at->format('M d, Y H:i') }}</td>
+                                        <td>{{ \Carbon\Carbon::parse($attendee->created_at)->format('M d, Y H:i') }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

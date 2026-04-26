@@ -35,7 +35,7 @@ class Events extends Component
     #[Computed()]
     public function events()
     {
-        $events = Event::with('trainer.profile');
+        $events = Event::with('trainer.profile')->withCount('users');
 
         if (!empty($this->search)) {
             $events = $events->where('title', 'LIKE', "%$this->search%");

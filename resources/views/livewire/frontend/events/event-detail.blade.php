@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="am-event-sidebar p-4 border rounded shadow-sm bg-white">
+                <div class="am-event-sidebar mb-4 p-4 border rounded shadow-sm bg-white">
                     <h4>Event Details</h4>
                     <ul class="list-unstyled mt-3">
                         <li class="mb-3">
@@ -44,14 +44,9 @@
                             <span>{{ $event->date_time }}</span>
                         </li>
                     </ul>
-                    <div class="mt-4">
-                        @if(Auth::check() && $event->users()->where('user_id', Auth::id())->exists())
-                            <button class="am-btn am-btn-success w-100" disabled>Already Registered</button>
-                        @else
-                            <button wire:click="register" class="am-btn w-100">Register Now</button>
-                        @endif
-                    </div>
                 </div>
+
+                <livewire:frontend.events.event-registration :event="$event" />
             </div>
         </div>
     </div>

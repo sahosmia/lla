@@ -63,7 +63,7 @@
                                         <td data-label="Mode">{{ $single->mode }}</td>
                                         <td data-label="Trainer">{{ $single->trainer?->profile?->full_name ?? 'N/A' }}</td>
                                         <td data-label="Attendees">
-                                            <a href="{{ route('admin.events.attendees', $single->id) }}" class="tb-btn tb-btn-small">View ({{ $single->users_count ?? $single->users()->count() }})</a>
+                                            <a href="{{ route('admin.events.attendees', $single->id) }}" class="tb-btn tb-btn-small">View ({{ $single->users_count }})</a>
                                         </td>
                                         <td data-label="{{__('general.actions')}}">
                                             <ul class="tb-action-icon">

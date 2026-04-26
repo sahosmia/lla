@@ -14,7 +14,11 @@ return new class extends Migration
         Schema::create('event_user', function (Blueprint $table) {
             $table->id();
             $table->foreignId('event_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('profession')->nullable();
+            $table->string('organization')->nullable();
             $table->timestamp('completed_at')->nullable();
             $table->timestamps();
         });

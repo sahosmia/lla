@@ -23,10 +23,13 @@ class EventAttendees extends Component
     #[Layout('layouts.admin-app')]
     public function render()
     {
-        $attendees = $this->event->users()
+        $attendees = \DB::table('event_user')
+            ->where('event_id', $this->event->id)
             ->where(function ($query) {
-                $query->where('email', 'LIKE', "%$this->search%");
+                $query->where('email', 'LIKE', "%$this->search%")
+                      ->orWhere('name', 'LIKE', "%$this->search%");
             })
+            ->orderBy('created_at', 'desc')
             ->paginate($this->perPage);
 
         return view('livewire.pages.admin.events.event-attendees', compact('attendees'));

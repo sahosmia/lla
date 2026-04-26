@@ -40,11 +40,7 @@
                                 </div>
                             </div>
                             <div class="cr-card_footer" style="display: flex; justify-content: space-between; align-items: center;">
-                                @if(Auth::check() && $event->users()->where('user_id', Auth::id())->exists())
-                                    <button class="am-btn am-btn-success" disabled>Registered</button>
-                                @else
-                                    <button wire:click="register({{ $event->id }})" class="am-btn">Register Now</button>
-                                @endif
+                                <a href="{{ route('events.detail', $event->id) }}" class="am-btn">Register Now</a>
                                 <a href="{{ route('events.detail', $event->id) }}" class="am-btn am-btn-outline">Details</a>
                             </div>
                         </div>

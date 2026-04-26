@@ -23,21 +23,4 @@ class EventList extends Component
 
         return view('livewire.frontend.events.event-list', compact('events'));
     }
-
-    public function register($eventId)
-    {
-        if (!Auth::check()) {
-            return redirect()->route('login');
-        }
-
-        $event = Event::findOrFail($eventId);
-        $user = Auth::user();
-
-        if (!$event->users()->where('user_id', $user->id)->exists()) {
-            $event->users()->attach($user->id);
-            $this->dispatch('showAlertMessage', type: 'success', message: 'Successfully registered for the event');
-        } else {
-            $this->dispatch('showAlertMessage', type: 'info', message: 'You are already registered for this event');
-        }
-    }
 }

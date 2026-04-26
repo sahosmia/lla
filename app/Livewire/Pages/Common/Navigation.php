@@ -154,6 +154,15 @@ class Navigation extends Component
                 'icon'  => '<i class="am-icon-dispute-1"></i>',
                 'accessibility' => ['student', 'tutor'],
                 'disableNavigate' => true,
+            ],
+            [
+                'tutorSortOrder' => 12,
+                'studentSortOrder' => 13,
+                'route' => 'events.list',
+                'onActiveRoute' => ['events.list', 'events.detail'],
+                'title' => 'Events',
+                'icon'  => '<i class="am-icon-calender-duration"></i>',
+                'accessibility' => ['student', 'tutor'],
             ]
         ];
 

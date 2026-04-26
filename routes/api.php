@@ -46,6 +46,9 @@ Route::get('student-reviews/{id}',                              [StudentControll
 Route::get('tutor-available-slots',                             [TutorController::class,'getTutorAvailableSlots']);
 Route::get('slot-detail/{id}',                                  [TutorController::class,'slotDetail']);
 
+Route::get('events',                                            [\App\Http\Controllers\Api\EventController::class, 'index']);
+Route::get('events/{id}',                                       [\App\Http\Controllers\Api\EventController::class, 'show']);
+
 Route::apiResource('tutor-education',                           EducationController::class)->only(['show','store','update','destroy']);
 Route::apiResource('tutor-experience',                          ExperienceController::class)->only(['show','store','update','destroy']);
 Route::apiResource('tutor-certification',                       CertificationController::class)->only(['show','store','destroy']);
@@ -96,6 +99,12 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('notifications',                                [NotificationController::class, 'index']);
     Route::post('notifications/{id}/read',                     [NotificationController::class, 'markAsRead']);
     Route::post('notifications/read-all',                      [NotificationController::class, 'markAllAsRead']);
+
+    Route::middleware('role:admin')->group(function () {
+        Route::post('events',                                  [\App\Http\Controllers\Api\EventController::class, 'store']);
+        Route::post('events/{id}',                             [\App\Http\Controllers\Api\EventController::class, 'update']); // Using POST for multipart update
+        Route::delete('events/{id}',                           [\App\Http\Controllers\Api\EventController::class, 'destroy']);
+    });
 });
 
 Route::get('country-states',                                    [TutorController::class,'getStates']);

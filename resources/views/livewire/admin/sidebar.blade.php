@@ -226,6 +226,23 @@ new class extends Component
                     ],
                 ],
             ];
+
+        $this->menuItems[] = [
+            'title' => 'Events',
+            'icon'  => 'icon-calendar',
+            'routes' => [
+                [
+                    'route' => 'admin.events.index',
+                    'title' => 'All Events',
+                    'permission' => 'can-manage-courses', // Reusing course permission for now
+                ],
+                [
+                    'route' => 'admin.events.create',
+                    'title' => 'Add Event',
+                    'permission' => 'can-manage-courses',
+                ],
+            ],
+        ];
         }
 
         $this->menuItems[] = [

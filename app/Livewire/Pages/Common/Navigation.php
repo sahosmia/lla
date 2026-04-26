@@ -154,6 +154,24 @@ class Navigation extends Component
                 'icon'  => '<i class="am-icon-dispute-1"></i>',
                 'accessibility' => ['student', 'tutor'],
                 'disableNavigate' => true,
+            ],
+            [
+                'tutorSortOrder' => 12,
+                'studentSortOrder' => 13,
+                'route' => 'events.list',
+                'onActiveRoute' => ['events.list', 'events.detail'],
+                'title' => 'Events',
+                'icon'  => '<i class="am-icon-calender-duration"></i>',
+                'accessibility' => ['student', 'tutor'],
+            ],
+            [
+                'tutorSortOrder' => 13,
+                'studentSortOrder' => 14,
+                'route' => $this->role === 'tutor' ? 'tutor.events.index' : 'student.my-events',
+                'onActiveRoute' => ['tutor.events.index', 'student.my-events', 'tutor.events.create', 'tutor.events.edit'],
+                'title' => $this->role === 'tutor' ? 'My Created Events' : 'My Registered Events',
+                'icon'  => '<i class="am-icon-book-01"></i>',
+                'accessibility' => ['student', 'tutor'],
             ]
         ];
 

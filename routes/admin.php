@@ -82,5 +82,12 @@ Route::middleware(['auth', 'verified', 'role:admin|sub_admin'])->prefix('admin')
         Route::get('/inquiries/{id}', [InquiryManagerController::class, 'show'])->name('inquiries.show');
         Route::delete('/inquiries/{id}', [InquiryManagerController::class, 'destroy'])->name('inquiries.destroy');
     });
+
+    Route::prefix('events')->name('events.')->group(function () {
+        Route::get('/', \App\Livewire\Pages\Admin\Events\Events::class)->name('index');
+        Route::get('/create', \App\Livewire\Pages\Admin\Events\CreateEvent::class)->name('create');
+        Route::get('/edit/{id}', \App\Livewire\Pages\Admin\Events\UpdateEvent::class)->name('edit');
+        Route::get('/attendees/{id}', \App\Livewire\Pages\Admin\Events\EventAttendees::class)->name('attendees');
+    });
 });
 Route::get('download-invoice/{id}', [SiteController::class, 'downloadPDF'])->name('download.invoice');

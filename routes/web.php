@@ -43,6 +43,9 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
     Route::get('/blogs', Blogs::class)->name('blogs');
     Route::get('/blog/{slug}', BlogDetails::class)->name('blog-details');
 
+    Route::get('/events', \App\Livewire\Frontend\Events\EventList::class)->name('events.list');
+    Route::get('/event/{id}', \App\Livewire\Frontend\Events\EventDetail::class)->name('events.detail');
+
     Route::middleware(['auth', 'verified', 'onlineUser'])->group(function () {
         Route::post('/openai/submit', [OpenAiController::class, 'submit'])->name('openai.submit');
         Route::post('favourite-tutor', [SearchController::class, 'favouriteTutor'])->name('favourite-tutor');
@@ -77,6 +80,13 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
             Route::get('invoices', Invoices::class)->name('invoices');
             Route::get('disputes', Dispute::class)->name('disputes');
             Route::get('manage-dispute/{id}', ManageDispute::class)->name('manage-dispute');
+
+            Route::prefix('events')->name('events.')->group(function () {
+                Route::get('/', \App\Livewire\Pages\Tutor\Events\TutorEvents::class)->name('index');
+                Route::get('/create', \App\Livewire\Pages\Tutor\Events\CreateEvent::class)->name('create');
+                Route::get('/edit/{id}', \App\Livewire\Pages\Tutor\Events\UpdateEvent::class)->name('edit');
+                Route::get('/attendees/{id}', \App\Livewire\Pages\Admin\Events\EventAttendees::class)->name('attendees');
+            });
         });
 
         Route::middleware('role:student')->prefix('student')->name('student.')->group(function () {
@@ -95,6 +105,7 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
             Route::get('certificates', CertificateList::class)->name('certificate-list');
             Route::get('disputes', Dispute::class)->name('disputes');
             Route::get('manage-dispute/{id}', ManageDispute::class)->name('manage-dispute');
+            Route::get('my-events', \App\Livewire\Pages\Student\Events\MyEvents::class)->name('my-events');
         });
     });
     

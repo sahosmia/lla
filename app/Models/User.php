@@ -291,4 +291,22 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPasswordC
         return $this->hasMany(\Modules\Courses\Models\Course::class, 'instructor_id');
 
     }
+
+    /**
+     * Get the events for the user.
+     */
+    public function events(): BelongsToMany
+    {
+        return $this->belongsToMany(Event::class, 'event_user')
+            ->withPivot('completed_at')
+            ->withTimestamps();
+    }
+
+    /**
+     * Get the events hosted by the user (as a trainer).
+     */
+    public function hostedEvents(): HasMany
+    {
+        return $this->hasMany(Event::class, 'user_id');
+    }
 }

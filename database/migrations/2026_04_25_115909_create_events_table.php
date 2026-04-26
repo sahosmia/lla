@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('date_time')->nullable(); // For display: "Saturday, 17 January 2026"
-            $table->dateTime('sort_date')->nullable(); // For chronological sorting
-            $table->string('mode')->nullable();
-            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade'); // Trainer (tutor)
+            $table->string('date_time')->nullable();
+            $table->dateTime('sort_date')->nullable();
+            $table->string('mode')->nullable(); // Virtual or Physical
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade'); // Tutor (creator)
             $table->string('banner_image')->nullable();
+            $table->string('venue_address')->nullable();
+            $table->string('venue_city')->nullable();
             $table->timestamps();
         });
     }

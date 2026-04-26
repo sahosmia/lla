@@ -4,9 +4,9 @@ namespace App\Livewire\Frontend\Events;
 
 use App\Models\Event;
 use App\Models\User;
-use App\Models\EventUser;
 use Livewire\Component;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class EventRegistration extends Component
 {
@@ -42,34 +42,32 @@ class EventRegistration extends Component
 
     public function register()
     {
+        if (Auth::check() && Auth::id() === $this->event->user_id) {
+            $this->dispatch('showAlertMessage', type: 'error', message: 'Tutors cannot register for their own events');
+            return;
+        }
+
         $this->validate();
 
         $user = User::where('email', $this->email)->first();
 
-        $registrationData = [
-            'event_id' => $this->event->id,
-            'user_id' => $user ? $user->id : null,
-            'name' => $this->name,
-            'email' => $this->email,
-            'profession' => $this->profession,
-            'organization' => $this->organization,
-        ];
-
         // Check if already registered by email for this event
-        $existing = \DB::table('event_user')
+        $existing = DB::table('event_user')
             ->where('event_id', $this->event->id)
             ->where('email', $this->email)
             ->exists();
 
         if (!$existing) {
-            \DB::table('event_user')->insert(array_merge($registrationData, ['created_at' => now(), 'updated_at' => now()]));
-
-            if ($user) {
-                $user->update([
-                    'profession' => $this->profession,
-                    'organization' => $this->organization,
-                ]);
-            }
+            DB::table('event_user')->insert([
+                'event_id' => $this->event->id,
+                'user_id' => $user ? $user->id : null,
+                'name' => $this->name,
+                'email' => $this->email,
+                'profession' => $this->profession,
+                'organization' => $this->organization,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]);
 
             $this->dispatch('showAlertMessage', type: 'success', message: 'Successfully registered for the event');
             $this->dispatch('event-registered');

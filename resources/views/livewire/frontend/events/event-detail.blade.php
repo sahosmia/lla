@@ -43,6 +43,12 @@
                             <strong>Date:</strong><br>
                             <span>{{ $event->date_time }}</span>
                         </li>
+                        @if($event->mode === 'Physical')
+                            <li class="mb-3">
+                                <strong>Venue:</strong><br>
+                                <span>{{ $event->venue_address }}, {{ $event->venue_city }}</span>
+                            </li>
+                        @endif
                     </ul>
                 </div>
 

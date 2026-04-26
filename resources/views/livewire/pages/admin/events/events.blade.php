@@ -8,11 +8,10 @@
                         <fieldset>
                             <div class="tb-themeform__wrap">
                                 <div class="tb-actionselect">
-                                    <a href="javascript:;" class="tb-btn btnred {{ $selectedEvents ? '' : 'd-none' }}" @click="$wire.dispatch('showConfirm', { action : 'delete-event' })">{{ __('general.delete_selected') }}</a>
+                                    <a href="{{route('admin.events.create')}}" class="tb-btn tb-menubtn">
+                                        Add Event <i class="icon-plus"></i>
+                                    </a>
                                 </div>
-                                <a href="{{route('admin.events.create')}}" class="tb-btn tb-menubtn">
-                                    Add Event <i class="icon-plus"></i>
-                                </a>
                                 <div class="form-group tb-inputicon tb-inputheight">
                                     <i class="icon-search"></i>
                                     <input type="text" class="form-control" wire:model.live.debounce.500ms="search" autocomplete="off" placeholder="{{ __('taxonomy.search_here') }}">
@@ -68,6 +67,7 @@
                                         <td data-label="{{__('general.actions')}}">
                                             <ul class="tb-action-icon">
                                                 <li> <a href="{{ route('admin.events.edit', $single->id) }}"><i class="icon-edit-3"></i></a> </li>
+                                                <li> <a href="{{ route('events.detail', $single->id) }}" target="_blank"><i class="icon-eye"></i></a> </li>
                                                 <li>
                                                     <a href="javascript:void(0);"
                                                     @click="$wire.dispatch('showConfirm', { id: {{ $single->id }}, action: 'delete-event' })"

@@ -163,6 +163,15 @@ class Navigation extends Component
                 'title' => 'Events',
                 'icon'  => '<i class="am-icon-calender-duration"></i>',
                 'accessibility' => ['student', 'tutor'],
+            ],
+            [
+                'tutorSortOrder' => 13,
+                'studentSortOrder' => 14,
+                'route' => $this->role === 'tutor' ? 'tutor.events.index' : 'student.my-events',
+                'onActiveRoute' => ['tutor.events.index', 'student.my-events', 'tutor.events.create', 'tutor.events.edit'],
+                'title' => $this->role === 'tutor' ? 'My Created Events' : 'My Registered Events',
+                'icon'  => '<i class="am-icon-book-01"></i>',
+                'accessibility' => ['student', 'tutor'],
             ]
         ];
 

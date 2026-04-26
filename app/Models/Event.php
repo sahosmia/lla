@@ -18,6 +18,8 @@ class Event extends Model
         'mode',
         'user_id',
         'banner_image',
+        'venue_address',
+        'venue_city',
     ];
 
     protected $casts = [

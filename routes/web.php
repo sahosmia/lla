@@ -80,6 +80,13 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
             Route::get('invoices', Invoices::class)->name('invoices');
             Route::get('disputes', Dispute::class)->name('disputes');
             Route::get('manage-dispute/{id}', ManageDispute::class)->name('manage-dispute');
+
+            Route::prefix('events')->name('events.')->group(function () {
+                Route::get('/', \App\Livewire\Pages\Tutor\Events\TutorEvents::class)->name('index');
+                Route::get('/create', \App\Livewire\Pages\Tutor\Events\CreateEvent::class)->name('create');
+                Route::get('/edit/{id}', \App\Livewire\Pages\Tutor\Events\UpdateEvent::class)->name('edit');
+                Route::get('/attendees/{id}', \App\Livewire\Pages\Admin\Events\EventAttendees::class)->name('attendees');
+            });
         });
 
         Route::middleware('role:student')->prefix('student')->name('student.')->group(function () {
@@ -98,6 +105,7 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
             Route::get('certificates', CertificateList::class)->name('certificate-list');
             Route::get('disputes', Dispute::class)->name('disputes');
             Route::get('manage-dispute/{id}', ManageDispute::class)->name('manage-dispute');
+            Route::get('my-events', \App\Livewire\Pages\Student\Events\MyEvents::class)->name('my-events');
         });
     });
     

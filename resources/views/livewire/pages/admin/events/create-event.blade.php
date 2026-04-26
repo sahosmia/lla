@@ -26,11 +26,6 @@
                             @error('sort_date') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-md-6 form-group">
-                            <label class="tb-label">Mode</label>
-                            <input type="text" wire:model="mode" class="form-control" placeholder="e.g. Online, Physical, Hybrid">
-                            @error('mode') <span class="text-danger">{{ $message }}</span> @enderror
-                        </div>
-                        <div class="col-md-6 form-group">
                             <label class="tb-label">Trainer (Tutor)</label>
                             <select wire:model="user_id" class="form-control">
                                 <option value="">Select Trainer</option>
@@ -40,6 +35,28 @@
                             </select>
                             @error('user_id') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
+                        <div class="col-md-6 form-group">
+                            <label class="tb-label">Event Mode</label>
+                            <select wire:model.live="mode" class="form-control">
+                                <option value="Virtual">Virtual</option>
+                                <option value="Physical">Physical</option>
+                            </select>
+                            @error('mode') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+
+                        @if($mode === 'Physical')
+                            <div class="col-md-8 form-group">
+                                <label class="tb-label">Venue Address</label>
+                                <input type="text" wire:model="venue_address" class="form-control" placeholder="Detailed Address">
+                                @error('venue_address') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label class="tb-label">City</label>
+                                <input type="text" wire:model="venue_city" class="form-control" placeholder="City">
+                                @error('venue_city') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                        @endif
+
                         <div class="col-md-6 form-group">
                             <label class="tb-label">Banner Image</label>
                             <input type="file" wire:model="banner_image" class="form-control">

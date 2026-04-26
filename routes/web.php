@@ -43,6 +43,9 @@ Route::middleware(['locale', 'maintenance'])->group(function () {
     Route::get('/blogs', Blogs::class)->name('blogs');
     Route::get('/blog/{slug}', BlogDetails::class)->name('blog-details');
 
+    Route::get('/events', \App\Livewire\Frontend\Events\EventList::class)->name('events.list');
+    Route::get('/event/{id}', \App\Livewire\Frontend\Events\EventDetail::class)->name('events.detail');
+
     Route::middleware(['auth', 'verified', 'onlineUser'])->group(function () {
         Route::post('/openai/submit', [OpenAiController::class, 'submit'])->name('openai.submit');
         Route::post('favourite-tutor', [SearchController::class, 'favouriteTutor'])->name('favourite-tutor');

@@ -51,7 +51,6 @@
                         @endif
                     </ul>
                 </div>
-                
                 <livewire:frontend.events.event-registration :event="$event" />
             </div>
         </div>

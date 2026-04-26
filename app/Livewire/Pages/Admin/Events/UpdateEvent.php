@@ -67,6 +67,6 @@ class UpdateEvent extends Component
         $this->event->update($eventData);
 
         $this->dispatch('showAlertMessage', type: 'success', message: 'Event updated successfully');
-        return redirect()->route('events.index');
+        return redirect()->route('admin.events.index');
     }
 }

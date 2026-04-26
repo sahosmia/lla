@@ -21,7 +21,6 @@
             <input type="text" wire:model="organization" class="form-control" placeholder="e.g. Prime Bank PLC">
             @error('organization') <span class="text-danger small">{{ $message }}</span> @enderror
         </div>
-        
         <div class="mt-4">
             @if(Auth::check() && $event->users()->where('user_id', Auth::id())->exists())
                 <button class="am-btn am-btn-success w-100" type="button" disabled>Already Registered</button>

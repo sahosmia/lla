@@ -292,7 +292,6 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPasswordC
 
     }
 
-    
     /**
      * Get the events for the user.
      */

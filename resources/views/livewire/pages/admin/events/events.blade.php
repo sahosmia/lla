@@ -49,7 +49,7 @@
                                                     <input id="event_id{{ $single->id }}" wire:model.lazy="selectedEvents" value="{{ $single->id }}" type="checkbox">
                                                     <label for="event_id{{ $single->id }}">
                                                         @if($single->banner_image)
-                                                            <img src="{{ url(Storage::url($single->banner_image)) }}" alt="{{ $single->title }}" width="100"> 
+                                                            <img src="{{ url(Storage::url($single->banner_image)) }}" alt="{{ $single->title }}" width="100">
                                                         @endif
                                                         <span>
                                                             {!! $single->title !!}
@@ -68,9 +68,9 @@
                                             <ul class="tb-action-icon">
                                                 <li> <a href="{{ route('admin.events.edit', $single->id) }}"><i class="icon-edit-3"></i></a> </li>
                                                 <li> <a href="{{ route('events.detail', $single->id) }}" target="_blank"><i class="icon-eye"></i></a> </li>
-                                                <li>    
-                                                    <a href="javascript:void(0);" 
-                                                    @click="$wire.dispatch('showConfirm', { id: {{ $single->id }}, action: 'delete-event' })" 
+                                                <li>
+                                                    <a href="javascript:void(0);"
+                                                    @click="$wire.dispatch('showConfirm', { id: {{ $single->id }}, action: 'delete-event' })"
                                                     class="tb-delete">
                                                     <i class="icon-trash-2"></i>
                                                     </a>
@@ -87,6 +87,6 @@
                     @endif
                 </div>
             </div>
-        </div>    
+        </div>
     </div>
 </main>

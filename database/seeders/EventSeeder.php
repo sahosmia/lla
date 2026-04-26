@@ -22,7 +22,6 @@ class EventSeeder extends Seeder
         $trainer = User::whereHas('roles', function($q) {
             $q->where('name', 'tutor');
         })->first();
-        
         if (!$trainer) {
             $trainer = User::where('email', 'trainer@example.com')->first();
             if (!$trainer) {

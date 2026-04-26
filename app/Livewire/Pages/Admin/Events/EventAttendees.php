@@ -3,10 +3,10 @@
 namespace App\Livewire\Pages\Admin\Events;
 
 use App\Models\Event;
-use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Livewire\Attributes\Layout;
+use Illuminate\Support\Facades\Auth;
 
 class EventAttendees extends Component
 {
@@ -19,12 +19,16 @@ class EventAttendees extends Component
     public function mount($id)
     {
         $this->event = Event::findOrFail($id);
+
+        // Security Check: If user is tutor, they can only view attendees for their own events
+        if (Auth::user()->hasRole('tutor') && $this->event->user_id !== Auth::id()) {
+            abort(403, 'Unauthorized access to event attendees.');
+        }
     }
 
-    #[Layout('layouts.admin-app')]
     public function render()
     {
-        $attendees = DB::table('event_user')
+        $attendees = \DB::table('event_user')
             ->where('event_id', $this->event->id)
             ->where(function ($query) {
                 $query->where('email', 'LIKE', "%$this->search%")
@@ -33,7 +37,10 @@ class EventAttendees extends Component
             ->orderBy('created_at', 'desc')
             ->paginate($this->perPage);
 
-        return view('livewire.pages.admin.events.event-attendees', compact('attendees'));
+        $layout = Auth::user()->hasRole('admin') ? 'layouts.admin-app' : 'layouts.frontend-app';
+
+        return view('livewire.pages.admin.events.event-attendees', compact('attendees'))
+            ->layout($layout);
     }
 
     public function updatedSearch()

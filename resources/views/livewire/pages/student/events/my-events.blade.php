@@ -1,9 +1,6 @@
 <div class="am-db-box">
     <div class="am-db-box_title">
-        <h2>My Events</h2>
-        <div class="am-db-box_title_btns">
-            <a href="{{ route('tutor.events.create') }}" class="am-btn am-btn-small">Add New Event</a>
-        </div>
+        <h2>My Registered Events</h2>
     </div>
     <div class="am-db-table">
         <div class="am-db-table_wrap">
@@ -13,7 +10,7 @@
                         <th>Title</th>
                         <th>Date & Time</th>
                         <th>Mode</th>
-                        <th>Attendees</th>
+                        <th>Status</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -23,17 +20,16 @@
                             <td>{{ $event->title }}</td>
                             <td>{{ $event->date_time }}</td>
                             <td>{{ $event->mode }}</td>
-                            <td><a href="{{ route('tutor.events.attendees', $event->id) }}" class="am-btn am-btn-small">View ({{ $event->users_count }})</a></td>
+                            <td><span class="am-status-tag am-status-active">Registered</span></td>
                             <td>
                                 <div class="am-table_btns">
-                                    <a href="{{ route('tutor.events.edit', $event->id) }}" class="am-item_btn"><i class="am-icon-pencil"></i></a>
-                                    <button wire:click="delete({{ $event->id }})" wire:confirm="Are you sure you want to delete this event?" class="am-item_btn am-item_btn_del"><i class="am-icon-trash-02"></i></button>
+                                    <a href="{{ route('events.detail', $event->id) }}" class="am-item_btn"><i class="am-icon-eye"></i></a>
                                 </div>
                             </td>
                         </tr>
                     @empty
                         <tr>
-                            <td colspan="5" class="text-center">No events found.</td>
+                            <td colspan="5" class="text-center">You haven't registered for any events yet.</td>
                         </tr>
                     @endforelse
                 </tbody>

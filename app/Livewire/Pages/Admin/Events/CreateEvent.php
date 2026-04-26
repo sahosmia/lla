@@ -54,6 +54,6 @@ class CreateEvent extends Component
         Event::create($eventData);
 
         $this->dispatch('showAlertMessage', type: 'success', message: 'Event created successfully');
-        return redirect()->route('events.index');
+        return redirect()->route('admin.events.index');
     }
 }

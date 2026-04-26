@@ -43,9 +43,14 @@
                             <strong>Date:</strong><br>
                             <span><?php echo e($event->date_time); ?></span>
                         </li>
+                        <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($event->mode === 'Physical'): ?>
+                            <li class="mb-3">
+                                <strong>Venue:</strong><br>
+                                <span><?php echo e($event->venue_address); ?>, <?php echo e($event->venue_city); ?></span>
+                            </li>
+                        <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
                     </ul>
                 </div>
-                
                 <?php
 $__split = function ($name, $params = []) {
     return [$name, $params];

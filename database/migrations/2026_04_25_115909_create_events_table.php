@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('events', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('date_time')->nullable(); 
+            $table->string('date_time')->nullable();
             $table->dateTime('sort_date')->nullable();
             $table->string('mode')->nullable(); // Virtual or Physical
             $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade'); // Tutor (creator)

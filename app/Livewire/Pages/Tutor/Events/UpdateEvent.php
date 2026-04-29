@@ -47,7 +47,7 @@ class UpdateEvent extends Component
         $this->venue_city = $this->event->venue_city;
     }
 
-    #[Layout('layouts.frontend-app')]
+    #[Layout('layouts.app')]
     public function render()
     {
         return view('livewire.pages.tutor.events.update-event');

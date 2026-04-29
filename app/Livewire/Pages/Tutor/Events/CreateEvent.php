@@ -33,7 +33,7 @@ class CreateEvent extends Component
         ];
     }
 
-    #[Layout('layouts.frontend-app')]
+    #[Layout('layouts.app')]
     public function render()
     {
         return view('livewire.pages.tutor.events.create-event');

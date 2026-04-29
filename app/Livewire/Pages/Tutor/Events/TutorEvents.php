@@ -23,7 +23,7 @@ class TutorEvents extends Component
         $this->perPage = setting('_general.per_page_record') ?? 10;
     }
 
-    #[Layout('layouts.frontend-app')]
+    #[Layout('layouts.app')]
     public function render()
     {
         return view('livewire.pages.tutor.events.tutor-events', [

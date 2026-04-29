@@ -1,10 +1,14 @@
-<div class="am-db-box">
-    <div class="am-db-box_title">
-        <h2>My Registered Events</h2>
-    </div>
-    <div class="am-db-table">
-        <div class="am-db-table_wrap">
-            <table class="am-table">
+<div class="am-profile-setting">
+    <div class="am-userperinfo">
+        <div class="am-title_wrap">
+            <div class="am-title">
+                <h2>My Registered Events</h2>
+                <p>List of all events you have registered for</p>
+            </div>
+        </div>
+        <div class="am-db-table">
+            <div class="am-db-table_wrap">
+                <table class="am-table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -32,9 +36,10 @@
                             <td colspan="5" class="text-center">You haven't registered for any events yet.</td>
                         </tr>
                     @endforelse
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+            {{ $events->links() }}
         </div>
-        {{ $events->links() }}
     </div>
 </div>

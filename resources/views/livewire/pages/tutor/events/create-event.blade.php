@@ -1,10 +1,13 @@
-<div class="am-db-box">
-    <div class="am-db-box_title">
-        <h2>Add New Event</h2>
-        <a href="{{ route('tutor.events.index') }}" class="am-btn am-btn-small am-btn-outline">Back to Events</a>
-    </div>
-    <div class="am-db-box_content">
-        <form wire:submit.prevent="save" class="am-themeform">
+<div class="am-profile-setting">
+    <div class="am-userperinfo">
+        <div class="am-title_wrap">
+            <div class="am-title">
+                <h2>Add New Event</h2>
+                <p>Fill in the details below to create a new event</p>
+            </div>
+            <a href="{{ route('tutor.events.index') }}" class="am-btn am-btnsmall am-btn-outline">Back to Events</a>
+        </div>
+        <form wire:submit.prevent="save" class="am-themeform am-themeform_personalinfo">
             <div class="row">
                 <div class="col-12 form-group">
                     <label class="am-label">Title</label>
@@ -48,8 +51,8 @@
                     </div>
                 @endif
 
-                <div class="col-12 mt-4">
-                    <button type="submit" class="am-btn">Save Event</button>
+                <div class="col-12 am-form-btns">
+                    <button type="submit" class="am-btn" wire:loading.class="am-btn_disable">Save Event</button>
                 </div>
             </div>
         </form>

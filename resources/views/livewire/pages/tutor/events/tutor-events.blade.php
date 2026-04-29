@@ -1,13 +1,18 @@
-<div class="am-db-box">
-    <div class="am-db-box_title">
-        <h2>My Events</h2>
-        <div class="am-db-box_title_btns">
-            <a href="{{ route('tutor.events.create') }}" class="am-btn am-btn-small">Add New Event</a>
+<div class="am-profile-setting">
+    <div class="am-userperinfo">
+        <div class="am-title_wrap">
+            <div class="am-title">
+                <h2>My Events</h2>
+                <p>Manage all your created events here</p>
+            </div>
+            <a href="{{ route('tutor.events.create') }}" class="am-btn am-btnsmall">
+                Add New Event
+                <i class="am-icon-plus-02"></i>
+            </a>
         </div>
-    </div>
-    <div class="am-db-table">
-        <div class="am-db-table_wrap">
-            <table class="am-table">
+        <div class="am-db-table">
+            <div class="am-db-table_wrap">
+                <table class="am-table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -36,9 +41,10 @@
                             <td colspan="5" class="text-center">No events found.</td>
                         </tr>
                     @endforelse
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+            {{ $events->links() }}
         </div>
-        {{ $events->links() }}
     </div>
 </div>

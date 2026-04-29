@@ -14,7 +14,7 @@ class MyEvents extends Component
 
     public $perPage = 10;
 
-    #[Layout('layouts.frontend-app')]
+    #[Layout('layouts.app')]
     public function render()
     {
         $events = Auth::user()->events()

@@ -1,6 +1,6 @@
 <div class="am-db-box">
     <div class="am-db-box_title">
-        <h2>My Registered Events</h2>
+        <h2>My Registered Training</h2>
     </div>
     <div class="am-db-table">
         <div class="am-db-table_wrap">

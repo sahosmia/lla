@@ -18,6 +18,8 @@ class CreateEvent extends Component
     public $mode;
     public $user_id;
     public $banner_image;
+    public $price;
+    public $registration_deadline;
 
     protected $rules = [
         'title' => 'required|string|max:255',
@@ -26,6 +28,8 @@ class CreateEvent extends Component
         'mode' => 'nullable|string|max:255',
         'user_id' => 'nullable|exists:users,id',
         'banner_image' => 'nullable|image|max:1024',
+        'price' => 'nullable|numeric|min:0',
+        'registration_deadline' => 'nullable|date',
     ];
 
     #[Layout('layouts.admin-app')]
@@ -33,6 +37,13 @@ class CreateEvent extends Component
     {
         $tutors = User::role('tutor')->with('profile')->get();
         return view('livewire.pages.admin.events.create-event', compact('tutors'));
+    }
+
+    public function updatedSortDate($value)
+    {
+        if (empty($this->date_time) && !empty($value)) {
+            $this->date_time = \Carbon\Carbon::parse($value)->format('l, d F Y H:i');
+        }
     }
 
     public function save()
@@ -45,6 +56,8 @@ class CreateEvent extends Component
             'sort_date' => $this->sort_date,
             'mode' => $this->mode,
             'user_id' => $this->user_id,
+            'price' => $this->price,
+            'registration_deadline' => $this->registration_deadline,
         ];
 
         if ($this->banner_image) {

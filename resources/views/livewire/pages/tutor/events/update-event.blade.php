@@ -1,7 +1,7 @@
 <div class="am-db-box">
     <div class="am-db-box_title">
-        <h2>Update Event</h2>
-        <a href="{{ route('tutor.events.index') }}" class="am-btn am-btn-small am-btn-outline">Back to Events</a>
+        <h2>Update Training</h2>
+        <a href="{{ route('tutor.events.index') }}" class="am-btn am-btn-small am-btn-outline">Back to Training</a>
     </div>
     <div class="am-db-box_content">
         <form wire:submit.prevent="update" class="am-themeform">
@@ -18,8 +18,18 @@
                 </div>
                 <div class="col-md-6 form-group">
                     <label class="am-label">Sorting Date</label>
-                    <input type="datetime-local" wire:model="sort_date" class="form-control">
+                    <input type="datetime-local" wire:model.live="sort_date" class="form-control">
                     @error('sort_date') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="am-label">Price</label>
+                    <input type="number" step="0.01" wire:model="price" class="form-control" placeholder="0.00">
+                    @error('price') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="am-label">Last Date of Enrollment</label>
+                    <input type="datetime-local" wire:model="registration_deadline" class="form-control">
+                    @error('registration_deadline') <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
                 <div class="col-md-6 form-group">
                     <label class="am-label">Event Mode</label>

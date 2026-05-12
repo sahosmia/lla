@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 tb-md-12">
             <div class="tb-dhb-mainheading">
-                <h4>Update Event</h4>
+                <h4>Update Training</h4>
                 <div class="tb-sortby">
-                    <a href="{{ route('admin.events.index') }}" class="tb-btn tb-menubtn">Back to Events</a>
+                    <a href="{{ route('admin.events.index') }}" class="tb-btn tb-menubtn">Back to Training Calendar</a>
                 </div>
             </div>
             <div class="am-disputelist_wrap">
@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-md-6 form-group">
                             <label class="tb-label">Sorting Date (For chronological order)</label>
-                            <input type="datetime-local" wire:model="sort_date" class="form-control">
+                            <input type="datetime-local" wire:model.live="sort_date" class="form-control">
                             @error('sort_date') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-md-6 form-group">
@@ -34,6 +34,16 @@
                                 @endforeach
                             </select>
                             @error('user_id') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="tb-label">Price</label>
+                            <input type="number" step="0.01" wire:model="price" class="form-control" placeholder="0.00">
+                            @error('price') <span class="text-danger">{{ $message }}</span> @enderror
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="tb-label">Last Date of Enrollment</label>
+                            <input type="datetime-local" wire:model="registration_deadline" class="form-control">
+                            @error('registration_deadline') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-md-6 form-group">
                             <label class="tb-label">Event Mode</label>
@@ -68,7 +78,7 @@
                             @error('banner_image') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="tb-btn">Update Event</button>
+                            <button type="submit" class="tb-btn">Update Training</button>
                         </div>
                     </div>
                 </form>

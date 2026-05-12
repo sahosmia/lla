@@ -10,6 +10,14 @@
     </div>
     <div>
         <div wire:loading.remove wire:target="refresh">
+            <div class="am-dbbox mb-4">
+                <div class="am-dbbox_title">
+                    <h2>Training Calendar</h2>
+                    <div class="am-dbbox_title_btns">
+                        <a href="{{ route('events.list') }}" class="am-btn am-btn-small">View Training Calendar</a>
+                    </div>
+                </div>
+            </div>
             @include('livewire.pages.tutor.manage-account.wallet-detail')
             @include('livewire.pages.tutor.manage-account.earning-graph')
             <div class="am-dbbox">

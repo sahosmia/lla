@@ -47,6 +47,11 @@ class EventRegistration extends Component
             return;
         }
 
+        if ($this->event->registration_deadline && $this->event->registration_deadline->isPast()) {
+            $this->dispatch('showAlertMessage', type: 'error', message: 'Registration for this training has closed');
+            return;
+        }
+
         $this->validate();
 
         $user = User::where('email', $this->email)->first();

@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="am-section_title am-section_title_center">
-                    <h2>Upcoming Training and Events</h2>
-                    <p>Enhance your skills with our professional training sessions and events.</p>
+                    <h2>Training Calendar</h2>
+                    <p>Enhance your skills with our professional training sessions.</p>
                 </div>
             </div>
         </div>
@@ -38,6 +38,23 @@
                                     <i class="am-icon-user-v2"></i>
                                     <span>Trainer: {{ $event->trainer?->profile?->full_name ?? 'TBA' }}</span>
                                 </div>
+                                @if($event->price > 0)
+                                    <div class="cr-info-item">
+                                        <i class="am-icon-dollar"></i>
+                                        <span>Price: {{ formatAmount($event->price) }}</span>
+                                    </div>
+                                @else
+                                    <div class="cr-info-item">
+                                        <i class="am-icon-dollar"></i>
+                                        <span>Price: Free</span>
+                                    </div>
+                                @endif
+                                @if($event->registration_deadline)
+                                    <div class="cr-info-item">
+                                        <i class="am-icon-calender-duration"></i>
+                                        <span class="text-danger">Deadline: {{ $event->registration_deadline->format('M d, Y') }}</span>
+                                    </div>
+                                @endif
                             </div>
                             <div class="cr-card_footer" style="display: flex; justify-content: space-between; align-items: center;">
                                 <a href="{{ route('events.detail', $event->id) }}" class="am-btn">Register Now</a>

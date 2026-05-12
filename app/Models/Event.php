@@ -20,10 +20,13 @@ class Event extends Model
         'banner_image',
         'venue_address',
         'venue_city',
+        'price',
+        'registration_deadline',
     ];
 
     protected $casts = [
         'sort_date' => 'datetime',
+        'registration_deadline' => 'datetime',
     ];
 
     /**

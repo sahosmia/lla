@@ -1,10 +1,13 @@
-<div class="am-db-box">
-    <div class="am-db-box_title">
-        <h2>Update Event</h2>
-        <a href="{{ route('tutor.events.index') }}" class="am-btn am-btn-small am-btn-outline">Back to Events</a>
-    </div>
-    <div class="am-db-box_content">
-        <form wire:submit.prevent="update" class="am-themeform">
+<div class="am-profile-setting">
+    <div class="am-userperinfo">
+        <div class="am-title_wrap">
+            <div class="am-title">
+                <h2>Update Training</h2>
+                <p>Update the details of your training below</p>
+            </div>
+            <a href="{{ route('tutor.events.index') }}" class="am-btn am-btnsmall am-btn-outline">Back to Training</a>
+        </div>
+        <form wire:submit.prevent="update" class="am-themeform am-themeform_personalinfo">
             <div class="row">
                 <div class="col-12 form-group">
                     <label class="am-label">Title</label>
@@ -20,6 +23,16 @@
                     <label class="am-label">Sorting Date</label>
                     <input type="datetime-local" wire:model="sort_date" class="form-control">
                     @error('sort_date') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="am-label">Price</label>
+                    <input type="number" step="0.01" wire:model="price" class="form-control" placeholder="0.00">
+                    @error('price') <span class="text-danger">{{ $message }}</span> @enderror
+                </div>
+                <div class="col-md-6 form-group">
+                    <label class="am-label">Last Date of Enrollment</label>
+                    <input type="datetime-local" wire:model="registration_deadline" class="form-control">
+                    @error('registration_deadline') <span class="text-danger">{{ $message }}</span> @enderror
                 </div>
                 <div class="col-md-6 form-group">
                     <label class="am-label">Event Mode</label>
@@ -53,8 +66,8 @@
                     </div>
                 @endif
 
-                <div class="col-12 mt-4">
-                    <button type="submit" class="am-btn">Update Event</button>
+                <div class="col-12 am-form-btns">
+                    <button type="submit" class="am-btn" wire:loading.class="am-btn_disable">Update Event</button>
                 </div>
             </div>
         </form>

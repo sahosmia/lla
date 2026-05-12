@@ -37,7 +37,7 @@ class EventAttendees extends Component
             ->orderBy('created_at', 'desc')
             ->paginate($this->perPage);
 
-        $layout = Auth::user()->hasRole('admin') ? 'layouts.admin-app' : 'layouts.frontend-app';
+        $layout = Auth::user()->hasRole('admin') ? 'layouts.admin-app' : 'layouts.app';
 
         return view('livewire.pages.admin.events.event-attendees', compact('attendees'))
             ->layout($layout);

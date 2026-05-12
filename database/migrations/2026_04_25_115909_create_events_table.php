@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('banner_image')->nullable();
             $table->string('venue_address')->nullable();
             $table->string('venue_city')->nullable();
+            $table->decimal('price', 10, 2)->nullable();
+            $table->dateTime('registration_deadline')->nullable();
             $table->timestamps();
         });
     }

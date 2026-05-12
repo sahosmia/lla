@@ -1,13 +1,18 @@
-<div class="am-db-box">
-    <div class="am-db-box_title">
-        <h2>My Events</h2>
-        <div class="am-db-box_title_btns">
-            <a href="{{ route('tutor.events.create') }}" class="am-btn am-btn-small">Add New Event</a>
+<div class="am-profile-setting">
+    <div class="am-userperinfo">
+        <div class="am-title_wrap">
+            <div class="am-title">
+                <h2>My Training Calendar</h2>
+                <p>Manage all your created training here</p>
+            </div>
+            <a href="{{ route('tutor.events.create') }}" class="am-btn am-btnsmall">
+                Add Training
+                <i class="am-icon-plus-02"></i>
+            </a>
         </div>
-    </div>
-    <div class="am-db-table">
-        <div class="am-db-table_wrap">
-            <table class="am-table">
+        <div class="am-db-table">
+            <div class="am-db-table_wrap">
+                <table class="am-table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -26,8 +31,9 @@
                             <td><a href="{{ route('tutor.events.attendees', $event->id) }}" class="am-btn am-btn-small">View ({{ $event->users_count }})</a></td>
                             <td>
                                 <div class="am-table_btns">
-                                    <a href="{{ route('tutor.events.edit', $event->id) }}" class="am-item_btn"><i class="am-icon-pencil"></i></a>
-                                    <button wire:click="delete({{ $event->id }})" wire:confirm="Are you sure you want to delete this event?" class="am-item_btn am-item_btn_del"><i class="am-icon-trash-02"></i></button>
+                                     <a href="{{ route('tutor.events.edit', $event->id) }}" class="am-item_btn" title="Edit"><i class="am-icon-pencil"></i></a>
+                                    <a href="{{ route('events.detail', $event->id) }}" class="am-item_btn" title="View"><i class="am-icon-eye"></i></a>
+                                    <button wire:click="delete({{ $event->id }})" wire:confirm="Are you sure you want to delete this event?" class="am-item_btn am-item_btn_del" title="Delete"><i class="am-icon-trash-02"></i></button>
                                 </div>
                             </td>
                         </tr>
@@ -36,9 +42,10 @@
                             <td colspan="5" class="text-center">No events found.</td>
                         </tr>
                     @endforelse
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
+            {{ $events->links() }}
         </div>
-        {{ $events->links() }}
     </div>
 </div>

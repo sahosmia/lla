@@ -2,14 +2,14 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 tb-md-12">
             <div class="tb-dhb-mainheading">
-                <h4>Upcoming Training and Events</h4>
+                <h4>Training Calendar</h4>
                 <div class="tb-sortby">
                     <form class="tb-themeform tb-displistform">
                         <fieldset>
                             <div class="tb-themeform__wrap">
                                 <div class="tb-actionselect">
                                     <a href="{{route('admin.events.create')}}" class="tb-btn tb-menubtn">
-                                        Add Event <i class="icon-plus"></i>
+                                        Add Training <i class="icon-plus"></i>
                                     </a>
                                 </div>
                                 <div class="form-group tb-inputicon tb-inputheight">

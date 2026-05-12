@@ -19,6 +19,8 @@ class CreateEvent extends Component
     public $banner_image;
     public $venue_address;
     public $venue_city;
+    public $price;
+    public $registration_deadline;
 
     protected function rules()
     {
@@ -30,6 +32,8 @@ class CreateEvent extends Component
             'banner_image' => 'nullable|image|max:1024',
             'venue_address' => $this->mode === 'Physical' ? 'required|string|max:255' : 'nullable',
             'venue_city' => $this->mode === 'Physical' ? 'required|string|max:255' : 'nullable',
+            'price' => 'nullable|numeric|min:0',
+            'registration_deadline' => 'nullable|date',
         ];
     }
 
@@ -37,6 +41,13 @@ class CreateEvent extends Component
     public function render()
     {
         return view('livewire.pages.tutor.events.create-event');
+    }
+
+    public function updatedSortDate($value)
+    {
+        if (empty($this->date_time) && !empty($value)) {
+            $this->date_time = \Carbon\Carbon::parse($value)->format('l, d F Y H:i');
+        }
     }
 
     public function save()
@@ -51,6 +62,8 @@ class CreateEvent extends Component
             'user_id' => Auth::id(),
             'venue_address' => $this->mode === 'Physical' ? $this->venue_address : null,
             'venue_city' => $this->mode === 'Physical' ? $this->venue_city : null,
+            'price' => $this->price,
+            'registration_deadline' => $this->registration_deadline,
         ];
 
         if ($this->banner_image) {

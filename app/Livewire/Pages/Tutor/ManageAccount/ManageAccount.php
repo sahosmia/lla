@@ -4,6 +4,7 @@ namespace App\Livewire\Pages\Tutor\ManageAccount;
 use App\Livewire\Forms\Tutor\Payout\PayoutForm;
 use App\Services\PayoutService;
 use App\Services\WalletService;
+use App\Models\Event;
 use Carbon\Carbon;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
@@ -25,6 +26,7 @@ class ManageAccount extends Component
     public $walletBalance;
     public $withdrawalsType;
     public $withdrawalBalance;
+    public $events = [];
 
     public  PayoutForm $form;
     private ?WalletService $walletService   = null;
@@ -51,6 +53,14 @@ class ManageAccount extends Component
         $this->loadData();
     }
 
+    public function deleteEvent($id)
+    {
+        $event = Event::where('user_id', Auth::id())->findOrFail($id);
+        $event->delete();
+        $this->loadData();
+        $this->dispatch('showAlertMessage', type: 'success', message: 'Event deleted successfully');
+    }
+
     #[Layout('layouts.app')]
     public function render()
     {
@@ -70,6 +80,7 @@ class ManageAccount extends Component
         $this->withdrawalBalance    = $this->payoutService->geWithdrawalBalance(Auth::user()->id)->toArray();
         $this->withdrawalsType      = $this->payoutService->getWithdrawalTypes(Auth::user()->id);
         $this->payoutStatus         = $this->payoutService->getPayoutStatus(Auth::user()->id);
+        $this->events               = Event::where('user_id', Auth::id())->withCount('users')->orderBy('id', 'desc')->take(5)->get();
         $this->dispatch('initSelect2', target: '.am-select2' );
         $this->isLoading            = false;
     }

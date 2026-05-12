@@ -20,6 +20,8 @@ class UpdateEvent extends Component
     public $user_id;
     public $banner_image;
     public $old_banner_image;
+    public $price;
+    public $registration_deadline;
 
     protected $rules = [
         'title' => 'required|string|max:255',
@@ -28,6 +30,8 @@ class UpdateEvent extends Component
         'mode' => 'nullable|string|max:255',
         'user_id' => 'nullable|exists:users,id',
         'banner_image' => 'nullable|image|max:1024',
+        'price' => 'nullable|numeric|min:0',
+        'registration_deadline' => 'nullable|date',
     ];
 
     public function mount($id)
@@ -39,6 +43,8 @@ class UpdateEvent extends Component
         $this->mode = $this->event->mode;
         $this->user_id = $this->event->user_id;
         $this->old_banner_image = $this->event->banner_image;
+        $this->price = $this->event->price;
+        $this->registration_deadline = $this->event->registration_deadline ? $this->event->registration_deadline->format('Y-m-d\TH:i') : null;
     }
 
     #[Layout('layouts.admin-app')]
@@ -58,6 +64,8 @@ class UpdateEvent extends Component
             'sort_date' => $this->sort_date,
             'mode' => $this->mode,
             'user_id' => $this->user_id,
+            'price' => $this->price,
+            'registration_deadline' => $this->registration_deadline,
         ];
 
         if ($this->banner_image) {

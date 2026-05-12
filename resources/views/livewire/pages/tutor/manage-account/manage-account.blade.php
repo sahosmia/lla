@@ -10,8 +10,64 @@
     </div>
     <div>
         <div wire:loading.remove wire:target="refresh">
+             <div class="am-dbbox mb-4">
+                <div class="am-dbbox_title">
+                    <h2>Training Calendar</h2>
+                    <div class="am-dbbox_title_btns">
+                        <a href="{{ route('events.list') }}" class="am-btn am-btn-small">View Training Calendar</a>
+                    </div>
+                </div>
+            </div>
             @include('livewire.pages.tutor.manage-account.wallet-detail')
             @include('livewire.pages.tutor.manage-account.earning-graph')
+            <div class="am-dbbox">
+                <div class="am-dbbox_title">
+                    <h2>{{ __('My Events') }}</h2>
+                    <div class="am-dbbox_title_btns">
+                        <a href="{{ route('tutor.events.index') }}" class="am-btn am-btn-small am-btn-outline">{{ __('View All') }}</a>
+                        <a href="{{ route('tutor.events.create') }}" class="am-btn am-btn-small">{{ __('Add New Event') }}</a>
+                    </div>
+                </div>
+                <div class="am-dbbox_content">
+                    <div class="am-db-table">
+                        <div class="am-db-table_wrap">
+                            <table class="am-table">
+                                <thead>
+                                    <tr>
+                                        <th>{{ __('Title') }}</th>
+                                        <th>{{ __('Date & Time') }}</th>
+                                        <th>{{ __('Mode') }}</th>
+                                        <th>{{ __('Attendees') }}</th>
+                                        <th>{{ __('Actions') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse($events as $event)
+                                        <tr>
+                                            <td data-label="{{ __('Title') }}">{{ $event->title }}</td>
+                                            <td data-label="{{ __('Date & Time') }}">{{ $event->date_time }}</td>
+                                            <td data-label="{{ __('Mode') }}">{{ $event->mode }}</td>
+                                            <td data-label="{{ __('Attendees') }}">
+                                                <a href="{{ route('tutor.events.attendees', $event->id) }}" class="am-btn am-btn-small">{{ __('View') }} ({{ $event->users_count }})</a>
+                                            </td>
+                                            <td data-label="{{ __('Actions') }}">
+                                                <div class="am-table_btns">
+                                                    <a href="{{ route('tutor.events.edit', $event->id) }}" class="am-item_btn"><i class="am-icon-pencil"></i></a>
+                                                    <button wire:click="deleteEvent({{ $event->id }})" wire:confirm="{{ __('Are you sure you want to delete this event?') }}" class="am-item_btn am-item_btn_del"><i class="am-icon-trash-02"></i></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="5" class="text-center">{{ __('No events found.') }}</td>
+                                        </tr>
+                                    @endforelse
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="am-dbbox">
                 <div class="am-dbbox_title">
                     <h2>{{ __('tutor.setup_payouts_methods') }}</h2>

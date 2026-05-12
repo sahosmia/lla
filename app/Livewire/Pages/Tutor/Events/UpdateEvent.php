@@ -21,6 +21,8 @@ class UpdateEvent extends Component
     public $old_banner_image;
     public $venue_address;
     public $venue_city;
+    public $price;
+    public $registration_deadline;
 
     protected function rules()
     {
@@ -32,6 +34,8 @@ class UpdateEvent extends Component
             'banner_image' => 'nullable|image|max:1024',
             'venue_address' => $this->mode === 'Physical' ? 'required|string|max:255' : 'nullable',
             'venue_city' => $this->mode === 'Physical' ? 'required|string|max:255' : 'nullable',
+            'price' => 'nullable|numeric|min:0',
+            'registration_deadline' => 'nullable|date',
         ];
     }
 
@@ -45,6 +49,8 @@ class UpdateEvent extends Component
         $this->old_banner_image = $this->event->banner_image;
         $this->venue_address = $this->event->venue_address;
         $this->venue_city = $this->event->venue_city;
+        $this->price = $this->event->price;
+        $this->registration_deadline = $this->event->registration_deadline ? $this->event->registration_deadline->format('Y-m-d\TH:i') : null;
     }
 
     #[Layout('layouts.frontend-app')]
@@ -64,6 +70,8 @@ class UpdateEvent extends Component
             'mode' => $this->mode,
             'venue_address' => $this->mode === 'Physical' ? $this->venue_address : null,
             'venue_city' => $this->mode === 'Physical' ? $this->venue_city : null,
+            'price' => $this->price,
+            'registration_deadline' => $this->registration_deadline,
         ];
 
         if ($this->banner_image) {

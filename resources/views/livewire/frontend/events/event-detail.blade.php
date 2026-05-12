@@ -43,6 +43,18 @@
                             <strong>Date:</strong><br>
                             <span>{{ $event->date_time }}</span>
                         </li>
+                        <li class="mb-3">
+                            <strong>Price:</strong><br>
+                            <span>{{ $event->price > 0 ? formatAmount($event->price) : 'Free' }}</span>
+                        </li>
+                        @if($event->registration_deadline)
+                            <li class="mb-3">
+                                <strong>Registration Deadline:</strong><br>
+                                <span class="{{ $event->registration_deadline->isPast() ? 'text-danger' : '' }}">
+                                    {{ $event->registration_deadline->format('l, d F Y H:i') }}
+                                </span>
+                            </li>
+                        @endif
                         @if($event->mode === 'Physical')
                             <li class="mb-3">
                                 <strong>Venue:</strong><br>

@@ -160,7 +160,7 @@ class Navigation extends Component
                 'studentSortOrder' => 13,
                 'route' => 'events.list',
                 'onActiveRoute' => ['events.list', 'events.detail'],
-                'title' => 'Events',
+                'title' => 'Training Calendar',
                 'icon'  => '<i class="am-icon-calender-duration"></i>',
                 'accessibility' => ['student', 'tutor'],
             ],
@@ -169,7 +169,7 @@ class Navigation extends Component
                 'studentSortOrder' => 14,
                 'route' => $this->role === 'tutor' ? 'tutor.events.index' : 'student.my-events',
                 'onActiveRoute' => ['tutor.events.index', 'student.my-events', 'tutor.events.create', 'tutor.events.edit'],
-                'title' => $this->role === 'tutor' ? 'My Created Events' : 'My Registered Events',
+                'title' => $this->role === 'tutor' ? 'My Training' : 'My Registered Training',
                 'icon'  => '<i class="am-icon-book-01"></i>',
                 'accessibility' => ['student', 'tutor'],
             ]

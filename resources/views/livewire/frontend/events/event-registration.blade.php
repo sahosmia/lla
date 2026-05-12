@@ -1,5 +1,5 @@
 <div class="am-event-registration-form p-4 border rounded shadow-sm bg-white">
-    <h3 class="mb-4">Register for this Event</h3>
+    <h3 class="mb-4">Register for Training</h3>
     <form wire:submit.prevent="register">
         <div class="form-group mb-3">
             <label class="am-label">Full Name</label>
@@ -22,7 +22,9 @@
             @error('organization') <span class="text-danger small">{{ $message }}</span> @enderror
         </div>
         <div class="mt-4">
-            @if(Auth::check() && $event->users()->where('user_id', Auth::id())->exists())
+            @if($event->registration_deadline && $event->registration_deadline->isPast())
+                <button class="am-btn am-btn-del w-100" type="button" disabled>Registration Closed</button>
+            @elseif(Auth::check() && $event->users()->where('user_id', Auth::id())->exists())
                 <button class="am-btn am-btn-success w-100" type="button" disabled>Already Registered</button>
             @else
                 <button type="submit" class="am-btn w-100">

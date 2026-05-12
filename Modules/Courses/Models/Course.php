@@ -57,10 +57,6 @@ class Course extends Model
         'certificate_id',
         'validity',
         'validity_type',
-        'course_for',
-        'venue',
-        'date',
-        'time'
     ];
 
 
@@ -101,22 +97,34 @@ class Course extends Model
         'expert'            => 3,
         'all'               => 4,
     ];
-    
-     public const COURSE_FOR = [
-        'online'            => 1,
-        'classroom'         => 2,
+
+    public const VALIDITY_TYPES = [
+        'days'              => 1,
+        'months'            => 2,
+        'years'             => 3,
     ];
 
     /**
-     * Get and set the course_for attribute.
+     * Get and set the validity_type attribute.
      *
      * @return \Illuminate\Database\Eloquent\Casts\Attribute
      */
-    protected function courseFor(): Attribute
+    protected function validityType(): Attribute
     {
         return Attribute::make(
-            get: fn($value) => Arr::get(array_flip(self::COURSE_FOR), $value, null),
-            set: fn($value) => Arr::get(self::COURSE_FOR, $value, null)
+            set: fn($value) => is_numeric($value) ? $value : Arr::get(self::VALIDITY_TYPES, $value, null)
+        );
+    }
+
+    /**
+     * Get the validity_type text attribute.
+     *
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute
+     */
+    protected function validityTypeText(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => Arr::get(array_flip(self::VALIDITY_TYPES), $this->validity_type, null),
         );
     }
 

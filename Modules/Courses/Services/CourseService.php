@@ -745,21 +745,6 @@ class CourseService
         return $categories;
     }
     
-      // get online course  1 = online course
-    public function getOnlineCourese(){
-
-        $onlineCourse= Course::where('course_for', 1)->get();
-        
-        return $onlineCourse;
-    }
-
-    //get class room course 2 = class room course
-    public function getClassRoomCourses(){
-
-         $classRoomCourse= Course::where('course_for', 2)->get();
-        
-        return $classRoomCourse;
-    }
 
     public function getLevels(){
 

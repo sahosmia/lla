@@ -476,7 +476,7 @@
                                                     </div>
                                                     <div class="cr-stat-content">
                                                         <span class="cr-stat-label">{{ __('courses::courses.course_validity_period') }}</span>
-                                                        <span class="cr-stat-value">{{ $course->validity }} {{ Str::ucfirst($course->validity_type) }}</span>
+                                                        <span class="cr-stat-value">{{ $course->validity }} {{ Str::ucfirst($course->validity_type_text) }}</span>
                                                     </div>
                                                 </div>
                                             @endif

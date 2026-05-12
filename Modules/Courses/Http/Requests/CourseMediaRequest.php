@@ -13,8 +13,8 @@ class CourseMediaRequest extends FormRequest
     {
         $this->imageExtensions          = setting('_general.allowed_image_extensions') ?? 'jpg,png,jpeg';
         $this->videoExtensions          = setting('_general.allowed_video_extensions') ?? 'mp4,mov,avi,mkv,wmv,flv,webm';
-        $this->imageSize                = setting('_general.max_image_size') * 1024 ?? 5;
-        $this->videoSize                = setting('_general.max_video_size') * 1024 ?? 20;
+        $this->imageSize                = (int) (setting('_general.max_image_size') ?? 5) * 1024;
+        $this->videoSize                = (int) (setting('_general.max_video_size') ?? 20) * 1024;
     }
 
 

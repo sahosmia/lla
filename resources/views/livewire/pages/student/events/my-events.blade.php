@@ -23,7 +23,7 @@
                             <td><span class="am-status-tag am-status-active">Registered</span></td>
                             <td>
                                 <div class="am-table_btns">
-                                    <a href="{{ route('events.detail', $event->id) }}" class="am-item_btn"><i class="am-icon-eye"></i></a>
+                                    <a href="{{ route('events.detail', $event->id) }}" class="am-item_btn"><i class="am-icon-eye-open-01"></i></a>
                                 </div>
                             </td>
                         </tr>

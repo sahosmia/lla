@@ -26,8 +26,8 @@
                             <td><a href="{{ route('tutor.events.attendees', $event->id) }}" class="am-btn am-btn-small">View ({{ $event->users_count }})</a></td>
                             <td>
                                 <div class="am-table_btns">
-                                    <a href="{{ route('tutor.events.edit', $event->id) }}" class="am-item_btn" title="Edit"><i class="am-icon-pencil"></i></a>
-                                    <a href="{{ route('events.detail', $event->id) }}" class="am-item_btn" title="View"><i class="am-icon-eye"></i></a>
+                                    <a href="{{ route('tutor.events.edit', $event->id) }}" class="am-item_btn" title="Edit"><i class="am-icon-pencil-02"></i></a>
+                                    <a href="{{ route('events.detail', $event->id) }}" class="am-item_btn" title="View"><i class="am-icon-eye-open-01"></i></a>
                                     <button wire:click="delete({{ $event->id }})" wire:confirm="Are you sure you want to delete this event?" class="am-item_btn am-item_btn_del" title="Delete"><i class="am-icon-trash-02"></i></button>
                                 </div>
                             </td>

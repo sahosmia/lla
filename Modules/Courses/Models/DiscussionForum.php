@@ -17,9 +17,9 @@ class DiscussionForum extends Model
 
     protected $table;
 
-    public function __construct()
+    public function __construct(array $attributes = [])
     {
-        parent::__construct();
+        parent::__construct($attributes);
         $this->table = (config('courses.db_prefix') ?? 'courses_') . 'discussion_forums';
     }
 

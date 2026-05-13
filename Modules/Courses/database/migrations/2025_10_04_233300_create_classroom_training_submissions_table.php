@@ -11,9 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('classroom_training_submissions', function (Blueprint $table) {
+        $dbPrefix = config('courses.db_prefix') ?? 'courses_';
+
+        Schema::create($dbPrefix . 'classroom_training_submissions', function (Blueprint $table) use ($dbPrefix) {
             $table->id();
-            $table->foreignId('course_id')->constrained('courses_courses')->onDelete('cascade');
+            $table->foreignId('course_id')->constrained($dbPrefix . 'courses')->onDelete('cascade');
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('name');
             $table->text('address');
@@ -30,6 +32,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('classroom_training_submissions');
+        $dbPrefix = config('courses.db_prefix') ?? 'courses_';
+        Schema::dropIfExists($dbPrefix . 'classroom_training_submissions');
     }
 };

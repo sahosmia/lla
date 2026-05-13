@@ -56,11 +56,7 @@ class Course extends Model
         'discussion_forum',
         'certificate_id',
         'validity',
-        'validity_type',
-        'course_for',
-        'venue',
-        'date',
-        'time'
+        'validity_type'
     ];
 
 
@@ -102,24 +98,6 @@ class Course extends Model
         'all'               => 4,
     ];
     
-     public const COURSE_FOR = [
-        'online'            => 1,
-        'classroom'         => 2,
-    ];
-
-    /**
-     * Get and set the course_for attribute.
-     *
-     * @return \Illuminate\Database\Eloquent\Casts\Attribute
-     */
-    protected function courseFor(): Attribute
-    {
-        return Attribute::make(
-            get: fn($value) => Arr::get(array_flip(self::COURSE_FOR), $value, null),
-            set: fn($value) => Arr::get(self::COURSE_FOR, $value, null)
-        );
-    }
-
     /**
      * Get and set the status attribute.
      *

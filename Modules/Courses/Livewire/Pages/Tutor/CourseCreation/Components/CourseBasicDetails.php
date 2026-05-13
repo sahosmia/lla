@@ -36,11 +36,6 @@ class CourseBasicDetails extends Component
     public $templates = [];
     public $template_id = '';
     public $assign_quiz_certificate = 'any';
-    public $course_for = 'online';
-    public $course_for_options = [];
-    public $venue;
-    public $date;
-    public $time;
     public function mount()
     {
         $this->courseId = request()->route('id');
@@ -55,9 +50,6 @@ class CourseBasicDetails extends Component
             'all'               => 5,
         ];
         
-        $this->course_for_options = Course::COURSE_FOR;
-
-
         if ($this->courseId) {
             $this->loadCourseData();
         }
@@ -96,11 +88,6 @@ class CourseBasicDetails extends Component
         $this->learning_objectives      = !empty($course->learning_objectives) ?  $course->learning_objectives : [''];
         $this->validity                 = $course->validity;
         $this->validity_type            = $course->validity_type;
-         $this->course_for               = $course->course_for;
-        $this->venue                    = $course->venue;
-        $this->date                     = $course->date;
-        $this->time                     = $course->time;
-        
     }
 
     private function rules()
@@ -134,20 +121,7 @@ class CourseBasicDetails extends Component
             $validatedData['tags']  = array_filter($this->tags, fn($tag) => !empty($tag));
 
             $validatedData['instructor_id'] = Auth::id();
-            
-            
-            if ($this->course_for === 'classroom') {
-                $validatedData['venue'] = $this->venue;
-                $validatedData['date'] = $this->date;
-                $validatedData['time'] = $this->time;
-            } else {
-                $validatedData['venue'] = null;
-                $validatedData['date'] = null;
-                $validatedData['time'] = null;
-                
-            }
-            
-            
+
              // Ensure validity fields are null if validity is empty
             if (empty($this->validity)) {
                 $validatedData['validity'] = null;

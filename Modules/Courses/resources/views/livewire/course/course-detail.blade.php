@@ -48,36 +48,6 @@
                             @endif
                         </div>
                         <div class="cr-course-stats">
-                            @if($course->course_for === 'classroom')
-                                <div class="cr-stat-item">
-                                    <div class="cr-stat-icon-wrapper">
-                                        <i class="am-icon-map-pin"></i>
-                                    </div>
-                                    <div class="cr-stat-content">
-                                        <span class="cr-stat-label">{{ __('courses::courses.venue') }}</span>
-                                        <span class="cr-stat-value">{{ $course->venue }}</span>
-                                    </div>
-                                </div>
-                                <div class="cr-stat-item">
-                                    <div class="cr-stat-icon-wrapper">
-                                        <i class="am-icon-calendar"></i>
-                                    </div>
-                                    <div class="cr-stat-content">
-                                        <span class="cr-stat-label">{{ __('courses::courses.date') }}</span>
-                                        <span class="cr-stat-value">{{ \Carbon\Carbon::parse($course->date)->format('M d, Y') }}</span>
-                                    </div>
-                                </div>
-                                <div class="cr-stat-item">
-                                    <div class="cr-stat-icon-wrapper">
-                                        <i class="am-icon-time"></i>
-                                    </div>
-                                    <div class="cr-stat-content">
-                                        <span class="cr-stat-label">{{ __('courses::courses.time') }}</span>
-                                        <span class="cr-stat-value">{{ \Carbon\Carbon::parse($course->time)->format('h:i A') }}</span>
-                                    </div>
-                                </div>
-                            @endif
-                            
                             <div class="cr-stat-item">
                                 <div class="cr-stat-icon-wrapper">
                                     <i class="am-icon-bar-chart-04"></i>
@@ -120,7 +90,6 @@
                             </div>
                             
                             @if(!empty($course->validity) || !empty($course->validity_type))
-
                                <div class="cr-stat-item">
                                     <div class="cr-stat-icon-wrapper">
                                         <i class="am-icon-calendar"></i>
@@ -130,8 +99,7 @@
                                         <span class="cr-stat-value">{{ $course->validity }} {{ Str::ucfirst($course->validity_type) }}</span>
                                     </div>
                                 </div>
-                                
-                                @endif
+                            @endif
                         </div>
                     </div>
                 </div>

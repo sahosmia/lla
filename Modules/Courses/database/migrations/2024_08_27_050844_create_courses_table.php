@@ -32,12 +32,8 @@ return new class extends Migration {
             $table->unsignedTinyInteger('status')->default(1);
             $table->unsignedBigInteger('content_length')->nullable();
             $table->unsignedBigInteger('views_count')->default(0);
-              $table->integer('validity')->nullable();
+            $table->integer('validity')->nullable();
             $table->string('validity_type')->nullable();
-              $table->tinyInteger('course_for')->default(1)->comment('1: online, 2: classroom');
-            $table->string('venue')->nullable();
-            $table->date('date')->nullable();
-            $table->time('time')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

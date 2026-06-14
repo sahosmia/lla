@@ -39,7 +39,7 @@ class CourseTaking extends Component
     public $rating;
     public $description;
     public $isLoading = true;
-    public $progress;
+    public $progress = 0;
     public $studentRating;
     public $role;
     public $backRoute = null;
@@ -123,9 +123,13 @@ class CourseTaking extends Component
             }
         }
 
-        if (!empty($this->course->course_watchtime_sum_duration) && !empty($this->course->content_length)) {
-            $progress = floor(($this->course->course_watchtime_sum_duration / $this->course->content_length) * 100);
+        $contentLength = $this->course->content_length ?? 0;
+        $watchtimeSum = $this->course->course_watchtime_sum_duration ?? 0;
+        if ($contentLength > 0) {
+            $progress = floor(($watchtimeSum / $contentLength) * 100);
             $this->progress = $progress >= 99 ? 100 : $progress;
+        } else {
+            $this->progress = 0;
         }
 
         $firstCurriculum = $this->course?->sections?->first()?->curriculums?->first();
@@ -296,9 +300,9 @@ class CourseTaking extends Component
             ]
         );
 
-        if (!empty($courseDuration->course_watchtime_sum_duration) && !empty($this->course->content_length)) {
-            $this->progress = floor(($courseDuration->course_watchtime_sum_duration / $this->course->content_length) * 100);
-        }
+        $contentLength = $this->course->content_length ?? 0;
+        $watchtimeSum = $courseDuration->course_watchtime_sum_duration ?? 0;
+        $this->progress = ($contentLength > 0) ? floor(($watchtimeSum / $contentLength) * 100) : 0;
 
         $this->activeCurriculum['watchtime']['duration'] = $totalDuration;
 
@@ -347,9 +351,9 @@ class CourseTaking extends Component
             ]
         );
 
-        if (!empty($courseDuration->course_watchtime_sum_duration) && !empty($this->course->content_length)) {
-            $this->progress = floor(($courseDuration->course_watchtime_sum_duration / $this->course->content_length) * 100);
-        }
+        $contentLength = $this->course->content_length ?? 0;
+        $watchtimeSum = $courseDuration->course_watchtime_sum_duration ?? 0;
+        $this->progress = ($contentLength > 0) ? floor(($watchtimeSum / $contentLength) * 100) : 0;
 
         if ($this->progress >= 100) {
 

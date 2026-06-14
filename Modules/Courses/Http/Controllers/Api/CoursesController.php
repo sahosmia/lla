@@ -298,10 +298,8 @@ class CoursesController extends Controller
 
         $progress = 0;
 
-        // if(!empty($course->course_watchtime_sum_duration) && !empty($course->content_length)) {
-                if ($course->content_length > 0) {
-
-            $progress = floor(($course->course_watchtime_sum_duration / $course->content_length) * 100);
+        if (($course->content_length ?? 0) > 0) {
+            $progress = floor((($course->course_watchtime_sum_duration ?? 0) / $course->content_length) * 100);
         }
         $course->progress = $progress;
 
@@ -384,11 +382,9 @@ class CoursesController extends Controller
         $courses->each(function ($course) use ($favCourseIds) {
             $course->is_favorite = in_array($course->id, $favCourseIds);
             
-            if (!empty($course->course_progress_sum_duration) && !empty($course->course->content_length)) {
-                $course->progress = floor(($course->course_progress_sum_duration / $course->course->content_length) * 100);
-            } else {
-                $course->progress = 0;
-            }
+            $contentLength = $course->course->content_length ?? 0;
+            $progressSum = $course->course_progress_sum_duration ?? 0;
+            $course->progress = ($contentLength > 0) ? floor(($progressSum / $contentLength) * 100) : 0;
         });
         return $this->success(data: new EnrolledcoursesCollection($courses), code: Response::HTTP_OK);
     }

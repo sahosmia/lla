@@ -1,5 +1,5 @@
 
-<div class="col-12 col-lg-8 col-xl-9" id="am-tutor_list" wire:init="loadPage" x-data="{
+<div class="col-12" id="am-tutor_list" wire:init="loadPage" x-data="{
         message: @entangle('message'),
         recepientId: @entangle('recepientId'),
         charLeft:500,

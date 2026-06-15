@@ -149,7 +149,7 @@ class User extends Authenticatable implements MustVerifyEmail, CanResetPasswordC
                 'admin'     => route('admin.insights', absolute: false),
                 'sub_admin' => route('admin.profile', absolute: false),
                 'tutor'     => route('tutor.dashboard', absolute: false),
-                'student'   => route('student.bookings', absolute: false),
+                'student'   => route('courses.course-list', absolute: false),
                 default     => url('/')
             },
         );

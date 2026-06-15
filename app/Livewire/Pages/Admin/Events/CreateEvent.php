@@ -66,7 +66,7 @@ class CreateEvent extends Component
 
         Event::create($eventData);
 
-        $this->dispatch('showAlertMessage', type: 'success', message: 'Event created successfully');
+        $this->dispatch('showAlertMessage', type: 'success', message: 'Training Calendar created successfully');
         return redirect()->route('admin.events.index');
     }
 }

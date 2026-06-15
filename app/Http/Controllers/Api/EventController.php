@@ -83,6 +83,6 @@ class EventController extends Controller
             Storage::disk('public')->delete($event->banner_image);
         }
         $event->delete();
-        return response()->json(['success' => true, 'message' => 'Event deleted successfully']);
+        return response()->json(['success' => true, 'message' => 'Training Calendar deleted successfully']);
     }
 }

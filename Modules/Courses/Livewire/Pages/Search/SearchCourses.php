@@ -20,8 +20,6 @@ class SearchCourses extends Component
 
     public $perPage;
     public $languages;
-    public $onlineCourse;
-    public $classRoomCourse;
     public $levels;
     public $categories;
     public $totalCourses;
@@ -68,10 +66,7 @@ class SearchCourses extends Component
         $this->categories   = (new CourseService())->getCategories();
         $this->levels       = (new CourseService())->getLevels();
         $this->languages    = (new CourseService())->getLanguages();
-        
-        $this->onlineCourse    = (new CourseService())->getOnlineCourese();
-        $this->classRoomCourse    = (new CourseService())->getClassRoomCourses();
-        
+
         $ratingCounts = (new CourseService())->getCourseByRating()
             ->pluck('average_rating')
             ->filter(function ($value) {

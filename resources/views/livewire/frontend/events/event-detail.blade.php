@@ -21,7 +21,7 @@
             </div>
             <div class="col-lg-4">
                 <div class="am-event-sidebar mb-4 p-4 border rounded shadow-sm bg-white">
-                    <h4>Event Details</h4>
+                    <h4>Training Calendar Details</h4>
                     <ul class="list-unstyled mt-3">
                         <li class="mb-3">
                             <strong>Trainer:</strong><br>

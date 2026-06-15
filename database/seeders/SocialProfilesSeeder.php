@@ -54,11 +54,7 @@ class SocialProfilesSeeder extends Seeder
                         'type' => 'YouTube',
                         'url' => 'https://www.youtube.com/',
                     ],
-                    [
-                        'user_id' => $tutor->id,
-                        'type' => 'TikTok',
-                        'url' => 'https://www.tiktok.com/',
-                    ],
+                    
                 ]);
             }
         }

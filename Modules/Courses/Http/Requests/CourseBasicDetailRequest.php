@@ -28,12 +28,7 @@ class CourseBasicDetailRequest extends FormRequest
             'learning_objectives'   => 'nullable|array',
             'learning_objectives.*' => 'string',
             'validity'              => 'nullable|integer|min:1',
-            'validity_type'         => 'nullable|string|in:days,months,years',
-            'course_for'            => 'required|in:online,classroom',
-            'venue'                 => 'required_if:course_for,classroom|nullable|string|max:255',
-            'date'                  => 'required_if:course_for,classroom|nullable|date',
-            'time'                  => 'required_if:course_for,classroom|nullable',
-
+            'validity_type'         => 'nullable|integer|in:1,2,3',
         ];
     }
 

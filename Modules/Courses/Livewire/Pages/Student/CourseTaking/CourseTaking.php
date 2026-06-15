@@ -108,7 +108,7 @@ class CourseTaking extends Component
                 }
 
                 if ($startDate) {
-                    $expirationDate = $startDate->add($this->course->validity, $this->course->validity_type);
+                    $expirationDate = $startDate->add($this->course->validity_type_text, $this->course->validity);
 
                     if (\Carbon\Carbon::now()->gt($expirationDate)) {
                         session()->flash('error', __('courses::courses.course_access_expired'));

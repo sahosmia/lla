@@ -53,6 +53,6 @@ class TutorEvents extends Component
     {
         $event = Event::where('user_id', Auth::id())->findOrFail($id);
         $event->delete();
-        $this->dispatch('showAlertMessage', type: 'success', message: 'Event deleted successfully');
+        $this->dispatch('showAlertMessage', type: 'success', message: 'Training Calendar deleted successfully');
     }
 }

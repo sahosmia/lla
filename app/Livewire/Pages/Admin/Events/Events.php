@@ -63,10 +63,10 @@ class Events extends Component
     {
         if (!empty($params['id'])) {
             Event::findOrFail($params['id'])->delete();
-            $message = 'Event deleted successfully';
+            $message = 'Training Calendar deleted successfully';
         } elseif (!empty($this->selectedEvents)) {
             Event::whereIn('id', $this->selectedEvents)->delete();
-            $message = 'Events deleted successfully';
+            $message = 'Training Calendar deleted successfully';
         }
 
         $this->selectedEvents = [];

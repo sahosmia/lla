@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Cache;
 use Larabuild\Optionbuilder\Facades\Settings;
 use Nwidart\Modules\Facades\Module;
 use Larabuild\Pagebuilder\Models\Page;
+use Illuminate\Support\Facades\Schema;
+
 
 class DefaultSettingSeeder extends Seeder
 {
@@ -799,8 +801,12 @@ class DefaultSettingSeeder extends Seeder
      */
     public function defualtMenu()
     {
+        Schema::disableForeignKeyConstraints();
+
         Menu::truncate();
         MenuItem::truncate();
+        Schema::enableForeignKeyConstraints();
+
         $menus = [
             [
                 'name'          => 'Header menu',
@@ -815,103 +821,14 @@ class DefaultSettingSeeder extends Seeder
                         'sort'      => '1',
                         'class'     => '',
                     ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 01',
-                        'route'     => url('/'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 02',
-                        'route'     => url('home-two'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 03',
-                        'route'     => url('home-three'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 04',
-                        'route'     => url('home-four'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 05',
-                        'route'     => url('home-five'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 06',
-                        'route'     => url('home-six'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 07',
-                        'route'     => url('home-seven'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 08',
-                        'route'     => url('home-eight'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => '1',
-                        'label'     => 'Home Page 09',
-                        'route'     => url('home-nine'),
-                        'type'      => 'custom',
-                        'sort'      => '1',
-                        'class'     => '',
-                    ],
-                    [
-                        'menu_id'   => '',
-                        'parent_id' => null,
-                        'label'     => 'Find Tutors',
-                        'route'     => url('find-tutors'),
-                        'type'      => 'page',
-                        'sort'      => '2',
-                        'class'     => '',
-                    ],
+                    
                     [
                         'menu_id'   => '',
                         'parent_id' => null,
                         'label'     => 'About',
                         'route'     => url('about-us'),
                         'type'      => 'page',
-                        'sort'      => '3',
+                        'sort'      => '1',
                         'class'     => '',
                     ],
                     [
@@ -948,6 +865,33 @@ class DefaultSettingSeeder extends Seeder
                         'route'     => url('blogs'),
                         'type'      => 'page',
                         'sort'      => '13',
+                        'class'     => '',
+                    ],
+                    [
+                        'menu_id'   => '',
+                        'parent_id' => null,
+                        'label'     => 'Online Class',
+                        'route'     => url('search-courses-searchcategories-0-49'),
+                        'type'      => 'page',
+                        'sort'      => '3',
+                        'class'     => '',
+                    ],
+                    [
+                        'menu_id'   => '',
+                        'parent_id' => null,
+                        'label'     => 'Classroom Training',
+                        'route'     => url('search-courses-searchcategories-0-50'),
+                        'type'      => 'page',
+                        'sort'      => '13',
+                        'class'     => '',
+                    ],
+                    [
+                        'menu_id'   => '',
+                        'parent_id' => null,
+                        'label'     => 'Contact Us',
+                        'route'     => '/contact-us',
+                        'type'      => 'custom',
+                        'sort'      => '7',
                         'class'     => '',
                     ],
                 ]

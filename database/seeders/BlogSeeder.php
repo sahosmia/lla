@@ -11,14 +11,19 @@ use App\Models\User;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Schema;
+
 
 class BlogSeeder extends Seeder
 {
     public function run()
     {
+        Schema::disableForeignKeyConstraints();
+        
         Blog::truncate();
         BlogCategoryLink::truncate();
         BlogTagLink::truncate();
+        Schema::enableForeignKeyConstraints();
 
         $storagePath = storage_path('app/public/blogs/');
 

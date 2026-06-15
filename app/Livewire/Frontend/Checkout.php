@@ -319,8 +319,8 @@ class Checkout extends Component
                 $ipnUrl = PaymentDriver::getIpnUrl($this->form->paymentMethod);
                 session(['payment_data' =>  [
                     'amount'        => $this->payAmount,
-                    'title'         => setting('_general.site_name') ?? env('APP_NAME', 'Lernen') . ' Purchase',
-                    'description'   => setting('_general.site_name') ?? env('APP_NAME', 'Lernen') . ' Purchase Order Confirmation for reference #' . $orderDetail->id,
+                    'title'         => setting('_general.site_name') ?? env('APP_NAME', 'The Learning Line') . ' Purchase',
+                    'description'   => setting('_general.site_name') ?? env('APP_NAME', 'The Learning Line') . ' Purchase Order Confirmation for reference #' . $orderDetail->id,
                     'ipn_url'       => !empty($ipnUrl) ? route($ipnUrl, ['payment_method' => $this->form->paymentMethod]) : url('/'),
                     'order_id'      => $orderDetail->id,
                     'track'         => Str::random(36),

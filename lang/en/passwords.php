@@ -32,7 +32,7 @@ return array (
   'no_calendar_linked' => 'No calendar linked at the moment',
   'keys_missing' => 'Google client credentials (client_id or client_secret) are missing.',
   'no_calendar' => 'No Calendar Found',
-  'event_deleted' => 'Event Deleted',
+  'event_deleted' => 'Training Calendar Deleted',
   'link_zoom_account' => 'Link Your Zoom Account',
   'link_zoom_account_btn' => 'Link Zoom Account',
   'link_zoom_account_msg' => 'Link your Zoom account to sync all your lessons and meetings',

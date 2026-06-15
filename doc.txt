@@ -1,0 +1,9 @@
+Admin sidebar: resources/views/livewire/admin/sidebar.blade.php 
+Tutor and Student sidebar logic: app/Livewire/Pages/Common/Navigation.php 
+Tutor and Student sidebar view: resources/views/livewire/pages/common/navigation.blade.php
+
+
+
+
+Need ========================
+SocialProfilesSeeder data (Facebook, X/Twiter, Linkdein,  Instagram, YouTube, Pinterest) => C:\Users\User\Desktop\well-known\database\seeders\SocialProfilesSeeder.php

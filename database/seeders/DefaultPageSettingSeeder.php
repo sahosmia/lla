@@ -10,6 +10,8 @@ use Illuminate\Support\Str;
 use Larabuild\Pagebuilder\Models\Page;
 use App\Services\PageBuilderService;
 use Modules\Courses\Models\Course;
+use Illuminate\Support\Facades\Schema;
+
 class DefaultPageSettingSeeder extends Seeder
 {
     private $pageBuilderService;
@@ -230,8 +232,9 @@ class DefaultPageSettingSeeder extends Seeder
 
             return;
         }
-
+        Schema::disableForeignKeyConstraints();        
         Page::truncate();
+        Schema::enableForeignKeyConstraints();
         $pageData = [];
         $pages = [
             [

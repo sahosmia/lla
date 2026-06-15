@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 use App\Models\EmailTemplate;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
+
 
 class EmailTemplateSeeder extends Seeder
 {
@@ -20,8 +22,10 @@ class EmailTemplateSeeder extends Seeder
 
     public function setEmailTemplates(){
 
-        if ($this->version == '1.0') {
+        if ($this->version == '1.0') {        
+            Schema::disableForeignKeyConstraints();
             EmailTemplate::truncate();
+            Schema::enableForeignKeyConstraints();
         }
 
         $emailTemplates = $this->getEmailTemplates();

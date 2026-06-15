@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-12 form-group">
                             <label class="tb-label">Title</label>
-                            <input type="text" wire:model="title" class="form-control" placeholder="Event Title">
+                            <input type="text" wire:model="title" class="form-control" placeholder="Training Calendar Title">
                             @error('title') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-md-6 form-group">
@@ -46,7 +46,7 @@
                             @error('registration_deadline') <span class="text-danger">{{ $message }}</span> @enderror
                         </div>
                         <div class="col-md-6 form-group">
-                            <label class="tb-label">Event Mode</label>
+                            <label class="tb-label">Training Calendar Mode</label>
                             <select wire:model.live="mode" class="form-control">
                                 <option value="Virtual">Virtual</option>
                                 <option value="Physical">Physical</option>

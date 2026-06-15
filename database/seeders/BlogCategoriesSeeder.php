@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\BlogCategory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
+
 
 class BlogCategoriesSeeder extends Seeder
 {
@@ -13,7 +15,9 @@ class BlogCategoriesSeeder extends Seeder
      */
     public function run(): void
     {
+        Schema::disableForeignKeyConstraints();
         BlogCategory::truncate();
+        Schema::enableForeignKeyConstraints();
 
         BlogCategory::upsert([
             ['name' => 'Technology',        'slug' => 'technology'],

@@ -10,6 +10,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
 
+
+
 class GeneralSeeder extends Seeder
 {
 
@@ -30,8 +32,12 @@ class GeneralSeeder extends Seeder
 
         $admin->assignRole('admin');
 
+        Schema::disableForeignKeyConstraints();
+
         SubjectGroup::truncate();
         Subject::truncate();
+        Schema::enableForeignKeyConstraints();
+
 
         SubjectGroup::insert([
             ['name' => 'Primary school (Grade 1 to 5)'],

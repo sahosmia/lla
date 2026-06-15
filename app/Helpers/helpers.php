@@ -421,13 +421,14 @@ if (!function_exists('resizedImage')) {
             return asset('demo-content/placeholders/placeholder.png');
         }
 
+        $extension = pathinfo($image, PATHINFO_EXTENSION);
         // Generate a unique name for the resized image
         $resizedImageName = uniqueImageName($image, $width . 'x' . $height);
 
         // Create a hashed directory structure similar to Laravel cache
         $hash = md5($resizedImageName);
         $directory = "thumbnails/" . substr($hash, 0, 2); // First 2 characters as subdirectory
-        $resizedImagePath = $directory . '/' . substr($hash, 2); // Remaining hash as filename
+        $resizedImagePath = $directory . '/' . substr($hash, 2) . '.' . $extension; // Remaining hash as filename with extension
 
         // Check if the resized image already exists
         if (Storage::disk($disk)->exists($resizedImagePath)) {
@@ -436,11 +437,19 @@ if (!function_exists('resizedImage')) {
 
         try {
             // Attempt to read and resize the image
-            $resizedImage = Image::read(Storage::disk($disk)->get($image))
-                ->cover($width, $height)
-                ->encode();
+            $imageContent = Storage::disk($disk)->get($image);
+            $resizedImage = Image::read($imageContent)
+                ->cover($width, $height);
 
-            Storage::disk($disk)->put($resizedImagePath, $resizedImage);
+            $encoded = match(strtolower($extension)) {
+                'jpg', 'jpeg' => $resizedImage->toJpeg(),
+                'png'         => $resizedImage->toPng(),
+                'gif'         => $resizedImage->toGif(),
+                'webp'        => $resizedImage->toWebp(),
+                default       => $resizedImage->encode(),
+            };
+
+            Storage::disk($disk)->put($resizedImagePath, (string) $encoded);
 
             return Storage::disk($disk)->url($resizedImagePath);
         } catch (\Exception $e) {

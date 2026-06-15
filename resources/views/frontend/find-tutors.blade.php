@@ -75,11 +75,9 @@
 @push('styles')
 @vite([
 'public/css/flags.css',
-'public/css/videojs.css'
 ])
 @endpush
 @push('scripts')
-<script src="{{ asset('js/video.min.js') }}"></script>
 <script>
     var filter_record           = @js($filters);
     function applySearchFilter(clearFilter = true){

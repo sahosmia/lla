@@ -11566,6 +11566,10 @@ body:has(.am-dragfile):before {
 .am-checkout_logo a {
   display: block;
 }
+.am-checkout_logo a img {
+  max-width: 150px;
+  height: auto;
+}
 .am-checkout_box {
   display: flex;
   margin: 0 auto;

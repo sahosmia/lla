@@ -96,10 +96,10 @@ class CourseBasicDetails extends Component
         $this->learning_objectives      = !empty($course->learning_objectives) ?  $course->learning_objectives : [''];
         $this->validity                 = $course->validity;
         $this->validity_type            = $course->validity_type;
-         $this->course_for               = $course->course_for;
-        $this->venue                    = $course->venue;
-        $this->date                     = $course->date;
-        $this->time                     = $course->time;
+        $this->course_for               = 'online';
+        $this->venue                    = null;
+        $this->date                     = null;
+        $this->time                     = null;
         
     }
 
@@ -135,17 +135,10 @@ class CourseBasicDetails extends Component
 
             $validatedData['instructor_id'] = Auth::id();
             
-            
-            if ($this->course_for === 'classroom') {
-                $validatedData['venue'] = $this->venue;
-                $validatedData['date'] = $this->date;
-                $validatedData['time'] = $this->time;
-            } else {
-                $validatedData['venue'] = null;
-                $validatedData['date'] = null;
-                $validatedData['time'] = null;
-                
-            }
+            $validatedData['course_for'] = 'online';
+            $validatedData['venue'] = null;
+            $validatedData['date'] = null;
+            $validatedData['time'] = null;
             
             
              // Ensure validity fields are null if validity is empty

@@ -1,0 +1,158 @@
+/** ====== button components ====== **/
+/** --- theme buttons --- **/
+.am-btn,
+.am-btn-light,
+.am-white-btn,
+.am-btnvtwo,
+.am-primary-btn,
+.am-primary-btn-white{
+    gap: 6px;
+    border:0;
+    z-index: 0;
+    cursor: pointer;
+    overflow: hidden;
+    color: $clr-white;
+    position: relative;
+    padding: 10px 18px;
+    @extend %transition;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: $radius;
+    background-color: $btn-color;
+    font: 500 rem(14)/em(20,14) $heading-font-family;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $btnhover-color;
+        opacity: 0;
+        z-index: -1;
+        @extend %transition;
+    }
+    &:hover,
+    &:focus{
+        outline: none;
+        color: $clr-white;
+    } 
+    &:hover{
+        &:before{opacity: 0.1;}
+    }
+}
+.am-primary-btn{
+    color: $clr-white;
+    border-radius: 9999px;
+    background: $btn-color;
+    border: 1px solid $btn-color;
+}
+.am-primary-btn-white{
+    border-radius: 9999px;
+    background: $btn-white;
+    border-color: $btn-color;
+    border: 1px solid $btn-color;
+    color: $body-font-color;
+    &:hover{
+        color: $clr-white;
+        background: $btn-color;
+    }
+}
+.rippleholder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+    &.is-active .ripplecircle{ animation: a-ripple .4s ease-in;}
+}
+.ripplecircle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba($dark_black, 0.2);
+    z-index: -1;
+}
+.am-btnvtwo{
+    color: rgba($btn-black,0.7);
+    &:hover,
+    &:focus{
+        color: rgba($btn-black,0.7);
+    }
+}
+.am-btnsmall{
+    height: 36px;
+    padding: 8px 14px;
+}
+.am-btn-light{
+    color: $body-font-color;
+    background: transparent;
+    &:hover{
+        background :$formbg;
+        color: $body-font-color;
+    }
+}
+.am-white-btn{
+    background: $btn-white;
+    color: $body-font-color;
+    border: 1px solid $border-color;
+    &:hover,
+    &:focus{
+        background: $btn-white;
+        color: $body-font-color;
+
+    }
+    i{
+        &::before{
+            color: $body-font-color;
+        }
+    }
+}
+// Common button styles
+.am-btn {
+  & > i:before{
+    @extend %transition;
+  }
+  &:not(.am-btn_disable):hover {
+    color: $clr-white;
+    background: darken($btn-color, 10%);
+    & > i:before{
+      color: $clr-white;
+    }
+  }
+}
+/* theme Global Button style end */
+.am-btn_disable{
+    pointer-events: none;
+    background: $btn-disable;
+    color: rgba($color: $body-font-color, $alpha: 0.5) !important;
+    &:after{
+        content: '';
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        animation: .5s btnloader infinite linear;
+        border: 2px solid rgba($color: $text-light, $alpha: 0.5);
+        border-top-color: rgba($color: $text-light, $alpha: 0.1);
+    }
+    & > i:before{
+        color: rgba($color: $body-font-color, $alpha: 0.5) !important;
+    }
+}
+@keyframes btnloader {
+    to {transform: rotate(360deg);}
+}
+.am-btn_disabled{
+    pointer-events: none;
+    background-color: $btn-disable !important;
+    color: rgba($color: $text-light, $alpha: 0.5) !important;
+}

@@ -1,0 +1,88 @@
+.am-banner{
+    background: #464AAF;
+}
+.am-coming-soon_content h3 em,
+.am-banner_content h1 span{
+    color: #7AEB7A;
+}
+.am-banner_btns .am-primary-btn{
+    color: #000;
+    background: #7AEB7A;
+    border-color: #7AEB7A;
+}
+.am-section_title h2 span,
+.am-section_title > span{
+    color: #4448A9;
+}
+.am-section_title h2 em{
+    color: #24DE24;
+}
+.am-primary-btn{
+    background: #2D3071;
+    border-color: #2D3071;
+}
+.am-coming-soon{
+    background: #464AAF;
+}
+.splide__slide.is-active.is-visible .am-feedbackicon svg path{
+    fill: #4448A9;
+}
+.am-tutors-varient-two .am-experience-tutor-card:hover .am-experience-tutor-info .am-tutorsearch_user_name .am-primary-btn{
+    background: #2D3071;
+}
+.am-footer_two{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #464AAF;
+}
+.am-header_three .am-loginbtns .am-btn, .am-header_three .am-loginbtns .am-white-btn{
+    border-color: #2D3071;
+}
+.am-header_three .am-loginbtns .am-btn, .am-header_three .am-loginbtns .am-white-btn:hover{
+    background: #2D3071;
+}
+.am-header_three .am-btn{
+    background: #2D3071;
+}
+.am-header_three .am-navbar-toggler{
+    background: #2D3071 !important;
+}
+.am-banner_btns .am-primary-btn-white{
+    border-color: #fff;
+}
+.am-primary-btn{
+    background-color: #2D3071;
+    border-color: #2D3071;
+}
+.am-primary-btn-white{
+    border-color: #2D3071;
+}
+.am-primary-btn-white:hover{
+    background: #2D3071;
+}
+.am-footer_two{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%), #464AAF;
+}
+.am-footer_logoarea .am-btn{
+    color: #000;
+    background: #7AEB7A;
+}
+.am-footer_logoarea .am-btn:hover{
+    background: rgba(74, 72, 169, 0.2) !important;
+}
+.am-banner_btns .am-primary-btn-white{
+    background-color: transparent;
+}
+.splide__slide.is-active.is-visible .am-feedbackicon svg path {
+    fill: #4448A9;
+}
+.am-easysetup_list_item a i:before,
+.am-easysetup_list_item a{
+    color: #4448A9;
+}
+.am-feedback-two .am-section_title > span,
+.am-section_title .am-tag{
+    color: #4448A9;
+    background: transparent;
+    &::before{
+        background: transparent;
+    }
+}

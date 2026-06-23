@@ -1,0 +1,51 @@
+.video-js {
+  overflow: hidden;
+}
+.video-js .vjs-big-play-button {
+  border: 0 !important;
+  margin: 0 !important;
+  color: #fff !important;
+  width: 69.21px !important;
+  line-height: 0 !important;
+  height: 69.21px !important;
+  border-radius: 50% !important;
+  transform: translate(-50%, -50%);
+  -webkit-backdrop-filter: blur(10px) !important;
+          backdrop-filter: blur(10px) !important;
+  background: rgba(37, 37, 37, 0.2) !important;
+}
+.video-js .vjs-big-play-button .vjs-icon-placeholder::before {
+  display: flex;
+  top: 50% !important;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%) !important;
+  content: url("../images/play.svg") !important;
+}
+.video-js .vjs-control-bar {
+  background: transparent !important;
+}
+.video-js .vjs-error-display {
+  background: transparent !important;
+}
+
+.video-js-two .vjs-big-play-button {
+  top: auto !important;
+  left: auto !important;
+  width: 44px !important;
+  right: -10px !important;
+  height: 44px !important;
+  bottom: -10px !important;
+}
+.video-js-two .vjs-big-play-button .vjs-icon-placeholder::before {
+  content: url("../images/playtwo.svg") !important;
+}
+.video-js-two .vjs-control-bar {
+  justify-content: space-between;
+}
+.video-js-two .vjs-time-control,
+.video-js-two .vjs-progress-control,
+.video-js-two .vjs-fullscreen-control,
+.video-js-two .vjs-picture-in-picture-control {
+  display: none !important;
+}/*# sourceMappingURL=video-js.css.map */

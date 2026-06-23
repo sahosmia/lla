@@ -1,0 +1,28 @@
+{
+    "name": "amentotech/laraguppy",
+    "description": "LaraGuppy - A chat plugin",
+    "version": "1.0.1",
+    "autoload": {
+        "psr-4": {
+            "Amentotech\\LaraGuppy\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "amentotech",
+            "email": "info@amentotech.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "laravel/reverb": "@beta"
+    },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "Amentotech\\LaraGuppy\\LaraGuppyServiceProvider"
+        ]
+        }
+    }
+}

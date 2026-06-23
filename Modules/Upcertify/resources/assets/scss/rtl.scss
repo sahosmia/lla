@@ -1,0 +1,131 @@
+@charset "UTF-8";
+html {
+  direction: rtl;
+}
+.uc-navigation_goback{
+    a {
+        .uc-navigation_icon {
+            transform: rotate(0deg);
+        }
+    }
+}
+.uc-sidebar-element{
+    .form-group-wrap{
+        .uc-search-wildcard{
+            padding-left: 12px;
+            padding-right: 40px;
+        }
+    } 
+    .uc-search-icon{
+        left: auto;
+        right: 12px;
+    }
+} 
+.uc-modal_title{
+    padding: 10px 20px 10px 10px !important;
+    .uc-removemodal{
+        margin-right: auto;
+        margin-left: 0 !important;
+    }
+} 
+.uc-radio-section{
+    li{
+        input[type=radio]:checked ~ label::before{
+            left: 16px;
+            right: auto !important;
+        }
+        input[type=radio]:checked ~ label::after{
+            left: 10.83px;
+            right: auto !important;
+        }
+    }
+}
+.uc-certificates_item_actions{
+    margin-right: auto;
+    margin-left: 0 !important;
+}
+.uc-certificates_list_items{    
+    & > li:nth-child(5n+5){
+        .uc-certificates_item_actions_dropdown{
+            right: auto;
+            left: 0;
+        }
+    } 
+}
+.uc-certificates_item_actions_dropdown{
+    left: auto;
+    right: 0;
+}
+.uc-course_options{
+    .uc-select{
+        padding-right: 0;
+        &::before{
+            left: 4px;
+            right: auto;
+        }
+        .uc-select-title{
+            padding-left: 22px;
+        }
+    }
+    .cpBG{
+        left: auto;
+        right: 10px;
+    }
+    .uc-font-size-slider{
+        right: 0;
+        left: auto;
+    }
+}
+.uc-sidebar-hidebtn{
+    margin-left: 0;
+    margin-right: auto;
+}
+@media (max-width: 1680px){
+    .uc-sidebar_wrap{
+        right: 0;
+        left: auto;
+        transform: translate(100%, 0);
+    }
+    .uc-sidebar_show .uc-sidebar_wrap{
+        transform: translate(-90px, 0);
+    }
+}
+.uc-upcertify1680 .uc-sidebar_wrap{
+    left: auto;
+    right: 0;
+    transform: translate(100%, 0);
+}
+.uc-upcertify1680.uc-sidebar_show .uc-sidebar_wrap{
+    transform: translate(-90px, 0);
+}
+.uc-geomatric.uc-media-img .uc-media-title i{
+    margin-left: 0;
+    margin-right: auto;
+}
+.uc-element-instructor .uc-element-drag_icon{
+    right: auto;
+    left: 14px;
+}
+.uc-navigation{
+    padding-left: 0;
+    padding-right: 4px;
+    & nav ul li a{
+        border-radius: 0 10px 10px 0;
+        &:after,
+        &:before{
+            right: auto;
+            left: -8px;
+        }
+        &:before {
+            top: -12px;
+            left: -6.5px;
+            transform: rotate(90deg);
+        }
+        &:after{
+            transform: rotate(-90deg);
+            left: -1px;
+            right: auto;
+            bottom: -12px;
+        }
+    }
+}

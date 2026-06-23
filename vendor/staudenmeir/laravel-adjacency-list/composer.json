@@ -1,0 +1,53 @@
+{
+    "name": "staudenmeir/laravel-adjacency-list",
+    "description": "Recursive Laravel Eloquent relationships with CTEs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Staudenmeir",
+            "email": "mail@jonas-staudenmeir.de"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.0",
+        "staudenmeir/eloquent-has-many-deep-contracts": "^1.2",
+        "staudenmeir/laravel-cte": "^1.11"
+    },
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^3.0",
+        "harrygulliford/laravel-firebird": "^3.3",
+        "larastan/larastan": "^3.0",
+        "laravel/framework": "^11.0",
+        "mockery/mockery": "^1.5.1",
+        "orchestra/testbench-core": "^9.5",
+        "phpunit/phpunit": "^11.0",
+        "singlestoredb/singlestoredb-laravel": "^1.5.4",
+        "staudenmeir/eloquent-has-many-deep": "^1.20"
+    },
+    "suggest": {
+        "barryvdh/laravel-ide-helper": "Provide type hints for attributes and relations."
+    },
+    "autoload": {
+        "psr-4": {
+            "Staudenmeir\\LaravelAdjacencyList\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Staudenmeir\\LaravelAdjacencyList\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Staudenmeir\\LaravelAdjacencyList\\IdeHelperServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable" : true
+}

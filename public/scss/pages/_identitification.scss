@@ -1,0 +1,44 @@
+/* Identitification style Start */
+.am-alert{
+    z-index: 1;
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 19px;
+    background: linear-gradient(140deg, #1A8480 42.4%, #B3F2D5 124.52%);
+    &_wrap{
+        width: 100%;
+        padding: 4px;
+        margin: 0 auto;
+        max-width: 610px;
+        border-radius: 19px;
+        border: 1px solid $border-color;
+    }
+    .am-userearning_item_bg{
+        top: 0;
+        left: auto;
+        width: 100%;
+        z-index: -1;
+        height: auto;
+        right: -280px;
+        position: absolute;
+        pointer-events: none;
+    }
+    h3{
+        margin: 0 0 6px;
+        color: $clr-white;
+        font: 500 rem(20)/em(30,20) $heading-font-family; 
+    }
+    p{
+        margin: 0;
+        color: $clr-white;
+        font: 400 rem(15)/em(21,15) $body-font-family; 
+    }
+    a{
+        margin-top: 14px;
+        color: $clr-white;
+        display: inline-block;
+        text-decoration-line: underline;
+        font: 400 rem(14)/em(20,14) $body-font-family; 
+    }
+}
+/* Identitification style end */

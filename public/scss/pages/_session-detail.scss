@@ -1,0 +1,214 @@
+.am-session-detail-banner{
+    margin-top: 40px;
+    .am-searchdetail{
+        .am-session-grade{
+            span{
+                gap: 5px;
+                @extend %flex;
+                align-items: center;
+                color: $body-font-color;
+                font: 400 rem(16) / em(24, 16) $body-font-family;
+            }
+            h2{
+                margin: 2px 0 0;
+                color: $heading-color;
+                font: 600 rem(30) / em(38, 30) $heading-font-family;
+            }
+        }
+        .am-tutordetail_user{
+            gap: 10px;
+            margin-top: 30px;
+            figure{
+                max-width: 40px;
+                border-radius: 10px;
+                img{
+                    height: 40px;
+                    border-radius: 10px;
+                }
+            }
+            .am-userstaus{
+                width: 8px;
+                height: 8px;
+                bottom: -4px;
+                margin-left: 0;
+                border-width: 1.5px;
+                transform: translateX(-50%);
+            }
+            &_name{
+                h5{
+                    margin: 0;
+                    color: $heading-color;
+                    font: 600 rem(16) / em(24, 16) $heading-font-family;
+                }
+                span{
+                    margin: -2px 0 0;
+                    color: $body-font-color;
+                    font: 400 rem(12) / em(18, 12) $body-font-family;
+                }
+            }
+        }
+        .am-tutordetail-reviews{
+            gap: 0;
+            margin-top: 20px;
+            ul{
+                gap: 0;
+                max-width: 100%;
+                flex-wrap: wrap;
+                align-items: center;
+                flex-direction: row;
+                li{
+                    width: 50%;
+                    padding: 6px 0;
+                    &:nth-child(even){
+                        padding-left: 30px;
+                    }
+                    &:nth-child(odd){
+                        padding-right: 30px;
+                        border-right: 1px solid $border-color;
+                    }
+                }
+                .am-tutorreview-item{
+                    & > em {
+                        font-style: normal;
+                        color: $body-font-color;
+                        font: 400 rem(13) / em(18, 13) $body-font-family;
+                    }
+                    & > span{
+                        margin-left: auto;
+                        em{margin-right: 2px;}
+                    }
+                }
+                .am-sessionstart{
+                    gap: 8px;
+                    @extend %flex;
+                    align-items: center;
+                    &_icon{
+                        width: 30px;
+                        height: 30px;
+                        @extend %flex;
+                        border-radius: 50%;
+                        align-items: center;
+                        justify-content: center;
+                        background: rgba(41, 92, 81, 0.06);
+                        i::before{
+                            font-size: 12px;
+                            color: $theme-color;
+                        }
+                    }
+                    em{
+                        font-style: normal;
+                        color: $body-font-color;
+                        font: 400 rem(12) / em(18, 12) $body-font-family;
+                    }
+                    &_timer{
+                        gap: 4px;
+                        @extend %flex;
+                        padding: 0 12px;
+                        max-height: 26px;
+                        margin-left: auto;
+                        align-items: center;
+                        border-radius: 36px;
+                        background: rgba(41, 92, 81, 0.10);
+                        span{
+                            color: $theme-color;
+                            display: inline-block;
+                            font: 600 rem(14) / em(20, 14) $heading-font-family;
+                            em{
+                                margin-left: 1px;
+                                font-style: normal;
+                                color: rgba($color: $theme-color, $alpha: 0.7);
+                                font: 600 rem(12) / em(18, 12) $body-font-family;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .am-tutordetail-btns{
+            .am-btn{
+                min-width: 190px;
+                border-radius: 8px;
+                i::before{
+                    color: $clr-white;
+                }
+            }
+        }
+    }
+    .am-detailuser_image{
+        height: 314px;
+        figure{
+            margin: 0;
+            height: 100%;
+            border-radius: 20px;
+            img{
+                height: 100%;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+        }
+    }
+    .am-aboutuser_tab{
+        li{
+            width: auto;
+            a{
+                padding: 10px 16px;
+            }
+        }
+    }
+    .am-userinfo{
+        &_section{
+            padding: 50px 0 80px;
+        }
+        &_content{
+            padding: 0;
+            h3{
+                color: $heading-color;
+                font: 700 rem(18) / em(28, 18) $heading-font-family;
+            }
+        }
+        &_session-detail{
+            @extend %flex;
+            padding: 40px 0;
+            align-items: flex-start;
+            ul{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                max-width: 618px;
+                & > li{
+                    list-style: none;
+                    h4{
+                        margin: 0;
+                        color: rgba($color: $heading-color, $alpha: 0.7);
+                        font: 700 rem(18) / em(28, 18) $heading-font-family;
+                    }
+                    & + li{
+                        margin-top: 30px;
+                    }
+                    p{
+                        margin: 10px 0 0;
+                        color: $body-font-color;
+                        font: 400 rem(16) / em(24, 16) $body-font-family;
+                    }
+                }
+                ol{
+                    margin: 10px 0 0;
+                    li{
+                        span{
+                            display: block;
+                            color: $body-font-color;
+                            font: 400 rem(16) / em(24, 16) $body-font-family;
+                        }
+                    }
+                }
+                &:first-child{
+                    width: 100%;
+                    max-width: 648px;
+                    margin-right: 30px;
+                    padding-right: 30px;
+                    border-right: 1px solid $border-color;
+                }
+            }
+        }
+    }
+}

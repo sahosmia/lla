@@ -1,0 +1,14 @@
+{
+    "name": "TrainingCalendar",
+    "alias": "trainingcalendar",
+    "description": "Training Calendar Management",
+    "keywords": [],
+    "priority": 0,
+    "version": "1.0.0",
+    "providers": [
+        "Modules\\TrainingCalendar\\Providers\\TrainingCalendarServiceProvider"
+    ],
+    "files": [
+        "helpers/functions.php"
+    ]
+}

@@ -1,0 +1,149 @@
+@media (max-width: 1399px){
+    // .am-tracklearning_wrap{
+    //     flex-direction: column;
+    // }
+    .am-tracklearning_images{
+        display: none;
+    }
+}
+@media (max-width: 1199px){
+    .am-easysetup_list{
+        ul{
+            flex-wrap: wrap;
+            li{
+                width: 50%;
+                .am-easysetup_list_item{
+                    max-width: 100%;
+                }
+            }
+        } 
+    }
+    .am-revolutionize_wrap{
+        flex-direction: column-reverse;
+    }
+    .am-coming-soon{
+        & > figure{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1024px){
+    .am-feedback{
+        .splide__arrow--prev{
+            left: 35% !important;
+        }
+        .splide__arrow--next{
+            right: 35% !important;
+        }
+    }
+}
+@media (max-width: 991px){
+    .am-banner_wrap{
+        flex-direction: column;
+    }
+    .am-revolutionize_video{
+        .video-js{
+            z-index: 1;
+        }
+    }
+    .am-feedback{
+        .splide__arrow--prev{
+            left: 30% !important;
+        }
+        .splide__arrow--next{
+            right: 30% !important;
+        }
+    }
+    .am-banner_companies{
+        gap: 20px;
+        width: auto;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 767px){
+    .am-revolutionize_video .video-js{
+        max-height: 428px;
+    }
+    .am-coming-soon{
+        padding: 80px 40px;
+    }
+    .am-tuition_content{
+        flex-direction: column;
+    }
+    .am-feedback{
+        .splide__arrow--prev{
+            left: 1% !important;
+        }
+        .splide__arrow--next{
+            right: 1% !important;
+        }
+    }
+}
+@media (max-width: 576px){
+    .am-easysetup_list{
+        ul{
+            li{
+                width: 100%;
+                .am-easysetup_list_item{
+                    max-width: 100%;
+                }
+            }
+        } 
+    }
+    .am-revolutionize_video{
+        max-width: 100%;
+        .video-js{
+            max-width: 100%;
+        }
+    }
+    .am-tuition_content_detail{
+        padding: 40px 20px;
+    }
+}
+@media (max-width: 598px){
+    .am-orderwrap .am-ordersummary.am-bookcartopen{
+        top: 130px !important;
+        max-height: calc(100vh - 130px);
+    }
+}
+@media (max-width: 540px){
+    .am-orderwrap .am-ordersummary:not(.am-bookcartopen){
+        right: -100px !important;
+    }
+}
+@media (max-width: 480px){
+    .am-revolutionize_video .video-js{
+        max-height: 300px;
+    }
+    .am-coming-soon{padding: 80px 20px;}
+    .am-banner_btns{
+        flex-wrap: wrap;
+        a{
+            width: 100%;
+        }
+    }
+    .am-notifywrap .am-allnotifications{
+        right: -75px;
+    }
+}
+@media (max-width: 480px){
+    .am-notifywrap .am-allnotifications{
+        width: 320px;
+        right: -75px;
+    }
+}
+@media (max-width: 360px){
+    .am-notifywrap .am-allnotifications{
+        width: 284px;
+        left: -87px;
+    }
+    .am-orderwrap .am-ordersummary:not(.am-bookcartopen){
+        right: -120px !important;
+    }
+}

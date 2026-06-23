@@ -1,0 +1,46 @@
+{
+    "name": "staudenmeir/laravel-cte",
+    "description": "Laravel queries with common table expressions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Staudenmeir",
+            "email": "mail@jonas-staudenmeir.de"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/database": "^11.0"
+    },
+    "require-dev": {
+        "harrygulliford/laravel-firebird": "^3.3",
+        "laravel/framework": "^11.0",
+        "orchestra/testbench-core": "^9.5",
+        "phpstan/phpstan": "^2.0",
+        "phpunit/phpunit": "^11.0",
+        "singlestoredb/singlestoredb-laravel": "^1.5.4",
+        "yajra/laravel-oci8": "^11.2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Staudenmeir\\LaravelCte\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Staudenmeir\\LaravelCte\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Staudenmeir\\LaravelCte\\DatabaseServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

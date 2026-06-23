@@ -1,0 +1,119 @@
+:root {
+    --yellow: #FFE450;
+    --green: #085E55;
+    --white: #fff;
+    --black: #000;
+}
+.am-loginbtns .am-btn{
+    color: var(--white) !important;
+    background: transparent !important;
+    border-color: var(--white) !important;
+}
+.am-btn,
+.am-loginbtns .am-white-btn:hover,
+.am-header_nine .am-header_two_wrap .am-btn:hover,
+.am-tuition-varient-two .am-primary-btn,
+.am-featured-mentors-slider .splide__arrow:hover,
+.am-featured-mentors.am-tutors-varient-four .am-experience-tutor-card:hover .am-primary-btn,
+.am-featured-mentors.am-tutors-varient-four .am-featured-mentors-head .am-primary-btn-white:hover{
+    color: var(--black) !important;
+    background: var(--yellow) !important;
+    border-color: var(--yellow) !important;
+}
+.am-btn i::before,
+.am-primary-btn:hover,
+.am-whychooseus .am-whychooseus-section .am-card.am-yellow-card p,
+.am-whychooseus .am-whychooseus-section .am-card.am-yellow-card h2{
+    color: var(--black) !important;
+}
+.am-mission-variation-one .am-title-varient-one > span{
+    color: #4448A9;
+    background: rgba(68, 72, 169, 0.05);
+}
+.am-mission-variation-one .am-title-varient-one > span::before{
+    opacity: 1;
+    background: currentColor;
+}
+.am-section_title h2{
+    color: var(--black) !important;
+    -webkit-text-fill-color: unset !important;
+}
+.am-whychooseus.marketplace-stands-out-varient-two .am-section_title .am-tag{
+    color: #FF9126 !important;
+    background: rgba(255, 145, 38, 0.07) !important;
+}
+.am-whychooseus.marketplace-stands-out-varient-two .am-section_title .am-tag::before{
+    background: currentColor !important;
+}
+.am-whychooseus .am-whychooseus-section .am-card.am-yellow-card{
+    background: var(--yellow) !important;
+}
+.am-whychooseus .am-whychooseus-section .am-card.am-blue-card{
+    background: var(--green) !important;
+}
+.am-categories .am-section_title .am-tag{
+    color: #7846B4 !important;
+    background: #F8EBFF !important;
+}
+.am-categories .am-section_title .am-tag::before{
+    background: currentColor !important;
+}
+.am-categories .am-card-container .am-card{
+    background: #FDFDFD;
+}
+.am-categories .am-card-container .am-card.am-highlighted{
+    box-shadow: 10px 10px 0px 0px rgba(255, 221, 133, 0.25);
+}
+.am-whychooseus.marketplace-stands-out-varient-two,
+.am-featured-mentors.am-tutors-varient-four,
+.am-tuition .am-tuition_content_detail{
+    background: #FAFBFF;
+}
+.am-featured-mentors-slider .splide__arrow:hover svg{
+    fill: var(--black);
+}
+.am-feedback.am-feedback-three .am-title-varient-one > span{
+    color: #295C51;
+    background: rgba(41, 92, 81, 0.07);
+}
+.am-feedback.am-feedback-three .am-title-varient-one > span::before{
+    opacity: 1;
+    background: #295C51;
+}
+.am-tuition-varient-two,
+
+.am-categories.am-verient-three{
+    background: var(--white);
+}
+.pb-themesection:has(.get-app-varient-five){
+    background: var(--white);
+}
+.am-coming-section{
+    background: linear-gradient(98deg, #085E55 6.14%, #057E72 93.95%) !important;
+}
+.am-coming-section .am-coming-soon_content h3 em {
+    opacity: 0.83;
+    color: var(--yellow) !important;
+}
+.am-tuition .am-section_title .am-tag{
+    color: #FC3A5B;
+    background: rgba(252, 58, 91, 0.07);
+}
+.am-tuition .am-section_title .am-tag::before{
+    background: currentColor;
+}
+.splide .splide__slide .am-hero-container .am-hero-content .am-yellow-bar{background-color: var(--yellow) !important;}
+.am-coming-section.get-app-varient-five::before{
+    opacity: 0.4;
+    mix-blend-mode: luminosity;
+  }
+.am-feedback .am-section_title_two > span{
+    background: rgba(41, 92, 81, 0.07);
+}
+.am-featured-mentors .am-section_title_two > span{
+    color: #F55C2B;
+    background: rgba(245, 92, 43, 0.07);
+}
+.am-featured-mentors .am-section_title_two > span::before{
+    background: currentColor;
+}

@@ -1,0 +1,33 @@
+.pb-themesection:has(.am-aboutus_section) .container-fluid > div > .col-12{
+    padding-left: 0;
+    padding-right: 0;
+}
+.tk-section-frequently{
+    padding: 40px 0 80px 0;
+}
+.tk-jobdescription{
+    h2{
+        a{
+            color: rgba($heading-color, 0.7);
+        }
+    }
+    h2#cancellation_policy{
+        margin-bottom: 14px;
+    }
+    p{
+        font-size: 16px;
+        &:empty{
+            display: none;
+        }
+        strong{
+            margin-right: 4px;
+        }
+    }
+    & ul,ol{
+        margin-bottom: 24px;
+    }
+}
+.page-privacy-policy,
+.page-terms-condition{
+    .pb-themesection:has(.am-terms-section){background: $clr-white;}
+}

@@ -1,0 +1,123 @@
+/** ====== Sass Placeholder ====== **/
+// @use "sass:list";
+/** --- Heading placeholder --- **/
+%h1{font: 700 slash(rem(36),em(46,36)) $heading_font_family;}
+%h2{font: 700 slash(rem(28),em(38,28)) $heading_font_family;}
+%h3{font: 700 slash(rem(24),em(34,24)) $heading_font_family;}
+%h4{font: 700 slash(rem(20),em(30,20)) $heading_font_family;}
+%h5{font: 700 slash(rem(18),em(26,18)) $heading_font_family;}
+%h6{font: 700 slash(rem(16),em(26,16)) $heading_font_family;}
+
+/** --- Sub title placeholder --- **/
+%small_title{font: 400 slash(rem(14),em(22,14)) $heading_font_family;}
+%smaller_title{font: 400 slash(rem(13),em(22,13)) $heading_font_family;}
+%smallest_title{font: 400 slash(rem(12),em(20,12)) $heading_font_family;}
+%tiny_title{font: 400 slash(rem(10),em(16,10)) $heading_font_family;}
+
+
+
+/** --- Paragraph placeholder --- **/
+%p20{font: 400 slash(rem(20),em(30,20)) $body_font_family;}
+%p18{font: 400 slash(rem(18),em(28,18)) $body_font_family;}
+%p16{font: 400 slash(rem(16),em(26,16)) $body_font_family;}
+%p15{font: 400 slash(rem(15),em(24,15)) $body_font_family;}
+%p14{font: 400 slash(rem(14),em(24,14)) $body_font_family;}
+%p13{font: 400 slash(rem(13),em(22,13)) $body_font_family;}
+%body-font{
+    color: $text-light;
+    letter-spacing: 0.5px;
+    font: 400 rem(14)/em(24,14) $body-font-family;
+}
+/** --- Transition placeholder --- **/
+%transition{
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+%transitiontwo{
+    -webkit-transition: all .6s ease-in-out;
+    -moz-transition: all .6s ease-in-out;
+    -ms-transition: all .6s ease-in-out;
+    -o-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+}
+/** --- flex placeholder --- **/
+%flex{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+%themeboxshadow{
+    -webkit-box-shadow: 0 6px 20px 0 rgba(0,0,0,0.1);
+        box-shadow: 0 6px 20px 0 rgba(0,0,0,0.1);
+}
+/** --- Border placeholder --- **/
+%border{border: 1px solid $border-color;}
+%border-top{border-top: 1px solid $border-color;}
+%border-bottom{border-bottom: 1px solid $border-color;}
+%border-left{border-left: 1px solid $border-color;}
+%border-right{border-right: 1px solid $border-color;}
+%border-radius10{
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+%readmore-btn{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    width: 100%;
+    font: 600 14px $heading-font-family;
+    color: rgba($heading-color,0.7);
+    padding: 10px;
+    margin-top: 20px;
+}
+/** --- Theme stars styling --- **/
+.am-stars span,
+.am-stars{
+	width: 106px;
+	height: 18px;
+	line-height:18px;
+	position:relative;
+}
+.am-stars span:after,
+.am-stars:before {
+	top: 0;
+	left: 0;
+	font-size: 18px;
+	line-height: 18px;
+	position: absolute;
+    font-weight: 700;
+	letter-spacing: 1px;
+	font-family: "Font Awesome 6 Free";
+	color: $lighter;
+	content: '\f005 \f005 \f005 \f005 \f005';
+}
+.am-stars span {
+	width:100%;
+	overflow: hidden;
+    display: block;
+}
+.am-stars span:after {color: #fddb5b;}
+
+// Skeleton
+
+%skeleton{
+    background: #ebebea;
+    background-size: 40px 100%;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-position: left -40px top 0;
+    animation: skeleton-wave 1.2s ease infinite;
+    background-image: linear-gradient(90deg, rgba($clr-white, 0), rgba($clr-white, 0.5), rgba($clr-white, 0));
+    @keyframes skeleton-wave {
+    to {background-position: right -40px top 0;}
+    100% {background-position: left 40px top 1;}
+    }
+}

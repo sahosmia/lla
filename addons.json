@@ -1,0 +1,141 @@
+{
+    "optionbuilder": {
+        "name": "Option Builder",
+        "image": "larabuild-optionbuilder.jpg",
+        "description": "LaraBuild - Option Builder for generating project options with ease.",
+        "type": "core",
+        "demo_url": "https://codecanyon.net/item/larabuild-a-laravel-option-builder-package/42354730"
+    },
+    "pagebuilder": {
+        "name": "Drag & DropPage Builder",
+        "image": "larabuild-pagebuilder.jpg",
+        "description": "LaraBuild's drag & drop page builder helps to create custom pages easily.",
+        "type": "core",
+        "demo_url": "https://codecanyon.net/item/larabuild-a-laravel-option-builder-package/42354730"
+    },
+    "laraguppy": {
+        "name": "LaraGuppy",
+        "image": "laraguppy.jpg",
+        "description": "A Laravel Real-Time Chat Solution enables instant & seamless live chat.",
+        "type": "core",
+        "demo_url": "https://codecanyon.net/item/laraguppy-a-laravel-real-time-chat-solution/52260382"
+    },
+    "larapayease": {
+        "name": "LaraPayEase",
+        "image": "larapayease.jpg",
+        "description": "Versatile Payment Gateway Integration Addon for Lernen.",
+        "type": "external",
+        "price": "$29",
+        "demo_url": "https://codecanyon.net/item/lara-payease-versatile-payment-gateway-integration-addon-for-taskup/53009467",
+        "version": "lite"
+    },
+    "meetfusion": {
+        "name": "MeetFusion",
+        "description": "Google Meet Scheduler for Lernen LMS",
+        "image": "meetfusion.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/meetfusion-laravel-google-meet-scheduler-addon/55014992",
+        "version": "lite"
+    },
+    "upcertify": {
+        "name": "upCertify",
+        "description": "Laravel Digital Certificate Generator",
+        "image": "upcertify.jpg",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/upcertify-laravel-digital-certificate-generator-addon/55014403"
+    },
+    "forumwise": {
+        "name": "ForumWise",
+        "description": "Laravel Community Board",
+        "image": "forumwise.jpg",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/forumwise-laravel-community-forum-addon/55057687"
+    },
+    "s3konnect": {
+        "name": "S3Konnect",
+        "description": "AWS S3 Storage Integration Addon",
+        "image": "s3konnect.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/s3-konnect-aws-s3-storage-addon/55359965"
+    },
+    "kupondeal": {
+        "name": "KuponDeal",
+        "description": "Coupon Management System",
+        "image": "kupondeal.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/kupondeal-coupon-management-addon/55415192"
+    },
+    "starup": {
+        "name": "StarUp",
+        "description": "StarUp LMS - Badges Addon For Lernen",
+        "image": "starup.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/starup-lms-badges-addon-for-lernen-lms/55638153"
+    },  
+    "courses": {
+        "name": "Learnty",
+        "description": "Courses Management System",
+        "image": "learnty.jpg",
+        "type": "external",
+        "depends": [
+            "coursebundles"
+        ],
+        "price": "$29",
+        "demo_url": "https://codecanyon.net/item/learnty-lms-courses-addon-for-lernen/55503789"
+    },
+    "subscriptions": {
+        "name": "LearnTier",
+        "description": "Subscription Management System",
+        "image": "subscriptions.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/learntier-subscription-addon-for-lernen-lms/56125502"
+    },
+    "quiz": {
+        "name": "QuizDeck",
+        "description": "Quiz Creation & Management Solution for Lernen LMS",
+        "image": "quiz.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/quizdeck-quiz-creation-management-solution-for-lernen-lms/56584684"
+    },
+    "coursebundles": {
+        "name": "LearntySuite",
+        "description": "Course Bundle Addon for Lernen",
+        "image": "course-bundle.png",
+        "type": "external",
+        "requires": ["courses"],
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/learnty-suite-course-bundle-addon-for-lernen-lms/56835956"
+    },
+    "assignments":{
+        "name": "Assignora",
+        "description": "Assignment Management System",
+        "image": "assignora.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/assignora-assignment-manager-addon-for-lernen-lms/56976755"
+    },
+    "ipmanager":{
+        "name": "SmartIpier",
+        "description": "The Ultimate IP & Session Manager for Lernen LMS!",
+        "image": "smartIpier.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/smartipier-ip-and-session-manager-for-lernen-lms/57426883"
+    },
+    "spacekonnect": {
+        "name": "SpaceKonnect",
+        "description": "DigitalOcean Space Integration Addon",
+        "image": "spacekonnect.png",
+        "type": "external",
+        "price": "$20",
+        "demo_url": "https://codecanyon.net/item/spacekonnect-digitalocean-cloud-storage-addon-for-lernen/57677612"
+    }
+}

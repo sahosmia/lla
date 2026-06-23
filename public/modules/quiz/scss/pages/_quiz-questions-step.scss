@@ -1,0 +1,290 @@
+.am-quiz{
+    &_questions{
+        &_btn{
+            gap: 10px;
+            display: flex;
+            margin-top: 30px;
+            align-items: center;
+            justify-content: end;
+            & > button{
+                min-width: 100px;
+            }
+            .am-btn-light{
+                border: 1px solid $border-color;
+                padding: 9px 18px;
+            }
+        }
+        &_title{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            h2{
+                display: flex;
+                align-items: center;
+                color: $dark_black;
+                font: 600 rem(18)/em(28,18) $heading-font-family;
+                gap: 8px;
+                & > span{
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    cursor: pointer;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            & .am-select{
+                width: 187px;
+                position: relative;
+                .select2-selection__rendered{
+                    padding-left: 51px;
+                }
+                &-type{
+                    top: 50%;
+                    left: 12px;
+                    color: $body-font-color;
+                    position: absolute;
+                    transform: translateY(-50%);
+                    font: 400 rem(14)/em(20,14) $heading-font-family;
+                }
+            }
+        }
+        &_box{
+            margin-top: 30px;
+            border-radius: 16px;
+            background: $clr-white;
+            border: 1px solid $border-color;
+        }
+        &_section{
+            padding: 24px 24px 20px;
+            form{
+                .am-label {
+                    i{
+                        &::before{
+                            color: rgba($body-font-color,0.6);
+                        }
+                    }
+                }
+                fieldset{
+                    margin: -8px;
+                    .form-group{
+                        padding: 8px;
+                    }
+                }
+                textarea{
+                    &.form-control{
+                        height: 141px;
+                    }
+                }
+            }
+            .am-uploadoption{
+                max-width: 100%;
+            }
+        }
+        &.am-fill-in-blanks{
+            .am-quiz_questions_title {
+                .am-select{width: 200px;}
+            }
+        }
+        &.am-true-false{
+            .am-quiz_questions_title {
+                .am-select{width: 156px;}
+            }
+        }
+        &.am-open-ended-essay{
+            .am-quiz_questions_title {
+                .am-select{width: 210px;}
+            }
+        }
+    }
+    &_answer{
+        &_section{
+            padding: 20px 24px 24px;
+        }
+        &_title{
+            gap: 20px;
+            display: flex;
+            margin-bottom: 24px;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                flex: none;
+                color: $input-br-hover;
+                font: 500 rem(14)/em(20,14) $body-font-family;
+                .am-fill-blanks{
+                    .form-group{padding: 0;}
+                    .am-label{
+                        margin: 0;
+                        display: flex;
+                        padding: 5px 9px;
+                        border-radius: 64px;
+                        background: #fff;
+                        align-items: center;
+                        color: $body-font-color;
+                        border: 1px solid $border-color;
+                        font: 400 rem(12)/em(18,12) $body-font-family;
+                    }
+                }
+            }
+        }
+        &_heading{
+            h5{
+                color: rgba($dark_black , 0.8);
+                font: 600 rem(18)/em(28,18) $heading-font-family;
+            }
+            p{
+                color: $text-light;
+                font: 400 rem(14)/em(20,14) $body-font-family;
+            }
+        }
+        &_option{
+            & > div + div{
+                margin-top: 16px;
+            }
+            &_wrap{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                &:hover > i{
+                    opacity: 1;
+                }
+                & > i{
+                    cursor: pointer;
+                    opacity: 0.57;
+                }
+                .am-checkbox,
+                .am-radio{
+                    label{
+                        padding: 0;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    input{
+                        &[type=radio]{
+                            &:checked {
+                                & + label{
+                                    &:before {
+                                        background-color: #0BC37A;
+                                        border-color: #0BC37A;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                    &:has(input[type=radio]:checked) + .form-control{
+                        background: #F0FDF8;
+                    }
+                }
+                & > .am-input-control{
+                    width: 100%;
+                    margin-left: 6px;
+                    .form-control{
+                        color: $body-font-color;
+                    }
+                }
+                & > span{
+                    flex: none;
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    cursor: pointer;
+                    margin-left: 6px;
+                    border-radius: 6px;
+                    align-items: center;
+                    @extend %transition;
+                    background: #FEF3F2;
+                    justify-content: center;
+                    i::before{
+                        color: #FDA29B;
+                        @extend %transition;
+                    }
+                    &:hover{
+                        background: #F04438;
+                        i::before{color: $clr-white;}
+                    }
+                }
+                textarea{
+                    &.form-control{
+                        height: 191px;
+                    }
+                }
+                .am-short-label{
+                    color: #000;
+                    display: block;
+                    margin-bottom: 4px;
+                    font: 500 rem(14)/em(20,18) $body-font-family;
+                }
+            }
+        }
+    }
+    &_setting{
+        &_section{
+            padding: 23px 24px 24px;
+            border-top: 1px solid $border-color;
+        }
+        &_title{
+            gap: 20px;
+            display: flex;
+            margin-bottom: 24px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &_heading{
+            h5{
+                color: rgba($dark_black , 0.8);
+                font: 600 rem(18)/em(28,18) $heading-font-family;
+            }
+            p{
+                color: $text-light;
+                font: 400 rem(14)/em(20,14) $body-font-family;
+            }
+        }
+        &_status{
+            gap: 10px;
+            display: flex;
+            padding: 10px;
+            border-radius: 12px;
+            align-items: center;
+            background: rgba(247, 144, 9, 0.08);
+            span{
+                color: #F79009;
+                font: 400 rem(14)/em(20,14) $body-font-family;
+            }
+        }
+        &_listing{
+            margin-top: 20px;
+            & div{
+                & + div{
+                    margin-top: 16px;
+                }
+            }
+        }
+        &_item{
+            @extend %flex;
+            gap: 10px 20px;
+            align-items: center;
+            justify-content: space-between;
+            & > span{
+                gap: 6px;
+                display: flex;
+                color: $dark_black;                
+                align-items: center;
+                font: 400 rem(14)/em(20,14) $body-font-family;
+                .am-tooltip:before{
+                    color: rgba($body-font-color,0.6);
+                }
+            }
+            & > input{
+                max-width: 130px;
+            }
+        }
+    }
+}
+.am-quiz_answer_option_wrap,
+.am-quiz_answer_label{
+    &.draggable-mirror{
+        width: 100%;
+        max-width: 738px;
+    }
+}

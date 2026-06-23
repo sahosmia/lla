@@ -1,0 +1,75 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | All Translation Lines For Notifcations Templates
+    |--------------------------------------------------------------------------
+    */
+
+    'all_templates'                             => 'All Notification Templates',
+    'set_notification_status'                   => 'Set notification status as',
+    'add_notification'                          => 'Add new notification',
+    'update_notification'                       => 'Update notification',
+    'notification_title'                        => 'Notifcation title',
+    'role_type'                                 => 'Role type',
+    'select_notification'                       => 'Select notification',
+    'notification_setting_variable'             => 'Notifcation setting variables',
+
+    // =========== Notifcation general translation ==================== \\
+    'notification_content'                              => 'Notifcation Content',
+    'identity_verification_approved_title'              => 'Identity Verification Approved',
+    'identity_verification_rejected_title'              => 'Identity Verification Rejected',
+    'session_booking_title'                             => 'Session Booking',
+    'booking_rescheduled_title'                         => 'Booking Rescheduled',
+    'accepted_withdraw_request_title'                   => 'Accepted Withdraw Request',
+    'new_message_notification_title'                    => 'New Message Notification',
+    'booking_link_title'                                => 'Meeting Link for Your Upcoming Session',
+    'session_request_title'                             => 'Session Request',
+    'booking_completion_request_title'                  => 'Booking Completion Request',
+    'dispute_resolution_title'                          => 'Dispute Resolution Notification',
+    'variables_used'                                    => 'Variables Used in email',
+    'subject'                                           => 'Subject',
+    'identity_verification_approved_subject'            => 'Identity Verification Approved',
+    'identity_verification_rejected_subject'            => 'Identity Verification Rejected',
+    'session_booking_student_subject'                   => 'Thank you for booking with Lernen!',
+    'session_booking_tutor_subject'                     => 'Thank you for booking with Lernen!',
+    'booking_rescheduled_subject'                       => 'Your Session Has Been Rescheduled',
+    'accepted_withdraw_request_subject'                 => 'Your Withdraw Request Has Been Approved',
+    'new_message_subject'                               => 'New Message from :messageSender',
+    'meeting_link_subject'                              => 'Meeting Link for Your Upcoming Session',
+    'booking_completion_request_subject'                => 'Confirm Your Session with {tutorName}',
+    'session_request_subject'                           => 'New Custom Session Request from {studentName}',
+    'dispute_resolved_tutor_subject'                    => 'Dispute Resolved – Payment Released for Session with :studentName',
+    'dispute_resolved_student_subject'                  => 'Dispute Resolved – Refund Issued for Your Session with :tutorName',
+    'identity_verification_approved_content'            => 'Congrats, :userName! Your identity is verified. Enjoy all platform benefits!',
+    'identity_verification_rejected_content'            => 'Unfortunately,:userName! Your identity verification was not successful. Please resubmit your documents.',
+    'session_booking_student_content'                   => 'Your sessions are confirmed! Check booking details here: :bookingLink',
+    'session_booking_tutor_content'                     => 'Your sessions are confirmed! Check booking details here: :bookingLink',
+    'booking_rescheduled_content'                       => 'Your session with :tutorName is rescheduled due to the following reason: (:reason). See details: :viewLink',
+    'accepted_withdraw_request_content'                 => 'Your withdrawal request for :withdrawAmount is approved! Funds credited soon.',
+    'new_message_content'                               => 'New message from :messageSender. Goto messages to respond.',
+    'meeting_link_content'                              => 'New meeting link for your session with :tutorName on :sessionDate ( :sessionSubject ) :meetingLink',
+    'booking_completion_request_content'                => 'Confirm session completion with :tutorName on :sessionDateTime. Auto-confirmed after {days} days. {completeBookingLink}',
+    'session_request_content'                           => 'New session request from :studentName (:studentEmail). Type: :sessionType. Message: :message',
+    'dispute_resolved_student_content'                  => 'Your dispute with :tutorName is resolved. Refund of :refundAmount issued.',
+    'dispute_resolved_tutor_content'                    => 'Your dispute with :studentName is resolved. Payment released to your wallet.',
+    'identity_verification_approved_student_variables'  => '{userName} - For Username',
+    'identity_verification_approved_tutor_variables'    => '{userName} - For Username',
+    'identity_verification_rejected_student_variables'  => '{rejectionReason} - For Rejection Reason',
+    'identity_verification_rejected_tutor_variables'    => '{rejectionReason} - For Rejection Reason',
+    'session_booking_student_variables'                 => '{bookingLink} - For Booking Details Link', 
+    'session_booking_tutor_variables'                   => '{bookingLink} - For Booking Details Link', 
+    'booking_rescheduled_student_variables'             => '{newSessionDate} - For New Session Date <br> {tutorName} - For Tutor Name <br> {reason} - For Reschdule Reason <br> {viewLink} - For viewing detail',
+    'accepted_withdraw_request_tutor_variables'         => '{withdrawAmount} - For Withdraw Amount',
+    'booking_completion_request_student_variables'      => '{tutorName} - For Tutor Name <br> {sessionDateTime} - For Session Date & Time <br> {completeBookingLink} - For Complete Booking Link <br> {days} - For Days',
+    'new_message_student_variables'                     => '{messageSender} - For Message Sender',
+    'new_message_tutor_variables'                       => '{messageSender} - For Message Sender',
+    'meeting_link_student_variables'                    => '{tutorName} - For Tutor Name <br> {sessionSubject} - For Session Subject <br> {sessionDate} - For Session Date & time <br> {meetingLink} - For Meeting Link',
+    'session_request_student_variables'                 => '{studentName} - For Student Name <br> {studentEmail} - For Student Notifcation <br> {sessionType} - For Session Type <br> {message} - For Message',
+    'dispute_resolve_student_variables'                 => '{tutorName} - For Tutor Name <br> {refundAmount} - For Refund Amount',
+    'dispute_resolve_tutor_variables'                   => '{studentName} - For Student Name',
+    'view_booking'                                      => 'View Booking',
+
+];

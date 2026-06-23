@@ -1,0 +1,156 @@
+.am-select select{
+    cursor: pointer;
+    padding-left: 12px;
+}
+.am-quizsetting{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 788px;
+    .am-title_wrap{
+        margin-bottom: 30px;
+        .am-title{
+            h2{
+                opacity: 0.8;
+                margin: 0 0 2px;
+                font: 600 rem(20)/em(30,20) $heading-font-family;
+            }
+        }
+    }
+    .am-custom-textarea{
+        .am-label{align-self: flex-start !important;}
+    }
+    .am-custom-editor.am-custom-textarea{
+        border: 0;
+        background-color: transparent;
+        & .characters-count,
+        & .total-characters{
+            padding: 0;
+            bottom: auto;
+            position: relative;
+            .tu-input-counter{
+                padding: 0;
+                width: 100%;
+                bottom: auto;
+                display: flex;
+                font-size: 12px;
+                margin: 10px 0 0;
+                line-height: 18px;
+                text-align: right;
+                position: relative;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+        .note-editor.note-frame{
+            background-color: $formbg;
+            border: 1px solid $border-color;
+            border-radius: $radius;
+        }
+    }
+    .am-themeform{
+        & .am-title_wrap{
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid $border-color;
+        }
+        &_personalinfo fieldset > .form-group{
+            display: flex !important;
+            &:has(.am-select.am-multiple-select) .am-label{
+                align-self: flex-start;
+            }
+            & + .form-group{
+                margin-top: 30px;
+                border: 0;
+                padding: 0;
+            }
+            .form-group-two-wrap{
+                gap: 16px;
+                .am-label{
+                    font-weight: 400;
+                    color: $body-font-color;
+                }
+            }
+            &.am-form-btns{
+                gap: 10px;
+                margin-top: 40px;
+                padding-top: 30px;
+                border-top: 1px solid $border-color;
+                .am-white-btn{padding: 9px 18px;}
+            }
+            & > .am-label{
+                min-width: 161px;
+                align-self: center;
+            }
+            .am-label{
+                gap: 6px;
+                display: flex;
+                align-items: center;
+                color: rgba($color: $heading-color, $alpha: 0.8);
+                .am-tooltip{
+                    .am-tooltip-text{
+                        width: 330px;
+                        z-index: 9;
+                    }
+                    &.am-resulttooltip{
+                        .am-tooltip-text{
+                            width: 210px;
+                        }
+                    }
+                }
+            }
+        }
+        .am-quiz-switchbtn{
+            gap: 10px;
+            @extend %flex;
+            align-items: center;
+            & > span{
+                display: block;
+                color: rgba($color: $heading-color, $alpha: 0.3);
+                font: 400 rem(12)/em(18,12) $heading_font_family;
+            }
+        }
+        .am-passing-grade{
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            position: relative;
+            > span{
+                right: 0;
+                height: 100%;
+                padding: 12px;
+                font-weight: 500;
+                position: absolute;
+                place-items: center;
+                display: inline-flex;
+                border-left: 1px solid $border-color;
+                color: rgba($color: $body-font-color, $alpha: 0.5);
+            }
+            input{padding-right: 52px;}
+        }
+    }
+}
+.am-tooltip{
+    position: relative;
+    font: 500 rem(14)/em(14,14) $heading_font_family;
+    &:before{
+        color: rgba($color: $body-font-color, $alpha: 0.6);
+    }
+    &:hover{
+        .am-tooltip-text{
+            opacity: 1;
+        }
+    }
+    .am-tooltip-text{
+        height: auto;
+        bottom: 100%;
+        max-height: initial;
+        margin-bottom: 5px;
+        display: block !important;
+        strong{
+            color: #FFF;
+            margin: 0 0 4px;
+            display: block;
+            font: 500 rem(12)/em(18,12) $heading_font_family;
+        }
+    }
+}

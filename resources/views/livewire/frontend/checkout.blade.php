@@ -33,17 +33,17 @@
                 </div>
                 <div class="col-12" x-data="{
                     form:@entangle('form'),
-                    charLeft:500,
+                    charCount:500,
                     init(){
-                        this.updateCharLeft();
+                        this.updateCharCount();
                     },
                     tutorInfo:{},
-                    updateCharLeft() {
+                    updateCharCount() {
                         let maxLength = 500;
                         if (this.form.dec.length > maxLength) {
                             this.form.dec = this.form.dec.substring(0, maxLength);
                         }
-                        this.charLeft = maxLength - this.form.dec.length;
+                        this.charCount = maxLength - this.form.dec.length;
                     }
                 }">
                     <div class="am-checkout_box">
@@ -170,8 +170,8 @@
                                         <legend>{{ __('checkout.additional_information') }}</legend>
                                     </div>
                                     <div class="form-group">
-                                        <textarea wire:model='form.dec' class="form-control" placeholder="{{ __('checkout.note_about_your_order') }}" x-on:input="updateCharLeft" ></textarea>
-                                        <span class="am-charleft" x-text="charLeft + ' {{ __('general.char_account') }}'"></span>
+                                        <textarea wire:model='form.dec' class="form-control" placeholder="{{ __('checkout.note_about_your_order') }}" x-on:input="updateCharCount" ></textarea>
+                                        <span class="am-charleft" x-text="charCount + ' {{ __('general.char_account') }}'"></span>
                                         <x-input-error field_name="form.dec" />
                                     </div>
                                     @if ($walletBalance)

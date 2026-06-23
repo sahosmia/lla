@@ -103,15 +103,6 @@
                                     <span>{{ __('courses::courses.write_article') }}</span>
                                 </div>
                             </li>
-                            <li>
-                                <div class="cr-curriculum-btnconten">
-                                    <figure>
-                                        <img src="{{ asset('modules/courses/images/live-icon.png') }}" alt="icon" />
-                                    </figure>
-                                    <span>{{ __('courses::courses.live') }}</span>
-                                </div>
-                                <span class="cr-tag">{{ __('courses::courses.coming_soon') }}</span>
-                            </li>
                         </ul>
                         @if($activeCurriculumItem['type'] === 'article')
                             <div class="form-group @error('article_content') cr-invalid @enderror">
